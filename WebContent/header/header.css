@@ -1,0 +1,303 @@
+@charset "UTF-8";
+
+html, body{
+    margin : 0 ;
+    padding : 0 ;
+}
+
+body {
+    font-family:'Pretendard JP',Pretendard,system-ui,Roboto,'Helvetica Neue','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif;
+    color: rgb(26, 26, 26);
+}
+
+a{
+    text-decoration: none;
+}
+
+div.top-line-banner{
+    visibility: visible;
+    margin: 0 auto;
+    background-color : #19ce60;
+    z-index : 2000;
+    cursor : pointer;
+    padding : 12px 0;
+    overflow : hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+div.top-line-content{
+    color : white;
+    width : 1176px;
+    margin-left : auto;
+    margin-right : auto;
+    letter-spacing: -0.15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.top-line-content span{
+    width : 100%;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 14px;
+}
+
+div.top-line-content button{
+    background: inherit;
+    border-style : none;
+    cursor : pointer;
+}
+
+div.top-line-content button:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+header {
+    overflow: hidden;
+    max-width: 1176px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header div.header-wrap {
+    width: calc(100% - 40px);
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header div.header-left {
+    display: flex;
+    align-items: center;
+}
+
+div.header-left span {
+    width: auto;
+    display: block;
+}
+
+div.header-left div.main-logo{
+    width : 104px;
+
+}
+
+div.header-left a {
+    text-decoration: none;
+    height: 26px;
+}
+
+div.class-select {
+    display: flex;
+    float : left;
+}
+
+div.header-left h4 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+div.class-select h4.online {
+    color :#19ce60;
+}
+
+div.class-select h4.oneday {
+    color : #1A1A1A;
+}
+
+div.search-box {
+    width : 380px;
+    height : 38px;
+    background-color: #F8F8F8;
+    border-color: #E5E5E5;
+    position: relative;
+}
+
+div.search-box form {
+    width : 100%;
+    height : 100%;
+}
+
+div.search-box input{
+    width : 100%;
+    height : 100%;
+    border-style: none;
+    padding-left: 12px;
+    color :rgb(102, 102, 102);
+    border-radius: 2px;
+    font-family:'Pretendard JP',Pretendard,system-ui;
+    background: transparent;
+    outline : none;
+}
+
+div.search-box svg{
+    position : absolute;
+    top : 7px;
+    right : 10px;
+}
+
+div.search-modal{
+    width : 100vw;
+    height : 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    position : absolute;
+    top : 0;
+    left : 0;
+    z-index: 5000;
+    visibility: hidden;
+}
+
+.toggle{
+    visibility: visible;
+}
+
+div.search-click{
+    width : 100vw;
+    height : 70vh;
+    background-color: white;
+    display: flex;
+    float: left;
+    top : 0;
+    left: 0;
+    z-index : 5000;
+    position: absolute;
+}
+
+div.search-click div.logo{
+    width : 35%;
+    margin : 0;
+    margin-left: 30px;
+    margin-top : 30px;
+}
+
+div.search-click div.search-main {
+    width : 36%;
+    margin: 0;
+    margin-top : 30px;
+}
+
+div.search-click div.cancel{
+    width : auto;
+    margin: 0;
+    margin-top: 37px;
+    margin-left: -115px;
+    cursor: pointer;
+}
+
+div.seacrh-title {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+span.seacrh-title {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+div.search-lately{
+    display : flex;
+    float : left;
+    justify-content: space-around;
+    margin-top: 20px;
+    height : 20%;
+}
+
+div.search-del{
+    color: rgb(102, 102, 102);
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    padding-left: 300px;
+    cursor : pointer;
+}
+
+div.recommend{
+    clear: both;
+    height : 20%;
+}
+
+div.button-wrap{
+    display: flex;
+    float : left
+}
+
+div.recommend button{
+    margin : 12px 4px;
+    -webkit-appearance: none;
+    border :2px rgb(92, 92, 92) solid;
+    background-color: rgb(255, 255, 255);
+    border-width: 1px;
+    padding: 9px 16px;
+    border-radius: 24px;
+    letter-spacing: -1.15px;
+    cursor : pointer;
+}
+
+span.lately{
+    display : inline-block;
+    color: rgb(162, 162, 162);
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-left: 4px;
+}
+
+div.rangkin-num {
+    display: flex;
+    float : left;
+    width : 63%;
+    margin-top: 30px;
+}
+
+div.rangkin-num div.num-half {
+    clear:both;
+    width : 49%;
+}
+
+div.rangkin-num span.num{
+    margin : 10px 0;
+    display: inline-block;
+    color: rgb(255, 86, 0);
+    padding: 0px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    width : 10%;
+    cursor : pointer;
+}
+
+div.rangkin-num span.keyword{
+    margin : 10px 0;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    width : 80%;
+    cursor : pointer;
+}
+
+ div.header-right {
+     clear : both;
+     display: flex;
+ }
+
+div.header-right a{
+    text-decoration: none;
+}
+
+div.header-right p{
+    margin: 0;
+    font-size: 0.875rem;
+    color : #1A1A1A;
+}
