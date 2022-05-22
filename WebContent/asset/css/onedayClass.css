@@ -1,0 +1,351 @@
+@charset "UTF-8";
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+	font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 
+	'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+	margin: 0;
+}
+
+body {
+	word-break: keep-all;
+}
+
+button {
+	cursor: pointer;
+}
+
+div.container-wrap {
+	display: flex;
+	width: 100%;
+	background-color: #fff;
+	justify-content: center;
+	align-items: center;
+	flex: 1 1 0%;
+	flex-direction: column;
+}
+
+div.container {
+	width: 1176px;
+	position: relative;
+	margin: 32px 161px 0;
+}
+
+div.class-wrap {
+	width: 648px;
+}
+
+div.class-image {
+	width: 648px;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+div.images {
+	width: 2592px;
+	height: 100%;
+	transition: transform 0.5s;
+}
+
+div.image {
+	width: 648px;
+	height: 100%;
+	float: left;
+}
+
+div.image img {
+	width: 100%;
+    display: block;
+}
+
+div.arrow {
+	position: absolute;
+	z-index: 1;
+}
+
+div.prev {
+	left: 5px;
+	top: 50%;
+}
+
+div.next {
+	right: 5px;
+	top: 50%;
+}
+
+div.arrow button {
+	display: flex;
+	width: 40px;
+	height: 40px;
+	align-items: center;
+	background: none;
+	border: none;
+	border-radius: 3px;
+}
+
+div.aperture {
+	height: 22px;
+}
+
+div.class-buy {
+	width: 440px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 999;
+}
+
+div.sticky {
+	position: sticky;
+	top: 32px;
+	right: 0;
+}
+
+div.class-name {
+	font-size: 26px;
+	font-weight: 700;
+}
+
+div.class-name h4 {
+	width: 420px;
+}
+
+div.class-crea {
+	color: #666666;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 24px;
+	margin-bottom: 8px;
+}
+
+div.class-price {
+	display: flex;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 20px;
+	justify-content: flex-end;
+	margin-bottom: 44px;
+}
+
+div.reservation-button {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+div.reservation-button button {
+	width: 100%;
+	height: 50px;
+	color: #fff;
+	background-color: #19ce60;
+	border: 1px solid #19ce60;
+	border-radius: 2px;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+div.push-share {
+	display: flex;
+	justify-content: space-between;
+}
+
+div.push-share button {
+	display: flex;
+	width: 214px;
+	height: 38px;
+	color: #101010;
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 2px;
+	font-size: 14px;
+	font-weight: 700;
+	align-items: center;
+	justify-content: center;
+}
+
+span.push-share-img img {
+	width: 18px;
+	height: 18px;
+	margin-right: 6px;
+}
+
+nav.intro-wrap {
+	position: sticky;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 999;
+}
+
+div.intro {
+	display: flex;
+}
+
+div.intro h6 {
+	display: flex;
+	width: 90px;
+	height: 42px;
+	color: #101010;
+	font-size: 16px;
+	font-weight: 700;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+h6.intro-class {
+	 border-bottom: 2px solid #101010;
+}
+
+div.class {
+	margin-bottom: 40px;
+}
+
+div.class-intro {
+	color: #101010;
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 24px;
+	margin-top: 46px;
+	padding-bottom: 26px;
+}
+
+div.writing {
+	position: relative;
+}
+
+div.folded {
+	display: flex;
+	height: 1000px;
+	overflow: hidden;
+}
+
+div.class div.main-text {
+	line-height: 24px;
+	margin-bottom: 30px;
+}
+
+div.class div.main-text img {
+	width: 648px;
+	margin-bottom: 16px;
+}
+
+div.class div.main-text p {
+	padding-top: 8px;
+}
+
+div.class h3.text-margin-top {
+	margin-top: 36px;
+}
+
+div.class-hidden, div.creator-hidden {
+	width: 100%;
+	height: 82px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+div.button-more button {
+	display: inline-flex;
+	width: 100%;
+	height: 44px;
+	background-color: #fff;
+	color: #101010;
+	border: 1px solid #00000026;
+	border-radius: 2px;
+	font-size: 14px;
+	font-weight: 700;
+	justify-content: center;
+	align-items: center;
+}
+
+div.line {
+	width: 100%;
+	height: 1px;
+	background-color: #efefef;
+}
+
+div.creator {
+	display: none;
+	margin-top: 46px;
+	margin-bottom: 40px;
+}
+
+div.creator-profile {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 26px;
+}
+
+div.creator-profile h3 {
+	font-size: 26px;
+}
+
+div.creator-image img {
+	width: 62px;
+	height: 62px;
+	border-radius: 100px;
+}
+
+div.creator div.main-text {
+	line-height: 24px;
+	margin-bottom: 30px;
+}
+
+div.creator div.main-text img {
+	width: 648px;
+	margin-bottom: 16px;
+}
+
+div.creator div.main-text p {
+	padding-top: 8px;
+}
+
+div.detail {
+	display: none;
+	line-height: 24px;
+	margin-top: 46px;
+	margin-bottom: 40px;
+}
+
+div.detail-name {
+	font-size: 26px;
+	font-weight: 700;
+	padding-bottom: 26px;
+}
+
+div.detail-wrap {
+	display: inline-flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+div.detail-product, div.detail-category, div.detail-location, div.detail-time {
+	display: inline-flex;
+	width: 300px;
+	justify-content: space-between;
+}
+
+p.question {
+	color: #a2a2a2;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+p.answer {
+	color: #000;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+/* 스크롤 */
+div.detail {
+	margin-bottom: 300px;
+}
