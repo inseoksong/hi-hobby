@@ -1,0 +1,438 @@
+@charset "UTF-8";
+
+*{
+ font-family: -apple-system, BlinkMacSystemFont, 'Pretendard JP', Pretendard, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+html{
+	background-color: #ffffff !important;
+}
+
+body {
+    display: block;
+    margin: 8px;
+}
+
+body{
+    margin: 0;
+    text-align: left;
+    text-transform: none;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+    background: #ffffff;
+    position: relative;
+    margin: 0;
+}
+
+div{
+    display: block;
+}
+
+a{
+    cursor: pointer;
+}
+
+h3{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h4{
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+input {
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+
+button {
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    margin: 0em;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+button, input{
+    overflow: visible;
+}
+
+button, select{
+    text-transform: none;
+}
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body{
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+body>div{
+    position: relative;
+    z-index: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+.wrapper2{
+    position: relative;
+}
+
+.kgBzKM {
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+.ihVMlk{
+    padding: 55px 0px 128px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.ihVMlk{
+    max-width: 1176px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bxTXNb{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: normal;
+    margin: 0px;
+    color: rgb(162, 162, 162);
+}
+
+.bxTXNb * {
+    vertical-align: middle;
+}
+
+.iTUWBy{
+    border-radius: 24px;
+    background-color: rgb(248, 248, 248);
+    padding: 6px 10px;
+    color: rgb(202, 202, 202);
+}
+
+.iDrVSO{
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: normal;
+    margin: 0px;
+    color: inherit;
+}
+
+.lkWmez{
+    transform: rotate(13deg);
+    margin: 0px 6px;
+    width: 1px;
+    height: 17px;
+    background-color: rgb(202, 202, 202);
+}
+
+.CDUoo{
+    border-radius: 24px;
+    background-color: rgb(248, 248, 248);
+    padding: 6px 10px;
+    color: rgb(26, 26, 26);
+}
+
+.gxwndi{
+    display: flex;
+    align-items: flex-end;
+    margin: 72px 0px 3px;
+}
+
+.dmhaXF{
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(26, 26, 26);
+    line-height: 44px;
+    letter-spacing: -0.6px;
+    margin: 0px;
+}
+
+.bRmawf{
+    color: rgb(0, 0, 0);
+}
+
+.jdPAHA{
+    font-size: 18px;
+    font-weight: normal;
+    color: rgb(26, 26, 26);
+    line-height: 24px;
+    letter-spacing: -0.45px;
+    margin: 0px;
+}
+
+.lkyvNI{
+    margin-left: 8px;
+    line-height: 20px;
+    margin-bottom: 5px;
+    color: rgb(162, 162, 162);
+}
+
+.jlgpeI{
+    margin-bottom: 16px;
+}
+
+.dybKLf{
+    width: calc(50% - 12px);
+}
+
+.kSXYcU{
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+.hVvVYd{
+    width: 100%;
+    height: 56px;
+}
+
+.dGxueP{
+    display: block;
+}
+
+.kSXYcU > *{
+    box-sizing: border-box;
+    border-radius: 0px;
+    flex: 1 1 auto;
+}
+
+
+.kSXYcU > :first-child{
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+}
+
+.eQAnnk{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    border: 1px solid rgb(239, 239, 239);
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    width: 100%;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+}
+
+.iinfVf{
+    border-radius: 0px;
+    max-width: 500px;
+    height: 56px;
+}
+
+.css-dnovcd{
+    flex: 0 0 8px;
+    display: flex;
+}
+
+.gQyJNI{
+    border: 0px;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    flex: initial;
+    box-sizing: border-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.bQeqNr{
+    width: auto;
+    display: inline-flex;
+    vertical-align: middle;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 86, 0);
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    padding: 0px 20px;
+    height: 48px;
+    transition: background-color 0.1s ease 0s;
+    text-decoration-line: none;
+}
+
+.fjbmsx{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    flex: 0 0 auto;
+    background-color: rgb(0, 0, 0);
+    border-radius: 0px;
+    color: rgb(255, 255, 255);
+}
+
+.fjbmsx{
+    height: 56px;
+}
+
+.kSXYcU > :last-child{
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+}
+
+.gQyJNI:not(:disabled):not(.disabled){
+    cursor: pointer;
+}
+
+.jwNHGa{
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.bDnlSL{
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.hOnkYE{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    padding: 88px 0px 64px;
+}
+
+.impvyv{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-size: 126px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.impvyv{
+    background-image: url("https://cdn.class101.net/images/fcc2c512-0f58-4793-bc07-2f5c29bce4dc");
+}
+
+.cqZvVN{
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(26, 26, 26);
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+}
+
+.kElkXM{
+    margin-top: 34px;
+    color: rgb(162, 162, 162);
+    text-align: center;
+}
+
+.gBCbWC{
+    font-size: 14px;
+    margin-top: 14px;
+    color: rgb(0, 199, 60);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.dkJRnq{
+    margin-top: 72px;
+}
+
+.fjbmsx:hover{
+	background-color: 	#696969;
+}
+
+.myP{
+	cursor: pointer;
+}
+
+
+
+
