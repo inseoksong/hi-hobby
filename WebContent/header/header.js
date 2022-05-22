@@ -4,7 +4,6 @@ const cancelBtn = document.querySelector('div.cancel');
 
 input.addEventListener("click",function(){
     if(!search.classList.contains('toggle')){
-        console.log("클릭됨");
         search.classList.add('toggle');  
     }
 });
