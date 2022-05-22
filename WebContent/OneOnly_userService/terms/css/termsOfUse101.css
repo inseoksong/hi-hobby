@@ -1,0 +1,154 @@
+@charset "UTF-8";
+*{
+ font-family: -apple-system, BlinkMacSystemFont, 'Pretendard JP', Pretendard, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+body {
+    display: block;
+    margin: 8px;
+}
+
+body{
+    margin: 0;
+    text-align: left;
+    text-transform: none;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+    background: #ffffff;
+    position: relative;
+    margin: 0;
+}
+
+body{
+    line-height: 1;
+}
+
+body{
+    margin: 0;
+    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+}
+
+div {
+    display: block;
+}
+
+body>div{
+    position: relative;
+    z-index: 0;
+}
+
+ol, ul{
+    list-style: none;
+}
+
+ul {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.wrapper2{
+    position: relative;
+}
+
+.mainScreen{
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+.mainScreen2{
+    margin-left: 24px;
+    margin-right: 24px;
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 24px;
+}
+
+.mainScreen2{
+    max-width: 1176px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mainScreen3{
+    flex: 1 1 0%;
+    min-width: 0px;
+}
+
+.mainTitle{
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(26, 26, 26);
+    line-height: 44px;
+    letter-spacing: -0.6px;
+    margin: 0px;
+    text-align: center;
+}
+
+.mainTitle2{
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(26, 26, 26);
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    margin: 0px;
+    text-align: right;
+}
+
+.mainText{
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(26, 26, 26);
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    margin: 0px;
+}
+
+.allTitle{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(26, 26, 26);
+    line-height: 28px;
+    margin: 0px;
+}
+
+.ululul{
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+
+.lilili{
+    margin-left: 12px;
+    list-style-position: inside;
+    line-height: 26px;
+}
+
+
+
+
+
+
+
+
+
+
+
