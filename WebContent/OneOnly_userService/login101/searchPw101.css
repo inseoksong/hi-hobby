@@ -1,0 +1,270 @@
+@charset "UTF-8";
+
+
+*{
+ font-family: -apple-system, BlinkMacSystemFont, 'Pretendard JP', Pretendard, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+body {
+    display: block;
+    margin: 8px;
+}
+
+body{
+    margin: 0;
+    text-align: left;
+    text-transform: none;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+    background: #ffffff;
+    position: relative;
+    margin: 0;
+}
+
+
+input {
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+
+button {
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    margin: 0em;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+button, input{
+    overflow: visible;
+}
+
+button, select{
+    text-transform: none;
+}
+
+input{
+    margin: 0;
+}
+
+h1{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h1{
+    color: #182026;
+    font-weight: 600;
+    margin: 0 0 10px;
+    padding: 0;
+    line-height: 40px;
+    font-size: 36px;
+}
+
+label {
+    cursor: default;
+    display: inline-block;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body{
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+body>div{
+    position: relative;
+    z-index: 0;
+}
+
+.wrapper2{
+    position: relative;
+}
+
+.cabFoD{
+    padding: 64px 0px 128px;
+    background-color: white;
+}
+
+.dehNWh{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+}
+
+.doNejd{
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    place-content: stretch flex-start;
+    margin-right: -12px;
+    margin-left: -12px;
+}
+
+.dAvcdk{
+    position: relative;
+    min-height: 1px;
+    padding-right: 12px;
+    padding-left: 12px;
+    box-sizing: border-box;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.cabFoD h1{
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: -0.6px;
+    margin: 16px 0px 48px;
+}
+
+.cqZvVN{
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(26, 26, 26);
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+}
+
+.ihuZYz{
+    margin: -32px 0px 24px;
+}
+
+.edxcPn{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 16px;
+}
+
+.lnRpba{
+    margin-bottom: 16px;
+}
+
+.jbmNLF{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px 0px 4px;
+    color: rgb(26, 26, 26);
+}
+
+.dGxueP{
+    display: block;
+}
+
+.eQAnnk{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    border: 1px solid rgb(239, 239, 239);
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    width: 100%;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+}
+
+.gQyJNI{
+    border: 0px;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    flex: initial;
+    box-sizing: border-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.cBAUkf{
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    border-radius: 3px;
+    color: rgb(248, 248, 248);
+    background-color: rgb(58, 58, 58);
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    padding: 0px 20px;
+    height: 48px;
+    transition: background-color 0.1s ease 0s;
+    text-decoration-line: none;
+}
+
+.gQyJNI:not(:disabled):not(.disabled){
+    cursor: pointer;
+}
+
+.jwNHGa{
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.cBAUkf:hover{
+	background-color: 	#696969;
+}
