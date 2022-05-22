@@ -1,0 +1,277 @@
+@charset "UTF-8";
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+	font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 
+	'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+	margin: 0;
+}
+
+body {
+	word-break: keep-all;
+	background-color: #f8f8f9;
+}
+
+button {
+	cursor: pointer;
+}
+
+div.section-wrap {
+	width: 100%;
+}
+
+div.main-section {
+	width: 1176px;
+	background-color: #fff;
+	margin: 0 auto;
+}
+
+div.header-cover {
+	display: flex;
+	width: 100%;
+	height: 84px;
+	background-color: #1a1a1a;
+}
+
+div.header {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	padding: 24px;
+}
+
+div.header h3 {
+	font-size: 26px;
+	font-weight: 700;
+	color: #fff;
+}
+
+div.encryption {
+	display: flex;
+}
+
+div.encryption p {
+	font-size: 16px;
+	font-weight: 700;
+	color: #19ce60;
+	margin-left: 4px;
+}
+
+div.encryption img {
+	width: 18px;
+	height: 18px;
+}
+
+section.main {
+	padding: 24px;
+}
+
+div.class-information {
+	height: 150px;
+}
+
+div.class-text-big {
+	font-size: 20px;
+	font-weight: 700;
+	color: #1a1a1a;
+}
+
+div.class-text-small {
+	font-size: 14px;
+	font-weight: normal;
+	color: #1a1a1a;
+	margin-top: 16px;
+}
+
+div.class-image {
+	height: 72px;
+	margin-top: 10px;
+}
+
+div.class-image img {
+	width: auto;
+	height: 100%;
+}
+
+div.line {
+	background-color: #f8f8f8;
+	width: 100%;
+	height: 1px;
+	margin: 24px 0px;
+}
+
+input[type="text"]::placeholder {
+	color: #e5e5e5;
+}
+
+input[type="text"]:focus  {
+	outline: 1px solid #3a3a3a;
+}
+
+div.point {
+	height: 150px;
+}
+
+div.point-text-big {
+	font-size: 20px;
+	font-weight: 700;
+	color: #1a1a1a;
+}
+
+div.point-text-small {
+	font-size: 14px;
+	font-weight: normal;
+	color: #1a1a1a;
+	margin-top: 16px;
+}
+
+div.point-use {
+	display: flex;
+	justify-content: space-between;
+}
+
+div.point-use input[type="text"] {
+	width: 86.5%;
+	height: 50px;
+	color: #101010;
+	background-color: transparent;
+	border: 1px solid #e5e5e5;
+    border-radius: 2px;
+	margin-top: 10px;
+	padding: 0px 13px;
+}
+
+div.point-use input[type="button"] {
+	width: 10%;
+	height: 52px;
+	color: #fff;
+	background-color: #1f1f1f;
+	border: 1px solid #1f1f1f;
+	border-radius: 2px;
+	margin-top: 10px;
+}
+
+div.point-have {
+	display: flex;
+	margin-top: 10px;
+}
+
+div.point-have p.point-one {
+	color: #a2a2a2;
+	font-size: 13px;
+	font-weight: 400;
+	margin-right: 4px;
+}
+
+div.point-have p.point-two {
+	color: #a2a2a2;
+	font-size: 13px;
+	font-weight: 700;
+	margin-right: 4px;
+}
+
+div.amount-of-payment {
+	height: 150px;
+}
+
+div.payment-text-big {
+	font-size: 20px;
+	font-weight: 700;
+	color: #1a1a1a;
+}
+
+div.payment-price {
+	display: flex;
+	color: #a2a2a2;
+	font-size: 14px;
+	font-weight: 400;
+	justify-content: space-between;
+	margin-top: 16px;
+}
+
+div.payment-line {
+	background-color: #f8f8f8;
+	width: 100%;
+	height: 1px;
+	margin: 12px 0px;
+}
+
+div.payment-point {
+	display: flex;
+	color: #a2a2a2;
+	font-size: 14px;
+	font-weight: 400;
+	justify-content: space-between;
+	margin-top: 16px;
+}
+
+div.payment-final {
+	display: flex;
+	color: #101010;
+	font-size: 16px;
+	font-weight: 700;
+	justify-content: space-between;
+	margin-top: 16px;
+}
+
+div.payment-method {
+	height: 165px;
+}
+
+div.method-text {
+	font-size: 20px;
+	font-weight: 700;
+	color: #1a1a1a;
+	margin-bottom: 16px;
+}
+
+div.payment-buttons {
+	display: flex;
+	justify-content: space-between;
+}
+
+div.payment-buttons button {
+	display: flex;
+	width: 33%;
+	height: 48px;
+	border-radius: 2px;
+	border: 1px solid #f8f8f8;
+	background-color: #fff;
+	justify-content: center;
+	align-items: center;
+	margin-top: 8px;
+}
+
+div.payment-buttons button.clicked {
+	border-color: #3a3a3a;
+}
+
+button.payment-card img {
+	width: 16px;
+	height: 16px;
+	margin-right: 4px;
+}
+
+button.payment-card p {
+	font-size: 14px;
+	font-weight: 400;
+	color: #1a1a1a;
+}
+
+button.payment-kakao img, button.payment-naver img {
+	width: auto;
+	height: 26px;
+}
+
+div.go-payment button {
+	width: 100%;
+	height: 44px;
+	color: #fff;
+	background-color: #19ce60;
+	border: 1px solid #19ce60;
+	border-radius: 2px;
+	font-size: 14px;
+	font-weight: 700;
+	margin-top: 24px;
+}
