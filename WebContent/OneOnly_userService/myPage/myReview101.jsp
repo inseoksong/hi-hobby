@@ -123,7 +123,7 @@
 							</div>
 							<div class="kWcFTw">
 								<div class="dOOEWv ilDyc">크리에이터</div>
-								<a class="hEiHUA" href="https://www.google.co.kr/" target="_blank" rel="noreferrer">
+								<a class="hEiHUA" onclick="location.href='../../createrSupport.jsp'" target="_blank" rel="noreferrer">
 									<div class="cqZvVN hrrnrN">크리에이터 센터</div>
 								</a>
 								<a class="hEiHUA" href="https://www.google.co.kr/" target="_blank" rel="noreferrer">

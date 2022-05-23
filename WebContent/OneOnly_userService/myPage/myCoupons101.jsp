@@ -36,11 +36,11 @@
 		                    <div style="width: 36px;"></div> <!-- 공백 블록 -->
 		                    <div>
 		                        <div class="class-select">
-		                            <a href="">
+		                            <a onclick="location.href='../../onlineList.jsp'">
 		                                <h4 class="online">온라인 클래스</h4>
 		                            </a>
 		                            <div style="width:16px"></div> <!-- 공백 블록 -->
-		                            <a href="">
+		                            <a onclick="location.href='../../onedayList.jsp'">
 		                                <h4 class="oneday">원데이 클래스</h4>
 		                            </a>
 		                        </div>
@@ -110,7 +110,7 @@
 		                    </div>
 		                </div>
 		                <div class="header-right">
-		                    <a href="">
+		                    <a onclick="location.href='../../createrSupport.jsp'">
 		                        <p>크리에이터 지원</p>
 		                    </a>
 		                    <div style="width:24px;"></div> <!-- 공백 블록 -->
@@ -118,9 +118,9 @@
 		                        <p>고객센터</p>
 		                    </a>
 		                    <div style="width:24px;"></div> <!-- 공백 블록 -->
-		                    <a onclick="location.href='login101.jsp'">
+		                    <!-- <a onclick="location.href='login101.jsp'">
 		                        <p>로그인</p>
-		                    </a>
+		                    </a>	 -->
 		                </div>
 		            </div>
 		        </header>
@@ -194,7 +194,7 @@
 			            </div>
 			            <div class="footer-creator">
 			                <p class="footer-title">크리에이터</p>
-			                <a href="">
+			                <a onclick="location.href='../../createrSupport.jsp'">
 			                    <p class="footer-bottom-text">크리에이터 센터</p>
 			                </a>
 			                <a href="">
