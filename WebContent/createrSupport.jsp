@@ -20,7 +20,7 @@
             <div class="headCen">
                 <div class="headPad">
                     <div class="headLog">
-                        <a target="_self" rel="noreferrer" href="https://class101.net/">
+                        <a target="_self" rel="noreferrer" href="createrSupport.jsp">
                             <div class="class101Logo">
                                 <span class="class101Span">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 33" class="class101">
@@ -42,7 +42,7 @@
                         </a>
                         <div class="headSpace"></div>
                         <div class="loginFrom">
-                            <a href="">
+                            <a href="createrLogin.jsp">
                                 <ul class="loginBlock">
                                     <div class="login">
                                         <p class="loginLan">로그인</p>
@@ -81,7 +81,7 @@
                                 </div>
                             </div>
                             <div class="chestFirLiBuSp"></div>
-                            <button class="chestFirBu" onclick="location.href='createLogin.html'">
+                            <button class="chestFirBu" onclick="location.href='createrLogin.jsp'">
                                 <span class="chestFirBuSp">
                                     <span class="chestFirBuSp3">3초만에 크리에이터 시작하기</span>
                                 </span>
@@ -340,7 +340,7 @@
                                 </div>
                             </div>
                             <div class="chestForConFoForm">
-                                <button class="chestForConFoBu" onclick="location.href='createLogin.html'">
+                                <button class="chestForConFoBu" onclick="location.href='createrLogin.jsp'">
                                     <span class="chestForConFoBu">
                                         <span class="chestForConFoBuSp">3초만에 크리에이터 시작하기</span>
                                     </span>
@@ -527,7 +527,7 @@
                     </div>
                 </div>
             </div>
-            <div class="chestSix">
+  <!--           <div class="chestSix">
                 <div class="chestSixMa">
                     <div class="chestSixBan">
                         <div class="chestSixCon">
@@ -539,7 +539,7 @@
                                         차근차근 따라해보세요.</p>
                                 </div>
                                 <div class="chestSixConLeSp"></div>
-                                <a target="_self" cursor="pointer" class="chestSixConLeFr" href="createLogin.html">
+                                <a target="_self" cursor="pointer" class="chestSixConLeFr" href="createrLogin.jsp">
                                     <span class="chestSixConLeFr">
                                         <span class="chestSixConLeFrSp">무료로 가이드 받기</span>
                                     </span>
@@ -558,7 +558,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="chestSev">
                 <div class="chestSevPa">
                     <div class="chestSevPaMa">
@@ -699,7 +699,7 @@
                                 <h4 class="chestEiFormConLeH4">망설이지 마세요,<br>새로운 크리에이터로서의 삶</h4>
                             </div>
                             <div class="chestEiFormConLeSpa"></div>
-                            <button class="chestEiFormConLeRi" onclick="location.href='createLogin.html'">
+                            <button class="chestEiFormConLeRi" onclick="location.href='createrLogin.jsp'">
                                 <span class="chestEiFormConLeRi">
                                     <span class="chestEiFormConLeRiSp">3초만에 크리에이터 시작하기</span>
                                 </span>
@@ -806,7 +806,7 @@
                             <div class="footerListCata">
                                 <span class="footerListSocial">
                                     <span class="footerListSocialFlat">
-                                        <a href="termOfService.html">크리에이터 이용약관</a>
+                                        <a href="termOfService.jsp">크리에이터 이용약관</a>
                                     </span>
                                 </span>
                             </div>
@@ -825,5 +825,5 @@
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="/teamProject/asset/js/createrSupport.js"></script>
+<script src="asset/js/createrSupport.js"></script>
 </html>
