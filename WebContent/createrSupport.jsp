@@ -825,5 +825,5 @@
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="/teamProject/asset/js/createrSupport.js"></script>
+<script src="asset/js/createrSupport.js"></script>
 </html>
