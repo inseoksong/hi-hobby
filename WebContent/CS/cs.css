@@ -67,16 +67,19 @@ div.helpTop{
     background-color: #18a550;
     border : none;
     color : white;
-    font-size: 14px;
-    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 32px;
     cursor: pointer;
     margin-right: 20px;
+    font-family:'Pretendard JP',Pretendard,system-ui,Roboto,'Helvetica Neue','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif;
 }
 
 .helpAll{
     width : 100%;
     height : 582px;
-    border: 1px rgb(238, 238, 238) solid;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
 }
 
 div.tableWrap{
