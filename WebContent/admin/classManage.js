@@ -1,3 +1,33 @@
+const btnAr = document.querySelectorAll('button.manageBtn');
+
+btnAr.forEach((btn) => {
+    btn.addEventListener("click", function () {
+
+        const statusText = btn.parentNode.parentNode.childNodes[17];
+
+        if(btn.classList[1]== 'waitinBtn'){
+            alert("승인 되었습니다");
+            btn.classList.remove('waitinBtn');
+            btn.classList.add('refuseBtn');
+            btn.innerHTML= "반려";
+
+            statusText.innerHTML = "승인 완료";
+            statusText.classList.remove('refuse');
+            statusText.classList.add('confirm');
+
+        } else {
+            alert("반려 되었습니다")
+            btn.classList.remove('refuseBtn');
+            btn.classList.add('waitinBtn');
+            btn.innerHTML= "승인";
+
+            statusText.innerHTML = "재검토 요청";
+            statusText.classList.remove('confirm');
+            statusText.classList.add('refuse');
+        }
+    })
+})
+
 const profile = document.querySelector('div.profile');
 const menu = document.querySelector('div.child-box');
 
@@ -11,13 +41,13 @@ profile.addEventListener("click",function (){
 
         logOut.addEventListener("click", function (){
             console.log("클릭됨");
-            window.open('101adminLogin.jsp','_self',true);
+            window.open('login/adminLogin.html','_self',true);
         });
     }
 });
 
 
-const allCheck = document.querySelector('input#checkall');
+/* const allCheck = document.querySelector('input#checkall');
 const checkAr = document.querySelectorAll('input.childCheck');
 let check = false;
 
@@ -81,6 +111,6 @@ confirm.addEventListener("click",function(){
         setTimeout(()=>{
             alertBox.classList.remove('visible')},2500)
     }
-});
+}); */
 
 
