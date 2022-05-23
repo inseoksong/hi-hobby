@@ -32,7 +32,7 @@
                                         <p class="css-jbm3q">이메일 주소</p>
                                         <div class="css-1k5xfry"></div>
                                         <div class="css-15zhte1"><input name="email" placeholder="class101@class101.net"
-                                                disabled="" class="css-13ih0z" value="csw980928@gmail.com"></div>
+                                                disabled="" class="css-13ih0z" value="oneOnly@hihobby.com"></div>
                                     </div>
                                 </label>
                                 <div class="css-1guwy4j"></div><label>
@@ -40,7 +40,7 @@
                                         <p class="css-jbm3q">휴대폰번호</p>
                                         <div class="css-1k5xfry"></div>
                                         <div class="css-15zhte1"><input name="phone" placeholder="01012341234"
-                                                disabled="" class="css-13ih0z" value="01033809028"></div>
+                                                disabled="" class="css-13ih0z" value="01000000000"></div>
                                     </div>
                                 </label>
                                 <div class="css-1guwy4j"></div>

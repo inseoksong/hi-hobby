@@ -104,7 +104,7 @@
                     </div>
                 </div>
                 <div class="header-right">
-                    <a href="">
+                    <a href="../createrSupport.jsp">
                         <p>크리에이터 지원</p>
                     </a>
                     <div style="width:24px;"></div> <!-- 공백 블록 -->

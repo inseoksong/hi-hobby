@@ -37,10 +37,10 @@
             </div>
             <div class="footer-creator">
                 <p class="footer-title">크리에이터</p>
-                <a href="">
+                <a href="../createrCenter.jsp">
                     <p class="footer-bottom-text">크리에이터 센터</p>
                 </a>
-                <a href="">
+                <a href="../createrCenter.jsp">
                     <p class="footer-bottom-text">정규클래스 지원하기</p>
                 </a>
                 <a href="">
