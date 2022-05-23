@@ -679,9 +679,7 @@
                                     </button>
                                     <div class="ex" style="display: none;" id="show6" name="six">
                                         <p class="exp">
-                                            <p>클래스101에서는 판매 중인 상품을 예비 수강생에게 알리기 위해 홍보를 다양한 곳에서 진행하고 있어요. 내 상품을 좋아할 만한 수강생에 대한 크리에이터님의 노하우를 바탕으로 SNS, 커뮤니티에서 홍보를 해주시면 더 효과적으로 나의 상품을 알릴 수 있어요. 자세한 홍보 방법이 궁금하다면? 
-                                                <a href="https://creator.class101.net/creator/help/subjects/13" target="blank" style="text-decoration: underline;">성공 크리에이터의 노하우 바로가기</a>
-                                            </p>
+                                            <p>클래스101에서는 판매 중인 상품을 예비 수강생에게 알리기 위해 홍보를 다양한 곳에서 진행하고 있어요. 내 상품을 좋아할 만한 수강생에 대한 크리에이터님의 노하우를 바탕으로 SNS, 커뮤니티에서 홍보를 해주시면 더 효과적으로 나의 상품을 알릴 수 있어요.</p>
                                         </p>
                                     </div>
                                 </div>

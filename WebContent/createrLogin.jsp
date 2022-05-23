@@ -79,7 +79,7 @@
                                 </div>
                                 <div class="css-ot2zoy">
                                     <a target="_blank" rel="noreferrer"
-                                        href="">
+                                        href="OneOnly_userService/login101/searchPw101.jsp">
                                         <p class="css-yjlz19">비밀번호를 잊으셨나요?</p>
                                     </a>
                                 </div>
@@ -109,7 +109,7 @@
                                         </span>
                                     </span>
                                 </button>
-                                <div class="css-1u2hgfc"></div><button class="css-1xluyh"><span class="css-3kqv01"
+<!--                                 <div class="css-1u2hgfc"></div><button class="css-1xluyh"><span class="css-3kqv01"
                                         onclick="script:navLogin()"><span class="css-1ai31h">
                                             <div class="css-58su99">
                                                 <picture class="css-10m9xeu"><img
@@ -118,7 +118,7 @@
                                                 <div class="css-jvrg49"></div>
                                                 <div class="css-1qti8at">네이버로 시작하기</div>
                                             </div>
-                                        </span></span></button>
+                                        </span></span></button> -->
                                 <!-- <div class="css-1u2hgfc"></div><button class="css-1xluyh"><span class="css-3kqv01"><span
                                             class="css-1ai31h">
                                             <div class="css-58su99">
