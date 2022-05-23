@@ -88,9 +88,9 @@ function loginWithKakao() {
                     console.log(kakao_account);
                 }
             });
-            if(response){
+            /* if(response){
             	location.href='createrCenterJoin.jsp';
-            }
+            } */
             // window.location.href='/ex/kakao_login.html' //리다이렉트 되는 코드
         },
         fail: function (error) {
