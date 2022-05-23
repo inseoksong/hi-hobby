@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+html, body{
+    margin : 0 ;
+    padding : 0 ;
+}
+
+body {
+    font-family:'Pretendard JP',Pretendard,system-ui,Roboto,'Helvetica Neue','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif;
+    color: rgb(26, 26, 26);
+}
+
+a{
+    text-decoration: none;
+}
+
+footer{
+    width: 1176px;
+    padding-top : 50px;
+    margin-left: auto;
+    margin-right: auto;
+    clear : both;
+    background-color: #fff;
+}
+
+footer div.footer-top{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px rgb(248, 248, 248) solid;
+    margin-bottom: 22px;
+    padding-bottom: 50px;
+}
+
+footer div.footer-intro{
+    width : 398px;
+    float : left;
+}
+
+footer div.footer-intro p{
+    width : 398px;
+    font-size : 13px;
+    letter-spacing: -0.15px;
+    color: rgb(102, 102, 102);
+}
+
+footer div.footer-basic{
+    width : calc((100%-398px)/3);
+}
+
+footer div.footer-creator{
+    width : calc((100%-398px)/3);
+}
+
+footer div.footer-qna{
+    width : calc((100%-398px)/3);
+}
+
+p.footer-title {
+    color: rgb(26, 26, 26);
+    font-size: 16px;
+    font-weight: 700;
+    margin : 0;
+}
+
+p.footer-bottom-text{
+    color: rgb(102, 102, 102);
+    letter-spacing: -0.15px;
+    font-size: 14px;
+    margin-top : 17px
+}
+
+button.footer-qna{
+    margin-top : 13px;
+    background-color: rgb(248, 248, 248);
+    color: rgb(26, 26, 26);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    width : 100%;
+    height : 50px;
+    border-radius: 5px;
+    border-style: none;
+    font-family:'Pretendard JP',Pretendard,system-ui;
+    cursor : pointer;
+}
+
+p.qna-bottom-text{
+    margin-top: 12px;
+    letter-spacing: -0.15px;
+    font-size: 14px;
+    color : rgb(162, 162, 162);
+    text-align: center;
+}
+
+div.footer-bottom{
+    width : 100%;
+    display: flex;
+    padding-bottom: 120px;
+    justify-content: space-between;
+}
+
+div.footer-bottom-left{
+    width : 20%;
+}
+
+div.footer-bottom-left a{
+    color : rgb(162, 162, 162);
+    font-size: 11px;
+}
+
+div.footer-bottom-left a::after {
+    color : rgb(162, 162, 162);
+    content: "･";
+    width : 24px;
+    text-align: center;
+    margin: 0 3px 0 5px;
+}
+
+div.footer-bottom-right{
+    width : 63%;
+    clear : both;
+}
+
+div.footer-bottom-right a{
+    color: rgb(162, 162, 162);
+    font-size: 11px;
+}
+
+div.footer-bottom-right a::after{
+    color : rgb(162, 162, 162);
+    content: "･";
+    width : 24px;
+    text-align: center;
+    margin: 0 3px 0 5px;
+}
+
+div.footer-end{
+    margin-top: 20px;
+    color : rgb(202, 202, 202);
+    font-size: 9px;
+}
