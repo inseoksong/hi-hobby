@@ -19,7 +19,6 @@
 <title>클래스101 크리에이터 센터 | 온라인 클래스 부터 전자책, 디지털 파일까지 크리에이터의 삶은
 	클래스101에서 시작해 2022세요</title>
 </head>
-
 <body>
 	<div id="__next" data-reactroot="">
 		<main>
@@ -82,40 +81,20 @@
 								<div class="css-1q7ezph">
 									<div class="css-zsoya5">
 										<div class="css-qg5d2b"></div>
-										<div class="css-165esj4 1" onclick="notice(1)"
+										<div class="css-1mg3xmk 2" onclick="notice(2);"
 											onmouseout="this.style.background='#ffffff'"
 											onmouseover="this.style.background='rgb(248, 248, 248)';">
 											<div class="css-1f8m7mx">
 												<div class="css-1m6hr3p">
-													<span class="css-l67hwq"> <svg
-															xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-															class="css-skwyyj">
-                                                                <path
-																fill-rule="evenodd"
-																d="M19.5 8.5V15h1.25c.14 0 .25.11.25.25v2a.249.249 0 0 1-.25.25H3.25c-.14 0-.25-.11-.25-.25v-2c0-.14.11-.25.25-.25H4.5V8.5C4.5 4.375 7.875 1 12 1s7.5 3.375 7.5 7.5ZM7 8.5c0-2.755 2.245-5 5-5s5 2.245 5 5V15H7V8.5Z"
-																clip-rule="evenodd" class="css-sy7xp0"></path>
-                                                                <path
-																d="M14 21a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
-																class="css-sy7xp0"></path>
-                                                            </svg>
-													</span>
-													<div class="css-84g0ej"></div>
-													<span class="css-15zs1or">공지사항</span>
-												</div>
-											</div>
-										</div>
-										<div class="css-1mg3xmk 2" onclick="notice(2)"
-											onmouseout="this.style.background='#ffffff'"
-											onmouseover="this.style.background='rgb(248, 248, 248)';">
-											<div class="css-1f8m7mx">
-												<div class="css-1m6hr3p">
-													<span class="css-l67hwq"><svg
+													<span class="css-l67hwq">
+													    <svg
 															xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
 															class="css-skwyyj">
                                                                 <path
 																d="M15.88 10.4c1-.995 1.62-2.375 1.62-3.9C17.5 3.46 15.04 1 12 1S6.5 3.46 6.5 6.5c0 1.52.62 2.895 1.615 3.895C5.095 11.85 3 14.94 3 18.5v3.25c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25V18.5a6.504 6.504 0 0 1 6.83-6.49c3.49.17 6.17 3.185 6.17 6.68v3.06c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25v-3.045c.005-3.59-2.055-6.805-5.12-8.305Zm-3.875-6.9c1.655 0 3 1.345 3 3s-1.345 3-3 3-3-1.345-3-3 1.345-3 3-3Z"
 																class="css-sy7xp0"></path>
-                                                            </svg></span>
+                                                        </svg>
+                                                    </span>
 													<div class="css-84g0ej"></div>
 													<span class="css-15zs1or">크리에이터 정보</span>
 												</div>
@@ -158,173 +137,6 @@
 				</div>
 				<div class="css-16f3fmi">
 					<div class="css-2pw500">
-						<!-- 공지사항 -->
-						<div class="css-1le1epv" style="display: block;">
-							<h4 class="css-vjrwa3">공지사항</h4>
-							<div class="css-oor4vx"></div>
-							<div class="css-15zhte1">
-								<div class="css-h0rvbg">
-									<div class="css-zsoya5 in" onclick="notice(6)"
-										style="cursor: pointer;">
-										<div class="css-zsoya5">
-											<div class="css-112e52f">
-												<div class="css-1qti8at">
-													<div class="css-1fai0nh">
-														<p class="css-1jv4f9j">중요</p>
-													</div>
-													<p class="css-esz8sy">크리에이터센터 약관 제정 안내</p>
-												</div>
-												</a>
-											</div>
-											<div class="css-14zcvlt"></div>
-										</div>
-									</div>
-								</div>
-								<div class="css-oor4vx"></div>
-								<div class="css-1n2mv2k">
-									<nav aria-label="Pagination Navigation" class="css-58su99">
-										<div class="css-1qti8at">
-											<button class="css-18gsj3a" disabled="">
-												<span class="css-ujih8e"><svg
-														xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-														class="css-byt8v">
-                                                            <path
-															d="M15.175 2.075 16.59 3.49c.1.1.1.255 0 .355L8.435 12l8.16 8.16c.1.1.1.255 0 .355L15.18 21.93c-.1.1-.255.1-.355 0l-9.75-9.75c-.1-.1-.1-.255 0-.355l9.745-9.75c.1-.1.26-.1.355 0Z"
-															class="css-oh7lsi"></path>
-                                                        </svg></span>
-											</button>
-										</div>
-										<div class="css-2ezfro"></div>
-										<div class="css-58su99">
-											<div class="css-1qti8at">
-												<button aria-label="Page 1" class="css-9z3irw"
-													aria-current="true">1</button>
-											</div>
-											<div class="css-kna7wq"></div>
-											<div class="css-1qti8at">
-												<button aria-label="Page 2" class="css-h2fvm7">2</button>
-											</div>
-											<div class="css-kna7wq"></div>
-											<div class="css-1qti8at">
-												<button aria-label="Page 3" class="css-h2fvm7">3</button>
-											</div>
-											<div class="css-kna7wq"></div>
-											<div class="css-1qti8at">
-												<button aria-label="Page 4" class="css-h2fvm7">4</button>
-											</div>
-											<div class="css-kna7wq"></div>
-											<div class="css-1qti8at">
-												<button aria-label="Page 5" class="css-h2fvm7">5</button>
-											</div>
-										</div>
-										<div class="css-2ezfro"></div>
-										<div class="css-1qti8at">
-											<button class="css-1iwg3rr">
-												<span class="css-ujih8e"><svg
-														xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-														class="css-uxrfz2">
-                                                            <path
-															d="M8.825 21.93 7.41 20.515c-.1-.1-.1-.255 0-.355l8.155-8.155-8.16-8.16c-.1-.1-.1-.255 0-.355L8.82 2.075c.1-.1.255-.1.355 0l9.75 9.75c.1.1.1.255 0 .355L9.18 21.93c-.1.1-.26.1-.355 0Z"
-															class="css-17ivn46"></path>
-                                                        </svg></span>
-											</button>
-										</div>
-									</nav>
-								</div>
-							</div>
-						</div>
-						<!-- 공지사항 내부 -->
-						<div class="css-fl174t" style="display: none;">
-							<div class="css-15zhte1">
-								<div class="css-1sqjo32">
-									<h4 class="css-vjrwa3">공지사항</h4>
-								</div>
-								<div class="css-9ru05u"></div>
-								<div class="css-9y23z5">
-									<div class="css-1pasxmu">
-										<div class="css-1m6hr3p">
-											<h6 class="css-190ymz">[중요]</h6>
-											<div class="css-4os83y"></div>
-											<h6 class="css-9gfydg">크리에이터센터 약관 제정 안내</h6>
-										</div>
-										<p class="css-bxbdku">2022. 5. 9.</p>
-									</div>
-								</div>
-								<div class="css-9ru05u"></div>
-								<div class="css-9y23z5">
-									<div class="css-fmiran">
-										<p>안녕하세요, 크리에이터님. 클래스 101 운영팀 입니다.</p>
-										<p>
-											<br class="ProseMirror-trailingBreak">
-										</p>
-										<p>먼저, 늘 저희 클래스101을 믿고 애용해주시는 모든 크리에이터님께 감사 인사 드립니다.</p>
-										<p>
-											<br class="ProseMirror-trailingBreak">
-										</p>
-										<p>클래스101에서 계약 체결 방식의 간소화와 크리에이터분들의 편의를 위해 크리에이터 센터 이용 약관을
-											제정하였습니다.</p>
-										<p>2022년 5월 9일부터 크리에이터 센터에 접속하시면 신규 제정된 크리에이터 센터 이용 약관을
-											확인하실 수 있습니다.</p>
-										<p>
-											<br class="ProseMirror-trailingBreak">
-										</p>
-										<p>해당 크리에이터 센터 이용 약관(22.05.09 시행)에는 기존에 체결되었던 계약 내용 일부와,
-											크리에이팅 서비스 정책(22.05.09 시행) 및 정산 정책(22.06.15 시행)에 관한 내용이 포함되어
-											있으니, 번거로우시더라도 확인 해주시기 바랍니다.</p>
-										<p>
-											<br class="ProseMirror-trailingBreak">
-										</p>
-										<p>약관 및 정책에 동의를 하지 않으실 경우, 원활한 크리에이터 센터 이용이 어려울 수 있으니 하기
-											링크를 통해 접속하여 이용 약관에 동의 해주시면 감사하겠습니다.</p>
-										<p>
-											<br class="ProseMirror-trailingBreak">
-										</p>
-										<p>앞으로도 저희 클래스101은 모든 크리에이터분들께서 편리하게 클래스 제작 및 운영을 하실 수 있도록
-											꾸준히 개선할 것이며, 더욱 만족스러운 서비스로 나아가기 위해 노력하겠습니다.</p>
-										<p>
-											<br class="ProseMirror-trailingBreak">
-										</p>
-										<p>관련하여 궁금하신 점이 있으시다면 언제든 크리에이터 고객센터로 문의 주시면 답변드리겠습니다 :)</p>
-										<p>
-											<br class="ProseMirror-trailingBreak">
-										</p>
-										<p>감사합니다.</p>
-										<p>
-											<br class="ProseMirror-trailingBreak">
-										</p>
-										<p>
-											<br class="ProseMirror-trailingBreak">
-										</p>
-										<p>
-											<br class="ProseMirror-trailingBreak">
-										</p>
-										<p>
-											<br class="ProseMirror-trailingBreak">
-										</p>
-										<p>
-											<a href="termOfCreateService.jsp">&gt;&gt;&gt;&gt; 서비스 및
-												정산 정책 보러가기</a>
-										</p>
-									</div>
-								</div>
-								<div class="css-9ru05u"></div>
-								<div class="css-18ac00y">
-									<div class="css-150azey">
-										<a target="_self" cursor="pointer" class="css-1ozk62k"
-											onclick="notice(1)"><span class="css-3kqv01"><span
-												class="css-1u6oz3l"><svg
-														xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-														class="css-1oe6l0y">
-                                                            <path
-															d="M14.405 4.24H6.509v-2c0-.2-.2-.3-.4-.2L1.112 5.29c-.15.1-.15.3 0 .4L6.11 8.943c.15.1.4 0 .4-.2V6.742h7.946c3.048 0 5.746 2.251 5.996 5.303.35 3.502-2.399 6.454-5.847 6.454H5.26c-.15 0-.25.1-.25.25v2c0 .15.1.251.25.251h9.345c4.547 0 8.295-3.702 8.395-8.255.05-4.702-3.948-8.504-8.595-8.504Z"
-															class="css-1b224fx"></path>
-                                                        </svg></span>
-												<div class="css-1gxj1fi"></div> <span class="css-13g5vis">목록으로</span>
-										</span></a>
-									</div>
-								</div>
-							</div>
-						</div>
 						<!-- 크리에이터 정보 -->
 						<div class="css-154w5w9" style="display: none;">
 							<div class="css-djg42i">

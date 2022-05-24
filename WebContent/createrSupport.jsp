@@ -20,7 +20,7 @@
             <div class="headCen">
                 <div class="headPad">
                     <div class="headLog">
-                        <a target="_self" rel="noreferrer" href="createrSupport.jsp">
+                        <a target="_self" rel="noreferrer" href="mainPage.jsp">
                             <div class="class101Logo">
                                 <span class="class101Span">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 33" class="class101">
