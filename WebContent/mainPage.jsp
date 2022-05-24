@@ -6,8 +6,10 @@
 <meta charset="UTF-8">
 <link rel="shortcut icon" href="asset/img/favicon.ico">
 <title>클래스101 | 세상의 모든 클래스, 클래스101</title>
- <link rel="stylesheet" href="main/main.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="main/main.css">
+<link rel="stylesheet" href="header/header.css">
+<link rel="stylesheet" href="footer/footer.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 
 </head>
 <body>
@@ -1971,4 +1973,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="main/main.js"></script>
+<script src="header/header.js"></script>
 </html>

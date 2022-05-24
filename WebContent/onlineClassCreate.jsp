@@ -4,18 +4,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>하이하비 크리에이터 센터 | 원데이 클래스 신청</title>
-<link rel="stylesheet" href="asset/css/onedayClassCreate.css">
+<title>하이하비 크리에이터 센터 | 온라인 클래스 신청</title>
+<link rel="stylesheet" href="asset/css/onlineClassCreate.css">
 </head>
 <body>
 	<section class="main">
 		<div class="container-wrap">
 			<div class="container">
 				<div class="topside">
-					<h3>원데이 클래스 신청</h3>
+					<h3>온라인 클래스 신청</h3>
 					<nav>
 						<div class="basic-information">기본 정보</div>
-						<!-- <div class="video">동영상</div> -->
+						<div class="video">동영상</div>
 					</nav>
 				</div>
 				<!-- 기본 정보 -->
@@ -73,10 +73,6 @@
 							<p>장소</p>
 							<input type="text" name="classPlace" placeholder="클래스가 진행되는 장소를 추가해주세요.">
 						</div>
-						<div class="class-time">
-							<p>시간</p>
-							<input type="text" name="classtime" placeholder="클래스가 진행되는 시간을 추가해주세요.">
-						</div>
 						<div class="class-introduce">
 							<p>클래스 소개</p>
 							<textarea rows="10" cols="45"></textarea>
@@ -110,9 +106,30 @@
 						<button>신청하기</button>
 					</div>
 				</div>
+				<!-- 동영상 -->
+				<div class="video-wrap">
+					<div class="class-video">
+						<div class="video-name">
+							<p>비디오 제목</p>
+							<input type="text" name="videoName" placeholder="비디오의 제목을 입력해주세요.">
+						</div>
+						<div class="video-file">
+							<p>비디오 업로드</p>
+							<label for="video-file">
+								<span>
+									<img src="https://creator.class101.net/images/video-add.png">
+								</span>
+							</label>
+							<input type="file" id="video-file" name="videoFile">
+						</div>
+					</div>
+					<div class="application-button">
+						<button>신청하기</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
 </body>
-<script src="asset/js/onedayClassCreate.js"></script>
+<script src="asset/js/onlineClassCreate.js"></script>
 </html>

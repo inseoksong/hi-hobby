@@ -148,20 +148,6 @@ div.class-place input {
 	padding-right: 8px;
 }
 
-div.class-time p {
-	font-size: 14px;
-	color: #a2a2a2;
-	padding-top: 16px;
-}
-
-div.class-time input {
-	width: 892px;
-	height: 50px;
-	margin-top: 16px;
-	padding-left: 8px;
-	padding-right: 8px;
-}
-
 div.class-introduce p {
 	font-size: 14px;
 	color: #a2a2a2;
@@ -264,6 +250,57 @@ label[for='image1'] div, label[for='image2'] div, label[for='image3'] div, label
 }
 
 div.creator-image input {
+	display: none;
+}
+
+div.video-wrap {
+	display: none;
+	width: 910px;
+	height: 544px;
+	background-color: #fff;
+	border: 1px solid #efefef;
+	border-radius: 8px;
+	padding: 24px;
+}
+
+div.video-name p {
+	font-size: 14px;
+	color: #a2a2a2;
+}
+
+div.video-name input {
+	width: 892px;
+	height: 50px;
+	margin-top: 16px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border: 1px solid #efefef;
+	border-radius: 3px;
+}
+
+div.video-file p {
+	font-size: 14px;
+	color: #a2a2a2;
+	padding-top: 16px;
+}
+
+div.video-file label span {
+	display: flex;
+	width: 908px;
+	height: 350px;
+	border: 1px solid #efefef;
+	border-radius: 3px;
+	justify-content: center;
+	align-items: center;
+	margin-top: 16px;
+}
+
+div.video-file label img {
+	width: 52px;
+	height: 52px;
+}
+
+div.video-file input {
 	display: none;
 }
 
