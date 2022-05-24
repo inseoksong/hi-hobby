@@ -16,26 +16,6 @@ const classImg4 = document.querySelector("label[for='image4'] img");
 const creatorFile1 = document.querySelector("div.creator-image input");
 const creatorThumbnail1 = document.querySelector("label[for='creator-img'] img");
 
-const basic = document.querySelector("div.basic-information");
-const video = document.querySelector("div.video");
-
-const basicDiv = document.querySelector("div.bottomside");
-const videoDiv = document.querySelector("div.video-wrap");
-
-basic.addEventListener("click", function() {
-	basic.style.borderBottom = "3px solid #1a1a1a";
-	video.style.borderBottom = "0px";
-	basicDiv.style.display = "block";
-	videoDiv.style.display = "none";
-});
-
-video.addEventListener("click", function() {
-	basic.style.borderBottom = "0px";
-	video.style.borderBottom = "3px solid #1a1a1a";
-	basicDiv.style.display = "none";
-	videoDiv.style.display = "block";
-});
-
 classFile1.addEventListener("change", function(event) {
     let reader = new FileReader();
     reader.readAsDataURL(event.target.files[0]);

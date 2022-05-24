@@ -15,7 +15,6 @@
 					<h3>원데이 클래스 신청</h3>
 					<nav>
 						<div class="basic-information">기본 정보</div>
-						<!-- <div class="video">동영상</div> -->
 					</nav>
 				</div>
 				<!-- 기본 정보 -->
