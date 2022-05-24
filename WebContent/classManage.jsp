@@ -17,8 +17,8 @@
     <header>
         <div class="header">
             <div class="logo">
-                <!-- <svg xmlns="http://www.w3.org/2000/svg" ; viewBox="0 0 140 32"><path d="M30.303 5.687v7.027l-.043.053-.069-.215-.073-.214a10.545 10.545 0 0 0-9.901-7.088h-.018a10.545 10.545 0 0 0-9.909 7.095l-.073.215-.068.214-.046-.052V5.687H0v20.621h10.103v-7.027l.046-.053.068.215.073.212a10.545 10.545 0 0 0 9.902 7.09h.017a10.545 10.545 0 0 0 9.902-7.09l.073-.212.068-.215.043.053v7.035h10.103V5.686H30.303ZM65.237" fill="rgb(26, 26, 26)" m30.303=""></path></svg>
-                 --><div class="logo-text"><span>Admin Center</span></div>
+                <svg xmlns="http://www.w3.org/2000/svg" ; viewBox="0 0 140 32"><path d="M30.303 5.687v7.027l-.043.053-.069-.215-.073-.214a10.545 10.545 0 0 0-9.901-7.088h-.018a10.545 10.545 0 0 0-9.909 7.095l-.073.215-.068.214-.046-.052V5.687H0v20.621h10.103v-7.027l.046-.053.068.215.073.212a10.545 10.545 0 0 0 9.902 7.09h.017a10.545 10.545 0 0 0 9.902-7.09l.073-.212.068-.215.043.053v7.035h10.103V5.686H30.303ZM65.237" fill="rgb(26, 26, 26)" m30.303=""></path></svg>
+                <div class="logo-text"><span>Admin Center</span></div>
             </div>
             <div class="profile">
                 <div><img src="admin/img/profile.webp"></div>
@@ -38,7 +38,7 @@
     <nav>
         <div class="section-left">
             <div class="nav-wrap">
-                <a href="101admin.jsp">
+                <a href="admin.jsp">
                     <div class="menu-wrap">
                         <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-skwyyj"><path fill-rule="evenodd" d="M19.5 8.5V15h1.25c.14 0 .25.11.25.25v2a.249.249 0 0 1-.25.25H3.25c-.14 0-.25-.11-.25-.25v-2c0-.14.11-.25.25-.25H4.5V8.5C4.5 4.375 7.875 1 12 1s7.5 3.375 7.5 7.5ZM7 8.5c0-2.755 2.245-5 5-5s5 2.245 5 5V15H7V8.5Z" clip-rule="evenodd"></path><path d="M14 21a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"></path></svg></span>
                         <div class="menu-text"><span>공지사항</span></div>
@@ -60,13 +60,9 @@
         </div>
     </nav>
     <section>
-        <div class="alert">
-            <div><span class="alertMsg">클래스가 승인 되었습니다!</span></div>
-        </div>
         <div class="class-wrap">
             <div class="class-top">
                 <div class="class-top-title"><span>클래스 신청 목록</span></div>
-                <button class="confirm">승인하기</button>
             </div>
             <div class="class-all">
                 <div class="search-box">
@@ -79,92 +75,91 @@
                 <div class="list-wrap">
                     <table class="class-admin">
                         <tr>
-                            <th width="4%"><input type="checkbox" id="checkall"></th>
-                            <th width="8%">NO</th>
-                           <th width="7%">상태</th>
-                           <th width="35%">클래스명</th>
-                           <th width="12%">크리에이터명</th>
+                            <th width="10%" colspan = "2">NO</th>
+                            <th width="30%">클래스명</th>
+                            <th width="12%">크리에이터명</th>
                             <th width="10%">1개월 수강료</th>
                             <th width="8%">클래스 기간</th>
-                           <th width="8%">카테고리</th>
-                           <th width="10%">신청일</th>
+                            <th width="8%">카테고리</th>
+                            <th width="10%">신청일</th>
+                            <th width="8%">상태</th>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" class="childCheck"></td>
                             <td>135768</td>
-                            <td class="status">승인대기</td>
+                            <td class="btn"><button class="manageBtn waitinBtn">승인</button></td>
                             <td class="className">오유의 수채화 같은 아이패드 드로잉 클래스</td>
                             <td>오유</td>
                             <td>70,000원</td>
                             <td>5개월</td>
                             <td>일러스트</td>
                             <td>2022-05-17</td>
+                            <td class="status">승인대기</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" class="childCheck"></td>
                             <td>135769</td>
-                            <td class="status">승인대기</td>
+                            <td class="btn"><button class="manageBtn waitinBtn">승인</button></td>
                             <td class="className">색이 춤추는 마블링 도자기 클래스</td>
                             <td>mwm수지</td>
                             <td>70,000원</td>
                             <td>5개월</td>
                             <td>도예</td>
                             <td>2022-05-18</td>
+                            <td class="status">승인대기</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" class="childCheck"></td>
                             <td>135770</td>
-                            <td class="status back">재검토 요청</td>
+                            <td class="btn"><button class="manageBtn waitinBtn">승인</button></td>
                             <td class="className">누구나 쉽고 재밌게 배우는 브루어스 구움과자 레시피의 모든 것</td>
                             <td>브루어스커피</td>
                             <td>60,000원</td>
                             <td>5개월</td>
                             <td>베이킹</td>
                             <td>2022-05-18</td>
+                            <td class="status refuse">재검토 요청</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" class="childCheck"></td>
                             <td>135771</td>
-                            <td class="status">승인대기</td>
+                            <td class="btn"><button class="manageBtn waitinBtn">승인</button></td>
                             <td class="className">핸드폰으로 만드는 영상, 소중한 시간의 시록</td>
                             <td>제이</td>
                             <td>55,000원</td>
                             <td>5개월</td>
                             <td>영상</td>
                             <td>2022-05-19</td>
+                            <td class="status">승인대기</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" class="childCheck"></td>
                             <td>135772</td>
-                            <td class="status">승인대기</td>
+                            <td class="btn"><button class="manageBtn waitinBtn">승인</button></td>
                             <td class="className">평범한 사람이 돈 만드는 생각의 피밀, 머니 시크릿</td>
                             <td>김새해</td>
                             <td>45,000원</td>
                             <td>5개월</td>
                             <td>성공 마인드</td>
                             <td>2022-05-19</td>
+                            <td class="status">승인대기</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" class="childCheck"></td>
                             <td>135773</td>
-                            <td class="status">승인대기</td>
+                            <td class="btn"><button class="manageBtn waitinBtn">승인</button></td>
                             <td class="className">중국인처럼 말하기 하루 3분, 101일 챌린지</td>
                             <td>차이티</td>
                             <td>35,000원</td>
                             <td>5개월</td>
                             <td>제2외국어</td>
                             <td>2022-05-20</td>
+                            <td class="status">승인대기</td>
                         </tr>
                         <tr class="lastData">
-                            <td><input type="checkbox" class="childCheck"></td>
                             <td>135774</td>
-                            <td class="status">승인대기</td>
+                            <td class="btn"><button class="manageBtn waitinBtn">승인</button></td>
                             <td class="className">Java + 스프링부트 프레임워크 기초 제대로 배우기</td>
                             <td>IT 백과사전</td>
                             <td>30,000원</td>
                             <td>5개월</td>
                             <td>프로그래밍</td>
                             <td>2022-05-21</td>
+                            <td class="status">승인대기</td>
                         </tr>
                     </table>
                 </div>

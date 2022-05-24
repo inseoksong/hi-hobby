@@ -609,7 +609,7 @@
                                                     </span>
                                                 </div>
                                             </div> -->
-										<div class="css-30l5k6">
+										<div class="css-30l5k6" style="width: fit-content; height: fit-content;">
 											<div class="css-1egv2d9">
 												<div aria-colcount="9" aria-rowcount="1"
 													class="ReactVirtualized__Table" role="grid">
@@ -712,7 +712,7 @@
 													<div aria-label="grid"
 														class="ReactVirtualized__Grid ReactVirtualized__Table__Grid"
 														role="rowgroup" tabindex="0"
-														style="box-sizing: border-box; direction: ltr; height: 80px; position: relative; width: 1232px; will-change: transform; overflow: hidden;">
+														style="box-sizing: border-box; direction: ltr; height: fit-content; position: relative; width: 1232px; will-change: transform; overflow: hidden;">
 														<div class="ReactVirtualized__Grid__innerScrollContainer"
 															role="rowgroup"
 															style="width: auto; height: 72px; max-width: 1232px; max-height: 72px; overflow: hidden; position: relative;">
