@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 </head>
 <body>
-	<jsp:include page="header/header.jsp"/>
+	<jsp:include page="header.jsp"/>
 	<!-- ↑ 헤더 부분 -->
 	<section class="final-wrap">
 		<div class="container-wrap">
@@ -258,7 +258,7 @@
 		</div>
 	</section>
 	<!-- ↓ 푸터 부분 -->
-	<jsp:include page="footer/footer.jsp"/>
+	<jsp:include page="footer.jsp"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="asset/js/onedayClass.js"></script>

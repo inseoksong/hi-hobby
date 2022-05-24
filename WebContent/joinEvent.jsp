@@ -402,7 +402,7 @@
         </div>
     </div>
    <!-- 푸터 영역입니다 -->
-   <jsp:include page=""footer.jsp"/>
+   <jsp:include page="footer.jsp"/>
 </body>
 <script src="asset/js/joinEvent.js"></script>
 </html>
