@@ -67,6 +67,11 @@
 								<option value="music">음악</option>
 								<option value="exercise">운동</option>
 								<option value="life">라이프</option>
+								<option value="photo">사진 · 영상</option>
+								<option value="finance">금융 · 재태크</option>
+								<option value="programming">프로그래밍</option>
+								<option value="business">비즈니스</option>
+								<option value="language">외국어</option>
 							</select>
 						</div>
 						<div class="class-place">
@@ -116,9 +121,9 @@
 						<div class="video-file">
 							<p>비디오 업로드</p>
 							<label for="video-file">
-								<span>
+								<div>
 									<img src="https://creator.class101.net/images/video-add.png">
-								</span>
+								</div>
 							</label>
 							<input type="file" id="video-file" name="videoFile">
 						</div>

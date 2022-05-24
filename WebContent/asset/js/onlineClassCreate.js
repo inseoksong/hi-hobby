@@ -22,6 +22,10 @@ const video = document.querySelector("div.video");
 const basicDiv = document.querySelector("div.bottomside");
 const videoDiv = document.querySelector("div.video-wrap");
 
+const videoFile = document.querySelector("input#video-file");
+const videoThumbnail = document.querySelector("label[for='video-file'] div");
+const videoImg = document.querySelector("label[for='video-file'] img");
+
 basic.addEventListener("click", function() {
 	basic.style.borderBottom = "3px solid #1a1a1a";
 	video.style.borderBottom = "0px";
@@ -110,6 +114,22 @@ creatorFile1.addEventListener("change", function(event) {
         }
         else {
         	creatorThumbnail1.src = "https://creator.class101.net/images/ic-unknown.png";
+        }
+    }
+});
+
+videoFile.addEventListener("change", function(event) {
+    let reader = new FileReader();
+    reader.readAsDataURL(event.target.files[0]);
+    reader.onload = function(event) {
+        let url = event.target.result;
+        if(url.includes("image")) {
+        	videoThumbnail.style.backgroundImage = "url('" + url + "')";
+        	videoImg.style.display = "none";
+        }
+        else {
+        	videoThumbnail.style.backgroundImage = "url('')";
+        	videoImg.style.display = "inline";
         }
     }
 });

@@ -284,7 +284,7 @@ div.video-file p {
 	padding-top: 16px;
 }
 
-div.video-file label span {
+div.video-file label div {
 	display: flex;
 	width: 908px;
 	height: 350px;
@@ -306,4 +306,9 @@ div.video-file input {
 
 div.topside div {
 	cursor: pointer;
+}
+
+label[for='video-file'] div {
+    background-size: 100% 100%;
+    cursor: pointer;
 }
