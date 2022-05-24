@@ -97,11 +97,11 @@ div.class-buy {
 	z-index: 999;
 }
 
-div.sticky {
+/* div.sticky {
 	position: sticky;
 	top: 32px;
 	right: 0;
-}
+} */
 
 div.class-name {
 	font-size: 26px;
