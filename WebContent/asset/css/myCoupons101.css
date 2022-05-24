@@ -433,6 +433,8 @@ a{
 	cursor: pointer;
 }
 
-
+#buttonMyPage:hover{
+	background-color: #F0EEEE;
+}
 
 

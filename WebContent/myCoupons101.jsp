@@ -128,7 +128,7 @@
 				<div class="kgBzKM">
 					<div class="ihVMlk">
 						<div class="bxTXNb">
-							<div class="iTUWBy">
+							<div id="buttonMyPage" class="iTUWBy">
 								<a target="_self" class="iDrVSO" onclick="location.href='myPage101.jsp'">마이페이지</a>
 							</div>
 							<div class="lkWmez"></div>
@@ -160,7 +160,7 @@
 									<br>
 									지금 새로운 쿠폰을 받아보세요.
 								</div>
-								<a class="gBCbWC" href="https://www.google.co.kr/">쿠폰 이벤트 확인하기</a>
+								<a class="gBCbWC" onclick="location.href='blocB.jsp'">쿠폰 이벤트 확인하기</a>
 							</div>
 						</div>
 						<div class="dkJRnq"></div>
