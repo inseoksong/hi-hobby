@@ -1,0 +1,922 @@
+html, body{
+    margin : 0 ;
+    padding : 0 ;
+}
+
+body {
+    font-family:'Pretendard JP',Pretendard,system-ui,Roboto,'Helvetica Neue','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif;
+    color: rgb(26, 26, 26);
+}
+
+a{
+    text-decoration: none;
+}
+
+nav {
+    max-width: 1216px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.nav-wrap {
+    display: flex;
+    width: calc(100% - 40px);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor : pointer;
+}
+
+div.all-menu {
+    align-items: center;
+    width : 140px;
+}
+
+div.all-menu p{
+    display: flex;
+    float: left;
+}
+
+div.all-menu span {
+    margin-bottom: 3px;
+    margin-left: 2px;
+    line-height: 53px;
+}
+
+div.all-menu-below{
+    position : absolute;
+    clear:both;
+    width : 140px;
+    background-color: white;
+    position: relative;
+}
+
+.below-div{
+    clear : both;
+    visibility: hidden;
+    width : 160px;
+    position: absolute;
+    z-index: 2000;
+    border :1px rgb(102, 102, 102) solid;
+}
+
+.toggle{
+    visibility : visible;
+    background-color: white;
+}
+
+.child-wrap{
+    width:160px;
+    height : 40px;
+}
+
+.child-wrap:hover {
+    background-color: #E5E5E5;
+}
+
+.white:hover{
+    background-color: white;
+}
+
+div.below-child{
+    width:135px;
+    height : 40px;
+    line-height: 40px;
+    margin: 0;
+    margin-left: 20px;
+}
+
+div.cate-top{
+    width : 140px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color :rgb(162, 162, 162);
+}
+
+div.cate-bottom{
+    width : 140px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: rgb(26, 26, 26);
+}
+
+div.other-menu{
+    display : flex;
+}
+
+div.other-menu a {
+    text-decoration: none;
+    color : #1A1A1A;
+}
+
+div.rolling-banner{
+    position: relative;
+    width : 100vw;
+    height : 516px;
+    background-color: transparent;
+}
+
+button.rollingBtn{
+    border-style: none;
+    background: transparent;
+    color : white;
+    margin-left: 300px;
+    font-weight: 100;
+    font-size: 30px;
+    position: absolute;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+button.rollPrev{
+    right: 305px;
+    top: 352px;
+}
+
+button.rollPrev:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+button.rollNext{
+    right: 270px;
+    top: 352px;
+}
+
+button.rollNext:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+div.banner-container {
+    width : 100vw;
+    height : 516px;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+div.banner-full {
+    width : 600vw;
+    height : 100%;
+    background-color: transparent;
+    display : flex;
+    float : left;
+}
+
+div.bannerChild{
+    width : 100vw;
+    height : 424px;
+}
+
+div.bannerChild img {
+    width : 55%;
+    height : auto;
+    position: absolute;
+    z-index: 1000;
+    top : 10%;
+    left: 0;
+}
+
+div.banner-back{
+    width : 100vw;
+    height : 424px;
+    /* position: absolute; 이건왜?  */
+}
+
+
+div.banner01 div.banner-back{
+    background-color: rgb(26, 26, 26);
+}
+
+div.banner02 div.banner-back{
+    background-color: rgb(26, 26, 26);
+}
+
+div.banner03 div.banner-back{
+    background-color: rgb(26, 26, 26);
+}
+
+div.banner04 div.banner-back{
+    background-color: #eb3248;
+}
+
+div.banner05 div.banner-back{
+    background-color: rgb(26, 26, 26);
+}
+
+div.banner06 div.banner-back{
+    background-color: rgb(26, 26, 26);
+}
+
+div.banner07 div.banner-back{
+    background-color: #ff5946;
+}
+
+div.bannerCenter{
+    width : 1176px;
+    height : 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+div.text-wrap{
+    margin-left: 700px;
+    margin-top: 67px;
+    width : 516px;
+    height : 456px;
+}
+
+div.text01{
+    color : white;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+div.text02 {
+    margin-top: 20px;
+    color : rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+}
+
+div.text-bottom{
+    display: flex;
+    color : rgb(255, 255, 255);
+    font-size: 12px;
+    margin-top: 37%;
+}
+
+div.thisNum::after{
+    color : rgb(255, 255, 255);
+    content: "|";
+    height : 3px;
+    width : 10px;
+    margin: 0 7px;
+    font-weight: 100;
+}
+
+div.main-content {
+    width : 1216px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.main-content p.title{
+    font-size : 24px;
+    font-weight: bold;
+    letter-spacing: -0.4px;
+    color: rgb(26, 26, 26);
+    margin : 0 0 18px 0;
+}
+
+div.layer {
+    position : relative;
+}
+
+div.floor1, div.floor4, div.floor5 {
+    width : 100%;
+    height: 464px;
+}
+
+div.floor2{
+    width : 100%;
+    height : 610px;
+}
+
+div.floor3{
+    width : 100%;
+    height : 396px;
+}
+
+button.swipe-btn{
+    border-style: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+button.event{
+    border-style: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+button.prev-btn {
+    position : absolute;
+    left : -50px;
+    top : 150px;
+}
+
+button.next-btn {
+    position : absolute;
+    right : -50px;
+    top : 150px;
+}
+
+button.floor2-prev-btn {
+    position : absolute;
+    left : -50px;
+    top : 215px;
+}
+
+button.floor2-next-btn {
+    position : absolute;
+    right : -50px;
+    top : 215px;
+}
+
+div.container-hidden{
+    overflow: hidden;
+    width : 1216px;
+}
+
+div.container-full{
+    width : 1380px;
+}
+
+div.timedeal-container {
+    display : flex;
+    float : left;
+    margin-bottom: 72px;
+}
+
+div.main-content a {
+    text-decoration: none;
+}
+
+div.timedeal-container div {
+    width: 276px;
+    margin-right: 24px;
+}
+
+div.thumb-pic {
+    width : 276px;
+    height : 207px;
+    position : relative;
+    
+}
+
+div.thumb-pic img {
+    width : 100%;
+    height : 100%;
+    border-radius: 3px;
+}
+
+div.thumb-pic span svg {
+    position : absolute;
+    top : 10px;
+    right : 10px;
+    cursor:pointer;
+}
+
+.red-color{
+    fill:#FD3049;
+}
+
+span.coupon-mark {
+    position : absolute;
+    top : 11px;
+    left : 10px;
+    width :67px;
+    height : 23px;
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 23px;
+    border-radius: 3px;
+    border-radius: 2px;
+}
+
+span.violet-back{
+    background-color: rgb(99, 0, 216);
+}
+
+span.magenta-back{
+    background-color: rgb(255, 0, 122);
+}
+
+span.black-back{
+    background-color: black;
+}
+
+div.timedeal-time{
+    display : flex;
+    align-items: center;
+    width : 100%;
+    height : 20px;
+    background-color: rgb(99, 0, 216);
+    margin-top : 5px;
+    border-radius: 2px;
+}
+
+div.timedeal-time svg{
+    margin-left : 7px;
+}
+
+div.timedeal-time p{
+    color : white;
+    font-size: 11px;
+    font-weight: bold;
+    padding : 0;
+    margin-left : 5px;
+}
+
+p.creator-name {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    margin : 7px 0;
+}
+
+p.class-name {
+    font-size : 14px;
+    letter-spacing: -0.15px;
+    color: rgb(26, 26, 26);
+    margin: -3px 0px -9px 0;
+}
+
+div.good-icon {
+    width:100%;
+    display: flex;
+    align-items: center;
+    margin : 0;
+    padding : 0;
+}
+
+div.good-child {
+    display: flex;
+    align-items: center;
+    margin : 0 5px 0 0;
+    padding : 0;
+    width : 50px;
+}
+
+div.good-icon p{
+    color:rgb(162, 162, 162);
+    font-size: 11px;
+    margin: 0 0 0 1px;
+    padding : 0;
+}
+
+div.linediv {
+    background-color: #F8F8F8;
+    width: 100%;
+    height: 1px;
+    margin: 6px 0;
+}
+
+div.price-wrap {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 0;
+}
+
+div.price-wrap p{
+    margin: 0 4px 0 0 ;
+    font-size: 0.8125rem;
+}
+
+p.per{
+    color: #FD3049;
+    font-weight: 700;
+}
+
+p.price {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #1A1A1A;
+}
+
+p.period {
+    font-size: 0.6875rem;
+    font-weight: 400;
+    color: #A2A2A2;
+}
+
+div.md-container-hidden {
+    width :1216px;
+    overflow-x: hidden;
+}
+
+div.md-container-full{
+    width : 2745px;
+}
+
+div.md-container {
+    width:1216px;
+    display : flex;
+    float : left;
+    margin-bottom: 85px;
+}
+
+div.md-container div {
+    width: 276px;
+    margin-right: 24px;
+}
+
+div.md-picture {
+    position : relative;
+    width : 276px;
+    height: 368px;
+}
+
+div.md-picture div{
+    width : 276px;
+    height: 368px;
+    overflow : hidden;
+}
+
+div.md-picture img {
+    width : auto;
+    height: 100%;
+    border-radius: 3px;
+}
+
+#id1 {
+    width : 276px;
+    height: 368px;
+    background-image: "https://cdn.class101.net/images/543d16cb-48be-43ae-9c88-cc84e65f9c09/750xauto.webp";
+    background-size: cover;
+    background-position: center;
+}
+
+div.md-picture span {
+    position : absolute;
+    top : 8px;
+    right : 8px;
+}
+
+div.event-hidden{
+    width : 1216px;
+    overflow-x: hidden;
+}
+
+div.event-full{
+    width : 1576px;
+    display : flex;
+    float : left;
+}
+
+div.event-container {
+    display : flex;
+    float : left;
+    margin-bottom: 85px;
+}
+
+div.event-container > div{
+    width: 376px;
+    margin-right: 24px;
+}
+
+div.event-picture div {
+    width : 376px;
+    height : 221px;
+}
+
+div.event-title {
+    margin : 22px 0 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(26, 26, 26);
+    letter-spacing: -0.15px;
+}
+
+div.period-wrap {
+    display: flex;
+    align-items: center;
+    float: left;
+    margin-bottom: 72px;
+}
+
+div.period-wrap p.d-day{
+    color : rgb(253, 48, 73);
+    font-size: 4px;
+    font-weight: 700;
+    margin: 3px 10px 0 0;
+}
+
+div.period-wrap p.period{
+    color: rgb(26, 26, 26);
+    font-size: 11px;
+    margin: 5px 0 0 0;
+}
+
+div.top10-container {
+    display : flex;
+    float : left;
+    margin-bottom: 72px;
+}
+
+div.top10-container div {
+    width: 276px;
+    margin-right: 24px;
+}
+
+div.title-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.title-wrap p.more-class{
+    font-size: 14px;
+    font-weight: 800;
+    color : rgb(162, 162, 162);
+    margin : 0;
+}
+
+div.one-container {
+    display : flex;
+    float : left;
+    margin-bottom: 72px;
+}
+
+div.one-container div {
+    width: 276px;
+    margin-right: 24px;
+}
+
+span.one-point{
+    background-color: black;
+}
+
+div.middle-rolling{
+    width : 100vw;
+    height : 206px;
+    position : relative;
+}
+
+.middleBtn{
+    position: absolute;
+    background-color: white;
+    width : 32px;
+    height : 32px;
+    border-radius: 5px;
+    font-size: 22px;
+    color:rgb(102, 102, 102);
+    z-index : 1000;
+    border: none;
+}
+
+.middleBtn:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.middlePrev{
+    top : 160px;
+    left : 1226px
+}
+
+.middleNext{
+    top : 160px;
+    left : 1258px
+}
+
+.middle-container{
+    overflow: hidden;
+}
+
+div.middle-full{
+    width : auto;
+    height: 206px;
+    display: flex;
+
+}
+
+div.middle-child{
+    width  :100vw;
+    height: 206px;
+}
+
+div.black{
+    width : 100vw;
+    height: 206px;
+    background-color: black;
+}
+
+.middleContentWrap{
+    width : 1216px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.middleTextWrap{
+    padding-top: 40px;
+}
+
+.middle-title{
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+}
+
+.middle-text{
+    color : white;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.middle-more{
+    width : 90px;
+    height : 32px;
+    background-color: rgb(248, 248, 248);
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    margin-top: 25px;
+    border-radius: 3px;
+}
+
+.middleImg{
+    object-fit : cover;
+    width  :360px;
+    height :240px;
+}
+
+.middleImg > span{
+    position: relative;
+    max-width: 360px;
+    width  :100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.middleImg img{
+    position: absolute;
+    bottom : 0;
+    top: -34px;
+    width  :100%;
+    height: 100%;
+}
+
+.red{
+    background-color: rgb(255, 62, 85);
+    width : 100vw;
+    height: 206px;
+}
+
+.orange{
+    background-color: rgb(255, 91, 15);
+    width : 100vw;
+    height: 206px;
+}
+
+.orange > span {
+    width : 100%;
+    height : 100%;
+}
+
+.latelyUpdate{
+    margin-top: 50px;
+    width: 1216px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.latelyUpdate p.title{
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -0.4px;
+    color: rgb(26, 26, 26);
+    margin: 0 0 18px 0;
+}
+
+.latelyClass-container {
+    width : 1216px;
+}
+
+.class-cell{
+    width : 276px;
+    margin : 24px;
+}
+
+ul.class-list {
+    overflow: hidden;
+    list-style: none;
+    display : flex;
+    flex-wrap: wrap;
+    place-content: stretch flex-start;
+    margin: 0px -12px -32px;
+    padding: 0px;
+    justify-content: space-around;
+}
+
+ul.class-list li {
+    width : 25%;
+    margin : 15px 0;
+}
+
+div.thumb-pic img {
+    width : 100%;
+    height : 100%;
+    border-radius: 3px;
+}
+
+div.thumb-pic span svg {
+    position : absolute;
+    top : 10px;
+    right : 10px;
+    cursor:pointer;
+}
+
+.red-color{
+    fill:#FD3049;
+}
+
+span.coupon-mark {
+    position : absolute;
+    top : 11px;
+    left : 10px;
+    width :67px;
+    height : 23px;
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 23px;
+    border-radius: 3px;
+    border-radius: 2px;
+}
+
+span.magenta-back{
+    background-color: rgb(255, 0, 122);
+}
+
+p.creator-name {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    margin : 7px 0;
+}
+
+p.class-name {
+    text-align: left;
+    font-size : 14px;
+    letter-spacing: -0.15px;
+    color: rgb(26, 26, 26);
+    margin: -3px 0px -9px 0;
+}
+
+div.good-icon {
+    width:100%;
+    display: flex;
+    align-items: center;
+    margin : 0;
+    padding : 0;
+}
+
+div.good-child {
+    display: flex;
+    align-items: center;
+    margin : 0 5px 0 0;
+    padding : 0;
+    width : 50px;
+}
+
+div.good-icon p{
+    color:rgb(162, 162, 162);
+    font-size: 11px;
+    margin: 0 0 0 1px;
+    padding : 0;
+}
+
+div.linediv {
+    background-color: #F8F8F8;
+    width: 100%;
+    height: 1px;
+    margin: 6px 0;
+}
+
+div.price-wrap {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 0;
+}
+
+div.price-wrap p{
+    margin: 0 4px 0 0 ;
+    font-size: 0.8125rem;
+}
+
+p.per{
+    color: #FD3049;
+    font-weight: 700;
+}
+
+p.price {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #1A1A1A;
+}
+
+p.period {
+    font-size: 0.6875rem;
+    font-weight: 400;
+    color: #A2A2A2;
+}
