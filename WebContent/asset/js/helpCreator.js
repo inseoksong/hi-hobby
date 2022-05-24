@@ -11,7 +11,7 @@ profile.addEventListener("click",function (){
 
         logOut.addEventListener("click", function (){
             console.log("클릭됨");
-            window.open('login/adminLogin.html','_self',true);
+            window.open('adminLogin.jsp','_self',true);
         });
     }
 });

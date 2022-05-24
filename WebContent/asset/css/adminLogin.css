@@ -15,7 +15,7 @@ a{
 }
 
 body {
-    background-image: url('img/back.png');
+    background-image: url('/hi_hobby/asset/img/adminLoginBack.png');
     display: flex;
     align-items: center;
 }

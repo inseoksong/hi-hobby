@@ -4,13 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="blockB/blocB.css">
+<link rel="stylesheet" href="asset/css/blockB.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
     <link rel="shortcut icon" href="asset/img/favicon.ico">
 
 <title>클래스101 | 세상의 모든 클래스, 클래스101</title>
 </head>
 <body>
+<jsp:include page="header.jsp"/>
+<!-- 헤더 영역 -->
     <section>
         <div class="share-modal">
             <div class="shareBox">
@@ -52,11 +54,13 @@
             </div>
         </div>
         <div class="parent">
-            <div class="top-block"></div>
+        	<div class= "backgroundWrap">
+            	<div class="top-block"></div>
+        	</div>
             <div class="content-wrap">
                 <div>
                     <div class="img-wrap">
-                        <div class="content01"><img src="img/01.webp"></div>
+                        <div class="content01"><img src="asset/img/blockB01.webp"></div>
                     </div>
                     <div class="textareaWrap">
                         <div class="textTop"><span>
@@ -68,7 +72,7 @@
                             지금 다운로드하세요!
                         </span></div>
                         <div class="coupon">
-                            <img src="img/coupon.png">
+                            <img src="asset/img/blockBcoupon.png">
                         </div>
                     </div>
                     <div class="class-wrap">
@@ -79,7 +83,7 @@
                                     <div class="class-cell">
                                         <a>
                                             <div class="thumb-pic">
-                                                <div><img src="img/class01.webp"></div>
+                                                <div><img src="asset/img/class01.webp"></div>
                                                 <span class="coupon-mark magenta-back">
                                                     3만원 쿠폰
                                                 </span>
@@ -110,7 +114,7 @@
                                     <div class="class-cell">
                                         <a>
                                             <div class="thumb-pic">
-                                                <div><img src="img/class02.webp"></div>
+                                                <div><img src="asset/img/class02.webp"></div>
                                                 <span class="coupon-mark magenta-back">
                                                     3만원 쿠폰
                                                 </span>
@@ -141,7 +145,7 @@
                                     <div class="class-cell">
                                         <a>
                                             <div class="thumb-pic">
-                                                <div><img src="img/class03.webp"></div>
+                                                <div><img src="asset/img/class03.webp"></div>
                                                 <span class="coupon-mark magenta-back">
                                                     3만원 쿠폰
                                                 </span>
@@ -172,7 +176,7 @@
                                     <div class="class-cell">
                                         <a>
                                             <div class="thumb-pic">
-                                                <div><img src="img/class04.webp"></div>
+                                                <div><img src="asset/img/class04.webp"></div>
                                                 <span class="coupon-mark magenta-back">
                                                     3만원 쿠폰
                                                 </span>
@@ -203,7 +207,7 @@
                                     <div class="class-cell">
                                         <a>
                                             <div class="thumb-pic">
-                                                <div><img src="img/class01.webp"></div>
+                                                <div><img src="asset/img/class01.webp"></div>
                                                 <span class="coupon-mark magenta-back">
                                                     3만원 쿠폰
                                                 </span>
@@ -234,7 +238,7 @@
                                     <div class="class-cell">
                                         <a>
                                             <div class="thumb-pic">
-                                                <div><img src="img/class02.webp"></div>
+                                                <div><img src="asset/img/class02.webp"></div>
                                                 <span class="coupon-mark magenta-back">
                                                     3만원 쿠폰
                                                 </span>
@@ -265,7 +269,7 @@
                                     <div class="class-cell">
                                         <a>
                                             <div class="thumb-pic">
-                                                <div><img src="img/class03.webp"></div>
+                                                <div><img src="asset/img/class03.webp"></div>
                                                 <span class="coupon-mark magenta-back">
                                                     3만원 쿠폰
                                                 </span>
@@ -296,7 +300,7 @@
                                     <div class="class-cell">
                                         <a>
                                             <div class="thumb-pic">
-                                                <div><img src="img/class04.webp"></div>
+                                                <div><img src="asset/img/class04.webp"></div>
                                                 <span class="coupon-mark magenta-back">
                                                     3만원 쿠폰
                                                 </span>
@@ -327,7 +331,7 @@
                                     <div class="class-cell">
                                         <a>
                                             <div class="thumb-pic">
-                                                <div><img src="img/class01.webp"></div>
+                                                <div><img src="asset/img/class01.webp"></div>
                                                 <span class="coupon-mark magenta-back">
                                                     3만원 쿠폰
                                                 </span>
@@ -409,6 +413,8 @@
             </div>
         </div>
     </section>
+    <!-- 푸터 영역 -->
+<jsp:include page="footer.jsp"/>
 </body>
-<script src="blockB/blockB.js"></script>
+<script src="asset/js/blockB.js"></script>
 </html>

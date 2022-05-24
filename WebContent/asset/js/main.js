@@ -1,17 +1,16 @@
 const mainBanner = document.querySelector('div.banner-full');
 
-let autoCount=0;
+let count = 0;
 
 setInterval(function () {
-    autoCount++;
-    autoCount = autoCount ==7? 0 : autoCount;
-    mainBanner.style.transform = "translate(-" + autoCount*100 + "vw)";
+	count++;
+	count = count ==7? 0 :acount;
+    mainBanner.style.transform = "translate(-" + count*100 + "vw)";
 },3000);
 
 const rollBtns = document.querySelectorAll('button.rollingBtn');
 
 rollBtns.forEach(btn=>{
-    let count = 0;
     btn.addEventListener("click",function(){
         let result = '';
         let btnType = btn.classList[2];

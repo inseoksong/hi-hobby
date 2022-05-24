@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
- <link rel="stylesheet" href="adminLogin/adminLogin.css">
+ <link rel="stylesheet" href="asset/css/adminLogin.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
     <link rel="shortcut icon" href="asset/adminLogin/img/favicon.ico">
     
@@ -30,7 +30,7 @@
                             <input type="password" id="pw" name="userPw" class="input-text" placeholder="********" required>
                         </div>
                         <p class="pwMsg" style="display : block"> </p>
-                        <a href="101adminFindPw.jsp">
+                        <a href="adminFindPw.jsp">
                             <div class="login-ment findPw"><span>비밀번호를 잊으셨나요?</span></div>
                         </a>
                         <div class="login-button">
@@ -42,31 +42,31 @@
                     <div class="sns-button-wrap">
                         <button class="sns-button kakao">
                             <div class="button-text-wrap">
-                                <div><img src="adminLogin/img/kakaoIcon.svg"></div>
+                                <div><img src="asset/img/adminLoginKakaoIcon.svg"></div>
                                 <span>카카오로 시작하기</span>
                             </div>
                         </button>
                         <button class="sns-button kakao">
                             <div class="button-text-wrap">
-                                <div><img src="adminLogin/img/naverIcon.svg"></div>
+                                <div><img src="asset/img/adminLoginNaverIcon.svg"></div>
                                 <span>네이버로 시작하기</span>
                             </div>
                         </button>
                         <button class="sns-button kakao">
                             <div class="button-text-wrap">
-                                <div><img src="adminLogin/img/GoogleIcon.svg"></div>
+                                <div><img src="asset/img/adminLoginGoogleIcon.svg"></div>
                                 <span>구글로 시작하기</span>
                             </div>
                         </button>
                         <button class="sns-button kakao">
                             <div class="button-text-wrap">
-                                <div><img src="adminLogin/img/facebookIcon.svg"></div>
+                                <div><img src="asset/img/adminLoginFacebookIcon.svg"></div>
                                 <span>페이스북으로 시작하기</span>
                             </div>
                         </button>
                         <button class="sns-button kakao">
                             <div class="button-text-wrap">
-                                <div><img src="adminLogin/img/appleIcon.svg"></div>
+                                <div><img src="asset/img/adminLoginAppleIcon.svg"></div>
                                 <span>애플로 시작하기</span>
                             </div>
                         </button>
@@ -76,5 +76,5 @@
         </div>
     </div>
 </body>
-<script src="adminLogin/adminLogin.js"></script>
+<script src="asset/js/adminLogin.js"></script>
 </html>

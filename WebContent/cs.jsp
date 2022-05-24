@@ -4,14 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
- <link rel="stylesheet" href="CS/cs.css">
+ <link rel="stylesheet" href="asset/css/cs.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
     <link rel="shortcut icon" href="asset/img/favicon.ico">
 
 <title>클래스101 | 세상의 모든 클래스, 클래스101</title>
 </head>
 <body>
-<jsp:include page="header/header.jsp"/>
+<jsp:include page="header.jsp"/>
 <!-- 헤더영역 -->
     <section>
         <div class="csWrap">
@@ -130,6 +130,6 @@
         </div>
     </section>
     <!-- 푸터 영역 -->
-      <jsp:include page="footer/footer.jsp"/>
+      <jsp:include page="footer.jsp"/>
 </body>
 </html>
