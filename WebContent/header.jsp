@@ -30,13 +30,9 @@
                     <div style="width: 36px;"></div> <!-- 공백 블록 -->
                     <div>
                         <div class="class-select">
-                            <a href="">
-                                <h4 class="online">온라인 클래스</h4>
-                            </a>
+                            <h4 class="online selectClass">온라인 클래스</h4>
                             <div style="width:16px"></div> <!-- 공백 블록 -->
-                            <a href="">
-                                <h4 class="oneday">원데이 클래스</h4>
-                            </a>
+                            <h4 class="oneday">원데이 클래스</h4>
                         </div>
                     </div>
                     <div style="width:36px;"></div> <!-- 공백 블록 -->

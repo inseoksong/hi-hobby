@@ -22,7 +22,7 @@
             </div>
             <div class="footer-basic">
                 <p class="footer-title">클래스101</p>
-                <a href="">
+                <a href="main.jsp">
                     <p class="footer-bottom-text">홈</p>
                 </a>
                 <a href="">
@@ -49,7 +49,9 @@
             </div>
             <div class="footer-qna">
                 <p class="footer-title">고객센터</p>
-                <button class="footer-qna">문의하기</button>
+                <a href="cs.jsp"/>
+                	<button class="footer-qna">문의하기</button>
+                </a>
                 <p class="qna-bottom-text">오전 10시 ~ 오후 6시 (주말, 공휴일 제외)</p>
             </div>
         </div>

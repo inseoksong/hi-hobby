@@ -104,12 +104,13 @@ div.header-left h4 {
     font-size: 1.25rem;
 }
 
-div.class-select h4.online {
-    color :#19ce60;
+h4 {
+    color : #1A1A1A;
+    cursor : pointer;
 }
 
-div.class-select h4.oneday {
-    color : #1A1A1A;
+.selectClass {
+	color :#19ce60;
 }
 
 div.search-box {
