@@ -1,14 +1,3 @@
-/* 
-$(document).ready(function() {
-    $('#summernote').summernote({
-        height : 300,   // 에디터 높이
-        placeholder : '내용을 입력하세요.',
-        focus : true,
-        lang: "ko-KR",
-
-    });
-});
- */
 
 const confirmBtn = document.querySelector('button.confirm');
 const alertMsg = document.querySelector('div.alert');
@@ -21,5 +10,5 @@ function complete() {
     }
 
     window.setTimeout(
-        "window.open('cs.html','_self')",3000);
+        "window.open('cs.jsp','_self')",3000);
 }

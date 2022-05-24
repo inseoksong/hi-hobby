@@ -14,13 +14,13 @@ a {
     text-decoration: none;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 /* a태그의 색상 > 부모에게 상속 */
 a:-webkit-any-link {
     color: inherit;
-}
-
-body{
-    overflow: hidden;
 }
 
 section{
@@ -107,7 +107,7 @@ textarea{
 
 .buttonWrap{
     position: absolute;
-    right : 0;
+    right : 22px;
 }
 
 button.confirm {
@@ -116,8 +116,10 @@ button.confirm {
     background-color: #18a550;
     border : none;
     color : white;
-    font-size: 14px;
-    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 32px;
     cursor: pointer;
     margin-right: 20px;
+    font-family:'Pretendard JP',Pretendard,system-ui,Roboto,'Helvetica Neue','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif;
 }

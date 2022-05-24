@@ -108,11 +108,11 @@
                         <p>크리에이터 지원</p>
                     </a>
                     <div style="width:24px;"></div> <!-- 공백 블록 -->
-                    <a href="">
+                    <a href="cs.jsp">
                         <p>고객센터</p>
                     </a>
                     <div style="width:24px;"></div> <!-- 공백 블록 -->
-                    <a href="">
+                    <a href="OneOnly_userService/login101/login101.jsp">
                         <p>로그인</p>
                     </a>
                 </div>

@@ -11,13 +11,14 @@
 <title>클래스101 | 세상의 모든 클래스, 클래스101</title>
 </head>
 <body>
-    
+<jsp:include page="header/header.jsp"/>
+<!-- 헤더영역 -->
     <section>
         <div class="csWrap">
             <div class="helpWrap">
                 <div class="helpTop">
                     <div class="helpTitle"><span>문의하기</span></div>
-                    <a href="write.html">
+                    <a href="csWrite.jsp">
                         <button class="confirm">글쓰기</button>
                     </a>
                 </div>
@@ -128,5 +129,7 @@
             </div>
         </div>
     </section>
+    <!-- 푸터 영역 -->
+      <jsp:include page="footer/footer.jsp"/>
 </body>
 </html>
