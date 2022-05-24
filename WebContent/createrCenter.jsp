@@ -16,7 +16,10 @@
 <link rel="stylesheet" type="text/css"
 	href="asset/css/createrCenter.css">
 <link rel="shortcut icon" href="asset/img/favicon.ico">
-<title>하이하비 크리에이터 센터 | 메인</title>
+<link rel="stylesheet" href="asset/css/classCreateChoice.css">
+<link rel="stylesheet" href="asset/css/onedayClassCreate.css">
+<title>클래스101 크리에이터 센터 | 온라인 클래스 부터 전자책, 디지털 파일까지 크리에이터의 삶은
+	클래스101에서 시작해 2022세요</title>
 </head>
 <body>
 	<div id="__next" data-reactroot="">
