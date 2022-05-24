@@ -28,17 +28,17 @@ function famale() {
     genChe = false;
 }
 function notice(idx){
-    var  col2 = document.getElementsByClassName('css-1mg3xmk 2')[0];
-    var  col3 = document.getElementsByClassName('css-165esj4 3')[0];
-    var to = document.getElementsByClassName('css-1wbal16')[0];
-    var co = document.getElementsByClassName('css-a1maoc')[0];
+    var  col2 = document.getElementsByClassName('.css-1mg3xmk 2')[0];
+    var  col3 = document.getElementsByClassName('.css-165esj4 3')[0];
+    var to = document.getElementsByClassName('.css-1wbal16')[0];
+    var co = document.getElementsByClassName('.css-a1maoc')[0];
 
-    var thr = document.getElementsByClassName('css-154w5w9')[0];
-    var fou = document.getElementsByClassName('Grid__StyledDiv-sc-81d45n-0 iIwnuy CreatorAccountProfileViewController__Container-sc-1u2e1vs-0 jrlbMn')[0];
-    var fiv = document.getElementsByClassName('css-ywnkfc')[0];
-    var six = document.getElementsByClassName('Spacing__Box-sc-47wgmh-0 fvDAgv')[0];
+    var thr = document.getElementsByClassName('.css-154w5w9')[0];
+    var fou = document.getElementsByClassName('.Grid__StyledDiv-sc-81d45n-0 iIwnuy CreatorAccountProfileViewController__Container-sc-1u2e1vs-0 jrlbMn')[0];
+    var fiv = document.getElementsByClassName('.css-ywnkfc')[0];
+    var six = document.getElementsByClassName('.Spacing__Box-sc-47wgmh-0 fvDAgv')[0];
 
-    var col1in = document.getElementsByClassName('css-zsoya5 in')[0];
+    var col1in = document.getElementsByClassName('.css-zsoya5 in')[0];
 
     var save = document.getElementById('save');
     var del = document.getElementById('del');
