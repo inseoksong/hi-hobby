@@ -7,7 +7,7 @@
 
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="preload" as="style">
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="stylesheet">
-<link rel="stylesheet" href="login101.css">
+<link rel="stylesheet" href="asset/css/login101.css">
 <title>로그인</title>
 </head>
 <body class="101-ui-portal" style="width: auto;">
@@ -86,7 +86,7 @@
 										<a class="underText"
 											onclick="location.href='searchPw101.jsp'">비밀번호를 잊으셨나요?</a> 
 										<a data-element-name="sign-up-button"
-											class="signUp" onclick="location.href='../signUp101/signUp101.jsp'">
+											class="signUp" onclick="location.href='signUp101/signUp101.jsp'">
 											회원가입하기</a>
 									</div>
 									<button type="submit"
@@ -115,13 +115,13 @@
 								</p>
 								<!-- 밑 이용약관 묶음 -->
 								<div class="termsOfUse_box">
-									<a onclick="location.href='../terms/jsp/termsOfUse101.jsp'" target="_blank"
+									<a onclick="location.href='termsOfUse101.jsp'" target="_blank"
 										rel="noreferrer" class="termsOfUse02">이용약관</a>
 									, 
-									<a onclick="location.href='../terms/jsp/infoCollection101.jsp'" target="_blank"
+									<a onclick="location.href='infoCollection101.jsp'" target="_blank"
 										rel="noreferrer" class="termsOfUse02">개인정보 수집 및 이용</a>
 									, 
-									<a onclick="location.href='../terms/jsp/personal_info101.jsp'" target="_blank"
+									<a onclick="location.href='personal_info101.jsp'" target="_blank"
 										rel="noreferrer" class="termsOfUse02">개인정보 제공</a>
 									내용을 확인하였고 동의합니다.
 								</div>

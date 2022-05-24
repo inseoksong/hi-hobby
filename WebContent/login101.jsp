@@ -7,7 +7,7 @@
 
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="preload" as="style">
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="stylesheet">
-<link rel="stylesheet" href="login101.css">
+<link rel="stylesheet" href="asset/css/login101.css">
 <title>로그인</title>
 </head>
 <body class="101-ui-portal" style="width: auto;">

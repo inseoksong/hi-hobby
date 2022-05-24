@@ -8,8 +8,8 @@
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="preload" as="style">
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="myOrder101.css">
-<link rel="stylesheet" href="miniHeadFoot101.css">
+<link rel="stylesheet" href="asset/css/myOrder101.css">
+<link rel="stylesheet" href="asset/css/miniHeadFoot101.css">
 <title>주문 내역</title>
 </head>
 <body class="101-ui-portal" style="width: auto;">
@@ -125,7 +125,7 @@
 							</div>
 							<div class="kWcFTw">
 								<div class="dOOEWv ilDyc">크리에이터</div>
-								<a class="hEiHUA" onclick="location.href='../../createrSupport.jsp'" target="_blank" rel="noreferrer">
+								<a class="hEiHUA" onclick="location.href='createrSupport.jsp'" target="_blank" rel="noreferrer">
 									<div class="cqZvVN hrrnrN">크리에이터 센터</div>
 								</a>
 								<a class="hEiHUA" href="https://www.google.co.kr/" target="_blank" rel="noreferrer">

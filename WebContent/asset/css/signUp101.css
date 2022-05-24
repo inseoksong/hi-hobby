@@ -426,7 +426,90 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 
 
+.gUToOv{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.edxcPn{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 16px;
+}
+
+.jbmNLF{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px 0px 4px;
+    color: rgb(26, 26, 26);
+}
 
 
+.kDVUuj{
+    display: flex;
+}
+
+.kDVUuj > div{
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
+
+.kDVUuj > div > input{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+
+.kDVUuj > button{
+    height: 48px;
+    border-top: 1px solid rgb(239, 239, 239);
+    border-right: 1px solid rgb(239, 239, 239);
+    border-bottom: 1px solid rgb(239, 239, 239);
+    border-image: initial;
+    border-left: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 10px;
+}
+
+.dGxueP{
+    display: block;
+}
+
+.eQAnnk{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+    border: 1px solid rgb(239, 239, 239);
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    width: 100%;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+}
+
+.jAuirA:disabled{
+    background-color: rgb(255, 255, 255);
+}
+
+.phone_num{
+    border: 1px solid rgb(239, 239, 239);
+}
+
+span.jwNHGa{
+	font-size: 13px !important;
+}
+
+#buttonColor:hover{
+	background-color: #DCDCDC;
+}
 
 
