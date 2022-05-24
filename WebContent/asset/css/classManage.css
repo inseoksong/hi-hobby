@@ -14,10 +14,6 @@ a{
     text-decoration: none;
 }
 
-body{
-    overflow: hidden;
-}
-
 header {
     width : 100%;
     height : 80px;
@@ -204,18 +200,6 @@ div.class-top{
     display: flex;
 }
 
-.class-top button {
-    width : 100px;
-    height : 45px;
-    background-color: #18a550;
-    border : none;
-    color : white;
-    font-size: 16px;
-    border-radius: 2px;
-    cursor: pointer;
-    margin-right: 20px;
-}
-
 .class-top-title{
     font-size: 24px;
     font-weight: 700;
@@ -270,10 +254,37 @@ div.list-wrap {
 }
 
 table.class-admin{
-    font-size: 14px;
+    font-size: 15px;
     width : 1300px;
     text-align: left;
     margin : 15px 0 0 2px ;
+}
+
+td.btn{
+    padding-left: 5px;
+}
+
+.manageBtn {
+    width: 55px;
+    height: 30px;
+    background-color: #18a550;
+    border : none;
+    color : white;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    border-radius: 32px;
+    cursor: pointer;
+    margin-right: 20px;
+    font-family:'Pretendard JP',Pretendard,system-ui,Roboto,'Helvetica Neue','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif;
+}
+
+.waitinBtn{
+    background-color: #18a550;
+}
+
+.refuseBtn{
+    background-color: rgb(218, 31, 31);
 }
 
 th{
@@ -299,11 +310,15 @@ td.className:hover{
 }
 
 .status{
-    color : #18a550;
+    color : rgb(26, 26, 26);
     font-weight: 700;
 }
 
-.back {
+.confirm{
+    color : #18a550;
+}
+
+.refuse {
     color : rgb(218, 31, 31);
 }
 

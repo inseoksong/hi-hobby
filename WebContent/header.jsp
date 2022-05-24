@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="asset/css/header.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
     
 </head>
@@ -112,12 +112,12 @@
                         <p>고객센터</p>
                     </a>
                     <div style="width:24px;"></div> <!-- 공백 블록 -->
-                    <a href="OneOnly_userService/login101/login101.jsp">
+                    <a href="login101.jsp">
                         <p>로그인</p>
                     </a>
                 </div>
             </div>
         </header>
 </body>
-<script src="header.js">
+<script src="asset/js/header.js">
 </script></html>

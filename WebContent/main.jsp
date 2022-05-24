@@ -6,14 +6,12 @@
 <meta charset="UTF-8">
 <link rel="shortcut icon" href="asset/img/favicon.ico">
 <title>클래스101 | 세상의 모든 클래스, 클래스101</title>
-<link rel="stylesheet" href="main/main.css">
-<link rel="stylesheet" href="header/header.css">
-<link rel="stylesheet" href="footer/footer.css">
+<link rel="stylesheet" href="asset/css/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 
 </head>
 <body>
-<jsp:include page="header/header.jsp"/>
+<jsp:include page="header.jsp"/>
 <!-- 헤더 영역입니다 -->
 <div class="main-wrap">
     <nav>
@@ -71,7 +69,7 @@
                 </div>
             </div>
             <div class="other-menu">
-                <a href="joinEventPage.jsp">
+                <a href="joinEvent.jsp">
                     <p>회원가입 혜택</p>
                 </a>
                 <div style="width:28px;"></div> <!-- 공백 블록 -->
@@ -103,12 +101,12 @@
             <button type="button" class="rollingBtn rollPrev prev">&lt;</button>
             <div class="banner-container">
                 <div class="banner-full">
-                    <a href="blocB.jsp">
+                    <a href="blockB.jsp">
                         <div class="bannerChild banner01">
                             <div class="banner-back">
                                 <div class="bannerCenter">
                                     <div>
-                                        <img src="main/img/roll01.webp">
+                                        <img src="asset/img/roll01.webp">
                                     </div>
                                     <div class="text-wrap">
                                         <div class="text-top">
@@ -132,7 +130,7 @@
                         <div class="banner-back">
                             <div class="bannerCenter">
                                 <div>
-                                    <img src="main/img/roll02.webp">
+                                    <img src="asset/img/roll02.webp">
                                 </div>
                                 <div class="text-wrap">
                                     <div class="text-top">
@@ -155,7 +153,7 @@
                         <div class="banner-back">
                             <div class="bannerCenter">
                                 <div>
-                                    <img src="main/img/roll03.webp">
+                                    <img src="asset/img/roll03.webp">
                                 </div>
                                 <div class="text-wrap">
                                     <div class="text-top">
@@ -179,7 +177,7 @@
                         <div class="banner-back">
                             <div class="bannerCenter">
                                 <div>
-                                    <img src="main/img/roll04.webp">
+                                    <img src="asset/img/roll04.webp">
                                 </div>
                                 <div class="text-wrap">
                                     <div class="text-top">
@@ -205,7 +203,7 @@
                         <div class="banner-back">
                             <div class="bannerCenter">
                                 <div>
-                                    <img src="main/img/roll05.webp">
+                                    <img src="asset/img/roll05.webp">
                                 </div>
                                 <div class="text-wrap">
                                     <div class="text-top">
@@ -230,7 +228,7 @@
                         <div class="banner-back">
                             <div class="bannerCenter">
                                 <div>
-                                    <img src="main/img/roll06.webp">
+                                    <img src="asset/img/roll06.webp">
                                 </div>
                                 <div class="text-wrap">
                                     <div class="text-top">
@@ -254,7 +252,7 @@
                         <div class="banner-back">
                             <div class="bannerCenter">
                                 <div>
-                                    <img src="main/img/roll07.webp">
+                                    <img src="asset/img/roll07.webp">
                                 </div>
                                 <div class="text-wrap">
                                     <div class="text-top">
@@ -331,7 +329,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/timedeal/time02.webp"></div>
+                                        <div><img src="asset/img/timedeal/time02.webp"></div>
                                         <span class="coupon-mark violet-back">
                                             6만원 쿠폰
                                         </span>
@@ -369,7 +367,7 @@
                                         <span class="coupon-mark violet-back">
                                             6만원 쿠폰
                                         </span>
-                                        <div><img src="main/img/timedeal/time03.webp"></div>
+                                        <div><img src="asset/img/timedeal/time03.webp"></div>
                                         <span><svg class="heart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path class="color" fill-rule="evenodd" d="M20.5 9c0-2-1.5-3.9-3.7-3.9-2.3 0-3.8 1.63-4.8 3.33-1-1.7-2.5-3.33-4.8-3.33C5 5.1 3.5 6.867 3.5 9c0 4.62 4.949 7.667 8.5 9.623 3.551-1.956 8.5-5.003 8.5-9.623zm-19-.176C1.5 5.607 3.962 3 7 3c2.7 0 4 1 5 2.2C13 4 14.3 3 17 3c3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#fff"></path></svg></span>
                                     </div>
                                     <div class="timedeal-time">
@@ -436,7 +434,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/timedeal/time02.webp"></div>
+                                        <div><img src="asset/img/timedeal/time02.webp"></div>
                                         <span class="coupon-mark violet-back">
                                             6만원 쿠폰
                                         </span>
@@ -474,7 +472,7 @@
                                         <span class="coupon-mark violet-back">
                                             6만원 쿠폰
                                         </span>
-                                        <div><img src="main/img/timedeal/time03.webp"></div>
+                                        <div><img src="asset/img/timedeal/time03.webp"></div>
                                         <span><svg class="heart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path class="color" fill-rule="evenodd" d="M20.5 9c0-2-1.5-3.9-3.7-3.9-2.3 0-3.8 1.63-4.8 3.33-1-1.7-2.5-3.33-4.8-3.33C5 5.1 3.5 6.867 3.5 9c0 4.62 4.949 7.667 8.5 9.623 3.551-1.956 8.5-5.003 8.5-9.623zm-19-.176C1.5 5.607 3.962 3 7 3c2.7 0 4 1 5 2.2C13 4 14.3 3 17 3c3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#fff"></path></svg></span>
                                     </div>
                                     <div class="timedeal-time">
@@ -541,7 +539,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/timedeal/time02.webp"></div>
+                                        <div><img src="asset/img/timedeal/time02.webp"></div>
                                         <span class="coupon-mark violet-back">
                                             6만원 쿠폰
                                         </span>
@@ -579,7 +577,7 @@
                                         <span class="coupon-mark violet-back">
                                             6만원 쿠폰
                                         </span>
-                                        <div><img src="main/img/timedeal/time03.webp"></div>
+                                        <div><img src="asset/img/timedeal/time03.webp"></div>
                                         <span><svg class="heart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path class="color" fill-rule="evenodd" d="M20.5 9c0-2-1.5-3.9-3.7-3.9-2.3 0-3.8 1.63-4.8 3.33-1-1.7-2.5-3.33-4.8-3.33C5 5.1 3.5 6.867 3.5 9c0 4.62 4.949 7.667 8.5 9.623 3.551-1.956 8.5-5.003 8.5-9.623zm-19-.176C1.5 5.607 3.962 3 7 3c2.7 0 4 1 5 2.2C13 4 14.3 3 17 3c3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#fff"></path></svg></span>
                                     </div>
                                     <div class="timedeal-time">
@@ -659,7 +657,7 @@
                             <div>
                                 <a>
                                     <div class="md-picture" id="md1">
-                                        <div><img src="main/img/md/md02.webp"></div>
+                                        <div><img src="asset/img/md/md02.webp"></div>
                                         <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.5 9c0-2-1.5-3.9-3.7-3.9-2.3 0-3.8 1.63-4.8 3.33-1-1.7-2.5-3.33-4.8-3.33C5 5.1 3.5 6.867 3.5 9c0 4.62 4.949 7.667 8.5 9.623 3.551-1.956 8.5-5.003 8.5-9.623zm-19-.176C1.5 5.607 3.962 3 7 3c2.7 0 4 1 5 2.2C13 4 14.3 3 17 3c3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#fff"></path></svg></span>
                                     </div>
                                     <p class="creator-name">Seal씰</p>
@@ -688,7 +686,7 @@
                             <div>
                                 <a>
                                     <div class="md-picture" id="md1">
-                                        <div><img src="main/img/md/md01.webp"></div>
+                                        <div><img src="asset/img/md/md01.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             사전예약 혜택
                                         </span>
@@ -742,7 +740,7 @@
                             <div>
                                 <a>
                                     <div class="md-picture" id="md1">
-                                        <div><img src="main/img/md/md02.webp"></div>
+                                        <div><img src="asset/img/md/md02.webp"></div>
                                         <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.5 9c0-2-1.5-3.9-3.7-3.9-2.3 0-3.8 1.63-4.8 3.33-1-1.7-2.5-3.33-4.8-3.33C5 5.1 3.5 6.867 3.5 9c0 4.62 4.949 7.667 8.5 9.623 3.551-1.956 8.5-5.003 8.5-9.623zm-19-.176C1.5 5.607 3.962 3 7 3c2.7 0 4 1 5 2.2C13 4 14.3 3 17 3c3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#fff"></path></svg></span>
                                     </div>
                                     <p class="creator-name">Seal씰</p>
@@ -771,7 +769,7 @@
                             <div>
                                 <a>
                                     <div class="md-picture" id="md1">
-                                        <div><img src="main/img/md/md01.webp"></div>
+                                        <div><img src="asset/img/md/md01.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             사전예약 혜택
                                         </span>
@@ -825,7 +823,7 @@
                             <div>
                                 <a>
                                     <div class="md-picture" id="md1">
-                                        <div><img src="main/img/md/md02.webp"></div>
+                                        <div><img src="asset/img/md/md02.webp"></div>
                                         <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.5 9c0-2-1.5-3.9-3.7-3.9-2.3 0-3.8 1.63-4.8 3.33-1-1.7-2.5-3.33-4.8-3.33C5 5.1 3.5 6.867 3.5 9c0 4.62 4.949 7.667 8.5 9.623 3.551-1.956 8.5-5.003 8.5-9.623zm-19-.176C1.5 5.607 3.962 3 7 3c2.7 0 4 1 5 2.2C13 4 14.3 3 17 3c3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#fff"></path></svg></span>
                                     </div>
                                     <p class="creator-name">Seal씰</p>
@@ -855,7 +853,7 @@
                             <div>
                                 <a>
                                     <div class="md-picture" id="md1">
-                                        <div><img src="main/img/md/md01.webp"></div>
+                                        <div><img src="asset/img/md/md01.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             사전예약 혜택
                                         </span>
@@ -902,7 +900,7 @@
                             <div>
                                 <a>
                                     <div class="event-picture">
-                                        <div><img src="main/img/event/375xauto.webp"></div>
+                                        <div><img src="asset/img/event/375xauto.webp"></div>
                                     </div>
                                     <div class="event-title">블록버스터 감사세일!  쿠폰도 블록버스터 급으로 드려요</div>
                                     <div class="period-wrap">
@@ -914,7 +912,7 @@
                             <div>
                                 <a>
                                     <div class="event-picture">
-                                        <div><img src="main/img/event/375xauto.webp"></div>
+                                        <div><img src="asset/img/event/375xauto.webp"></div>
                                     </div>
                                     <div class="event-title">블록버스터 감사세일!  쿠폰도 블록버스터 급으로 드려요</div>
                                     <div class="period-wrap">
@@ -926,7 +924,7 @@
                             <div>
                                 <a>
                                     <div class="event-picture">
-                                        <div><img src="main/img/event/375xauto.webp"></div>
+                                        <div><img src="asset/img/event/375xauto.webp"></div>
                                     </div>
                                     <div class="event-title">블록버스터 감사세일!  쿠폰도 블록버스터 급으로 드려요</div>
                                     <div class="period-wrap">
@@ -938,7 +936,7 @@
                             <div>
                                 <a>
                                     <div class="event-picture">
-                                        <div><img src="main/img/event/375xauto.webp"></div>
+                                        <div><img src="asset/img/event/375xauto.webp"></div>
                                     </div>
                                     <div class="event-title">블록버스터 감사세일!  쿠폰도 블록버스터 급으로 드려요</div>
                                     <div class="period-wrap">
@@ -969,7 +967,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/top10/01.gif"></div>
+                                        <div><img src="asset/img/top10/01.gif"></div>
                                         <span class="coupon-mark violet-back">
                                             6만원 쿠폰
                                         </span>
@@ -998,7 +996,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/top10/03.webp"></div>
+                                        <div><img src="asset/img/top10/03.webp"></div>
                                         <span class="coupon-mark violet-back">
                                             5만원 쿠폰
                                         </span>
@@ -1027,7 +1025,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/top10/02.webp"></div>
+                                        <div><img src="asset/img/top10/02.webp"></div>
                                         <span class="coupon-mark violet-back">
                                             5만원 쿠폰
                                         </span>
@@ -1056,7 +1054,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/top10/02.webp"></div>
+                                        <div><img src="asset/img/top10/02.webp"></div>
                                         <span class="coupon-mark violet-back">
                                             5만원 쿠폰
                                         </span>
@@ -1085,7 +1083,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/top10/01.gif"></div>
+                                        <div><img src="asset/img/top10/01.gif"></div>
                                         <span class="coupon-mark violet-back">
                                             6만원 쿠폰
                                         </span>
@@ -1114,7 +1112,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/top10/03.webp"></div>
+                                        <div><img src="asset/img/top10/03.webp"></div>
                                         <span class="coupon-mark violet-back">
                                             5만원 쿠폰
                                         </span>
@@ -1143,7 +1141,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/top10/02.webp"></div>
+                                        <div><img src="asset/img/top10/02.webp"></div>
                                         <span class="coupon-mark violet-back">
                                             5만원 쿠폰
                                         </span>
@@ -1172,7 +1170,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/top10/02.webp"></div>
+                                        <div><img src="asset/img/top10/02.webp"></div>
                                         <span class="coupon-mark violet-back">
                                             5만원 쿠폰
                                         </span>
@@ -1198,6 +1196,35 @@
                                     </div>
                                 </a>    
                             </div> 
+                            <div>
+                                <a>
+                                    <div class="thumb-pic">
+                                        <div><img src="asset/img/top10/01.gif"></div>
+                                        <span class="coupon-mark violet-back">
+                                            6만원 쿠폰
+                                        </span>
+                                        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.5 9c0-2-1.5-3.9-3.7-3.9-2.3 0-3.8 1.63-4.8 3.33-1-1.7-2.5-3.33-4.8-3.33C5 5.1 3.5 6.867 3.5 9c0 4.62 4.949 7.667 8.5 9.623 3.551-1.956 8.5-5.003 8.5-9.623zm-19-.176C1.5 5.607 3.962 3 7 3c2.7 0 4 1 5 2.2C13 4 14.3 3 17 3c3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#fff"></path></svg></span>
+                                    </div>
+                                    <p class="creator-name">유랑</p>
+                                    <p class="class-name">[💣24시간] 무명 이모티콘 작가가 인기 작가가 된 비결! 경쟁에서 살아남는 인기 이모티콘 만들기<p>
+                                    <div class="good-icon">
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path></svg></span>
+                                            <p>8438</p>
+                                        </div>
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 10.68c0-.691.503-1.251 1.135-1.251h2.273V22H3.135C2.508 22 2 21.427 2 20.749V10.68zm11.361-2.508h6.366c1.255 0 2.272 1.126 2.272 2.514 0 .151-.012.301-.037.45l-1.616 9.832C20.25 21.566 19.779 22 19.23 22H7.681V9.429L11.089 0c1.704 0 2.84 1.257 2.84 3.143 0 1.257-.189 2.933-.568 5.029z" fill="#d7d7d7"></path></svg></span>
+                                            <p>99%</p>
+                                        </div>
+                                    </div>
+                                    <div class="linediv"></div>
+                                    <div class="price-wrap">
+                                        <p class="per">38%</p>
+                                        <p class="price">월 39.200원</p>
+                                        <p class="period">(5개월)</p>
+                                    </div>
+                                </a>    
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1224,7 +1251,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/onepoint/01.webp"></div>
+                                        <div><img src="asset/img/onepoint/01.webp"></div>
                                         <span class="coupon-mark black-back">
                                             원포인트
                                         </span>
@@ -1247,7 +1274,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/onepoint/02.webp"></div>
+                                        <div><img src="asset/img/onepoint/02.webp"></div>
                                         <span class="coupon-mark black-back">
                                             원포인트
                                         </span>
@@ -1270,7 +1297,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/onepoint/01.webp"></div>
+                                        <div><img src="asset/img/onepoint/01.webp"></div>
                                         <span class="coupon-mark black-back">
                                             원포인트
                                         </span>
@@ -1293,7 +1320,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/onepoint/02.webp"></div>
+                                        <div><img src="asset/img/onepoint/02.webp"></div>
                                         <span class="coupon-mark black-back">
                                             원포인트
                                         </span>
@@ -1316,7 +1343,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/onepoint/01.webp"></div>
+                                        <div><img src="asset/img/onepoint/01.webp"></div>
                                         <span class="coupon-mark black-back">
                                             원포인트
                                         </span>
@@ -1339,7 +1366,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/onepoint/02.webp"></div>
+                                        <div><img src="asset/img/onepoint/02.webp"></div>
                                         <span class="coupon-mark black-back">
                                             원포인트
                                         </span>
@@ -1362,7 +1389,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/onepoint/01.webp"></div>
+                                        <div><img src="asset/img/onepoint/01.webp"></div>
                                         <span class="coupon-mark black-back">
                                             원포인트
                                         </span>
@@ -1385,7 +1412,7 @@
                             <div>
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/onepoint/02.webp"></div>
+                                        <div><img src="asset/img/onepoint/02.webp"></div>
                                         <span class="coupon-mark black-back">
                                             원포인트
                                         </span>
@@ -1405,6 +1432,29 @@
                                     </div>
                                 </a>    
                             </div> 
+                        	 <div>
+                                <a>
+                                    <div class="thumb-pic">
+                                        <div><img src="asset/img/onepoint/01.webp"></div>
+                                        <span class="coupon-mark black-back">
+                                            원포인트
+                                        </span>
+                                        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M20.5 9c0-2-1.5-3.9-3.7-3.9-2.3 0-3.8 1.63-4.8 3.33-1-1.7-2.5-3.33-4.8-3.33C5 5.1 3.5 6.867 3.5 9c0 4.62 4.949 7.667 8.5 9.623 3.551-1.956 8.5-5.003 8.5-9.623zm-19-.176C1.5 5.607 3.962 3 7 3c2.7 0 4 1 5 2.2C13 4 14.3 3 17 3c3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#fff"></path></svg></span>
+                                    </div>
+                                    <p class="creator-name">뜨개사계절</p>
+                                    <p class="class-name">코바늘 기초는 마스터했다면? 크로쉐 뷔스티에 만들기<p>
+                                    <div class="good-icon">
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path></svg></span>
+                                            <p>48</p>
+                                        </div>
+                                    </div>
+                                    <div class="linediv"></div>
+                                    <div class="price-wrap">
+                                        <p class="price">990원</p>
+                                    </div>
+                                </a>    
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1428,7 +1478,7 @@
                                      </a>
                                   </div>
                                   <div class="middleImg">
-                                    <span><img src="main/img/middle01.webp"></span>
+                                    <span><img src="asset/img/middle01.webp"></span>
                                   </div> 
                               </div>
                           </div> 
@@ -1444,7 +1494,7 @@
                                    </a>
                                 </div>
                                 <div class="middleImg">
-                                  <span><img src="main/img/middle02.webp"></span>
+                                  <span><img src="asset/img/middle02.webp"></span>
                                 </div> 
                             </div>
                         </div> 
@@ -1460,7 +1510,7 @@
                                      </a>
                                   </div>
                                   <div class="middleImg">
-                                    <span><img src="main/img/middle03.webp"></span>
+                                    <span><img src="asset/img/middle03.webp"></span>
                                   </div> 
                               </div>
                           </div> 
@@ -1476,7 +1526,7 @@
                                      </a>
                                   </div>
                                   <div class="middleImg">
-                                    <span><img src="main/img/middle04.webp"></span>
+                                    <span><img src="asset/img/middle04.webp"></span>
                                   </div> 
                               </div>
                           </div> 
@@ -1498,7 +1548,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/update/02.webp"></div>
+                                        <div><img src="asset/img/update/02.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -1528,7 +1578,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/update/03.webp"></div>
+                                        <div><img src="asset/img/update/03.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -1554,7 +1604,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/update/04.webp"></div>
+                                        <div><img src="asset/img/update/04.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -1584,7 +1634,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/update/05.webp"></div>
+                                        <div><img src="asset/img/update/05.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -1614,7 +1664,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/update/06.webp"></div>
+                                        <div><img src="asset/img/update/06.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -1644,7 +1694,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/update/02.webp"></div>
+                                        <div><img src="asset/img/update/02.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -1674,7 +1724,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/update/03.webp"></div>
+                                        <div><img src="asset/img/update/03.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -1700,7 +1750,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/update/04.webp"></div>
+                                        <div><img src="asset/img/update/04.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -1730,7 +1780,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/update/05.webp"></div>
+                                        <div><img src="asset/img/update/05.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -1760,7 +1810,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/update/06.webp"></div>
+                                        <div><img src="asset/img/update/06.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -1790,7 +1840,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/update/02.webp"></div>
+                                        <div><img src="asset/img/update/02.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -1820,7 +1870,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/update/03.webp"></div>
+                                        <div><img src="asset/img/update/03.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -1846,7 +1896,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/update/04.webp"></div>
+                                        <div><img src="asset/img/update/04.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -1876,7 +1926,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/update/05.webp"></div>
+                                        <div><img src="asset/img/update/05.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -1906,7 +1956,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/update/06.webp"></div>
+                                        <div><img src="asset/img/update/06.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -1936,7 +1986,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="main/img/update/02.webp"></div>
+                                        <div><img src="asset/img/update/02.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -1969,9 +2019,8 @@
     </section>
 </div>
 <!-- 푸터영역 입니다 -->
-<jsp:include page="footer/footer.jsp"/>
+<jsp:include page="footer.jsp"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="main/main.js"></script>
-<script src="header/header.js"></script>
+<script src="asset/js/main.js"></script>
 </html>

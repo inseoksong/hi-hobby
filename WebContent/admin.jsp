@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>클래스101 어드민 센터 | 세상의 모든 클래스, 클래스101</title>
 </head>
-<link rel="stylesheet" href="admin/101admin.css">
+<link rel="stylesheet" href="asset/css/admin.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +17,11 @@
     <header>
         <div class="header">
             <div class="logo">
-                <!-- <svg xmlns="http://www.w3.org/2000/svg" ; viewBox="0 0 140 32"><path d="M30.303 5.687v7.027l-.043.053-.069-.215-.073-.214a10.545 10.545 0 0 0-9.901-7.088h-.018a10.545 10.545 0 0 0-9.909 7.095l-.073.215-.068.214-.046-.052V5.687H0v20.621h10.103v-7.027l.046-.053.068.215.073.212a10.545 10.545 0 0 0 9.902 7.09h.017a10.545 10.545 0 0 0 9.902-7.09l.073-.212.068-.215.043.053v7.035h10.103V5.686H30.303ZM65.237" fill="rgb(26, 26, 26)" m30.303=""></path></svg>
-                 --><div class="logo-text"><span>Admin Center</span></div>
+               	<svg xmlns="http://www.w3.org/2000/svg" ; viewBox="0 0 140 32"><path d="M30.303 5.687v7.027l-.043.053-.069-.215-.073-.214a10.545 10.545 0 0 0-9.901-7.088h-.018a10.545 10.545 0 0 0-9.909 7.095l-.073.215-.068.214-.046-.052V5.687H0v20.621h10.103v-7.027l.046-.053.068.215.073.212a10.545 10.545 0 0 0 9.902 7.09h.017a10.545 10.545 0 0 0 9.902-7.09l.073-.212.068-.215.043.053v7.035h10.103V5.686H30.303ZM65.237" fill="rgb(26, 26, 26)" m30.303=""></path></svg>
+              	<div class="logo-text"><span>Admin Center</span></div>
             </div>
             <div class="profile">
-                <div><img src="admin/img/profile.webp"></div>
+                <div><img src="asset/img/profile.webp"></div>
                 <div class="child-box">
                     <div>
                         <div class="child-wrap">
@@ -38,7 +38,7 @@
     <nav>
         <div class="section-left">
             <div class="nav-wrap">
-                <a href="101admin.jsp">
+                <a href="admin.jsp">
                     <div class="menu-wrap">
                         <span class="css-l67hwq"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-skwyyj"><path fill-rule="evenodd" d="M19.5 8.5V15h1.25c.14 0 .25.11.25.25v2a.249.249 0 0 1-.25.25H3.25c-.14 0-.25-.11-.25-.25v-2c0-.14.11-.25.25-.25H4.5V8.5C4.5 4.375 7.875 1 12 1s7.5 3.375 7.5 7.5ZM7 8.5c0-2.755 2.245-5 5-5s5 2.245 5 5V15H7V8.5Z" clip-rule="evenodd" class="css-sy7xp0"></path><path d="M14 21a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" class="css-sy7xp0"></path></svg></span>
                         <div class="menu-text"><span>공지사항</span></div>
@@ -105,5 +105,5 @@
     </footer>
 </body>
 </html>
-<script src="admin/101admin.js"></script>
+<script src="asset/js/admin.js"></script>
 </html>
