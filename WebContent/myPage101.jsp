@@ -175,7 +175,7 @@
 									<section>
 										<div class="hcxVgX">
 											<div class="cHXTMU">
-												<h3 class="cFqqVC uoupY" font-weight="bold">내가 본 상품</h3>
+												<h3 class="cFqqVC uoupY" font-weight="bold">내가 구매한 상품</h3>
 											</div>
 										</div>
 										<div class="kgBzKM VOHdJ">

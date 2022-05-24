@@ -117,7 +117,7 @@
 							</div>
 						</div>
 						<div class="fHScIF">
-							<button type="submit" class="gQyJNI bfBEyV" color="orange" fill="true">
+							<button type="button" class="gQyJNI bfBEyV" color="orange" fill="true">
 								<span class="jwNHGa">수정하기</span>
 							</button>
 						</div>

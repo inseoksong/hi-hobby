@@ -42,32 +42,26 @@
 				<div class="kgBzKM">
 					<div class="dkpqLE">
 						<div class="bxTXNb">
-							<div class="iTUWBy">
+							<div id="buttonMyPage" class="iTUWBy">
 								<a target="_self" class="iDrVSO myP" onclick="location.href='myPage101.jsp'">마이페이지</a>
 							</div>
 							<div class="lkWmez"></div>
 							<div class="CDUoo">
-								<a target="_self" class="iDrVSO">주문 및 배송</a>
+								<a target="_self" class="iDrVSO">구매 내역</a>
 							</div>
 						</div>
 						<div class="bllwZM"></div>
 						<div class="css-1lg6qbs">
 							<div class="css-ugcyng">
 								<div class="css-1k81e3v">
-									<h4 class="css-vjrwa3">주문 및 배송</h4>
+									<h4 class="css-vjrwa3">구매 내역</h4>
 									<div class="css-iiuncx"></div>
 								</div>
 								<div class="css-1fq5k50">
 									<button class="css-16ca25h">
 										<div class="css-58su99">
-											<span class="css-9f1d6y">
-												<svg class="css-1nglat4" xmlns="https://www.google.co.kr/" viewBox="0 0 24 24">
-													<path class="css-dudu3d" d="M12 2.5c5.25 0 9.5 4.25 9.5 9.5s-4.25 9.5-9.5 9.5-9.5-4.25-9.5-9.5S6.75 2.5 12 2.5ZM12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1Z"></path>
-													<path class="css-dudu3d" d="M12 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM11.05 14.5c0-.5.05-1.05.25-1.55.35-.8 1-1.3 1.6-1.85.55-.55 1.1-1.2 1.1-2 0-.55-.15-1-.45-1.3-.3-.3-.8-.45-1.4-.45-.5 0-1.05.15-1.45.5-.45.4-.5.95-.5 1.55H8.6c0-1.3.35-2 1-2.5.65-.55 1.5-.8 2.55-.8 1.1 0 1.95.25 2.55.8.6.55.9 1.3.9 2.2 0 .85-.4 1.65-.95 2.25-.4.5-.95.9-1.4 1.35-.4.45-.65 1.05-.65 1.85 0-.05-1.55-.05-1.55-.05Z"></path>
-												</svg>
-											</span>
+											
 											<div class="css-oofvv2"></div>
-											<div class="css-d6hihw">배송 안내</div>
 										</div>
 									</button>
 								</div>
