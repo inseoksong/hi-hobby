@@ -137,12 +137,18 @@
 										<div class="text_box03">
 											<input class="input_box nameV" type="text" name="name" data-element-name="register-form-name-input" autocomplete="off" placeholder="홍길동" value>
 										</div>
+										<div class="erMnm" style="display: none;">
+                                            <p class="erMText">이름을 입력해주세요</p>
+                                        </div>
 									</div>
 									<div class="text_box01 text_box02">
 										<label class="text_label">이메일</label>
 										<div class="text_box03">
 											<input class="input_box emailV" type="text" name="email" data-element-name="register-form-email-input" autocomplete="off" placeholder="example@example.com" value>
 										</div>
+										<div class="erMem" style="display: none;">
+                                            <p class="erMText">이메일을 입력해주세요</p>
+                                        </div>
 									</div>
 									<div class="text_box01 text_box02">
 										<label class="text_label">비밀번호</label>
@@ -150,8 +156,8 @@
 											<div class="text_box03">
 												<input class="input_box passwordV" type="password" name="password" data-element-name="register-form-password-input" placeholder="********" value>
 											</div>
-											<div class="css-15zhte1 ps" style="display: none;">
-                                                <p class="css-17uv9yt">비밀번호를 입력해주세요</p>
+											<div class="erMpw" style="display: none;">
+                                                <p class="erMText">비밀번호를 입력해주세요</p>
                                             </div>
 											<div class="password_standard01 password_standard02">
 												<svg xmlns="https://www.google.co.kr/" width="14" height="14" fill="none" viewBox="0 0 24 24">
@@ -166,6 +172,9 @@
 										<div class="text_box03">
 											<input class="input_box password2V" type="password" name="password2" data-element-name="register-form-password-confirm-input" autocomplete="off" placeholder="********" value>
 										</div>
+										<div class="erMpw2" style="display: none;">
+                                            <p class="erMText">비밀번호를 다시 입력해주세요</p>
+                                        </div>
 									</div>
 									<div class="text_box01 text_box02">
 										<div class="edxcPn">
@@ -176,6 +185,9 @@
 											<button id="buttonColor" type="button" class="buttonTool1 buttonTool2" color="default" fill="false">
 												<span class="jwNHGa">인증하기</span>
 											</button>
+											<div class="erMpn" style="display: none;">
+                                            	<p class="erMText">휴대폰 번호 인증을 해주세요</p>
+                                        	</div>
 										</div>
 									</div>
 									<div class="hrhrhr"></div>
@@ -302,45 +314,60 @@
 		
 	    function nmNul(idx) {
 	        var input101 = document.getElementsByClassName("nameV")[0]; 
+	        var erM = document.getElementsByClassName("erMnm")[0];
 	        if (idx == 1) {
+	            erM.style.display = "block";
 	            input101.style.border = "1.5px solid #ff1414"
 	        }else{
+	            erM.style.display = "none";
 	            input101.style.border = "1px solid rgb(239, 239, 239)"
 	        }
 	    }
 
 	    function emNul(idx) {
 	        var input101 = document.getElementsByClassName("emailV")[0]; 
+	        var erM = document.getElementsByClassName("erMem")[0];
 	        if (idx == 1) {
+	            erM.style.display = "block";
 	            input101.style.border = "1.5px solid #ff1414"
 	        }else{
+	            erM.style.display = "none";
 	            input101.style.border = "1px solid rgb(239, 239, 239)"
 	        }
 	    }
 	
 	    function psNul(idx) {
 	        var input101 = document.getElementsByClassName("passwordV")[0];
+	        var erM = document.getElementsByClassName("erMpw")[0];
 	        if (idx == 1) {
+	            erM.style.display = "block";
 	            input101.style.border = "1.5px solid #ff1414"
 	        }else{
+	            erM.style.display = "none";
 	            input101.style.border = "1px solid rgb(239, 239, 239)"
 	        }
 	    }
 
 	    function ps2Nul(idx) {
 	        var input101 = document.getElementsByClassName("password2V")[0];
+	        var erM = document.getElementsByClassName("erMpw2")[0];
 	        if (idx == 1) {
+	            erM.style.display = "block";
 	            input101.style.border = "1.5px solid #ff1414"
 	        }else{
+	            erM.style.display = "none";
 	            input101.style.border = "1px solid rgb(239, 239, 239)"
 	        }
 	    }
 
 	    function phnNul(idx) {
 	        var input101 = document.getElementsByClassName("phone_num")[0];
+	        var erM = document.getElementsByClassName("erMpn")[0];
 	        if (idx == 1) {
+	            erM.style.display = "block";
 	            input101.style.border = "1.5px solid #ff1414"
 	        }else{
+	            erM.style.display = "none";
 	            input101.style.border = "1px solid rgb(239, 239, 239)"
 	        }
 	    }

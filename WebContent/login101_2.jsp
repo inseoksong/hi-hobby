@@ -73,6 +73,9 @@
 												type="email" name="email" autocomplete="username"
 												placeholder="example@naver.com" value>
 										</div>
+										<div class="erMem" style="display: none;">
+                                            <p class="erMText">이메일을 입력해주세요</p>
+                                        </div>
 									</div>
 									<div class="input_box01 input_box02">
 										<label class="input_label">비밀번호</label>
@@ -81,6 +84,9 @@
 												type="password" name="password"
 												autocomplete="current-password" placeholder="********" value>
 										</div>
+										<div class="erMpw" style="display: none;">
+                                            <p class="erMText">비밀번호를 입력해주세요</p>
+                                        </div>
 									</div>
 									<div>
 										<a class="underText"
@@ -144,18 +150,24 @@
 		
 	    function emNul(idx) {
 	        var input101 = document.getElementsByClassName("emailV")[0]; 
+	        var erM = document.getElementsByClassName("erMem")[0];
 	        if (idx == 1) {
+	            erM.style.display = "block";
 	            input101.style.border = "1.5px solid #ff1414"
 	        }else{
+	            erM.style.display = "none";
 	            input101.style.border = "1px solid rgb(239, 239, 239)"
 	        }
 	    }
 	
 	    function psNul(idx) {
 	        var input101 = document.getElementsByClassName("passwordV")[0];
+	        var erM = document.getElementsByClassName("erMpw")[0];
 	        if (idx == 1) {
+	            erM.style.display = "block";
 	            input101.style.border = "1.5px solid #ff1414"
 	        }else{
+	            erM.style.display = "none";
 	            input101.style.border = "1px solid rgb(239, 239, 239)"
 	        }
 	    }

@@ -512,4 +512,14 @@ span.jwNHGa{
 	background-color: #DCDCDC;
 }
 
+.erMText {
+    border-width: 0px;
+    color: rgb(243, 33, 59) !important;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.75rem !important;
+    font-weight: 400;
+    line-height: 1rem !important;
+    text-align: left !important;
+}
 
