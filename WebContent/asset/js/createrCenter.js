@@ -28,14 +28,11 @@ function famale() {
     genChe = false;
 }
 function notice(idx){
-    var  col1 = document.getElementsByClassName('css-165esj4 1')[0];
     var  col2 = document.getElementsByClassName('css-1mg3xmk 2')[0];
     var  col3 = document.getElementsByClassName('css-165esj4 3')[0];
     var to = document.getElementsByClassName('css-1wbal16')[0];
     var co = document.getElementsByClassName('css-a1maoc')[0];
 
-    var one = document.getElementsByClassName('css-1le1epv')[0];
-    var two = document.getElementsByClassName('css-fl174t')[0];
     var thr = document.getElementsByClassName('css-154w5w9')[0];
     var fou = document.getElementsByClassName('Grid__StyledDiv-sc-81d45n-0 iIwnuy CreatorAccountProfileViewController__Container-sc-1u2e1vs-0 jrlbMn')[0];
     var fiv = document.getElementsByClassName('css-ywnkfc')[0];
@@ -47,25 +44,10 @@ function notice(idx){
     var del = document.getElementById('del');
 
     switch(idx){
-        case 1:
-            col1.style.border= '#000000 solid 1px';
-            col2.style.border= '#ffffff solid 1px';
-            to.style.border= '#ffffff solid 1px';
-            co.style.border= '#ffffff solid 1px';
-            one.style.display='block';
-            two.style.display='none';
-            thr.style.display='none';
-            fou.style.display='none';
-            fiv.style.display='none';
-            six.style.display='none';
-            break;
         case 2:
-            col1.style.border= '#ffffff solid 1px';
-            col2.style.border= '#000000 solid 1px';
-            to.style.border= '#ffffff solid 1px';
-            co.style.border= '#ffffff solid 1px';
-            one.style.display='none';
-            two.style.display='none';
+            col2.style.border= '1px solid #000000';
+            to.style.border= '1px solid #ffffff';
+            co.style.border= '1px solid #ffffff';
             thr.style.display='block';
             fou.style.display='none';
             fiv.style.display='none';
@@ -81,40 +63,30 @@ function notice(idx){
             }
             break;
         case 4:
-            col1.style.border= '#ffffff solid 1px';
-            col2.style.border= '#ffffff solid 1px';
-            co.style.border= '#000000 solid 1px';
-            to.style.border= '#ffffff solid 1px';
-            one.style.display='none';
-            two.style.display='none';
+            col2.style.border= '1px solid #ffffff';
+            co.style.border= '1px solid #000000';
+            to.style.border= '1px solid #ffffff';
             thr.style.display='none';
             fou.style.display='none';
             fiv.style.display='block';
             six.style.display='none';
             break;
         case 5:
-            col1.style.border= '#ffffff solid 1px';
-            col2.style.border= '#ffffff solid 1px';
-            co.style.border= '#ffffff solid 1px';
-            to.style.border= '#000000 solid 1px';
-            one.style.display='none';
-            two.style.display='none';
+            col2.style.border= '1px solid #ffffff';
+            co.style.border= '1px solid #ffffff';
+            to.style.border= '1px solid #000000';
             thr.style.display='none';
             fou.style.display='none';
             fiv.style.display='none';
             six.style.display='block';
             break;
         case 6:
-            one.style.display='none';
-            two.style.display='block';
             thr.style.display='none';
             fou.style.display='none';
             fiv.style.display='none';
             six.style.display='none';
             break;
         case 7:
-            one.style.display='none';
-            two.style.display='none';
             thr.style.display='none';
             fou.style.display='block';
             fiv.style.display='none';
