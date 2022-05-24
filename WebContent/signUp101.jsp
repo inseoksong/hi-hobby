@@ -8,9 +8,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="preload" as="style">
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="stylesheet">
-<link rel="stylesheet" href="signUp101.css">
-<link rel="stylesheet" href="../../footer/footer.css">
-<link rel="stylesheet" href="../../header/header.css">
+<link rel="stylesheet" href="asset/css/signUp101.css">
+<link rel="stylesheet" href="footer/footer.css">
+<link rel="stylesheet" href="header/header.css">
 <title>회원가입</title>
 </head>
 <body class="101-ui-portal" style="width: auto;">
@@ -36,11 +36,11 @@
 		                    <div style="width: 36px;"></div> <!-- 공백 블록 -->
 		                    <div>
 		                        <div class="class-select">
-		                            <a onclick="location.href='../../onlineList.jsp'">
+		                            <a onclick="location.href='onlineList.jsp'">
 		                                <h4 class="online">온라인 클래스</h4>
 		                            </a>
 		                            <div style="width:16px"></div> <!-- 공백 블록 -->
-		                            <a onclick="location.href='../../onedayList.jsp'">
+		                            <a onclick="location.href='onedayList.jsp'">
 		                                <h4 class="oneday">원데이 클래스</h4>
 		                            </a>
 		                        </div>
@@ -110,11 +110,11 @@
 		                    </div>
 		                </div>
 		                <div class="header-right">
-		                    <a onclick="location.href='../../createrSupport.jsp'">
+		                    <a onclick="location.href='createrSupport.jsp'">
 		                        <p>크리에이터 지원</p>
 		                    </a>
 		                    <div style="width:24px;"></div> <!-- 공백 블록 -->
-		                    <a href="">
+		                    <a onclick="location.href='cs.jsp'">
 		                        <p>고객센터</p>
 		                    </a>
 		                    <div style="width:24px;"></div> <!-- 공백 블록 -->
@@ -150,6 +150,9 @@
 											<div class="text_box03">
 												<input class="input_box passwordV" type="password" name="password" data-element-name="register-form-password-input" placeholder="********" value>
 											</div>
+											<div class="css-15zhte1 ps" style="display: none;">
+                                                <p class="css-17uv9yt">비밀번호를 입력해주세요</p>
+                                            </div>
 											<div class="password_standard01 password_standard02">
 												<svg xmlns="https://www.google.co.kr/" width="14" height="14" fill="none" viewBox="0 0 24 24">
 													<path fill-rule="evenodd" fill="#666666" d="M23 12c0 6.075-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1s11 4.925 11 11zm-12 5v-6h2v6h-2zm0-8V7h2v2h-2z"></path>
@@ -164,6 +167,17 @@
 											<input class="input_box password2V" type="password" name="password2" data-element-name="register-form-password-confirm-input" autocomplete="off" placeholder="********" value>
 										</div>
 									</div>
+									<div class="text_box01 text_box02">
+										<div class="edxcPn">
+											<label class="text_label">휴대폰 번호</label>
+											<div class="text_box03">
+												<input class="input_box phone_num" type="tel" placeholder="-을 제외한 휴대폰 번호를 입력해주세요." autocomplete="off" >
+											</div>
+											<button id="buttonColor" type="button" class="buttonTool1 buttonTool2" color="default" fill="false">
+												<span class="jwNHGa">인증하기</span>
+											</button>
+										</div>
+									</div>
 									<div class="hrhrhr"></div>
 									<div class="hrhrhr"></div>
 									<button type="submit" class="buttonTool1 buttonTool3 buttonTool4 " class="orange"  data-element-name="register-form-signup-button" onclick="sighUpTotal()">
@@ -172,11 +186,11 @@
 								</form>
 								<div class="termsOfUse_box01"></div>
 								<div class="termsOfUse_box02">
-									<a onclick="location.href='../terms/jsp/termsOfUse101.jsp'" target="_blank"
+									<a onclick="location.href='termsOfUse101.jsp'" target="_blank"
 										rel="noreferrer" class="termsOfUse">이용약관</a> , <a
-										onclick="location.href='../terms/jsp/infoCollection101.jsp'" target="_blank"
+										onclick="location.href='infoCollection101.jsp'" target="_blank"
 										rel="noreferrer" class="termsOfUse">개인정보 수집 및 이용</a>
-									, <a onclick="location.href='../terms/jsp/personal_info101.jsp'" target="_blank"
+									, <a onclick="location.href='personal_info101.jsp'" target="_blank"
 										rel="noreferrer" class="termsOfUse">개인정보 제공</a>
 									내용을 확인하였고 동의합니다.
 								</div>
@@ -229,7 +243,7 @@
 			            </div>
 			            <div class="footer-creator">
 			                <p class="footer-title">크리에이터</p>
-			                <a onclick="location.href='../../createrSupport.jsp'">
+			                <a onclick="location.href='createrSupport.jsp'">
 			                    <p class="footer-bottom-text">크리에이터 센터</p>
 			                </a>
 			                <a href="">
@@ -280,7 +294,7 @@
 		</div>
 	</div>
 </body>
-<script src="../../header/header.js"></script>
+<script src="header/header.js"></script>
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script>
 	
@@ -321,12 +335,22 @@
 	            input101.style.border = "1px solid rgb(239, 239, 239)"
 	        }
 	    }
+
+	    function phnNul(idx) {
+	        var input101 = document.getElementsByClassName("phone_num")[0];
+	        if (idx == 1) {
+	            input101.style.border = "1.5px solid #ff1414"
+	        }else{
+	            input101.style.border = "1px solid rgb(239, 239, 239)"
+	        }
+	    }
 		
 	    
 	    var nm = document.getElementsByClassName("nameV")[0];
 	    var em = document.getElementsByClassName("emailV")[0];
 	    var ps = document.getElementsByClassName("passwordV")[0];
 	    var ps2 = document.getElementsByClassName("password2V")[0];
+	    var phn = document.getElementsByClassName("phone_num")[0];
 
 	    if(nm.value == ""){   // 이름이 입력되지 않았을 때
 	        nmNul(1)
@@ -334,6 +358,9 @@
 		        emNul(1);
 		        if(ps.value == ""){   // 패스워드가 입력되지 않았을 때
 			        psNul(1);
+		        	if(phn.value == ""){ //휴대폰 번호가 입력되지 않았을 때
+		        		phnNul(1);
+		        	}
 			    }
 		    }
 	    }else{         // 이름이 입력 됐을 때
@@ -351,8 +378,13 @@
 			        psNul(2);
 			    	if(ps2.value == ""){ // 패스워드 확인이 입력되지 않았을 때
 			        	ps2Nul(1);
-			    	}else{
-			        	ps2Nul(2); // 패스워드 확인이 입력됐을 때
+			    	}else{  // 패스워드 확인이 입력됐을 때
+			        	ps2Nul(2); 
+			        	if(phn.value == ""){ // 휴대폰 번호가 입력되지 않았을 때
+			        		phnNul(1)
+			        	}else{  // 휴대폰 번호가 입력됐을 때
+			        		phnNul(2)			       
+			        	}
 			    	}
 			    }
 	        }

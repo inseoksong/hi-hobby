@@ -5,13 +5,13 @@
 <head>
 <meta charset="UTF-8">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="preload" as="style">
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="stylesheet">
-<link rel="stylesheet" href="searchPw101.css">
-<link rel="stylesheet" href="../../footer/footer.css">
-<link rel="stylesheet" href="../../header/header.css">
-<title>비밀번호를 잊으셨나요?</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="asset/css/myPage101.css">
+<link rel="stylesheet" href="footer/footer.css">
+<link rel="stylesheet" href="header/header.css">
+<title>마이페이지</title>
 </head>
 <body class="101-ui-portal" style="width: auto;">
 	<div id="__next">
@@ -36,11 +36,11 @@
 		                    <div style="width: 36px;"></div> <!-- 공백 블록 -->
 		                    <div>
 		                        <div class="class-select">
-		                            <a onclick="location.href='../../onlineList.jsp'">
+		                            <a onclick="location.href='onlineList.jsp'">
 		                                <h4 class="online">온라인 클래스</h4>
 		                            </a>
 		                            <div style="width:16px"></div> <!-- 공백 블록 -->
-		                            <a onclick="location.href='../../onedayList.jsp'">
+		                            <a onclick="location.href='onedayList.jsp'">
 		                                <h4 class="oneday">원데이 클래스</h4>
 		                            </a>
 		                        </div>
@@ -90,18 +90,18 @@
 		                                </div>
 		                                <div class="rangkin-num">
 		                                    <div class="num-half">
-		                                            <div><span class="num" style="width:13%; margin:6px 0;">1</span><span class="keyword">일러스트</span></div>
-		                                            <div><span class="num" style="width:13%; margin:6px 0;">2</span><span class="keyword">아이패드</span></div>
-		                                            <div><span class="num" style="width:13%; margin:6px 0;">3</span><span class="keyword">색연필</span></div>
-		                                            <div><span class="num" style="width:13%; margin:6px 0;">4</span><span class="keyword">자바</span></div>
-		                                            <div><span class="num" style="width:13%; margin:6px 0;">5</span><span class="keyword">파이썬</span></div>
+		                                            <div><span class="num">1</span><span class="keyword">일러스트</span></div>
+		                                            <div><span class="num">2</span><span class="keyword">아이패드</span></div>
+		                                            <div><span class="num">3</span><span class="keyword">색연필</span></div>
+		                                            <div><span class="num">4</span><span class="keyword">자바</span></div>
+		                                            <div><span class="num">5</span><span class="keyword">파이썬</span></div>
 		                                    </div>
 		                                    <div class="num-half">
-		                                            <div><span class="num" style="width:13%; margin:6px 0;">6</span><span class="keyword">코딩</span></div>
-		                                            <div><span class="num" style="width:13%; margin:6px 0;">7</span><span class="keyword">데이터베이스</span></div>
-		                                            <div><span class="num" style="width:13%; margin:6px 0;">8</span><span class="keyword">스케치</span></div>
-		                                            <div><span class="num" style="width:13%; margin:6px 0;">9</span><span class="keyword">유투브</span></div>
-		                                            <div><span class="num" style="width:13%; margin:6px 0;">10</span><span class="keyword">노션</span></div>
+		                                            <div><span class="num">6</span><span class="keyword">코딩</span></div>
+		                                            <div><span class="num">7</span><span class="keyword">데이터베이스</span></div>
+		                                            <div><span class="num">8</span><span class="keyword">스케치</span></div>
+		                                            <div><span class="num">9</span><span class="keyword">유투브</span></div>
+		                                            <div><span class="num">10</span><span class="keyword">노션</span></div>
 		                                    </div>
 		                                </div>
 		                            </div>
@@ -110,47 +110,89 @@
 		                    </div>
 		                </div>
 		                <div class="header-right">
-		                    <a onclick="location.href='../../createrSupport.jsp'">
+		                    <a onclick="location.href='createrSupport.jsp'">
 		                        <p>크리에이터 지원</p>
 		                    </a>
 		                    <div style="width:24px;"></div> <!-- 공백 블록 -->
-		                    <a href="">
+		                    <a onclick="location.href='cs.jsp'">
 		                        <p>고객센터</p>
 		                    </a>
 		                    <div style="width:24px;"></div> <!-- 공백 블록 -->
-		                    <a onclick="location.href='login101.jsp'">
+		                    <!-- <a onclick="location.href='login101.jsp'">
 		                        <p>로그인</p>
-		                    </a>
+		                    </a>	 -->
 		                </div>
 		            </div>
 		        </header>
-				
-				<div class="cabFoD">
-					<div class="dehNWh">
-						<div class="doNejd">
-							<div class="dAvcdk">
-								<h1>
-								새로운 비밀번호를
-								<br>
-								설정해주세요
-								</h1>
-								<div class="cqZvVN ihuZYz">계정에 연결된 이메일 주소를 입력하면 암호를 재설정할 수 있는 링크를 이메일로 보내드릴게요.</div>
-								<form>
-									<div class="edxcPn lnRpba">
-										<label class="jbmNLF">이메일</label>
-										<div class="dGxueP">
-											<input class="eQAnnk" type="email" name="email" autocomplete="off" placeholder="example@naver.com" value>
+			
+				<div class="kgBzKM">
+					<div class="gqgKCQ">
+						<header class="fTBYHw">
+							<a class="efFJDg" onclick="location.href='myProfile101.jsp'">
+								<h2 class="cYLUty">홍길동</h2>
+								<div class="liqddx">
+									example@example.com
+									<svg xmlns="https://www.google.co.kr/" width="14" height="14" fill="none" viewBox="0 0 24 24">
+										<path fill-rule="evenodd" fill="#a2a2a2" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z"></path>
+									</svg>
+								</div>
+							</a>
+						</header>
+						<div class="iTujEl">
+							<aside class="ipCzuu">
+								<section class="LaCvk cgWehN">
+									<h4 class="jdPAHA dyWeXC">내 정보</h4>
+									<a class="eYKbXT" onclick="location.href='myCoupons101.jsp'">
+										<div class="cqZvVN gkiCmL">
+											내 쿠폰
 										</div>
-									</div>
-									<button type="submit" class="gQyJNI cBAUkf" color="default" fill="true">
-										<span class="jwNHGa">인증 메일 전송하기</span>
-									</button>
-								</form>
+									</a>
+									<a class="eYKbXT" onclick="location.href='myOrder101.jsp'">
+										<div class="cqZvVN gkiCmL">주문 내역</div>
+									</a>
+									<!-- <a class="eYKbXT" onclick="location.href='myReview101.jsp'">
+										<div class="cqZvVN gkiCmL">내 후기</div>
+									</a> -->
+								</section>
+								<section class="LaCvk cgWehN fXhCUc">
+									<h4 class="jdPAHA dyWeXC">메뉴</h4>
+									<a class="eYKbXT" target="_blank" rel="noreferrer" onclick="location.href='createrSupport.jsp'">
+										<div class="cqZvVN gkiCmL">
+										크리에이터 센터가기
+										</div>
+									</a>
+									<a class="eYKbXT" href="https://www.google.co.kr/">
+										<div class="cqZvVN gkiCmL">
+										로그아웃
+										</div>
+									</a>
+								</section>
+							</aside>
+							<hr class="fSJEcd">
+							<div class="jlbLpy">
+								<div class="jTDelL"></div>
+								<div class="kNxSwr">
+									<section>
+										<div class="hcxVgX">
+											<div class="cHXTMU">
+												<h3 class="cFqqVC uoupY" font-weight="bold">내가 본 상품</h3>
+											</div>
+										</div>
+										<div class="kgBzKM VOHdJ">
+											<svg xmlns="https://www.google.co.kr/" width="32" height="32" fill="none" viewBox="0 0 24 24">
+												<path fill-rule="evenodd" fill="#1B1C1D" d="M10.649 13.351l3.602.901-.901-3.602-2.702 2.702zM12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 100 16zm4.596-4.132a1 1 0 01-1.213.728L9 15 7.404 8.617a1 1 0 011.213-1.213L15 9l1.596 6.383a1 1 0 010 .485z"></path>
+											</svg>
+											<div>아직 둘러보신 클래스가 없어요!</div>
+										</div>
+									</section>
+								</div>
+							</div>
+							<div>
 							</div>
 						</div>
 					</div>
 				</div>
-				
+			
 				<footer>
 			        <div class="footer-top">
 			            <div class="footer-intro">
@@ -178,7 +220,7 @@
 			            </div>
 			            <div class="footer-creator">
 			                <p class="footer-title">크리에이터</p>
-			                <a onclick="location.href='../../createrSupport.jsp'">
+			                <a onclick="location.href='createrSupport.jsp'">
 			                    <p class="footer-bottom-text">크리에이터 센터</p>
 			                </a>
 			                <a href="">
@@ -223,10 +265,10 @@
 			            </div>
 			        </div>
 			    </footer>
-			
+				
 			</div>
 		</div>
 	</div>
 </body>
-<script src="../../header/header.js"></script>
+<script src="header/header.js"></script>
 </html>

@@ -5,15 +5,15 @@
 <head>
 <meta charset="UTF-8">
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="preload" as="style">
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="myPage101.css">
-<link rel="stylesheet" href="../../footer/footer.css">
-<link rel="stylesheet" href="../../header/header.css">
-<title>마이페이지</title>
+<link rel="stylesheet" href="asset/css/infoCollection101.css">
+<link rel="stylesheet" href="footer/footer.css">
+<link rel="stylesheet" href="header/header.css">
+<title>개인정보 수집 및 이용</title>
 </head>
-<body class="101-ui-portal" style="width: auto;">
+<body class="class101-ui-portal">
 	<div id="__next">
 		<div id="wrapper">
 			<div class="wrapper2">
@@ -36,11 +36,11 @@
 		                    <div style="width: 36px;"></div> <!-- 공백 블록 -->
 		                    <div>
 		                        <div class="class-select">
-		                            <a onclick="location.href='../../onlineList.jsp'">
+		                            <a onclick="location.href='onlineList.jsp'">
 		                                <h4 class="online">온라인 클래스</h4>
 		                            </a>
 		                            <div style="width:16px"></div> <!-- 공백 블록 -->
-		                            <a onclick="location.href='../../onedayList.jsp'">
+		                            <a onclick="location.href='onedayList.jsp'">
 		                                <h4 class="oneday">원데이 클래스</h4>
 		                            </a>
 		                        </div>
@@ -110,89 +110,105 @@
 		                    </div>
 		                </div>
 		                <div class="header-right">
-		                    <a onclick="location.href='../../createrSupport.jsp'">
+		                    <a onclick="location.href='createrSupport.jsp'">
 		                        <p>크리에이터 지원</p>
 		                    </a>
 		                    <div style="width:24px;"></div> <!-- 공백 블록 -->
-		                    <a href="">
+		                    <a onclick="location.href='cs.jsp'">
 		                        <p>고객센터</p>
 		                    </a>
 		                    <div style="width:24px;"></div> <!-- 공백 블록 -->
-		                    <!-- <a onclick="location.href='login101.jsp'">
+		                    <a onclick="location.href='login101.jsp'">
 		                        <p>로그인</p>
-		                    </a>	 -->
+		                    </a>
 		                </div>
 		            </div>
 		        </header>
 			
-				<div class="kgBzKM">
-					<div class="gqgKCQ">
-						<header class="fTBYHw">
-							<a class="efFJDg" onclick="location.href='myProfile101.jsp'">
-								<h2 class="cYLUty">홍길동</h2>
-								<div class="liqddx">
-									example@example.com
-									<svg xmlns="https://www.google.co.kr/" width="14" height="14" fill="none" viewBox="0 0 24 24">
-										<path fill-rule="evenodd" fill="#a2a2a2" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z"></path>
-									</svg>
-								</div>
-							</a>
-						</header>
-						<div class="iTujEl">
-							<aside class="ipCzuu">
-								<section class="LaCvk cgWehN">
-									<h4 class="jdPAHA dyWeXC">내 정보</h4>
-									<a class="eYKbXT" onclick="location.href='myCoupons101.jsp'">
-										<div class="cqZvVN gkiCmL">
-											내 쿠폰
-										</div>
-									</a>
-									<a class="eYKbXT" onclick="location.href='myOrder101.jsp'">
-										<div class="cqZvVN gkiCmL">주문 내역</div>
-									</a>
-									<a class="eYKbXT" onclick="location.href='myReview101.jsp'">
-										<div class="cqZvVN gkiCmL">내 후기</div>
-									</a>
-								</section>
-								<section class="LaCvk cgWehN fXhCUc">
-									<h4 class="jdPAHA dyWeXC">메뉴</h4>
-									<a class="eYKbXT" target="_blank" rel="noreferrer" onclick="location.href='../../createrSupport.jsp'">
-										<div class="cqZvVN gkiCmL">
-										크리에이터 센터가기
-										</div>
-									</a>
-									<a class="eYKbXT" href="https://www.google.co.kr/">
-										<div class="cqZvVN gkiCmL">
-										로그아웃
-										</div>
-									</a>
-								</section>
-							</aside>
-							<hr class="fSJEcd">
-							<div class="jlbLpy">
-								<div class="jTDelL"></div>
-								<div class="kNxSwr">
-									<section>
-										<div class="hcxVgX">
-											<div class="cHXTMU">
-												<h3 class="cFqqVC uoupY" font-weight="bold">내가 본 상품</h3>
-											</div>
-										</div>
-										<div class="kgBzKM VOHdJ">
-											<svg xmlns="https://www.google.co.kr/" width="32" height="32" fill="none" viewBox="0 0 24 24">
-												<path fill-rule="evenodd" fill="#1B1C1D" d="M10.649 13.351l3.602.901-.901-3.602-2.702 2.702zM12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 100 16zm4.596-4.132a1 1 0 01-1.213.728L9 15 7.404 8.617a1 1 0 011.213-1.213L15 9l1.596 6.383a1 1 0 010 .485z"></path>
-											</svg>
-											<div>아직 둘러보신 클래스가 없어요!</div>
-										</div>
-									</section>
-								</div>
-							</div>
-							<div>
+				<div class="mainScreen1">
+					<div class="mainScreen2">
+						<div class="mainScreen3">
+							<h2 class="mainTitle01">개인정보 수집항목 및 이용 목적</h2>
+							<br>
+							<div class="mainScreen4">
+								<br>
+								① 회사는 서비스 제공을 위한 최소한의 범위 내에서 이용자의 동의 하에 개인정보를 수집하며, 이용자가 필요한 최소한의 개인정보 이외의 개인정보를 제공하지 아니한다는 이유로 해당 서비스 제공을 거부하지 않습니다. 또한 수집한 모든 개인정보는 고지한 목적 범위 내에서만 사용되며 회사에서 제공하는 서비스 유형에 따라 다음과 같이 개인정보를 수집 및 이용하고 있습니다.
+								<br>
+								<br>
+								<br>
+								<h4 class="allTitle"><회원가입 및 서비스 이용></h4>
+								<table class="content">
+									<thead>
+										<tr>
+											<th><p>수집방법</p></th>
+											<th><p>수집항목</p></th>
+											<th><p>수집 및 이용목적</p></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><p>회원가입</p></td>
+											<td><p>[필수] 이름, 이메일주소, 휴대폰번호, 비밀번호</p></td>
+											<td><p>본인확인 및 가입의사 확인, 상담 및 문의 처리, 공지사항 전달 및 불만처리 등 원활한 의사소통 경로 확보</p></td>
+										</tr>
+										<tr>
+											<td><p>SNS계정 가입</p></td>
+											<td>
+												<p>[필수 - 카카오] 카카오계정 이메일, 이름</p>
+												<p>[필수 - 네이버] 네이버계정 이메일, 이름 프로필사진</p>
+												<p>[필수 - 페이스북] 이름, 프로필사진</p>
+												<p>[필수 - 구글] 구글계정 이메일, 이름, 휴대폰번호, 프로필사진</p>
+												<p>[필수 - 애플] 애플계정 이메일</p>
+											</td>
+											<td><p>SNS계정을 이용한 회원가입</p></td>
+										</tr>
+										<tr>
+											<td><p>회원정보 수정</p></td>
+											<td><p>[선택] 닉네임, 프로필 사진</p></td>
+											<td><p>이용자 식별 및 이용자간 관계 형성, 커뮤니티 활성화</p></td>
+										</tr>
+										<tr>
+											<td><p>구매 시</p></td>
+											<td><p>[필수] 수취인정보(이름, 휴대폰번호, 주소), 현금영수증 발행 정보(휴대폰번호)</p></td>
+											<td><p>주문/결제 및 상품 배송(교환, 반품) 서비스, 현금영수증 발급</p></td>
+										</tr>
+										<tr>
+											<td rowspan="2"><p>크리에이터 지원</p></td>
+											<td><p>(필수) 클래스메이트 회원가입 정보 + 이메일주소, 휴대폰번호</p></td>
+											<td><p>본인확인 및 가입의사 확인, 상담 및 문의 처리, 공지사항 전달 및 불만처리 등 원활한 의사소통 경로 확보</p></td>
+										</tr>
+										<tr>
+											<td><p>(선택) 닉네임, 프로필 사진, SNS 계정 및 URL</p></td>
+											<td><p>이용자 식별 및 이용자간 관계 형성, 커뮤니티 활성화</p></td>
+										</tr>
+									</tbody>
+								</table>
+								<br>
+								<br>
+								<h4 class="allTitle"><서비스 이용에 따른 자동 수집 및 생성 정보></h4>
+								<table class="content">
+									<thead>
+										<tr>
+											<th><p>수집항목</p></th>
+											<th><p>수집 및 이용목적</p></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>
+												<p>- 쿠키, IP, 방문일시, 서비스 이용기록</p>
+												<p>- 기기정보(device_id, OS종류 및 버전, 디바이스 종류, 광고식별자</p>
+												<p>- 앱 이용시 추가 모바일 기기정보(UUID, 푸쉬토큰)</p>
+											</th>
+											<th><p>서비스 이용 통계, 접속관리, 이용자별 사용환경 제공, 활동정보 파악, 이벤트 및 프로모션 통계 확인, 맞춤형 정보 제공</p></th>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>
 				</div>
-			
+
 				<footer>
 			        <div class="footer-top">
 			            <div class="footer-intro">
@@ -220,7 +236,7 @@
 			            </div>
 			            <div class="footer-creator">
 			                <p class="footer-title">크리에이터</p>
-			                <a onclick="location.href='../../createrSupport.jsp'">
+			                <a onclick="location.href='createrSupport.jsp'">
 			                    <p class="footer-bottom-text">크리에이터 센터</p>
 			                </a>
 			                <a href="">
@@ -265,10 +281,10 @@
 			            </div>
 			        </div>
 			    </footer>
-				
+			
 			</div>
-		</div>
-	</div>
+		</div>	
+	</div>	
 </body>
-<script src="../../header/header.js"></script>
+<script src="header/header.js"></script>
 </html>

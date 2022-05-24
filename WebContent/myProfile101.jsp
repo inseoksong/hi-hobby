@@ -8,8 +8,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="preload" as="style">
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="stylesheet">
-<link rel="stylesheet" href="myProfile101.css">
-<link rel="stylesheet" href="miniHeadFoot101.css">
+<link rel="stylesheet" href="asset/css/myProfile101.css">
+<link rel="stylesheet" href="asset/css/miniHeadFoot101.css">
 <title>프로필 수정</title>
 </head>
 <body class="101-ui-portal" style="width: auto;">
@@ -77,14 +77,14 @@
 								</div>
 							</div>
 						</div>
-						<div class="gUToOv">
+						<!-- <div class="gUToOv">
 							<div class="edxcPn">
 								<label class="jbmNLF">닉네임</label>
 								<div class="dGxueP">
 									<input class="eQAnnk" type="text" placeholder="홍길동" name="nickName" value>
 								</div>
 							</div>
-						</div>
+						</div>	 -->
 						<div class="gUToOv">
 							<div class="edxcPn">
 								<label class="jbmNLF">휴대폰 번호</label>
@@ -175,7 +175,7 @@
 							</div>
 							<div class="kWcFTw">
 								<div class="dOOEWv ilDyc">크리에이터</div>
-								<a class="hEiHUA" onclick="location.href='../../createrSupport.jsp'" target="_blank" rel="noreferrer">
+								<a class="hEiHUA" onclick="location.href='createrSupport.jsp'" target="_blank" rel="noreferrer">
 									<div class="cqZvVN hrrnrN">크리에이터 센터</div>
 								</a>
 								<a class="hEiHUA" href="https://www.google.co.kr/" target="_blank" rel="noreferrer">
