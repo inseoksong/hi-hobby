@@ -139,6 +139,7 @@ h3 {
 
 svg:not(:root) {
     overflow: hidden;
+    margin-left: -1px;
 }
 
 *,

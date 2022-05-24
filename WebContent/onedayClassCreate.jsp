@@ -5,10 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>하이하비 크리에이터 센터 | 원데이 클래스 신청</title>
-<link rel="stylesheet" href="asset/css/onedayClassCreate.css">
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="preload" as="style">
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="asset/css/createrCenter.css">
+<link rel="stylesheet" href="asset/css/onedayClassCreate.css">
 <link rel="shortcut icon" href="asset/img/favicon.ico">
 </head>
 <body>
@@ -108,7 +108,7 @@
 					</div>
 				</div>
 	<section class="main">
-		<div class="container-wrap">
+		<div class="container-wrap" id="classInput">
 			<div class="container">
 				<div class="topside">
 					<h3>원데이 클래스 신청</h3>

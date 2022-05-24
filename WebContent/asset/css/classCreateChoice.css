@@ -7,60 +7,60 @@
 	margin: 0;
 }
 
-body {
+div#createrChoice body {
 	word-break: keep-all;
 	background-color: #f8f8f8;
 }
 
-button {
+div#createrChoice button {
 	cursor: pointer;
 }
 
-header {
+div#createrChoice header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 27px 24px;
 }
 
-a:link, a:visited, a:active, a:hover {
+div#createrChoice a:link, div#createrChoice a:visited, div#createrChoice a:active, div#createrChoice a:hover {
 	cursor: pointer;
 	color: #000;
 	text-decoration: none;
 }
 
-header svg {
+div#createrChoice header svg {
 	width: 201px;
 	height: 24px;
 }
 
-div.aperture {
+div#createrChoice div.aperture {
 	height: 100px;
 }
 
-div.main {
+div#createrChoice div.main {
 	text-align: center;
 }
 
-div.main h3 {
+div#createrChoice div.main h3 {
 	font-size: 28px;
 	color: #101010;
 	margin-bottom: 8px;
 }
 
-div.main h6 {
+div#createrChoice div.main h6 {
 	font-size: 18px;
 	color: #a2a2a2;
 }
 
-div.class-wrap {
+div#createrChoice div.class-wrap {
 	display: flex;
 	justify-content: center;
 	margin-top: 48px;
 	transition: transform .2s ease, padding .2s ease;
 }
 
-div.class-choice {
+div#createrChoice div.class-choice {
 	display: flex;
 	position: relative;
 	width: 242px;
@@ -74,22 +74,22 @@ div.class-choice {
 	transition: all 0.3s ease-out;
 }
 
-div.class-choice:hover {
+div#createrChoice div.class-choice:hover {
 	transform: translate(0,-20px);
 }
 
-div.class-choice img {
+div#createrChoice div.class-choice img {
 	width: 120px;
 	height: 120px;
 	margin-bottom: 12px;
 }
 
-div.class-choice h6 {
+div#createrChoice div.class-choice h6 {
 	font-size: 20px;
 	color: #1a1a1a;
 }
 
-div.class-choice button {
+div#createrChoice div.class-choice button {
 	position: absolute;
 	width: 242px;
 	height: 44px;
@@ -101,6 +101,6 @@ div.class-choice button {
 	border: none;
 }
 
-div.class-choice:first-child {
+div#createrChoice div.class-choice:first-child {
 	margin-right: 24px;
 }
