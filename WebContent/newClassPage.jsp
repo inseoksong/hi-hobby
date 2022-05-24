@@ -12,7 +12,7 @@
 <title>클래스101 | 세상의 모든 클래스, 클래스101</title>
 </head>
 <body>
-<jsp:include page="header/header.jsp"/>
+<jsp:include page="header.jsp"/>
 <!-- 헤더영역  -->
     <section>
         <div class="latelyUpdate">
@@ -611,7 +611,7 @@
         </div>
     </section>
 <!-- 푸터영역  -->
-<jsp:include page="footer/footer.jsp"/>
+<jsp:include page="footer.jsp"/>
 </body>
 <script src="newClass/newClass.js"></script>
 </html>

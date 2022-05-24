@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 </head>
 <body>
-	<jsp:include page="header/header.jsp"/>
+	<jsp:include page="header.jsp"/>
 	<!-- ↑ 헤더 부분 -->
 	<section class="final-wrap">
 		<div class="section-wrap">
@@ -211,7 +211,7 @@
 									</li>
 								</ul>
 							</div>
-							<section class="page-number">
+							<div class="page-number">
 								<div class="number-buttons">
 									<button type="button">
 										<span>
@@ -220,9 +220,14 @@
 											</svg>
 										</span>
 									</button>
-									<button type="button" class="number1">
+									<button type="button" class="number-select numButton">
 										<span>
 											1
+										</span>
+									</button>
+									<button type="button" class="numButton">
+										<span>
+											2
 										</span>
 									</button>
 									<button type="button">
@@ -233,7 +238,7 @@
 										</span>
 									</button>
 								</div>
-							</section>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -241,7 +246,7 @@
 		</div>
 	</section>
 	<!-- ↓ 푸터 부분 -->
-	<jsp:include page="footer/footer.jsp"/>
+	<jsp:include page="footer.jsp"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="asset/js/onedayList.js"></script>

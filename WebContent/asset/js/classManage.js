@@ -1,5 +1,7 @@
 const btnAr = document.querySelectorAll('button.manageBtn');
 
+const $numButtons = $("button.numButton");
+
 btnAr.forEach((btn) => {
     btn.addEventListener("click", function () {
 
@@ -44,6 +46,11 @@ profile.addEventListener("click",function (){
             window.open('adminLogin.jsp','_self',true);
         });
     }
+});
+
+$numButtons.click(function() {
+	$numButtons.removeClass("number-select");
+	$(this).addClass("number-select");
 });
 
 

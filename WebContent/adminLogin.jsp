@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
- <link rel="stylesheet" href="asset/css/adminLogin.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-    <link rel="shortcut icon" href="asset/adminLogin/img/favicon.ico">
+<link rel="stylesheet" href="asset/css/adminLogin.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<link rel="shortcut icon" href="asset/adminLogin/img/favicon.ico">
     
 <title>클래스101 어드민 센터 | 세상의 모든 클래스, 클래스101</title>
 </head>

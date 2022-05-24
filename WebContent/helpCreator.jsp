@@ -4,13 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="admin/helpCreator.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="asset/img/favicon.ico">
-    
+<link rel="stylesheet" href="asset/css/helpCreator.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="asset/img/favicon.ico">
 <title>클래스101 어드민 센터 | 세상의 모든 클래스, 클래스101</title>
 </head>
 <body>
@@ -150,26 +149,37 @@
                     </table>
                 </div>
             </div>
-            <div class="numWrap">
-                <div class="numBox">
-                    <div class="arroePrev">
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M15.5 5.5l-6 6.5 6 6.5L14 20l-7.5-8L14 4l1.5 1.5z" fill="#1a1a1a"></path></svg></span>
-                    </div>
-                    <div></div>
-                    <div class="circleBox">
-                        <button class="numCircle">1</button>
-                        <button class="numCircle">2</button>
-                        <button class="numCircle">3</button>
-                        <button class="numCircle">4</button>
-                        <button class="numCircle">5</button>
-                    </div>
-                   <div >
-                       <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z" fill="#1a1a1a"></path></svg></span>
-                   </div>
-                </div>
-            </div>
+            <div class="page-number">
+				<div class="number-buttons">
+					<button type="button">
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+								<path fill-rule="evenodd" d="M15.5 5.5l-6 6.5 6 6.5L14 20l-7.5-8L14 4l1.5 1.5z" fill="#1a1a1a"></path>
+							</svg>
+						</span>
+					</button>
+					<button type="button" class="number-select numButton">
+						<span>
+							1
+						</span>
+					</button>
+					<button type="button" class="numButton">
+						<span>
+							2
+						</span>
+					</button>
+					<button type="button">
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+								<path fill-rule="evenodd" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z" fill="#1a1a1a"></path>
+							</svg>
+						</span>
+					</button>
+				</div>
+			</div>
         </div>
     </section>
 </body>
-<script src="admin/helpCreator.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="asset/js/helpCreator.js"></script>
 </html>
