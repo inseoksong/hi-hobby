@@ -1560,7 +1560,7 @@ picture.chestForConHeFormTopPic{
 }
 
 img.chestForConHeFormTopPic{
-    width: 100%;
+    width: 400px;
     height: 100%;
     object-fit: cover;
     vertical-align: top;
@@ -1608,10 +1608,11 @@ div.chestForConHeFormBo{
 }
 
 h6.chestForConHeFormBoH6{
+	text-align:center;
+	padding-left:143px;
     border-width: 0;
     color: var(--system-on-color);
     margin: 0;
-    padding: 0;
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.25rem;
