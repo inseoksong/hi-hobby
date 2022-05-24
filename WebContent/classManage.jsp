@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="admin/classManage.css">
+<link rel="stylesheet" href="asset/css/classManage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
                 <div class="logo-text"><span>Admin Center</span></div>
             </div>
             <div class="profile">
-                <div><img src="admin/img/profile.webp"></div>
+                <div><img src="asset/img/profile.webp"></div>
                 <div class="child-box">
                     <div>
                         <div class="child-wrap">
@@ -185,5 +185,5 @@
         </div>
     </section>
 </body>
-<script src="admin/classManage.js"></script>
+<script src="asset/js/classManage.js"></script>
 </html>
