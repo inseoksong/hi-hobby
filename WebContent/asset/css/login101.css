@@ -1,0 +1,543 @@
+@charset "UTF-8";
+*{
+ font-family: -apple-system, BlinkMacSystemFont, 'Pretendard JP', Pretendard, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+body{
+	display: block;
+	margin: 8px;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body{
+	margin: 0;
+    text-align: left;
+    text-transform: none;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+    background: #f8f8f9;
+    position: relative;
+    margin: 0;
+}
+
+button, input{
+    overflow: visible;
+}
+
+button, select{
+    text-transform: none;
+}
+
+button, input, optgroup, select, textarea{
+    margin: 0;
+    font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+    line-height: inherit;
+}
+
+html{
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h1{
+	font-size: 2em;
+	font-weight: bold;
+}
+
+h1{
+    color: #182026;
+    font-weight: 600;
+    margin: 0 0 10px;
+    padding: 0;
+    line-height: 40px;
+    font-size: 36px;
+}
+
+h2{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+button {
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    margin: 0em;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+    z-index: 1;
+}
+
+input {
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+p, ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button{
+	margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+hr  {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+hr{
+    margin: 20px 0;
+    border: none;
+    border-bottom: 1px solid rgba(16, 22, 26, 0.15);
+}
+
+label {
+    cursor: default;
+}
+
+div{
+	display: block;
+}
+
+body{
+    line-height: 1;
+}
+
+body{
+    margin: 0;
+    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+body>div{
+	position: relative;
+    z-index: 0;
+}
+
+body #__next{
+    height: 100%;
+    overflow-y: scroll;
+}
+
+body #wrapper{
+    height: 100%;
+}
+
+.wrapper2{
+    position: relative;
+}
+
+body #wrapper > div:first-of-type{
+    height: 100%;
+}
+
+.wrapper3{
+    display: flex;
+}
+
+.screenLeft{
+    position: relative;
+    flex: 0.88 1 0%;
+    display: flex;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+}
+
+.screenLeftTop{
+    position: absolute;
+    padding: 81px 24px 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.screenLeftTop{
+    position: relative;
+    padding-top: 18px;
+}
+
+.screenLeftTop2{
+    margin: 0px auto;
+    width: 100%;
+    max-width: 376px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+a{
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.screenLeftTopLogo{
+    margin-left: -2px;
+    display: inline-flex;
+}
+
+.logo{
+    height: 18px;
+    width: auto;
+}
+
+.screenLeftMain{
+    padding: 24px;
+    flex: 1 1 0%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.kakaoOrOther{
+    width: 100%;
+    max-width: 376px;
+}
+
+.text_block{
+    position: relative;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.text_Box{
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 44px;
+    color: rgb(58, 58, 58);
+}
+
+.buttonTool1{
+    border: 0px;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    flex: initial;
+    box-sizing: border-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.buttonTool2{
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    border-radius: 3px;
+    color: rgb(26, 26, 26);
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    padding: 0px 20px;
+    height: 48px;
+    transition: background-color 0.1s ease 0s;
+    text-decoration-line: none;
+}
+
+.allSpan{
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.buttonTool3 img, .buttonTool3 svg{
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+}
+
+.buttonTool4{
+    border-radius: 3px;
+    color: rgb(58, 58, 58);
+    background-color: rgb(248, 248, 248);
+}
+
+.buttonTool1{
+    cursor: pointer;
+}
+
+.allSpan{
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.screenRight{
+    flex: 1 1 0%;
+    background-image: url("https://class101.net/images/login/login-bg.png");
+    background-size: cover;
+}
+
+.show02{
+    max-width: 376px;
+    width: 100%;
+}
+
+.text_Login{
+    position: relative;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.text_Login2{
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(58, 58, 58);
+}
+
+.input_box01{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 16px;
+}
+
+.input_box02{
+    margin-bottom: 12px;
+}
+
+.input_label{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px 0px 4px;
+    color: rgb(58, 58, 58);
+}
+
+.input_box05{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    margin: 0px;
+   
+    background-color: white;
+    height: 48px;
+    flex: 1 1 auto;
+    width: 100%;
+    color: rgb(26, 26, 26);
+    box-sizing: border-box;
+    padding: 0px 16px;
+    border-radius: 3px;
+}
+
+.input_box04{
+	display: block;
+    margin-top: 2px;
+    border-radius: 3px;
+}
+.input_box06{
+    margin-top: 2px;
+    border-radius: 3px;
+}
+
+.underText{
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: normal;
+    margin: 0px;
+    display: block;
+    float: left;
+    color: rgb(202, 202, 202) !important;
+    cursor: pointer;
+}
+
+.signUp{
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: normal;
+    margin: 0px;
+    display: block;
+    text-align: right;
+    color: rgb(202, 202, 202) !important;
+    cursor: pointer;
+}
+
+.button_login01{
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 199, 60);
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    padding: 0px 20px;
+    height: 48px;
+    transition: background-color 0.1s ease 0s;
+    text-decoration-line: none;
+}
+
+.button_login02{
+    margin: 16px 0px;
+}
+
+.hrhrhr{
+    margin: 16px 0px;
+    border-bottom-color: rgb(248, 248, 248);
+}
+
+.buttonTool3{
+    border-radius: 3px;
+    margin-bottom: 8px;
+    color: rgb(58, 58, 58);
+    transition: filter 0.1s ease 0s;
+    background-color: rgb(255, 232, 18);
+}
+
+.termsOfUse_box{
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: normal;
+    margin: 0px;
+    color: rgb(202, 202, 202);
+    text-align: center;
+    cursor: pointer;
+}
+
+.termsOfUse02{
+    color: rgb(0, 78, 195) !important;
+}
+
+
+.buttonTool3:hover{
+	background-color: #D0B336;	
+}
+
+.buttonTool4:hover{
+	background-color: #DCDCDC;
+}
+
+.button_login01:hover{
+	background-color: #2E8B57;
+}
+
+.emailV, .passwordV{
+	border: 1px solid rgb(239, 239, 239);
+}
+
+.erMText {
+    border-width: 0px;
+    color: rgb(243, 33, 59) !important;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.75rem !important;
+    font-weight: 400;
+    line-height: 1rem !important;
+    text-align: left !important;
+}
+
+

@@ -15,6 +15,3 @@ profile.addEventListener("click",function (){
         });
     }
 });
-
-
-const numAr = document.querySelectorAll('button.numCircle');

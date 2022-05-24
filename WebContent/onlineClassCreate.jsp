@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>하이하비 크리에이터 센터 | 원데이 클래스 신청</title>
-<link rel="stylesheet" href="asset/css/onedayClassCreate.css">
+<title>하이하비 크리에이터 센터 | 온라인 클래스 신청</title>
+<link rel="stylesheet" href="asset/css/onlineClassCreate.css">
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="preload" as="style">
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="asset/css/createrCenter.css">
@@ -111,9 +111,10 @@
 		<div class="container-wrap">
 			<div class="container">
 				<div class="topside">
-					<h3>원데이 클래스 신청</h3>
+					<h3>온라인 클래스 신청</h3>
 					<nav>
 						<div class="basic-information">기본 정보</div>
+						<div class="video">동영상</div>
 					</nav>
 				</div>
 				<!-- 기본 정보 -->
@@ -165,15 +166,16 @@
 								<option value="music">음악</option>
 								<option value="exercise">운동</option>
 								<option value="life">라이프</option>
+								<option value="photo">사진 · 영상</option>
+								<option value="finance">금융 · 재태크</option>
+								<option value="programming">프로그래밍</option>
+								<option value="business">비즈니스</option>
+								<option value="language">외국어</option>
 							</select>
 						</div>
 						<div class="class-place">
 							<p>장소</p>
 							<input type="text" name="classPlace" placeholder="클래스가 진행되는 장소를 추가해주세요.">
-						</div>
-						<div class="class-time">
-							<p>시간</p>
-							<input type="text" name="classtime" placeholder="클래스가 진행되는 시간을 추가해주세요.">
 						</div>
 						<div class="class-introduce">
 							<p>클래스 소개</p>
@@ -202,6 +204,27 @@
 						<div class="creator-phone">
 							<p>크리에이터 소개</p>
 							<input type="text" name="creatorPhone" placeholder="연락 가능한 연락처를 입력해주세요. (- 제외)">
+						</div>
+					</div>
+					<div class="application-button">
+						<button>신청하기</button>
+					</div>
+				</div>
+				<!-- 동영상 -->
+				<div class="video-wrap">
+					<div class="class-video">
+						<div class="video-name">
+							<p>비디오 제목</p>
+							<input type="text" name="videoName" placeholder="비디오의 제목을 입력해주세요.">
+						</div>
+						<div class="video-file">
+							<p>비디오 업로드</p>
+							<label for="video-file">
+								<div>
+									<img src="https://creator.class101.net/images/video-add.png">
+								</div>
+							</label>
+							<input type="file" id="video-file" name="videoFile">
 						</div>
 					</div>
 					<div class="application-button">
@@ -290,6 +313,6 @@
 				</footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="asset/js/onedayClassCreate.js"></script>
+<script src="asset/js/onlineClassCreate.js"></script>
 <script src="asset/js/createrCenter.js"></script>
 </html>
