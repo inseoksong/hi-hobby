@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+	font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 
+	'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+	margin: 0;
+}
+
+body {
+	word-break: keep-all;
+	background-color: #f8f8f8;
+}
+
+button {
+	cursor: pointer;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 27px 24px;
+}
+
+a:link, a:visited, a:active, a:hover {
+	cursor: pointer;
+	color: #000;
+	text-decoration: none;
+}
+
+header svg {
+	width: 201px;
+	height: 24px;
+}
+
+div.aperture {
+	height: 100px;
+}
+
+div.main {
+	text-align: center;
+}
+
+div.main h3 {
+	font-size: 28px;
+	color: #101010;
+	margin-bottom: 8px;
+}
+
+div.main h6 {
+	font-size: 18px;
+	color: #a2a2a2;
+}
+
+div.class-wrap {
+	display: flex;
+	justify-content: center;
+	margin-top: 48px;
+	transition: transform .2s ease, padding .2s ease;
+}
+
+div.class-choice {
+	display: flex;
+	position: relative;
+	width: 242px;
+	height: 254px;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	border-radius: 12px;
+	flex-direction: column;
+	align-items: center;
+	padding: 24px;
+	transition: all 0.3s ease-out;
+}
+
+div.class-choice:hover {
+	transform: translate(0,-20px);
+}
+
+div.class-choice img {
+	width: 120px;
+	height: 120px;
+	margin-bottom: 12px;
+}
+
+div.class-choice h6 {
+	font-size: 20px;
+	color: #1a1a1a;
+}
+
+div.class-choice button {
+	position: absolute;
+	width: 242px;
+	height: 44px;
+	bottom: 24px;
+	color: #101010;
+	background-color: #f2f2f2;
+	font-size: 14px;
+	font-weight: 700;
+	border: none;
+}
+
+div.class-choice:first-child {
+	margin-right: 24px;
+}
