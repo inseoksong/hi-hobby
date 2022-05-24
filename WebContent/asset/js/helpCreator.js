@@ -1,6 +1,8 @@
 const profile = document.querySelector('div.profile');
 const menu = document.querySelector('div.child-box');
 
+const $numButtons = $("button.numButton");
+
 profile.addEventListener("click",function (){
     if(menu.classList.contains('toggle')){
         menu.classList.remove('toggle');
@@ -16,5 +18,7 @@ profile.addEventListener("click",function (){
     }
 });
 
-
-const numAr = document.querySelectorAll('button.numCircle');
+$numButtons.click(function() {
+	$numButtons.removeClass("number-select");
+	$(this).addClass("number-select");
+});
