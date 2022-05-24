@@ -540,4 +540,6 @@ a{
     text-align: left !important;
 }
 
-
+a.screenLeftTopLogo img {
+	width: 85px;
+}

@@ -8,7 +8,7 @@
  <link rel="stylesheet" href="asset/css/joinEvent.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
     
-<title>클래스101 | 세상의 모든 클래스, 클래스101</title>
+<title>하이하비 | 이벤트</title>
 
 </head>
 <body>

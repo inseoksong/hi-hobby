@@ -4,12 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>클래스101 | 원데이 클래스</title>
+<title>하이하비 | 원데이 클래스</title>
 <link rel="stylesheet" href="asset/css/onedayClass.css">
 <link rel="stylesheet" href="asset/css/onedayPayment.css">
-<link rel="stylesheet" href="header/header.css">
-<link rel="stylesheet" href="footer/footer.css">
+<link rel="stylesheet" href="asset/css/header.css">
+<link rel="stylesheet" href="asset/css/footer.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<link rel="shortcut icon" href="asset/img/favicon.ico">
 </head>
 <body>
 	<jsp:include page="header.jsp"/>
@@ -263,5 +264,5 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="asset/js/onedayClass.js"></script>
 <script src="asset/js/onedayPayment.js"></script>
-<script src="header/header.js"></script>
+<script src="asset/js/header.js"></script>
 </html>

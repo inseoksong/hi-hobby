@@ -11,7 +11,7 @@
     <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="asset/css/createrCenterJoin.css">
     <link rel="shortcut icon" href="asset/img/favicon.ico">
-    <title>클래스101 크리에이터 센터 | 온라인 클래스 부터 전자책, 디지털 파일까지 크리에이터의 삶은 클래스101에서 시작해 보세요</title>
+    <title>하이하비 크리에이터 센터 | 크리에이터 회원가입</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
                     <div class="css-y5hz80">
                         <h2 class="css-1nup08f">반갑습니다<br>크리에이터님!</h2>
                         <div class="css-uqt4j8"></div>
-                        <p class="css-18imif5">클래스101의 크리에이터가 되기 위해<br>필요한 정보들을 확인해 주세요.</p>
+                        <p class="css-18imif5">하이하비의 크리에이터가 되기 위해<br>필요한 정보들을 확인해 주세요.</p>
                     </div>
                     <div class="css-wlewje"></div>
                     <div class="css-1jrh0y4">

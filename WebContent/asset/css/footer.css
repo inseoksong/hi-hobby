@@ -16,7 +16,6 @@ a{
 
 footer{
     width: 1176px;
-    padding-top : 50px;
     margin-left: auto;
     margin-right: auto;
     clear : both;
@@ -108,13 +107,13 @@ div.footer-bottom-left a{
     font-size: 11px;
 }
 
-div.footer-bottom-left a::after {
+/* div.footer-bottom-left a::after {
     color : rgb(162, 162, 162);
     content: "･";
     width : 24px;
     text-align: center;
     margin: 0 3px 0 5px;
-}
+} */
 
 div.footer-bottom-right{
     width : 63%;
@@ -126,16 +125,24 @@ div.footer-bottom-right a{
     font-size: 11px;
 }
 
-div.footer-bottom-right a::after{
+/* div.footer-bottom-right a::after{
     color : rgb(162, 162, 162);
     content: "･";
     width : 24px;
     text-align: center;
     margin: 0 3px 0 5px;
-}
+} */
 
 div.footer-end{
     margin-top: 20px;
     color : rgb(202, 202, 202);
     font-size: 9px;
+}
+
+div.footer-line {
+	width: 100%;
+	height: 1px;
+	background-color: #efefef;
+	margin-bottom: 50px;
+	margin-top: 50px;
 }
