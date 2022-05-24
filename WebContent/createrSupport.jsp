@@ -205,6 +205,7 @@
                         <div class="chestForCon">
                             <h3 class="chestForConH3">원하는 상품으로<br>시작해보세요</h3>
                             <div class="chestForConHe">
+                            	<div class="chestForConHeFormBoSp"></div>
                                 <div class="chestForConHeFir">
                                     <div class="chestForConHeForm">
                                         <div class="chestForConHeFormTop">
@@ -228,14 +229,13 @@
                                             </picture>
                                         </div>
                                         <div class="chestForConHeFormBo">
-                                            <h6 class="chestForConHeFormBoH6">정규 클래스</h6>
+                                            <h6 class="chestForConHeFormBoH6">원데이 클래스</h6>
                                             <div class="chestForConHeFormBoH6Spa"></div>
-                                            <p class="chestForConHeFormBoP">단계별 커리큘럼으로 이론부터 기초, 깊이 있는 내용까지 담아낼 수 있어요.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="chestForConHeFormBoSp"></div>
-                                <div class="chestForConHeFormBoForm2">
+                                <div class="chestForConHeFormBoForm2" style="margin-right: 136px;">
                                     <div class="chestForConHeForm">
                                         <div class="chestForConHeFormTop">
                                             <picture class="chestForConHeFormTopPic">
@@ -257,70 +257,12 @@
                                             </picture>
                                         </div>
                                         <div class="chestForConHeFormBo">
-                                            <h6 class="chestForConHeFormBoH6">원포인트 클래스</h6>
+                                            <h6 class="chestForConHeFormBoH6">온라인 클래스</h6>
                                             <div class="chestForConHeFormBoH6Spa"></div>
-                                            <p class="chestForConHeFormBoP">3분 이상의 영상 하나로 핵심 노하우를<br> 간결하고 빠르게 전달할 수 있어요.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="chestForConHeFormBoSp"></div>
-                                <div class="chestForConHeFormBoForm2">
-                                    <div class="chestForConHeForm">
-                                        <div class="chestForConHeFormTop">
-                                            <picture class="chestForConHeFormTopPic">
-                                                <source type="image/webp"
-                                                    srcset="https://cdn.class101.net/images/4a2ea4d8-b95c-46c1-8b27-efc1ac92345d/640xauto.webp 640w,https://cdn.class101.net/images/4a2ea4d8-b95c-46c1-8b27-efc1ac92345d/750xauto.webp 750w,https://cdn.class101.net/images/4a2ea4d8-b95c-46c1-8b27-efc1ac92345d/828xauto.webp 828w,https://cdn.class101.net/images/4a2ea4d8-b95c-46c1-8b27-efc1ac92345d/1080xauto.webp 1080w,https://cdn.class101.net/images/4a2ea4d8-b95c-46c1-8b27-efc1ac92345d/1200xauto.webp 1200w,https://cdn.class101.net/images/4a2ea4d8-b95c-46c1-8b27-efc1ac92345d/1920xauto.webp 1920w,https://cdn.class101.net/images/4a2ea4d8-b95c-46c1-8b27-efc1ac92345d/2048xauto.webp 2048w,https://cdn.class101.net/images/4a2ea4d8-b95c-46c1-8b27-efc1ac92345d/3840xauto.webp 3840w">
-                                                <img srcset="https://cdn.class101.net/images/4a2ea4d8-b95c-46c1-8b27-efc1ac92345d/640xauto 640w,https://cdn.class101.net/images/4a2ea4d8-b95c-46c1-8b27-efc1ac92345d/750xauto 750w,https://cdn.class101.net/images/4a2ea4d8-b95c-46c1-8b27-efc1ac92345d/828xauto 828w,https://cdn.class101.net/images/4a2ea4d8-b95c-46c1-8b27-efc1ac92345d/1080xauto 1080w,https://cdn.class101.net/images/4a2ea4d8-b95c-46c1-8b27-efc1ac92345d/1200xauto 1200w,https://cdn.class101.net/images/4a2ea4d8-b95c-46c1-8b27-efc1ac92345d/1920xauto 1920w,https://cdn.class101.net/images/4a2ea4d8-b95c-46c1-8b27-efc1ac92345d/2048xauto 2048w,https://cdn.class101.net/images/4a2ea4d8-b95c-46c1-8b27-efc1ac92345d/3840xauto 3840w"
-                                                    src="https://cdn.class101.net/images/4a2ea4d8-b95c-46c1-8b27-efc1ac92345d"
-                                                    class="chestForConHeFormTopPic">
-                                            </picture>
-                                        </div>
-                                        <div class="chestForConHeFormSpa">
-                                            <picture class="chestForConHeFormSpa">
-                                                <source type="image/webp"
-                                                    srcset="https://cdn.class101.net/images/c2d7bf48-f55d-42d8-ad96-9c69254dbc6a/640xauto.webp 640w,https://cdn.class101.net/images/c2d7bf48-f55d-42d8-ad96-9c69254dbc6a/750xauto.webp 750w,https://cdn.class101.net/images/c2d7bf48-f55d-42d8-ad96-9c69254dbc6a/828xauto.webp 828w,https://cdn.class101.net/images/c2d7bf48-f55d-42d8-ad96-9c69254dbc6a/1080xauto.webp 1080w,https://cdn.class101.net/images/c2d7bf48-f55d-42d8-ad96-9c69254dbc6a/1200xauto.webp 1200w,https://cdn.class101.net/images/c2d7bf48-f55d-42d8-ad96-9c69254dbc6a/1920xauto.webp 1920w,https://cdn.class101.net/images/c2d7bf48-f55d-42d8-ad96-9c69254dbc6a/2048xauto.webp 2048w,https://cdn.class101.net/images/c2d7bf48-f55d-42d8-ad96-9c69254dbc6a/3840xauto.webp 3840w"
-                                                    sizes="80px"><img
-                                                    srcset="https://cdn.class101.net/images/c2d7bf48-f55d-42d8-ad96-9c69254dbc6a/640xauto 640w,https://cdn.class101.net/images/c2d7bf48-f55d-42d8-ad96-9c69254dbc6a/750xauto 750w,https://cdn.class101.net/images/c2d7bf48-f55d-42d8-ad96-9c69254dbc6a/828xauto 828w,https://cdn.class101.net/images/c2d7bf48-f55d-42d8-ad96-9c69254dbc6a/1080xauto 1080w,https://cdn.class101.net/images/c2d7bf48-f55d-42d8-ad96-9c69254dbc6a/1200xauto 1200w,https://cdn.class101.net/images/c2d7bf48-f55d-42d8-ad96-9c69254dbc6a/1920xauto 1920w,https://cdn.class101.net/images/c2d7bf48-f55d-42d8-ad96-9c69254dbc6a/2048xauto 2048w,https://cdn.class101.net/images/c2d7bf48-f55d-42d8-ad96-9c69254dbc6a/3840xauto 3840w"
-                                                    src="https://cdn.class101.net/images/c2d7bf48-f55d-42d8-ad96-9c69254dbc6a"
-                                                    sizes="80px" class="chestForConHeFormSpa">
-                                            </picture>
-                                        </div>
-                                        <div class="chestForConHeFormBo">
-                                            <h6 class="chestForConHeFormBoH6">전자책</h6>
-                                            <div class="chestForConHeFormBoH6Spa"></div>
-                                            <p class="chestForConHeFormBoP">영상 촬영, 편집 과정 없이 PDF 파일로<br> 쉽고 빠르게 상품 등록이 가능해요.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="chestForConHeFormBoSp"></div>
-                                <div class="chestForConHeFormBoForm2">
-                                    <div class="chestForConHeForm">
-                                        <div class="chestForConHeFormTop">
-                                            <picture class="chestForConHeFormTopPic">
-                                                <source type="image/webp"
-                                                    srcset="https://cdn.class101.net/images/4065f714-44a1-45db-a63d-4e2c97dec9c5/640xauto.webp 640w,https://cdn.class101.net/images/4065f714-44a1-45db-a63d-4e2c97dec9c5/750xauto.webp 750w,https://cdn.class101.net/images/4065f714-44a1-45db-a63d-4e2c97dec9c5/828xauto.webp 828w,https://cdn.class101.net/images/4065f714-44a1-45db-a63d-4e2c97dec9c5/1080xauto.webp 1080w,https://cdn.class101.net/images/4065f714-44a1-45db-a63d-4e2c97dec9c5/1200xauto.webp 1200w,https://cdn.class101.net/images/4065f714-44a1-45db-a63d-4e2c97dec9c5/1920xauto.webp 1920w,https://cdn.class101.net/images/4065f714-44a1-45db-a63d-4e2c97dec9c5/2048xauto.webp 2048w,https://cdn.class101.net/images/4065f714-44a1-45db-a63d-4e2c97dec9c5/3840xauto.webp 3840w">
-                                                <img srcset="https://cdn.class101.net/images/4065f714-44a1-45db-a63d-4e2c97dec9c5/640xauto 640w,https://cdn.class101.net/images/4065f714-44a1-45db-a63d-4e2c97dec9c5/750xauto 750w,https://cdn.class101.net/images/4065f714-44a1-45db-a63d-4e2c97dec9c5/828xauto 828w,https://cdn.class101.net/images/4065f714-44a1-45db-a63d-4e2c97dec9c5/1080xauto 1080w,https://cdn.class101.net/images/4065f714-44a1-45db-a63d-4e2c97dec9c5/1200xauto 1200w,https://cdn.class101.net/images/4065f714-44a1-45db-a63d-4e2c97dec9c5/1920xauto 1920w,https://cdn.class101.net/images/4065f714-44a1-45db-a63d-4e2c97dec9c5/2048xauto 2048w,https://cdn.class101.net/images/4065f714-44a1-45db-a63d-4e2c97dec9c5/3840xauto 3840w"
-                                                    src="https://cdn.class101.net/images/4065f714-44a1-45db-a63d-4e2c97dec9c5"
-                                                    class="chestForConHeFormTopPic">
-                                            </picture>
-                                        </div>
-                                        <div class="chestForConHeFormSpa">
-                                            <picture class="chestForConHeFormSpa">
-                                                <source type="image/webp"
-                                                    srcset="https://cdn.class101.net/images/c9e8c584-2034-4e34-8d2a-a8eaaad15479/640xauto.webp 640w,https://cdn.class101.net/images/c9e8c584-2034-4e34-8d2a-a8eaaad15479/750xauto.webp 750w,https://cdn.class101.net/images/c9e8c584-2034-4e34-8d2a-a8eaaad15479/828xauto.webp 828w,https://cdn.class101.net/images/c9e8c584-2034-4e34-8d2a-a8eaaad15479/1080xauto.webp 1080w,https://cdn.class101.net/images/c9e8c584-2034-4e34-8d2a-a8eaaad15479/1200xauto.webp 1200w,https://cdn.class101.net/images/c9e8c584-2034-4e34-8d2a-a8eaaad15479/1920xauto.webp 1920w,https://cdn.class101.net/images/c9e8c584-2034-4e34-8d2a-a8eaaad15479/2048xauto.webp 2048w,https://cdn.class101.net/images/c9e8c584-2034-4e34-8d2a-a8eaaad15479/3840xauto.webp 3840w"
-                                                    sizes="80px"><img
-                                                    srcset="https://cdn.class101.net/images/c9e8c584-2034-4e34-8d2a-a8eaaad15479/640xauto 640w,https://cdn.class101.net/images/c9e8c584-2034-4e34-8d2a-a8eaaad15479/750xauto 750w,https://cdn.class101.net/images/c9e8c584-2034-4e34-8d2a-a8eaaad15479/828xauto 828w,https://cdn.class101.net/images/c9e8c584-2034-4e34-8d2a-a8eaaad15479/1080xauto 1080w,https://cdn.class101.net/images/c9e8c584-2034-4e34-8d2a-a8eaaad15479/1200xauto 1200w,https://cdn.class101.net/images/c9e8c584-2034-4e34-8d2a-a8eaaad15479/1920xauto 1920w,https://cdn.class101.net/images/c9e8c584-2034-4e34-8d2a-a8eaaad15479/2048xauto 2048w,https://cdn.class101.net/images/c9e8c584-2034-4e34-8d2a-a8eaaad15479/3840xauto 3840w"
-                                                    src="https://cdn.class101.net/images/c9e8c584-2034-4e34-8d2a-a8eaaad15479"
-                                                    sizes="80px" class="chestForConHeFormSpa">
-                                            </picture>
-                                        </div>
-                                        <div class="chestForConHeFormBo">
-                                            <h6 class="chestForConHeFormBoH6">디지털 파일</h6>
-                                            <div class="chestForConHeFormBoH6Spa"></div>
-                                            <p class="chestForConHeFormBoP">혼자만 가지고 있기 아까운 도안, 브러시, 템플릿 등 다양한 파일도 판매해 보세요.</p>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             <div class="chestForConFoForm">
                                 <button class="chestForConFoBu" onclick="location.href='createrLogin.jsp'">
