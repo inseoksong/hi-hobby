@@ -11,6 +11,7 @@
 <title>클래스101 | 세상의 모든 클래스, 클래스101</title>
 </head>
 <body>
+<jsp:include page="header.jsp"/>
     <section>
         <div class="latelyUpdate">
             <div class="layer floor6">
@@ -25,7 +26,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="now/img/01.webp"></div>
+                                        <div><img src="asset/img/classList01.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             5만원 쿠폰
                                         </span>
@@ -56,7 +57,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="now/img/02.webp"></div>
+                                        <div><img src="asset/img/classList02.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -87,7 +88,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="now/img/03.webp"></div>
+                                        <div><img src="asset/img/classList03.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -118,7 +119,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="now/img/04.webp"></div>
+                                        <div><img src="asset/img/classList04.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -151,7 +152,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="now/img/05.webp"></div>
+                                        <div><img src="asset/img/classList05.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -182,7 +183,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="now/img/01.webp"></div>
+                                        <div><img src="asset/img/classList01.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             5만원 쿠폰
                                         </span>
@@ -213,7 +214,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="now/img/02.webp"></div>
+                                        <div><img src="asset/img/classList02.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -244,7 +245,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="now/img/03.webp"></div>
+                                        <div><img src="asset/img/classList03.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -287,7 +288,7 @@
                                            <div class="middle-text"><span>1번만 와도 무조건 선물 드려요!</span></div>
                                         </div>
                                         <div class="middleImg">
-                                          <span><img src="now/img/banner/01.webp"></span>
+                                          <span><img src="asset/img/smallbanner/01.webp"></span>
                                         </div> 
                                     </div>
                                 </div> 
@@ -300,7 +301,7 @@
                                            <div class="middle-text"><span>무료로 듣는 영어 핵심 포인트 ▶</span></div>
                                         </div>
                                         <div class="middleImg">
-                                          <span><img src="now/img/banner/02.webp"></span>
+                                          <span><img src="asset/img/smallbanner/02.webp"></span>
                                         </div> 
                                     </div>
                                 </div> 
@@ -313,7 +314,7 @@
                                            <div class="middle-text"><span>카테고리별 인기 클래스를 만나봐요</span></div>
                                         </div>
                                         <div class="middleImg">
-                                          <span><img src="now/img/banner/05.webp"></span>
+                                          <span><img src="asset/img/smallbanner/05.webp"></span>
                                         </div> 
                                     </div>
                                 </div> 
@@ -326,7 +327,7 @@
                                            <div class="middle-text"><span>하루에 한장씩 끝내는 영어회화</span></div>
                                         </div>
                                         <div class="middleImg">
-                                          <span><img src="now/img/banner/04.webp"></span>
+                                          <span><img src="asset/img/smallbanner/04.webp"></span>
                                         </div> 
                                     </div>
                                 </div> 
@@ -339,7 +340,7 @@
                                            <div class="middle-text"><span>디지털드로잉 무료수강권 증정👉</span></div>
                                         </div>
                                         <div class="middleImg">
-                                          <span><img src="now/img/banner/03.webp"></span>
+                                          <span><img src="asset/img/smallbanner/03.webp"></span>
                                         </div> 
                                     </div>
                                 </div> 
@@ -356,7 +357,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="now/img/01.webp"></div>
+                                        <div><img src="asset/img/classList01.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             5만원 쿠폰
                                         </span>
@@ -387,7 +388,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="now/img/02.webp"></div>
+                                        <div><img src="asset/img/classList02.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -418,7 +419,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="now/img/03.webp"></div>
+                                        <div><img src="asset/img/classList03.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -449,7 +450,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="now/img/04.webp"></div>
+                                        <div><img src="asset/img/classList04.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -482,7 +483,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="now/img/05.webp"></div>
+                                        <div><img src="asset/img/classList05.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -513,7 +514,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="now/img/01.webp"></div>
+                                        <div><img src="asset/img/classList01.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             5만원 쿠폰
                                         </span>
@@ -544,7 +545,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="now/img/02.webp"></div>
+                                        <div><img src="asset/img/classList02.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -575,7 +576,7 @@
                             <div class="class-cell">
                                 <a>
                                     <div class="thumb-pic">
-                                        <div><img src="now/img/03.webp"></div>
+                                        <div><img src="asset/img/classList03.webp"></div>
                                         <span class="coupon-mark magenta-back">
                                             3만원 쿠폰
                                         </span>
@@ -607,6 +608,7 @@
             </div>
         </div>
     </section>
+<jsp:include page="footer.jsp"/>
 </body>
-<script src="now/now.js"></script>
+<script src="asset/js/now.js"></script>
 </html>
