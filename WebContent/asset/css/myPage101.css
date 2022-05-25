@@ -292,6 +292,195 @@ body>div{
 
 
 
+/* --------------------------------------------------------------------- */
+
+
+.hiddenBox .swiper-slide{
+  list-style-type: none;
+}
+
+.gQyJNI{
+    border: 0px;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    flex: initial;
+    box-sizing: border-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.fEVWYc{
+    display: inline-flex;
+    flex: 0 0 auto;
+    vertical-align: middle;
+    padding: 0px;
+    border-radius: 3px;
+    color: rgb(26, 26, 26);
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    transition: background-color 0.1s ease 0s;
+}
+
+.jWkqON{
+    position: absolute;
+    z-index: 2;
+    top: -48px;
+    right: 32px;
+}
+
+.BYXFz{
+    position: absolute;
+    z-index: 2;
+    top: -48px;
+    right: 0px;
+}
+
+.gQyJNI{
+    cursor: pointer;
+}
+
+.jwNHGa{
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+
+
+.cXOrCl{
+}
+
+
+
+
+.eDQPYt{
+    position: relative;
+}
+
+.hiddenBox{
+	width: 780px;
+	overflow: hidden !important;
+	position: relative;
+}
+
+.swiper-container{
+    margin: 0px auto;
+    position: relative;
+    /* overflow: hidden; */
+    list-style: none;
+    padding: 0px;
+    z-index: 1;
+    width: 1500px;
+}
+
+.swiper-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform, -webkit-transform;
+    box-sizing: content-box;
+}
+
+.swiper-slide{
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform, -webkit-transform;
+}
+
+
+.swiper-container-android .swiper-slide, .swiper-wrapper{
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.css-zsoya5{
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.hRWfZQ{
+    display: block;
+    text-decoration: none !important;
+}
+
+.iDddPj{
+    position: relative;
+    width: 100%;
+}
+
+.kbMurS{
+    overflow: hidden;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+.bUogJm{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    font-size: 0px;
+    padding-top: 75%;
+    background: rgb(238, 238, 238);
+}
+
+.kKdHVx{
+    position: relative;
+    border-radius: 3px;
+    -webkit-mask-image: radial-gradient(rgb(255, 255, 255), rgb(0, 0, 0));
+}
+
+.iXXLck{
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.kKdHVx img{
+    transform: scale(1);
+    transition: transform 0.3s ease 0s, opacity 0.1s linear 0s !important;
+}
+
+.kWswCZ img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.iXXLck img{
+    transition: opacity 0.1s linear 0s;
+    object-fit: cover;
+    opacity: 1;
+}
+
+.hiddenBox{
+  position: absolute;
+  left: 0;
+  top: 0;/* 
+  width: 1500px; /* 슬라이드할 사진과 마진 총 넓이 */  */
+  transition: left 0.5s ease-out; 
+  /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
+}
+
+
+
+
+
 
 
 

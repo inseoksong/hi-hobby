@@ -438,3 +438,107 @@ a{
 }
 
 
+
+
+
+
+
+/* -------------------------------------------------------------------------------------- */
+
+.bTUKya{
+    width: calc(50% - 12px);
+    padding: 16px 0px 0px;
+}
+
+.css-11uude3{
+    padding: 24px 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    overflow: hidden;
+    transform: translateX(0px) translateY(0px) translateZ(0px);
+    width: 92.8%;
+    height: 64%;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(229, 229, 229);
+}
+
+.css-zsoya5{
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.css-1f8m7mx{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.bnDXmG{
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    line-height: 26px;
+}
+
+.gbisaG{
+    width: 62%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: rgb(0, 0, 0);
+    margin-top: 4px;
+    font-size: 13px;
+}
+
+.jABwSZ{
+    margin-bottom: 24px;
+}
+
+.fdzdeR{
+    font-size: 13px;
+    line-height: 18px;
+    color: rgb(243, 33, 59);
+    font-weight: 600;
+}
+
+.ikoJVN{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgb(102, 102, 102);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 26px 20px;
+}
+
+.gbPpyW{
+    width: 14px;
+    height: 14px;
+    margin-left: 2px;
+}
+
+svg:not(:root){
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+

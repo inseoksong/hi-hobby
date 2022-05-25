@@ -18,3 +18,21 @@ const topLine = document.querySelector('div.top-line-banner');
 xBtn.addEventListener("click",function(){
     topLine.classList.add('hidden');
 });
+
+
+const onlineBtn = document.querySelector('h4.online');
+const onedayBtn = document.querySelector('h4.oneday');
+
+onlineBtn.addEventListener("click", function(){
+	onedayBtn.classList.remove('selectClass');
+	if(!this.classList.contains('selectClass')){
+		this.classList.add('selectClass');
+	}
+});
+
+onedayBtn.addEventListener("click", function(){
+	onlineBtn.classList.remove('selectClass');
+	if(!this.classList.contains('selectClass')){
+		this.classList.add('selectClass');
+	}
+});
