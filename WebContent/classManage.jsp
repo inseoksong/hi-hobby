@@ -39,12 +39,6 @@
                         <div class="menu-text"><span>클래스 관리</span></div>
                     </div>
                 </a>
-                <a href="helpCreator.jsp">
-                    <div class="menu-wrap">
-                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-skwyyj"><path d="M15.88 10.4c1-.995 1.62-2.375 1.62-3.9C17.5 3.46 15.04 1 12 1S6.5 3.46 6.5 6.5c0 1.52.62 2.895 1.615 3.895C5.095 11.85 3 14.94 3 18.5v3.25c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25V18.5a6.504 6.504 0 0 1 6.83-6.49c3.49.17 6.17 3.185 6.17 6.68v3.06c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25v-3.045c.005-3.59-2.055-6.805-5.12-8.305Zm-3.875-6.9c1.655 0 3 1.345 3 3s-1.345 3-3 3-3-1.345-3-3 1.345-3 3-3Z" class="css-sy7xp0"></path></svg></span>
-                        <div class="menu-text"><span>크리에이터 지원</span></div>
-                    </div>
-                </a>
             </div>
         </div>
     </nav>

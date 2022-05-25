@@ -6,6 +6,8 @@ html, body{
 body {
     font-family:'Pretendard JP',Pretendard,system-ui,Roboto,'Helvetica Neue','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif;
     color: rgb(26, 26, 26);
+    word-break: keep-all;
+    overflow-x: hidden;
 }
 
 a{
@@ -159,7 +161,7 @@ div.banner-container {
 
 div.banner-full {
     width : 600vw;
-    height : 100%;
+    height : 450px;
     background-color: transparent;
     display : flex;
     float : left;
@@ -180,7 +182,7 @@ div.bannerChild img {
 }
 
 div.banner-back{
-    width : 100vw;
+    width: 100vw;
     height : 424px;
     /* position: absolute; 이건왜?  */
 }
@@ -228,7 +230,7 @@ div.text-wrap{
     margin-left: 700px;
     margin-top: 67px;
     width : 516px;
-    height : 456px;
+	height: 383px;
 }
 
 div.text01{
@@ -260,7 +262,7 @@ div.thisNum::after{
 }
 
 div.main-content {
-    width : 1216px;
+    width : 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -278,8 +280,9 @@ div.layer {
 }
 
 div.floor1, div.floor4, div.floor5 {
-    width : 100%;
+    width : 1216px;
     height: 464px;
+    margin: 0 auto;
 }
 
 div.floor2{
@@ -646,19 +649,18 @@ span.one-point{
 div.middle-rolling{
     width : 100vw;
     height : 206px;
-    position : relative;
+    position: relative;
 }
 
 .middleBtn{
-    position: absolute;
-    background-color: white;
-    width : 32px;
-    height : 32px;
-    border-radius: 5px;
-    font-size: 22px;
-    color:rgb(102, 102, 102);
-    z-index : 1000;
-    border: none;
+	border-style: none;
+	background: transparent;
+	color : white;
+	font-weight: 100;
+	font-size: 30px;
+	position: absolute;
+	z-index: 1000;
+	cursor: pointer;
 }
 
 .middleBtn:hover{
@@ -666,13 +668,13 @@ div.middle-rolling{
 }
 
 .middlePrev{
-    top : 160px;
-    left : 1226px
+    top: 129px;
+    right: 352px;
 }
 
 .middleNext{
-    top : 160px;
-    left : 1258px
+    top: 129px;
+    right: 305px;
 }
 
 .middle-container{

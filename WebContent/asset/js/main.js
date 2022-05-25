@@ -2,12 +2,6 @@ const mainBanner = document.querySelector('div.banner-full');
 
 let count = 0;
 
-setInterval(function () {
-	count++;
-	count = count ==7? 0 :acount;
-    mainBanner.style.transform = "translate(-" + count*100 + "vw)";
-},3000);
-
 const rollBtns = document.querySelectorAll('button.rollingBtn');
 
 rollBtns.forEach(btn=>{
@@ -82,31 +76,21 @@ eventBtns.forEach(btn=>{
     });
 });
 
-const midBtns = document.querySelectorAll('button.middleBtn');
+const $middleBtn = $("button.middleBtn");
+const middleBanner = document.querySelector("div.middle-full");
 
-midBtns.forEach(btn=>{
-    let count = 0;
-    btn.addEventListener("click",function(){
-        let result = '';
-        let btnType = btn.classList[1];
-        if(btnType = 'middlePrev'){
-            count--;
-            if(count== -1){
-                count = 2;
-            }
-            result = btn.nextSibling.nextSibling.firstChild.nextSibling;
-        } else{
-            console.log("next");
-            count++;
-            if(count==3){
-                count = 0;
-            }
-            result = btn.previousSibling.previousSibling.firstChild.nextSibling;
-        }
-        console.log(result);
-        result.style.transform = "translate(-" + count*100 + "vw)";
-    })
-})
+$middleBtn.click(function() {
+	if($(this).hasClass("prev") == true) {
+		count--;
+        count = count == -1 ? 3 : count;
+        middleBanner.style.transform = "translate(-" + count * 100 + "vw)";
+	}
+	else {
+		count++;
+        count = count == 4 ? 0 : count;
+        middleBanner.style.transform = "translate(-" + count * 100 + "vw)";
+	}
+});
 
 /* const $allMenu = $('.all-menu');
 const $allBelow = $('.all-menu-below');
@@ -141,21 +125,3 @@ function toggle() {
 };
 
 /* allMenu.addEventListener("focus", toggle()); */
-
-const heartAr = document.querySelectorAll('svg.heart');
-
-heartAr.forEach((heart) => {
-    heart.addEventListener("click", function(){
-        
-        const color = this.firstChild;
-
-        console.log(color);
-        if(color.classList.contains('red-color')){
-            color.classList.remove('red-color');
-            console.log("색상 초기호ㅏ");
-        } else {
-            color.classList.add('red-color');
-            console.log("색상 채우기");
-        }
-    })
-})
