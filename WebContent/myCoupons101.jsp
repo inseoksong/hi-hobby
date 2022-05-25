@@ -154,7 +154,9 @@
 							</div>
 						</div>
 						<div class="bDnlSL">
-							<div class="hOnkYE">
+						
+						
+							<div class="hOnkYE" style="display: none;">
 								<div class="impvyv"></div>
 								<div class="cqZvVN kElkXM">
 									보유하신 쿠폰이 없습니다.
@@ -163,6 +165,72 @@
 								</div>
 								<a class="gBCbWC" onclick="location.href='blockB.jsp'">쿠폰 이벤트 확인하기</a>
 							</div>
+							
+							
+							<!-- 데이터 입력받으면 위 div는 display는 none으로 바꾸고 밑 div가 생성되게 해야 함.  -->
+							
+							<div class="bTUKya">
+								<div class="css-11uude3">
+									<div class="css-zsoya5">
+										<div class="css-1f8m7mx">
+											<div class="bnDXmG">100,000원</div>
+										</div>
+										<div class="gbisaG">[블록버스터 세일 쿠폰팩] 10만원 클래스 할인</div>
+										<div class="jABwSZ"></div>
+										<div class="fdzdeR">오늘마감</div>
+										<a class="iyDZfK ikoJVN" onclick="location.href='blocB.jsp'">
+											이벤트 확인하기
+											<svg class="gbPpyW" width="24" height="24" height="24" viewBox="0 0 24 24">
+												<path fill-rule="evenodd" fill="#666666" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z"></path>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="bTUKya">
+								<div class="css-11uude3">
+									<div class="css-zsoya5">
+										<div class="css-1f8m7mx">
+											<div class="bnDXmG">100,000원</div>
+										</div>
+										<div class="gbisaG">[블록버스터 세일 쿠폰팩] 10만원 클래스 할인</div>
+										<div class="jABwSZ"></div>
+										<div class="fdzdeR">오늘마감</div>
+										<a class="iyDZfK ikoJVN" onclick="location.href='blocB.jsp'">
+											이벤트 확인하기
+											<svg class="gbPpyW" width="24" height="24" height="24" viewBox="0 0 24 24">
+												<path fill-rule="evenodd" fill="#666666" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z"></path>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="bTUKya">
+								<div class="css-11uude3">
+									<div class="css-zsoya5">
+										<div class="css-1f8m7mx">
+											<div class="bnDXmG">100,000원</div>
+										</div>
+										<div class="gbisaG">[블록버스터 세일 쿠폰팩] 10만원 클래스 할인</div>
+										<div class="jABwSZ"></div>
+										<div class="fdzdeR">오늘마감</div>
+										<a class="iyDZfK ikoJVN" onclick="location.href='blocB.jsp'">
+											이벤트 확인하기
+											<svg class="gbPpyW" width="24" height="24" height="24" viewBox="0 0 24 24">
+												<path fill-rule="evenodd" fill="#666666" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z"></path>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							
+							
+							
+							
 						</div>
 						<div class="dkJRnq"></div>
 					</div>

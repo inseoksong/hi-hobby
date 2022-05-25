@@ -67,10 +67,116 @@
 						</div>
 					</div>
 					<div class="eJOZvN"></div>
-					<div class="iGgrOr">
+					
+					
+					
+					
+					<div class="iGgrOr"  style="display: none;">
 						<img class="bDkLkp" src="https://class101.net/images/empty-pay.png">
 						<span class="cRjzuI">아직 구매하신 클래스가 없어요</span>
 					</div>
+					
+					
+					<!-- 데이터 입력받으면 위 div는 display는 none으로 바꾸고 밑 .giQpUz .kkWRfi div가 생성되게 해야 함.  -->
+					
+					<div class="hPeVaC">
+						
+						<div class="giQpUz kkWRfi">
+							<div class="hdnqZU">
+								<div class="fyBGRf" color="#3a3a3a">2022. 05. 25</div>
+								<span class="kLdAhK gjEfyk">
+									<a class="iyDZfK kvlcIY" icon-position="1" color="orange" theme="[object Object]" onclick="location.href="onlineClass.jsp">
+										<div class="fzMflk">
+											<svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+												<path fill-rule="evenodd" fill="#ff5600" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z"></path>
+											</svg>
+										</div>
+										<span class="jwNHGa">자세히 보기</span>
+									</a>
+								</span>
+							</div>
+							<div class="ihCtaW">
+								<hr class="apciC">
+							</div>							
+							<div class="jZWAhH">
+								<div class="kcZCaW">
+									<div class="jlEjpQ" color="#3a3a3a" font-weight="bold">결제 성공</div>
+								</div>
+								<div class="jlgpeI"></div>
+								<div class="jeemFk mjpoN">
+									<div class="hsEmIr">
+										<span class="bUogJm ilGvKF">
+											<picture class="kWswCZ iXXLck">
+												<img style="max-width: 100%; max-height:100%;" src="https://cdn.class101.net/images/b1e9c19f-dc77-4b83-a68b-b04a4183730e/375xauto.webp">
+											</picture>
+										</span>
+									</div>
+									<div class="jzTFeN">
+										<div class="bpeeGV">
+											<a class="fjgoBy" >유노코딩 온라인 수강권</a>
+										</div>
+										<div class="fyvIfK">20주 수강권</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						
+						<div class="giQpUz kkWRfi">
+							<div class="hdnqZU">
+								<div class="fyBGRf" color="#3a3a3a">2022. 05. 25</div>
+								<span class="kLdAhK gjEfyk">
+									<a class="iyDZfK kvlcIY" icon-position="1" color="orange" theme="[object Object]" onclick="location.href="onlineClass.jsp">
+										<div class="fzMflk">
+											<svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+												<path fill-rule="evenodd" fill="#ff5600" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z"></path>
+											</svg>
+										</div>
+										<span class="jwNHGa">자세히 보기</span>
+									</a>
+								</span>
+							</div>
+							<div class="ihCtaW">
+								<hr class="apciC">
+							</div>							
+							<div class="jZWAhH">
+								<div class="kcZCaW">
+									<div class="jlEjpQ" color="#3a3a3a" font-weight="bold">결제 성공</div>
+								</div>
+								<div class="jlgpeI"></div>
+								<div class="jeemFk mjpoN">
+									<div class="hsEmIr">
+										<span class="bUogJm ilGvKF">
+											<picture class="kWswCZ iXXLck">
+												<img style="max-width: 100%; max-height:100%;" src="https://cdn.class101.net/images/b1e9c19f-dc77-4b83-a68b-b04a4183730e/375xauto.webp">
+											</picture>
+										</span>
+									</div>
+									<div class="jzTFeN">
+										<div class="bpeeGV">
+											<a class="fjgoBy" >유노코딩 온라인 수강권</a>
+										</div>
+										<div class="fyvIfK">20주 수강권</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						
+						
+						
+
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
 				</div>
 			
 				<footer class="imGLyS">
