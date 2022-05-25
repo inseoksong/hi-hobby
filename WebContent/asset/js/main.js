@@ -141,21 +141,3 @@ function toggle() {
 };
 
 /* allMenu.addEventListener("focus", toggle()); */
-
-const heartAr = document.querySelectorAll('svg.heart');
-
-heartAr.forEach((heart) => {
-    heart.addEventListener("click", function(){
-        
-        const color = this.firstChild;
-
-        console.log(color);
-        if(color.classList.contains('red-color')){
-            color.classList.remove('red-color');
-            console.log("색상 초기호ㅏ");
-        } else {
-            color.classList.add('red-color');
-            console.log("색상 채우기");
-        }
-    })
-})
