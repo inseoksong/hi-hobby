@@ -4,29 +4,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="admin/helpCreator.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="asset/img/favicon.ico">
-    
-<title>클래스101 어드민 센터 | 세상의 모든 클래스, 클래스101</title>
+<link rel="stylesheet" href="asset/css/helpCreator.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="asset/img/favicon.ico">
+<title>하이하비 어드민 센터 | 크리에이터 지원</title>
 </head>
 <body>
     <header>
         <div class="header">
             <div class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" ; viewBox="0 0 140 32"><path d="M30.303 5.687v7.027l-.043.053-.069-.215-.073-.214a10.545 10.545 0 0 0-9.901-7.088h-.018a10.545 10.545 0 0 0-9.909 7.095l-.073.215-.068.214-.046-.052V5.687H0v20.621h10.103v-7.027l.046-.053.068.215.073.212a10.545 10.545 0 0 0 9.902 7.09h.017a10.545 10.545 0 0 0 9.902-7.09l.073-.212.068-.215.043.053v7.035h10.103V5.686H30.303ZM65.237" fill="rgb(26, 26, 26)" m30.303=""></path></svg>
-                 <div class="logo-text"><span>Admin Center</span></div>
+                <img src="asset/img/adminLogo2.png">
             </div>
             <div class="profile">
-                <div><img src="admin/img/profile.webp"></div>
+                <div><img src="https://cdn.class101.net/images/cba86b3c-f6a4-42b3-9bbd-bf6c09e49d27/1920xauto.webp"></div>
                 <div class="child-box">
                     <div>
-                        <div class="child-wrap">
-                            <div class="child-menu"><span>관리자 정보</span></div>
-                        </div>
                         <div class="logOut child-wrap">
                             <div class="child-menu"><span>로그아웃</span></div>
                         </div>
@@ -38,12 +33,6 @@
     <nav>
         <div class="section-left">
             <div class="nav-wrap">
-                <!-- <a href="admin.jsp">
-                    <div class="menu-wrap">
-                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-skwyyj"><path fill-rule="evenodd" d="M19.5 8.5V15h1.25c.14 0 .25.11.25.25v2a.249.249 0 0 1-.25.25H3.25c-.14 0-.25-.11-.25-.25v-2c0-.14.11-.25.25-.25H4.5V8.5C4.5 4.375 7.875 1 12 1s7.5 3.375 7.5 7.5ZM7 8.5c0-2.755 2.245-5 5-5s5 2.245 5 5V15H7V8.5Z" clip-rule="evenodd"></path><path d="M14 21a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"></path></svg></span>
-                        <div class="menu-text"><span>공지사항</span></div>
-                    </div>
-                </a> -->
                 <a href="classManage.jsp">
                     <div class="menu-wrap">
                         <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-skwyyj"><path d="M19.5 4.5v15h-15v-15h15ZM21.7 2H2.25c-.15 0-.3.15-.3.3v19.45c0 .15.15.3.3.3H21.7c.15 0 .3-.15.3-.3V2.3c0-.15-.1-.3-.3-.3Z" class="css-sy7xp0"></path><path d="M15.799 11.8c.15.1.15.3 0 .4l-2.95 1.9-2.85 1.9c-.2.1-.4 0-.4-.2V8.2c0-.2.25-.3.4-.2l2.85 1.85 2.95 1.95Z"></path></svg></span>
@@ -150,26 +139,37 @@
                     </table>
                 </div>
             </div>
-            <div class="numWrap">
-                <div class="numBox">
-                    <div class="arroePrev">
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M15.5 5.5l-6 6.5 6 6.5L14 20l-7.5-8L14 4l1.5 1.5z" fill="#1a1a1a"></path></svg></span>
-                    </div>
-                    <div></div>
-                    <div class="circleBox">
-                        <button class="numCircle">1</button>
-                        <button class="numCircle">2</button>
-                        <button class="numCircle">3</button>
-                        <button class="numCircle">4</button>
-                        <button class="numCircle">5</button>
-                    </div>
-                   <div >
-                       <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z" fill="#1a1a1a"></path></svg></span>
-                   </div>
-                </div>
-            </div>
+            <div class="page-number">
+				<div class="number-buttons">
+					<button type="button">
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+								<path fill-rule="evenodd" d="M15.5 5.5l-6 6.5 6 6.5L14 20l-7.5-8L14 4l1.5 1.5z" fill="#1a1a1a"></path>
+							</svg>
+						</span>
+					</button>
+					<button type="button" class="number-select numButton">
+						<span>
+							1
+						</span>
+					</button>
+					<button type="button" class="numButton">
+						<span>
+							2
+						</span>
+					</button>
+					<button type="button">
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+								<path fill-rule="evenodd" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z" fill="#1a1a1a"></path>
+							</svg>
+						</span>
+					</button>
+				</div>
+			</div>
         </div>
     </section>
 </body>
-<script src="admin/helpCreator.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="asset/js/helpCreator.js"></script>
 </html>

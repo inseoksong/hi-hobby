@@ -139,6 +139,7 @@ h3 {
 
 svg:not(:root) {
     overflow: hidden;
+    margin-left: -1px;
 }
 
 *,
@@ -527,6 +528,7 @@ body>div {
 }
 
 .css-1mg3xmk {
+	border: 1px solid #000000;
     background-color: rgb(255, 255, 255);
     padding: 12px;
     cursor: pointer;

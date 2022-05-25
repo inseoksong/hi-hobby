@@ -11,8 +11,7 @@
     <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="asset/css/termOfCreateService.css">
     <link rel="shortcut icon" href="asset/img/favicon.ico">
-    <link rel="shortcut icon" href="favicon.ico">
-    <title>CLASS101 크리에이터센터 이용약관</title>
+    <title>하이하비 크리에이터 센터 | 이용약관</title>
 </head>
 <body>
     <div id="__next" data-reactroot="">

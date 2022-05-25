@@ -43,7 +43,6 @@ div.header {
 div.logo {
     position : relative;
     width : 300px;
-    height: 100%;
 }
 
 div.logo > svg {
@@ -70,15 +69,15 @@ div.profile {
     cursor: pointer;
 }
 
-div.profile img{
+div.profile img {
     width : 100%;
     height : 100%;
 }
 
-.child-box{
+.child-box {
     visibility: hidden;
     width: 200px;
-    height : 100px;
+    height : 50px;
     background-color: white;
     border :1px rgb(229, 229, 229) solid;
     position: absolute;
@@ -87,7 +86,7 @@ div.profile img{
     cursor: pointer;
 }
 
-.toggle{
+.toggle {
     visibility: visible;
 }
 
@@ -96,7 +95,7 @@ div.child-wrap {
     height: 50%;
 }
 
-div.child-wrap:hover{
+div.child-wrap:hover {
     background-color: rgb(229, 229, 229);
 }
 
@@ -275,4 +274,43 @@ button.numCircle{
     margin-top: -7px;
     font-size: 15px;
     font-family:'Pretendard JP',Pretendard,system-ui,Roboto,'Helvetica Neue','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif;
+}
+
+div.page-number {
+	margin-top: 24px;
+	margin-bottom: 20px;
+}
+
+div.number-buttons {
+	display: flex;
+	justify-content: center;
+}
+
+div.number-buttons button {
+	display: inline-flex;
+	width: 32px;
+	height: 32px;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+	background-color: #f8f8f8;
+	border: 1px solid #f8f8f8;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+div.number-buttons button.numButton {
+	background-color: #f8f8f8;
+	border-color: #f8f8f8;
+	color: #000;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+div.number-buttons button.number-select {
+	background-color: #19ce60;
+	border-color: #19ce60;
+	color: #fff;
+	font-weight: 500;
+	font-size: 14px;
 }

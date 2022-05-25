@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="shortcut icon" href="asset/img/favicon.ico">
-<title>클래스101 | 세상의 모든 클래스, 클래스101</title>
+<title>하이하비 | 메인</title>
 <link rel="stylesheet" href="asset/css/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 

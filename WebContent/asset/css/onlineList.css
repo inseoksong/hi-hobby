@@ -176,7 +176,7 @@ li.last {
 	padding-left: 12px;
 }
 
-section.page-number {
+div.page-number {
 	margin-bottom: 20px;
 }
 
@@ -198,7 +198,15 @@ div.number-buttons button {
 	cursor: pointer;
 }
 
-div.number-buttons button.number1 {
+div.number-buttons button.numButton{
+	background-color: #f8f8f8;
+	border-color: #f8f8f8;
+	color: #000;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+div.number-buttons button.number-select {
 	background-color: #19ce60;
 	border-color: #19ce60;
 	color: #fff;

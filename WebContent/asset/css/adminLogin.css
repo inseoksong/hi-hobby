@@ -1,4 +1,4 @@
-html, body{
+html, body {
     margin : 0 ;
     padding : 0 ;
     width: 100%;
@@ -10,17 +10,16 @@ body {
     color: rgb(26, 26, 26);
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 body {
-    background-image: url('/hi_hobby/asset/img/adminLoginBack.png');
     display: flex;
     align-items: center;
 }
 
-.alert{
+.alert {
     visibility: hidden;
     color: rgb(243, 33, 59);
     position: fixed;
@@ -40,11 +39,11 @@ body {
     box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.5);
 }
 
-.visible{
+.visible {
     visibility: visible;
 }
 
-div.login-wrap{
+div.login-wrap {
     width : 496px;
     height : 845px;
     background-color: white;
@@ -52,32 +51,30 @@ div.login-wrap{
     border-radius: 15px;
 }
 
-div.login-box{
+div.login-box {
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
 }
 
-div.login-contentsWrap{
-    width : 496px;
-    height : 715px;
+div.login-contentsWrap {
+    display: flex;
+    width: 496px;
+    height: 715px;
     margin-left: auto;
     margin-right: auto;
+    flex-direction: column;
+    justify-content: center;
 }
 
-div.logo{
+div.logo {
     text-align: center;
-    margin: 30px 0;
+    margin: 10px 0;
 }
 
-div.logo > span {
-    display: inline-block;
-}
-
-div.logo > span > svg { 
-    width : 201px;
-    height : 24px;
+div.logo img {
+	width: 200px;
 }
 
 div.form-wrap {
@@ -119,9 +116,10 @@ input.input-text {
 
 div.login-button {
     height : 56px;
+    margin-top: 28px;
 }
 
-.findPw{
+.findPw {
     text-align: right;
     cursor: pointer;
     font-weight: 700;
@@ -130,7 +128,6 @@ div.login-button {
 button.login-button-box {
     width: 100%;
     height : 56px;
-    margin: 2px 0 0;
     background: #19ce60;
     border : none;
     border-radius: 2px;
@@ -142,38 +139,10 @@ button.login-button-box {
     font-family:'Pretendard JP',Pretendard,system-ui,Roboto,'Helvetica Neue','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif;
 }
 
-div.sns-login{
-    width : 400px;
-    margin: 0 auto;
-    align-items: center;
-    margin-top : 30px;
-    border-top: 1px rgba(0, 0, 0, 0.2) solid;
-    padding-top: 10px;
-}
-
-
-button.sns-button{
-    font-family:'Pretendard JP',Pretendard,system-ui,Roboto,'Helvetica Neue','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif;
-    background-color: rgba(0, 0, 0, 0.05);
-    width: 400px;
-    height: 50px;
-    border : none;
-    outline: none;
-    margin: 15px 0 0 0 ;
-    font-weight: 700;
-    font-size: 15px;
-    cursor: pointer;
-}
-
 div.button-text-wrap{
     align-items: center;
     display: flex;
     margin: 0 auto;
-}
-
-button.sns-button >div {
-    width : fit-content;
-    height: fit-content;
 }
 
 div.button-text-wrap> span {
