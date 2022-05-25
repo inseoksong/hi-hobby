@@ -132,7 +132,7 @@ body>div{
     margin-right: 24px;
     display: flex;
     padding-top: 32px;
-    padding-bottom: 24px;
+    padding-bottom: 50px;
 }
 
 .mainScreen2{
@@ -185,7 +185,9 @@ body>div{
     padding: 8px;
 }
 
-
+table#collected-items {
+	width: 100%;
+}
 
 
 

@@ -255,10 +255,13 @@ div.search-box svg{
     right : 10px;
 }
 
+div.css-utj593 img {
+    width: 77px;
+}
+
 /* --------------------------------------------------------------------------- */
 
 .imGLyS{
-    border-top: 1px solid rgb(248, 248, 248);
     background-color: rgb(255, 255, 255);
     padding-top: 40px;
     padding-bottom: 64px;
@@ -458,10 +461,6 @@ div.search-box svg{
 .fmUivt{
     display: flex;
     flex-direction: column;
-}
-
-.ckmiqi{
-    margin-top: 24px;
 }
 
 .imGLyS .ckmiqi{

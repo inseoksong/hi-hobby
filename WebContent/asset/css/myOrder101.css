@@ -310,6 +310,7 @@ svg:not(:root){
     align-items: center;
     padding-top: 16px;
     padding-bottom: 52px;
+    height: 800px;
 }
 
 .bDkLkp{
@@ -488,3 +489,10 @@ div.header-right p{
 	background-color: #F0EEEE;
 }
 
+div.css-utj593 img {
+	width: 77px;
+}
+
+.imGLyS {
+	border-top: none;
+}
