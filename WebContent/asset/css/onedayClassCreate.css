@@ -1,50 +1,50 @@
 @charset "UTF-8";
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
-div#classInput * {
+* {
 	font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 
 	'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 	margin: 0;
 }
 
-div#classInput body {
+body {
 	word-break: keep-all;
 }
 
-div#classInput button {
+button {
 	cursor: pointer;
 }
 
-div#classInput input {
+input {
 	margin: 0;
 	padding: 0;
 }
 
-div#classInput div.container-wrap {
+div.container-wrap {
 	display: flex;
 	justify-content: center;
 }
 
-div#classInput div.container {
+div.container {
 	width: 960px;
 }
 
-div#classInput div.topside {
+div.topside {
 	margin-top: 32px;
 }
 
-div#classInput div.topside h3 {
+div.topside h3 {
 	font-size: 24px;
 	color: #1a1a1a;
 }
 
-div#classInput div.topside nav {
+div.topside nav {
 	display: flex;
 	margin-top: 24px;
 	margin-bottom: 22px;
 }
 
-div#classInput div.topside nav div {
+div.topside nav div {
 	display: flex;
 	width: 70px;
 	height: 45px;
@@ -55,11 +55,11 @@ div#classInput div.topside nav div {
 	font-weight: bold;
 }
 
-div#classInput div.topside nav div:first-child {
+div.topside nav div:first-child {
 	border-bottom: 3px solid #1a1a1a;
 }
 
-div#classInput div.bottomside {
+div.bottomside {
 	width: 910px;
 	background-color: #fff;
 	border: 1px solid #efefef;
@@ -68,31 +68,31 @@ div#classInput div.bottomside {
     margin-bottom: 72px;
 }
 
-div#classInput div.class-information h4 {
+div.class-information h4 {
 	font-size: 20px;
 	color: #1a1a1a;
 }
 
-div#classInput div.class-image {
+div.class-image {
 	padding-top: 8px;
 }
 
-div#classInput div.class-image p {
+div.class-image p {
 	font-size: 14px;
 	color: #a2a2a2;
 }
 
-div#classInput input.class-image-file {
+input.class-image-file {
 	display: none;
 }
 
-div#classInput div.images {
+div.images {
 	display: flex;
 	margin-top: 16px;
 	justify-content: space-between;
 }
 
-div#classInput div.images label div {
+div.images label div {
 	display: flex;
 	width: 440px;
     height: 310px;
@@ -102,18 +102,18 @@ div#classInput div.images label div {
 	align-items: center;
 }
 
-div#classInput div.images label img {
+div.images label img {
 	width: 100px;
 	height: 100px;
 }
 
-div#classInput div.class-name p {
+div.class-name p {
 	font-size: 14px;
 	color: #a2a2a2;
 	padding-top: 16px;
 }
 
-div#classInput div.class-name input {
+div.class-name input {
 	width: 892px;
 	height: 50px;
 	margin-top: 16px;
@@ -121,13 +121,13 @@ div#classInput div.class-name input {
 	padding-right: 8px;
 }
 
-div#classInput div.class-category p {
+div.class-category p {
 	font-size: 14px;
 	color: #a2a2a2;
 	padding-top: 16px;
 }
 
-div#classInput div.class-category select {
+div.class-category select {
 	width: 910px;
 	height: 50px;
 	margin-top: 16px;
@@ -135,13 +135,13 @@ div#classInput div.class-category select {
 	padding-right: 8px;
 }
 
-div#classInput div.class-place p {
+div.class-place p {
 	font-size: 14px;
 	color: #a2a2a2;
 	padding-top: 16px;
 }
 
-div#classInput div.class-place input {
+div.class-place input {
 	width: 892px;
 	height: 50px;
 	margin-top: 16px;
@@ -149,13 +149,13 @@ div#classInput div.class-place input {
 	padding-right: 8px;
 }
 
-div#classInput div.class-time p {
+div.class-time p {
 	font-size: 14px;
 	color: #a2a2a2;
 	padding-top: 16px;
 }
 
-div#classInput div.class-time input {
+div.class-time input {
 	width: 892px;
 	height: 50px;
 	margin-top: 16px;
@@ -163,13 +163,13 @@ div#classInput div.class-time input {
 	padding-right: 8px;
 }
 
-div#classInput div.class-introduce p {
+div.class-introduce p {
 	font-size: 14px;
 	color: #a2a2a2;
 	padding-top: 16px;
 }
 
-div#classInput div.class-introduce textarea {
+div.class-introduce textarea {
 	width: 892px;
 	height: 100px;
 	margin-top: 16px;
@@ -177,36 +177,36 @@ div#classInput div.class-introduce textarea {
 	resize: none;
 }
 
-div#classInput div.creator-image p {
+div.creator-image p {
 	font-size: 14px;
 	color: #a2a2a2;
 	padding-top: 16px;
 	padding-bottom: 16px;
 }
 
-div#classInput div.creator-information h4 {
+div.creator-information h4 {
 	font-size: 20px;
 	color: #1a1a1a;
 	margin-top: 24px;
 }
 
-div#classInput div.creator-image img {
+div.creator-image img {
 	width: 86px;
 	height: 86px;
 	border-radius: 100px;
 }
 
-div#classInput div.creator-image input {
+div.creator-image input {
 	display: none;
 }
 
-div#classInput div.creator-name p {
+div.creator-name p {
 	font-size: 14px;
 	color: #a2a2a2;
 	padding-top: 16px;
 }
 
-div#classInput div.creator-name input {
+div.creator-name input {
 	width: 892px;
 	height: 50px;
 	margin-top: 16px;
@@ -214,13 +214,13 @@ div#classInput div.creator-name input {
 	padding-right: 8px;
 }
 
-div#classInput div.creator-introduce p {
+div.creator-introduce p {
 	font-size: 14px;
 	color: #a2a2a2;
 	padding-top: 16px;
 }
 
-div#classInput div.creator-introduce textarea {
+div.creator-introduce textarea {
 	width: 892px;
 	height: 100px;
 	margin-top: 16px;
@@ -228,13 +228,13 @@ div#classInput div.creator-introduce textarea {
 	resize: none;
 }
 
-div#classInput div.creator-phone p {
+div.creator-phone p {
 	font-size: 14px;
 	color: #a2a2a2;
 	padding-top: 16px;
 }
 
-div#classInput div.creator-phone input {
+div.creator-phone input {
 	width: 892px;
 	height: 50px;
 	margin-top: 16px;
@@ -242,7 +242,7 @@ div#classInput div.creator-phone input {
 	padding-right: 8px;
 }
 
-div#classInput div.application-button button {
+div.application-button button {
 	width: 100%;
     height: 44px;
     color: #fff;
@@ -254,20 +254,20 @@ div#classInput div.application-button button {
     margin-top: 16px;
 }
 
-div#classInput div.bottomside input, div#classInput div.bottomside select, div#classInput div.bottomside textarea {
+div.bottomside input, div.bottomside select, div.bottomside textarea {
 	border: 1px solid #efefef;
 	border-radius: 3px;
 }
 
-div#classInput label[for='image1'] div, div#classInput label[for='image2'] div, div#classInput label[for='image3'] div, div#classInput label[for='image4'] div {
+label[for='image1'] div, label[for='image2'] div, label[for='image3'] div, label[for='image4'] div {
 	background-size: 100% 100%;
 	cursor: pointer;
 }
 
-div#classInput div.creator-image input {
+div.creator-image input {
 	display: none;
 }
 
-div#classInput div.topside div {
+div.topside div {
 	cursor: pointer;
 }
