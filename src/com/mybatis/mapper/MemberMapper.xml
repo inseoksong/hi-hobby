@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace = "Member" parameter="">
+	<!-- 회원가입 -->
+	<insert id="join" parameterType="memberVO"> <!-- 원래는 com.member.domain.vo.MemberVO  인데, config 에서 alias 줬음-->
+																	<!-- 데이터베이스 내의 변수들을 담아놓은 파일, getter / setter 로 접근 -->
+		insert into tbl_member
+		(member_number, member_name, member_pw, member_gender, member_address, member_address_detail)
+		values(#{memberID}, #{memberName}, #{memberPw}, #{memberGender}, #{memberAddress}, #{memberAddressDetail})
+		<!-- #{} 안에 작성하면 getter 를 찾아서 넣는다 (memberVO 에 파일이 있음)   그리고 values 뒤에 세미콜론 찍으면 !!절대!! 안됨 오류남 -->
+	</insert>
+
+	<!-- 아이디 중복검사 -->
+	<!-- 기본 자료형은 앞에 _를 붙이고 , 클래스 자료형은 앞글자를 소문자로만 바꿔준다. -->
+	<!-- MemberVO , String 모두 클래스이므로 앞글자를 소문자로 변환? -->
+	<select id="checkId" parameterType ="string" resultType="int">
+		select count(member_id) from tbl_member where member_id = #{memberId}
+	</select>
+
+</mapper>
