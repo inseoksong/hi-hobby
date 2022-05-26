@@ -3,6 +3,7 @@ package com.hi_hobby.domain.dao;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import com.hi_hobby.domain.vo.UserVO;
 import com.mybatis.config.MyBatisConfig;
 
 public class UserDAO {
@@ -39,7 +40,7 @@ public class UserDAO {
 		
 	}
 	
-	// 유저 삭제
+	// 회원 탈퇴
 	public void del(UserVO userVO) {
 		sqlSession.delete("User.del", UserVO);
 	}

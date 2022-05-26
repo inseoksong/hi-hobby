@@ -34,5 +34,10 @@ public class ClassDAO {
 	public void view() {
 		sqlsseion.selectOne("_Class.view", classNum);
 	}
+	
+	// 내가 개설한 클래스 보기 
+	
+	
+	// 클래스 승인
 
 }
