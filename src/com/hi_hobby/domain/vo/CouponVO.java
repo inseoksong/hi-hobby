@@ -18,6 +18,16 @@ public class CouponVO {
 	public int getUserNum() {
 		return userNum;
 	}
-	
-	
+
+	public void setCouponNum(int couponNum) {
+		this.couponNum = couponNum;
+	}
+
+	public void setCouponStatus(boolean couponStatus) {
+		this.couponStatus = couponStatus;
+	}
+
+	public void setUserNum(int userNum) {
+		this.userNum = userNum;
+	}
 }
