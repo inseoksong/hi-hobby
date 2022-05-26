@@ -84,16 +84,13 @@
 									</div>
 									<section class="main">
 										<div class="point">
-											<div class="point-text-big">포인트</div>
-											<div class="point-text-small">포인트</div>
+											<div class="point-text-big">쿠폰</div>
+											<div class="point-text-small">쿠폰</div>
 											<div class="point-use">
-												<input type="text" name="point" placeholder="0">
-												<input type="button" value="전액 사용">
+												<input type="text" name="point" placeholder="쿠폰 번호를 입력해주세요.">
+												<input type="button" value="쿠폰 확인">
 											</div>
-											<div class="point-have">
-												<p class="point-one">사용 가능한 포인트 </p>
-												<p class="point-two">0 포인트</p>
-											</div>
+											<div class="coupon-check"></div>
 										</div>
 										<div class="line"></div>
 										<div class="amount-of-payment">
