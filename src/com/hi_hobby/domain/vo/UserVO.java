@@ -67,4 +67,5 @@ public class UserVO {
 		this.userStatus = userStatus;
 	}
 
+	
 }
