@@ -8,21 +8,26 @@
 		(class_num, class_nickname, class_title, class_category, class_place, class_price, class_start, class_end, class_approve, class_img, user_num)
 		values(#{classNum}, #{classNickname}, #{classTitle}, #{classCategory}, #{classStart}, #{classEnd}, #{classApprove}, #{classImg}, #{userNum})
 	</insert>
-
+	
 <!-- 클래스 수정 -->
 	<update id="modify" parameterType="classVO">
 		update tbl_class set class_nickname = #{classNickname}, class_title = #{classTitle}, class_category = #{classCategory}, class_start = #{classStart}, class_end = #{classEnd}, class_img = #{classImg} where class_num = {classNum} 
 	</update>
-
+	
 <!-- 클래스 삭제 -->
-	<delete id="del" parameterType="classVO">
-		delete from tbl_class where class_num = #{classNum}
-	</delete>
+	<update id="del" parameterType="classVO">
+		update tbl_class set class_status = #{classStatus} where class_num = #{classNum}
+	</update>
+	
+<!-- 클래스 보기 -->
+	<select id="view" parameterType="classVO" resultType="classVO">
+		select * from tbl_class where class_num = #{classNum}
+	</select>	
 
-
-
-
-
+<!-- 내가 개설한 클래스 보기 -->
+	<select id="myView" parameterType="classVO" resultType="classVO">
+		select * from tbl_class where user_num = #{userNum}
+	</select>	
 
 
 </mapper>

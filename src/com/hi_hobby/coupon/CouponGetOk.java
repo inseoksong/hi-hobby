@@ -1,4 +1,4 @@
-package com.hi_hobby;
+package com.hi_hobby.coupon;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -6,24 +6,26 @@ import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.simple.JSONObject;
-
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
+import com.hi_hobby.domain.dao.CouponDAO;
+import com.hi_hobby.domain.vo.CouponVO;
 
 public class CouponGetOk implements Action {
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");
-		PrintWriter out = resp.getWriter();
+		ActionInfo actionInfo = new ActionInfo();
 		CouponDAO couponDAO = new CouponDAO();
-		JSONObject resultJSON = new JSONObject();
+		CouponVO memberVO = new CouponVO();
 		
-		String couponNum = req.getParameter("couponNum");
-		resultJSON.put("couponNum", couponDAO.resisterCoupon(couponNum));
+		CouponVO.setCouponNum(req.getParameter("couponNum"));
+		CouponVO.setCouponStatus(req.getParameter("couponStatus"));
+		CouponVO.setUserNum(req.getParameter("userNum"));
 		
-		out.print(resultJSON.toJSONString());
-		out.close();
-		return null;
+		actionInfo.setRedirect(false);
+		actionInfo.setPath("/myCoupons101.jsp");
+		
+		return actionInfo;
 	}
 }

@@ -1,4 +1,4 @@
-package com.hi_hobby;
+package com.hi_hobby.coupon;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.hi_hobby.action.ActionInfo;
 
-public class OrderFrontController extends HttpServlet {
+public class CouponFrontController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doProcess(req, resp);
@@ -25,14 +25,14 @@ public class OrderFrontController extends HttpServlet {
 		String command = requestURL.substring(requestURL.lastIndexOf("/") + 1);
 		ActionInfo actionInfo = null;
 		
-		if(command.equals("OrderCreate.or")) {
-			actionInfo = new OrderCreate().execute(req, resp);
+		if(command.equals("CouponGetOk.co")) {
+			actionInfo = new CouponGetOk().execute(req, resp);
 		}
-		else if(command.equals("OrderCancel.or")) {
-			actionInfo = new OrderCancel().execute(req, resp);
+		else if(command.equals("CouponUse.co")) {
+			actionInfo = new CouponUse().execute(req, resp);
 		}
-		else if(command.equals("OrderView.or")) {
-			actionInfo = new OrderView().execute(req, resp);
+		else if(command.equals("CouponView.co")) {
+			actionInfo = new CouponView().execute(req, resp);
 		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성

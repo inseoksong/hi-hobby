@@ -1,4 +1,4 @@
-package com.hi_hobby;
+package com.hi_hobby.user;
 
 import java.io.IOException;
 
