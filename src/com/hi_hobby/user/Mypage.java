@@ -5,6 +5,8 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.simple.JSONObject;
+
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
 import com.hi_hobby.domain.vo.UserVO;
@@ -18,17 +20,16 @@ public class Mypage implements Action{
 		
 		 req.setCharacterEncoding("UTF-8");
 		  ActionInfo actionInfo = new ActionInfo();
-		  UserVO userVO = new UserVO();
 		  UserDAO userDAO = new UserDAO();
-
-		  userVO.getUserEmail(req.getParameter("UserEmail"));
+		  JSONObject resultJSON = new JSONObject();
 		  
-		  userDAO.print(userVO);
+		 String userNum = req.getParameter("userNum");
+		  userDAO.view(userNum);
 		  
 		  actionInfo.setRedirect(false);
 		  actionInfo.setPath("/myPage101jsp");
 		  
-		  return ActionInfo;
+		  return actionInfo;
 	}
 		  
 

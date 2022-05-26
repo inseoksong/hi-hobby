@@ -35,9 +35,9 @@ public class ClassCreateOk implements Action {
 			classDAO.create(classVO);
 		  
 			actionInfo.setRedirect(false);
-			actionInfo.setPath("/createrCenter.jsp");	//내가 방금 작성한 클래스 확인하기위해 뒤에 붙여주기
+			actionInfo.setPath("/createrCenter.jsp");	
 		  
-			return ActionInfo;
+			return actionInfo;
 		
 	}
 	

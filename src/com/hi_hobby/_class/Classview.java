@@ -6,27 +6,38 @@ import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.simple.JSONObject;
-import com.hi_hobby.dao.domain.ClassDAO;
-
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
+import com.hi_hobby.domain.dao.ClassDAO;
+import com.hi_hobby.domain.vo.ClassVO;
 
-public class Classview implements Action {
+public class ClassView implements Action {
 
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		
 		req.setCharacterEncoding("UTF-8");
-		PrintWriter out = resp.getWriter();
 		ClassDAO classDAO = new ClassDAO();
-		JSONObject resultJSON = new JSONObject();
+		ClassVO classVO = new  ClassVO();
+		ActionInfo actionInfo = new ActionInfo();
 		
-		String classNum = req.getParameter("classNum");
-		resultJSON.put("classNum", classDAO.view(classNum));
+		classVO.setClassNum(req.getParameter("classNum"));
+		classVO.setClassNickname(req.getParameter("classNickname"));
+		classVO.setClassTitle(req.getParameter("classTitle"));
+		classVO.setClassCategory(req.getParameter("classCategory"));
+		classVO.setClassPlace(req.getParameter("classplace"));
+		classVO.setClassPrice(req.getParameter("classPrice"));
+		classVO.setClassStart(req.getParameter("classStart"));
+		classVO.setClassEnd(req.getParameter("classEnd"));
+		classVO.setClassApprove(req.getParameter("classApprove"));
+		classVO.setClassImg(req.getParameter("classImg"));
+		classVO.setClasUserNum(req.getParameter("userNum"));
 		
-		out.print(resultJSON.toJSONString());
-		out.close();
-		return null;
+		classDAO.view(classVO);
+		
+		actionInfo.setRedirect(false);
+		
+		return actionInfo;
 		
 	}
 	

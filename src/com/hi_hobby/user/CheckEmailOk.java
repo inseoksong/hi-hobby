@@ -1,4 +1,4 @@
-package com.user;
+package com.hi_hobby.user;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -8,12 +8,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.simple.JSONObject;
 
+import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
-import com.member.domain.dao.MemberDAO;
-import com.user.hi_hobby.domain.dao.UserDAO;
-import com.user.hi_hobby.vo.UserVO;
+import com.hi_hobby.domain.dao.UserDAO;
 
-public class UserEmailCheckOk implements Action {
+public class CheckEmailOk implements Action {
+	
 	@Override
 	   public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 			req.setCharacterEncoding("UTF-8");
@@ -26,6 +26,7 @@ public class UserEmailCheckOk implements Action {
 	      
 	      out.print(resultJSON.toJSONString());
 	      out.close();
+	      
 	      return null;
 	}
 

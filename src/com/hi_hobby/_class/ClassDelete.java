@@ -20,7 +20,22 @@ public class ClassDelete implements Action{
 		ClassVO classVO = new ClassVO();
 		ClassDAO classDAO = new ClassDAO();
 		
-		classVO.getClassNum("classNum");
+		classVO.setClassNum(req.getParameter("classNum"));
+		classVO.setClassNickname(req.getParameter("classNickname"));
+		classVO.setClassTitle(req.getParameter("classTitle"));
+		classVO.setClassCategory(req.getParameter("classCategory"));
+		classVO.setClassPlace(req.getParameter("classplace"));
+		classVO.setClassPrice(req.getParameter("classPrice"));
+		classVO.setClassStart(req.getParameter("classStart"));
+		classVO.setClassEnd(req.getParameter("classEnd"));
+		classVO.setClassApprove(req.getParameter("classApprove"));
+		classVO.setClassImg(req.getParameter("classImg"));
+		classVO.setClasUserNum(req.getParameter("userNum"));
+		
+		classDAO.del(classVO);
+		
+		actionInfo.setRedirect(true);
+		actionInfo.setPath("/creatorCentor.jsp");
 		
 		return null;
 	}
