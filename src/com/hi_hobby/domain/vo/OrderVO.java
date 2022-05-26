@@ -4,8 +4,10 @@ public class OrderVO {
 	int orderNum;				// 주문(예약) 번호
 	String orderReservation;	// 예약 날짜
 	boolean orderStatus;		// 원데이, 온라인 클래스 구분
+	boolean orderApprove;		// 수강 취소 비활성화
 	int classNum;				// 주문한 클래스 번호
 	int userNum;				// 주문한 유저 번호
+	
 	
 	public void OrderVO() {;}
 

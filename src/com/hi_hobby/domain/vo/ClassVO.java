@@ -11,6 +11,7 @@ public class ClassVO {
 	private String classEnd;		// 끝나는 시간(시간 자료형)
 	private boolean classApprove;	// 승인 여부
 	private String classImg;		// 이미지 자료형
+	private int classStatus;		// 클래스 삭제 여부
 	private int userNum;			// 유저 고유번호(크리에이터 정보를 가져오기 위해)
 	
 	public void ClassVO() {;}
