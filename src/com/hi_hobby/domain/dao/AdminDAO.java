@@ -19,5 +19,8 @@ public class AdminDAO() {
 			return (Integer)
 		}
 		
-		// 클래스 관리 
+		// 클래스 관리
+		public void view() {
+			sqlsseion.select
+		}
 }
