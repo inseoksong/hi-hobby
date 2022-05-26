@@ -1,4 +1,4 @@
-package com.hi_hobby;
+package com.hi_hobby.coupon;
 
 import java.io.IOException;
 import java.io.PrintWriter;
