@@ -45,9 +45,7 @@ public class UserFrontController extends HttpServlet {
 			actionInfo.setPath(req.getContextPath() + "/login101.jsp");
 		}
 		else if(command.equals("Mypage.us")) {
-			actionInfo = new ActionInfo();
-			actionInfo.setRedirect(true);
-			actionInfo.setPath(req.getContextPath() + "/mypage101.jsp");
+			actionInfo = new Mypage().execute(req, resp);
 		}
 		else if(command.equals("MypageModify.us")) {
 			actionInfo = new MypageModify().execute(req, resp);
