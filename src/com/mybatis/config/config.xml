@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	
+	<typeAliases>
+		<typeAlias type="com.hi_hobby.domain.vo.UserVO" alias="userVO"/>
+		<typeAlias type="com.hi_hobby.domain.vo.ClassVO" alias="classVO"/>
+		<typeAlias type="com.hi_hobby.domain.vo.CouponVO" alias="couponVO"/>
+		<typeAlias type="com.hi_hobby.domain.vo.InquiryVO" alias="inquiryVO"/>
+		<typeAlias type="com.hi_hobby.domain.vo.OrderVO" alias="orderVO"/>
+		<typeAlias type="com.hi_hobby.domain.vo.AdminVO" alias="adminVO"/>
+	</typeAliases>
+	
+	<environments default="mysql">
+		<environment id="mysql">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql://localhost:3306/form"/>
+				<property name="username" value="root"/>
+				<property name="password" value="1234"/>
+			</dataSource>
+		</environment>
+	</environments>
+
+	<mappers>
+		<mapper resource="com/mybatis/mapper/UserMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/CouponMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/ClassMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/InquiryMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/OrderMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/AdminMapper.xml"/>
+	</mappers>
+
+
+</configuration>

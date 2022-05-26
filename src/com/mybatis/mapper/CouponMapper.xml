@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Coupon">
+
+<!-- 쿠폰 생성 -->
+	<insert id="resisterCoupon" parameterType="couponVO">
+		insert into tbl_coupon
+		(coupon_num, coupon_status, user_num)
+		values(#{couponNum}, #{couponStatus}, #{userNum})
+	</insert>
+
+<!-- 쿠폰 사용-->
+	<update id="useCoupon" parameterType="userVO">
+		update tbl_coupon set coupon_status = #{couponStatus} where user_num = #{userNum}
+	</update>
+
+
+
+
+
+
+
+</mapper>
