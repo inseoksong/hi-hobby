@@ -32,6 +32,7 @@ public class UserDAO {
 	
 	// 내 정보 불러오기
 	public void print(UserVO userVO) {
+		sqlSession.selectOne("User.print", userEmail)
 		
 	}
 	

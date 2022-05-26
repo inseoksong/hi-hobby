@@ -27,7 +27,9 @@ public class InquiryDAO {
 			sqlSession.update("Inquiry.delInquiry", inquiryVO);
 	}
 		
-	// 문의 글 확인
+	// 문의 글 전체리스트
+		
+	// 문의 글 불러오시
 		public void view(string inquiryNum) {
 			sqlSession.select("Inquiry.viewInquiry", inquiryNum);
 		}

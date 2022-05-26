@@ -1,4 +1,4 @@
-package com.user.hi_hobby;
+package com.hi_hobby.user;
 
 import java.io.IOException;
 
@@ -7,8 +7,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
-import com.user.hi_hobby.domain.dao.UserDAO;
-import com.user.hi_hobby.vo.UserVO;
+import com.hi_hobby.domain.vo.UserVO;
+import com.hi_hobby.domain.dao.UserDAO;
+
 
 public class Mypage implements Action{
 	
@@ -19,14 +20,8 @@ public class Mypage implements Action{
 		  ActionInfo actionInfo = new ActionInfo();
 		  UserVO userVO = new UserVO();
 		  UserDAO userDAO = new UserDAO();
-		  
-		  userVO.getUserNum(req.getParameter("UserNum"));
-		  userVO.getUserPhoneNum(req.getParameter("UserPhoneNum"));
+
 		  userVO.getUserEmail(req.getParameter("UserEmail"));
-		  userVO.getUserName(req.getParameter("UserName"));
-		  userVO.getUserPw(req.getParameter("UserPw"));
-		  userVO.getUserProfile(req.getParameter("UserProfile"));
-		  userVO.getUserStatus(req.getParameter("UserStatus"));
 		  
 		  userDAO.print(userVO);
 		  

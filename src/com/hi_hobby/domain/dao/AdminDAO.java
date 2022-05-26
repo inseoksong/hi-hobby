@@ -14,8 +14,10 @@ public class AdminDAO() {
 		sqlSession = sqlSessionFactory.openSession(true);
 	}
 	
-	// 로그인 유효성
+		// 로그인 유효성
 		public boolean login(String userEmail, String UserPw) {
 			return (Integer)
 		}
+		
+		// 클래스 관리 
 }
