@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Order">
+
+<!-- 주문 생성-->
+	<insert id="create" parameterType="orderVO">
+		insert into tbl_order
+		(order_num, order_reservation, order_status, class_num, user_num)
+		values(#{orderNum}, #{orderReservation}, #{orderStatus}, #{classNum}, #{userNum})
+	</insert>
+
+<!-- 주문 불러오기 -->
+	<select id="view" parameterType="int" resultType="orderVO">
+		select * from tbl_order where order_num = #{orderNum}
+	</select>
+
+
+<!-- 주문 취소 -->
+	<delete id="cancel" parameterType="int">
+		delete from tbl_order where order_num = #{orderNum}
+	</delete>
+
+
+
+
+
+
+</mapper>

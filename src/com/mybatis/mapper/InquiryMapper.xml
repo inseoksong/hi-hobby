@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Inquiry">
+
+
+<!-- 문의글 작성-->
+	<insert id="write" parameterType="inquirtVO">
+		insert into tbl_inquiry
+		(inquiry_num, inquiry_pw, inquiry_day, inquiry_content, inquiry_title, inquiry_process, user_num)
+		values(#{inquiryNum}, #{inquiryPw}, #{inquiryDay}, #{inquiryContent}, #{inquiryTitle}, #{inquiryProcess}, #{userNum})
+	</insert>
+
+<!-- 문의글 수정 -->
+	<update id="modify" parameterType="inquiryVO">
+		update tbl_inquiry set  inquiry_title = #{inquiryTitle}, inquiry_content = #{inquiryContent} where user_num = #{userNum} and inquiry_pw = {inquiryPw} 
+	</update>
+
+<!-- 문의글 삭제 -->
+	<delete id="del" parameterType="inquiryVO">
+		delete from tbl_inquiry where inquiry_num = #{inquiryNum}
+	</delete>
+
+<!-- 문의글 확인 -->
+	<select id="view" parameterType="string" resultType="inquiryVO">
+		select * from tbl_inquiry where inquiry_num = #{inquiryNum} and inquiry_pw = #{inquiryPw}
+	</select>
+
+
+
+
+
+
+
+
+
+
+
+
+</mapper>

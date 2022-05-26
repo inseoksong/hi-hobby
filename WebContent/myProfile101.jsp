@@ -103,7 +103,7 @@
 								</button>
 							</div>
 						</div>
-						<div class="gUToOv">
+						<!-- <div class="gUToOv">
 							<div class="edxcPn">
 								<label class="jbmNLF">연령 인증</label>
 								<div>
@@ -112,7 +112,7 @@
 									</button>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<div class="fHScIF">
 							<button type="button" class="gQyJNI bfBEyV" color="orange" fill="true">
 								<span class="jwNHGa">수정하기</span>
