@@ -50,15 +50,6 @@ public class OrderVO {
 	public void setUserNum(int userNum) {
 		this.userNum = userNum;
 	}
-
-	public boolean isOrderApprove() {
-		return orderApprove;
-	}
-
-	public void setOrderApprove(boolean orderApprove) {
-		this.orderApprove = orderApprove;
-	}
-	
 	
 	
 }

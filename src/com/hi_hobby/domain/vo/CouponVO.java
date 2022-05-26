@@ -30,5 +30,4 @@ public class CouponVO {
 	public void setUserNum(int userNum) {
 		this.userNum = userNum;
 	}
-	
 }
