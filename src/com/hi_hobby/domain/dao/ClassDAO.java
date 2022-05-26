@@ -1,4 +1,4 @@
-package com._class.hi_hobby.dao;
+package com.hi_hobby.domain.dao;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
