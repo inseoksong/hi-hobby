@@ -17,11 +17,13 @@ public class CouponGetOk implements Action {
 		req.setCharacterEncoding("UTF-8");
 		ActionInfo actionInfo = new ActionInfo();
 		CouponDAO couponDAO = new CouponDAO();
-		CouponVO memberVO = new CouponVO();
+		CouponVO couponVO = new CouponVO();
 		
-		CouponVO.setCouponNum(req.getParameter("couponNum"));
-		CouponVO.setCouponStatus(req.getParameter("couponStatus"));
-		CouponVO.setUserNum(req.getParameter("userNum"));
+		couponVO.setCouponNum(req.getParameter("couponNum"));
+		couponVO.setCouponStatus(req.getParameter("couponStatus"));
+		couponVO.setUserNum(req.getParameter("userNum"));
+		
+		couponDAO.resisterCoupon(couponVO);
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/myCoupons101.jsp");
