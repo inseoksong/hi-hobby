@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>hi_hobby</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>UserFrontController</servlet-name>
+    <servlet-class>com.hi_hobby.UserFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserFrontController</servlet-name>
+    <url-pattern>*.us</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ClassFrontController</servlet-name>
+    <servlet-class>com.hi_hobby.ClassFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClassFrontController</servlet-name>
+    <url-pattern>*.cl</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>InquiryFrontController</servlet-name>
+    <servlet-class>com.hi_hobby.InquiryFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InquiryFrontController</servlet-name>
+    <url-pattern>*.in</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OrderFrontController</servlet-name>
+    <servlet-class>com.hi_hobby.OrderFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderFrontController</servlet-name>
+    <url-pattern>*.or</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AdminFrontController</servlet-name>
+    <servlet-class>com.hi_hobby.AdminFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminFrontController</servlet-name>
+    <url-pattern>*.ad</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CouponFrontController</servlet-name>
+    <servlet-class>com.hi_hobby.CouponFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CouponFrontController</servlet-name>
+    <url-pattern>*.co</url-pattern>
+  </servlet-mapping>
+</web-app>
