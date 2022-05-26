@@ -29,4 +29,5 @@
 		select * from tbl_class where user_num = #{userNum}
 	</select>	
 
+
 </mapper>
