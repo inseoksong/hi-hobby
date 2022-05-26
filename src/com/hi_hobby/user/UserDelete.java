@@ -21,14 +21,13 @@ public class UserDelete  implements Action{
 		  UserVO userVO = new UserVO();
 		  UserDAO userDAO = new UserDAO();
 		  
-		  userVO.getUserEmail(req.getParameter("UserEmail"));
-		  
-		  userDAO.del(userVO);
+		  String userNum = req.getParameter("userNum");
+		  userDAO.del(userNum);
 		  
 		  actionInfo.setRedirect(true);
 		  actionInfo.setPath("/main.jsp"); //
 		  
-		  return ActionInfo;
+		  return actionInfo;
 	}
 		  
 

@@ -10,7 +10,7 @@ import com.hi_hobby.action.ActionInfo;
 import com.hi_hobby.domain.dao.ClassDAO;
 import com.hi_hobby.domain.vo.ClassVO;
 
-public class Classmodify implements Action {
+public class ClassModify implements Action {
 	
 	@Override
 	   public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -32,12 +32,12 @@ public class Classmodify implements Action {
 			classVO.setClassImg(req.getParameter("classImg"));
 			classVO.setClasUserNum(req.getParameter("userNum"));
 
-			classDAO.create(classVO);
+			classDAO.modify(classVO);
 		  
 			actionInfo.setRedirect(false);
 			actionInfo.setPath("/createrCenter.jsp");
 		  
-			return ActionInfo;
+			return actionInfo;
 		
 	}
 

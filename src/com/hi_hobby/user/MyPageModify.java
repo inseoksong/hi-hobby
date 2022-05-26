@@ -1,4 +1,4 @@
-package com.user.hi_hobby;
+package com.hi_hobby.user;
 
 import java.io.IOException;
 
@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
-import com.user.hi_hobby.domain.dao.UserDAO;
-import com.user.hi_hobby.vo.UserVO;
+import com.hi_hobby.domain.dao.UserDAO;
+import com.hi_hobby.domain.vo.UserVO;
 
 public class MypageModify implements Action{
 	
@@ -28,12 +28,12 @@ public class MypageModify implements Action{
 		  userVO.setUserProfile(req.getParameter("UserProfile"));
 		  userVO.setUserStatus(req.getParameter("UserStatus"));
 		  
-		  userDAO.print(userVO);
+		  userDAO.modifyInfo(userVO);
 		  
 		  actionInfo.setRedirect(false);
 		  actionInfo.setPath("/myPage101jsp");
 		  
-		  return ActionInfo;
+		  return actionInfo;
 	}
 
 }
