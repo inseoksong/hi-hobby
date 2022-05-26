@@ -4,13 +4,8 @@
 
 <!-- 로그인 -->
 	<select id="login" parameterType="adminVO" resultType="int">
-		select count(admin_num) from tbl_admin where admin_id = #{adminId} and admin_pw = #{adminPw}
+		select count(adminNum) from tbl_admin where admin_id = #{adminId} and admin_pw = #{adminPw}
 	</select>
-
-
-
-
-
 
 
 
