@@ -8,9 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.member.CheckIdOk;
-import com.member.MemberJoinOk;
-import com.member.action.ActionInfo;
+import com.hi_hobby.action.ActionInfo;
 
 public class UserFrontController extends HttpServlet {
 	@Override
