@@ -17,11 +17,13 @@ public class CouponView implements Action {
 		req.setCharacterEncoding("UTF-8");
 		ActionInfo actionInfo = new ActionInfo();
 		CouponDAO couponDAO = new CouponDAO();
-		CouponVO memberVO = new CouponVO();
+		CouponVO couponVO = new CouponVO();
 		
 		CouponVO.setCouponNum(req.getParameter("couponNum"));
 		CouponVO.setCouponStatus(req.getParameter("couponStatus"));
 		CouponVO.setUserNum(req.getParameter("userNum"));
+		
+		couponDAO.viewCoupon(couponVO);
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/myCoupons101.jsp");
