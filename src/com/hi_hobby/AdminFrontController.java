@@ -21,12 +21,15 @@ public class AdminFrontController extends HttpServlet {
 	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String requestURL = req.getRequestURI();
 		String command = requestURL.substring(requestURL.lastIndexOf("/") + 1);
+		ActionInfo actionInfo = null;
 		
-		if(command.equals("LoginOk.ad")) {
-			
+		if(command.equals("AdminLoginOk.ad")) {
+			actionInfo = new AdminLoginOk().execute(req, resp);
 		}
-		else if(command.equals("Login.ad")) {
-			
+		else if(command.equals("AdminLogin.ad")) {
+			actionInfo = new ActionInfo();
+			actionInfo.setRedirect(true);
+			actionInfo.setPath(req.getContextPath() + "/adminLogin.jsp");
 		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
