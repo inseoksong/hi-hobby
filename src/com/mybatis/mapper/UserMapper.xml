@@ -16,7 +16,7 @@
 
 <!-- 프로필 수정 -->
 	<update id="modifyInfo" parameterType="userVO">
-		update tbl_user set user_name = #{userName}, user_phone_num = #{userPhoneNum}, user_pw = {userPw} where user_num = #{userNum}
+		update tbl_user set user_name = #{userName}, user_phone_num = #{userPhoneNum}, user_pw = #{userPw}, user_profile = #{userProfile} where user_email = #{userEmail}
 	</update>
 
 <!-- 회원 탈퇴 -->
@@ -29,8 +29,10 @@
 		select count(user_num) from tbl_user where user_email = #{userEmail} and user_pw = #{userPw}
 	</select>
 
-	
-	
+<!-- 내 정보 불러오기 -->
+	<select id="print" parameterType="userVO" resultType="userVO">
+		select * from tbl_user where user_num = #{userNum}
+	</select>
 	
 	
 	

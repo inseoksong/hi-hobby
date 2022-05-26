@@ -10,15 +10,14 @@
 	</insert>
 
 <!-- 주문 불러오기 -->
-	<select id="view" parameterType="int" resultType="orderVO">
+	<select id="view" parameterType="orderVO" resultType="orderVO">
 		select * from tbl_order where order_num = #{orderNum}
 	</select>
 
-
 <!-- 주문 취소 -->
-	<delete id="cancel" parameterType="int">
-		delete from tbl_order where order_num = #{orderNum}
-	</delete>
+	<update id="cancel" parameterType="orderVO">
+		update tbl_order set order_status = #{couponStatus} where order_num = #{orderNum}
+	</update>
 
 
 
