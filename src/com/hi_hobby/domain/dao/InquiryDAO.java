@@ -15,23 +15,23 @@ public class InquiryDAO {
 	
 	//문의 글 작성
 	public void write (InquiryVO inquiryVO) {
-		sqlSession.insert("Inquiry.writeInquiry", inquiryVO);
+		sqlSession.insert("Inquiry.write", inquiryVO);
 		}
 		
 	// 문의 글 수정 삭제
 		public void modify (InquiryVO inquiryVO) {
-		sqlSession.update("Inquiry.modifyInquiry", inquiryVO);
+		sqlSession.update("Inquiry.modify", inquiryVO);
 	}
 		
 		public void del(InquiryVO inquiryVO) {
-			sqlSession.update("Inquiry.delInquiry", inquiryVO);
+			sqlSession.update("Inquiry.del", inquiryVO);
 	}
 		
 	// 문의 글 전체리스트
 		
-	// 문의 글 불러오시
+	// 문의 글 불러오기
 		public void view(string inquiryNum) {
-			sqlSession.select("Inquiry.viewInquiry", inquiryNum);
+			sqlSession.selectOne("Inquiry.view", inquiryNum);
 		}
 	
 }

@@ -16,23 +16,23 @@ public class ClassDAO {
 	
 	// 클래스 생성
 	public void create(ClassVO classVO) {
-		sqlSession.insert("_Class.create", classVO)
+		sqlSession.insert("_Class.create", classVO);
 	}
 	
 	// 클래스 수정
 	public void modify (ClassVO classVO) {
-		sqlSession.insert("_Class.modify", classVO)
+		sqlSession.insert("_Class.modify", classVO);
 	}
 	
 	// 클래스 삭제
 	public void del(ClassVO classVO) {
-		sqlSession.update
+		sqlSession.update("_Class.del", classVO);
 		
 	}
 	
 	// 클래스 조회
 	public void view() {
-		sqlsseion.select
+		sqlsseion.selectOne("_Class.view", classNum);
 	}
 
 }
