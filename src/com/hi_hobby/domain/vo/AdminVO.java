@@ -8,6 +8,14 @@ public class AdminVO {
 	
 	public void AdminVO() {;}
 
+	public int getClassNum() {
+		return classNum;
+	}
+
+	public void setClassNum(int classNum) {
+		this.classNum = classNum;
+	}
+
 	public int getAdminNum() {
 		return adminNum;
 	}

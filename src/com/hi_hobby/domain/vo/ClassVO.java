@@ -104,5 +104,13 @@ public class ClassVO {
 		this.userNum = userNum;
 	}
 	
+	public int getClassStatus() {
+		return classStatus;
+	}
+
+	public void setClassStatus(int classStatus) {
+		this.classStatus = classStatus;
+	}
+	
 	
 }
