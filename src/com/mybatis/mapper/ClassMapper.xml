@@ -4,47 +4,34 @@
 
 <!-- 클래스 생성 -->
 	<insert id="create" parameterType="classVO">
-		insert into tbl_class
-		(class_num, class_nickname, class_title, class_category, class_place, class_price, class_start, class_end, class_approve, class_img, user_num)
-		values(#{classNum}, #{classNickname}, #{classTitle}, #{classCategory}, #{classStart}, #{classEnd}, #{classApprove}, #{classImg}, #{userNum})
 	</insert>
 	
 <!-- 클래스 수정 -->
 	<update id="modify" parameterType="classVO">
-		update tbl_class set class_nickname = #{classNickname}, class_title = #{classTitle}, class_category = #{classCategory}, class_start = #{classStart}, class_end = #{classEnd}, class_img = #{classImg} where class_num = {classNum} 
 	</update>
 	
 <!-- 클래스 삭제 -->
 	<update id="del" parameterType="classVO">
-		update tbl_class set class_status = #{classStatus} where class_num = #{classNum}
 	</update>
 	
 <!-- 지정한 클래스 조회 -->
 	<select id="view" parameterType="classVO" resultType="classVO">
-		select * from tbl_class where class_num = #{classNum}
 	</select>	
 
 <!-- 내가 개설한 클래스 보기 -->
 	<select id="viewMine" parameterType="String" resultType="classVO">
-		select * from tbl_class where user_num = #{userNum}
 	</select>	
 	
 <!-- 승인 대기 클래스 보기 -->
 	<select id="pending" parameterType="String" resultType="classVO">
-		select * from tbl_class where class_approve=false
 	</select>
 	
-	
-<!-- -------------------------------- -->
-	
 <!-- 클래스 승인 -->
-	<update id="approve" parameterType="classVO" resultType="classVO">
-		update tbl_class set class_approve = #{classApprove} where class_num = #{classNum}
+	<update id="confirm" parameterType="classVO" resultType="classVO">
 	</update>
 
 <!-- 전체 클래스 조회 -->
 	<select id="allView" parameterType="classVO" resultType="classVO">
-		select * from tbl_class where class_approve = #{classApprove}
 	</select>
 
 
