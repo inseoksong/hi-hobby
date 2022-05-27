@@ -21,10 +21,17 @@ public class Mypage implements Action{
 		 req.setCharacterEncoding("UTF-8");
 		  ActionInfo actionInfo = new ActionInfo();
 		  UserDAO userDAO = new UserDAO();
-		  JSONObject resultJSON = new JSONObject();
+		  UserVO userVO = new userVO();
 		  
-		 String userNum = req.getParameter("userNum");
-		  userDAO.view(userNum);
+		  userVO.setUserNum(req.getParameter("userNum"));
+		  userVO.setUserPhoneNum(req.getParameter("userPhoneNum"));
+		  userVO.setUserEmail(req.getParameter("userEmail"));
+		  userVO.setUserName(req.getParameter("userName"));
+		  userVO.setUserPw(req.getParameter("userPw"));
+		  userVO.setUserProfile(req.getParameter("userProfile"));
+		  userVO.setUserStatus(req.getParameter("userStatus"));
+			
+		  userDAO.view(userVO);
 		  
 		  actionInfo.setRedirect(false);
 		  actionInfo.setPath("/myPage101jsp");

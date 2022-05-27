@@ -18,11 +18,18 @@ public class UserDelete  implements Action{
 		
 		 req.setCharacterEncoding("UTF-8");
 		  ActionInfo actionInfo = new ActionInfo();
-		  UserVO userVO = new UserVO();
 		  UserDAO userDAO = new UserDAO();
+		  UserVO userVO = new userVO();
 		  
-		  String userNum = req.getParameter("userNum");
-		  userDAO.del(userNum);
+		  userVO.setUserNum(req.getParameter("userNum"));
+		  userVO.setUserPhoneNum(req.getParameter("userPhoneNum"));
+		  userVO.setUserEmail(req.getParameter("userEmail"));
+		  userVO.setUserName(req.getParameter("userName"));
+		  userVO.setUserPw(req.getParameter("userPw"));
+		  userVO.setUserProfile(req.getParameter("userProfile"));
+		  userVO.setUserStatus(req.getParameter("userStatus"));
+			
+		  userDAO.del(userVO);
 		  
 		  actionInfo.setRedirect(true);
 		  actionInfo.setPath("/main.jsp"); //

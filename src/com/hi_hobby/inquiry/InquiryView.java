@@ -5,6 +5,8 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.simple.JSONObject;
+
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
 import com.hi_hobby.domain.dao.InquiryDAO;
@@ -20,9 +22,12 @@ public class InquiryView implements Action{
 		InquiryVO inquiryVO = new InquiryVO();
 		InquiryDAO inquiryDAO = new InquiryDAO();
 		ActionInfo actionInfo = new ActionInfo();
+		JSONObject resultJSON = new JSONObject();
 		
-		String inquiryNum = req.getParameter("inquiryNum");
-		inquiryDAO.view(inquiryNum);
+		inquiryVO.setInquiryNum("inquiryNum");
+		inquiryVO.setInquiryPw("inquiryPw");
+		
+		resultJSON.put("check", inquiryDAO.view(inquiryVO));
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/csView.jsp");

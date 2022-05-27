@@ -30,13 +30,13 @@ public class InquiryDAO {
 		}
 		
 	// 문의 글 전체리스트
-	public void list() {
+	public void allView() {
 		
 	}
 		
 	// 문의 글 불러오기
-	public void view(String inquiryNum) {
-		sqlSession.selectOne("Inquiry.view", inquiryNum);
+	public boolean view(InquiryVO inquiryVO) {
+	return (Integer)sqlSession.selectOne("Inquiry.view", inquiryVO) == 1;
 	}
 	
 }
