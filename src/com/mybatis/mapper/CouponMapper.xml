@@ -4,19 +4,14 @@
 
 <!-- 쿠폰 생성 -->
 	<insert id="resister" parameterType="couponVO">
-		insert into tbl_coupon
-		(coupon_num, coupon_status, user_num)
-		values(#{couponNum}, #{couponStatus}, #{userNum})
 	</insert>
 
 <!-- 쿠폰 사용-->
 	<update id="use" parameterType="couponVO">
-		update tbl_coupon set coupon_status = #{couponStatus} where user_num = #{userNum}
 	</update>
 
 <!-- 쿠폰 정보 가져오기 -->
 	<select id="view" parameterType="couponVO" resultType="couponVO">
-		select coupon_num from tbl_coupon where user_num = #{userNum}
 	</select>
 
 

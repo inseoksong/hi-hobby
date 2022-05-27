@@ -4,34 +4,26 @@
 
 <!-- 회원가입 status 0: 크리에이터 1: 일반회원 -->
 	<insert id="join" parameterType="userVO">
-		insert into tbl_user
-		(user_num, user_phone_num, user_email, user_name, user_pw, user_profile, user_status)
-		values(#{userNum}, #{userPhoneNum}, #{userEmail}, #{userName}, #{userPw}, #{userProfile}, #{userStatus})
 	</insert>
 
 <!-- 이메일 중복검사 -->
 	<select id="checkEmail" parameterType="string" resultType="int">
-		select count(user_email) from tbl_user where user_email = #{userEmail}
 	</select>
 
 <!-- 프로필 수정 -->
 	<update id="modifyInfo" parameterType="userVO">
-		update tbl_user set user_name = #{userName}, user_phone_num = #{userPhoneNum}, user_pw = #{userPw}, user_profile = #{userProfile} where user_email = #{userEmail}
 	</update>
 
 <!-- 회원 탈퇴 -->
 	<delete id="del" parameterType="userVO">
-		delete from tbl_user where user_num = #{userNum}
 	</delete>
 
 <!-- 로그인 -->
 	<select id="login" parameterType="userVO" resultType="int">
-		select count(user_num) from tbl_user where user_email = #{userEmail} and user_pw = #{userPw}
 	</select>
 
 <!-- 내 정보 불러오기 -->
 	<select id="view" parameterType="userVO" resultType="userVO">
-		select * from tbl_user where user_num = #{userNum}
 	</select>
 	
 	
