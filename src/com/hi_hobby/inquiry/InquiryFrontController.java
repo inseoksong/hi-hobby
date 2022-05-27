@@ -2,6 +2,7 @@ package com.hi_hobby.inquiry;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -42,8 +43,21 @@ public class InquiryFrontController extends HttpServlet {
 		else if(command.equals("InquiryView.in")) {
 			actionInfo = new InquiryView().execute(req, resp);
 		}
+		else if(command.equals("InquiryAllView.in")) {
+			actionInfo = new InquiryAllView().execute(req, resp);
+		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
+		}
+		
+		if(actionInfo != null) {
+			if(actionInfo.isRedirect()) {
+				resp.sendRedirect(actionInfo.getPath());
+			}
+			else {
+				RequestDispatcher dispatcher = req.getRequestDispatcher(actionInfo.getPath());
+				dispatcher.forward(req, resp);
+			}
 		}
 	}
 }
