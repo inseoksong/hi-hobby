@@ -51,7 +51,7 @@ public class UserFrontController extends HttpServlet {
 		else if(command.equals("UserDelete.us")) {
 			actionInfo = new UserDelete().execute(req, resp);
 		}
-		else if(command.equals("CheckEmailOk.me")) {
+		else if(command.equals("CheckEmailOk.us")) {
 			new CheckEmailOk().execute(req, resp);
 		}
 		else {

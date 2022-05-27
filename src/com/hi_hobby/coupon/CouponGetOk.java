@@ -23,7 +23,7 @@ public class CouponGetOk implements Action {
 		couponVO.setCouponStatus(req.getParameter("couponStatus"));
 		couponVO.setUserNum(req.getParameter("userNum"));
 		
-		couponDAO.resisterCoupon(couponVO);
+		couponDAO.resister(couponVO);
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/myCoupons101.jsp");

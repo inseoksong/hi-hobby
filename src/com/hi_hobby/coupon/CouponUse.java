@@ -19,15 +19,15 @@ public class CouponUse implements Action {
 		CouponDAO couponDAO = new CouponDAO();
 		CouponVO couponVO = new CouponVO();
 		
-		CouponVO.setCouponNum(req.getParameter("couponNum"));
-		CouponVO.setCouponStatus(req.getParameter("couponStatus"));
-		CouponVO.setUserNum(req.getParameter("userNum"));
+		couponVO.setCouponNum(req.getParameter("couponNum"));
+		couponVO.setCouponStatus(req.getParameter("couponStatus"));
+		couponVO.setUserNum(req.getParameter("userNum"));
 		
-		couponDAO.useCoupon(couponVO);
+		couponDAO.use(couponVO);
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/myPage101.jsp");
 		
-		return null;
+		return actionInfo;
 	}
 }
