@@ -15,12 +15,18 @@ public class CouponDAO {
 	}
 	
 	// 쿠폰 생성
-	public void resisterCoupon (CouponVO couponVO) {
+	public void resister (CouponVO couponVO) {
 		sqlSession.insert("Coupon.resister", couponVO);
 	}
 	
 	// 쿠폰 사용
-	public void useCoupon(CouponVO couponVO) {
+	public void use(CouponVO couponVO) {
 		sqlSession.update("Coupon.use", couponVO);
 	}
+	
+	// 쿠폰 보기
+	public void view(CouponVO couponVO) {
+		sqlSession.update("Coupon.view", couponVO);
+	}
+	
 }

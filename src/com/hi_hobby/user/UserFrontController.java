@@ -27,7 +27,7 @@ public class UserFrontController extends HttpServlet {
 		ActionInfo actionInfo = null;
 		
 		if(command.equals("JoinOk.us")) {
-			actionInfo = new UserJoinOk().execute(req, resp);
+			actionInfo = new JoinOk().execute(req, resp);
 		}
 		else if(command.equals("Join.us")) {
 			actionInfo = new ActionInfo();
