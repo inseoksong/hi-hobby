@@ -11,7 +11,7 @@
 
 <!-- 주문 불러오기 -->
 	<select id="view" parameterType="orderVO" resultType="orderVO">
-		select * from tbl_order where order_num = #{orderNum}
+		select * from tbl_order where user_num = #{userNum}
 	</select>
 
 <!-- 주문 취소 -->

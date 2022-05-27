@@ -20,18 +20,15 @@
 		delete from tbl_inquiry where inquiry_num = #{inquiryNum}
 	</delete>
 
-<!-- 내 문의글 확인 -->
-	<select id="view" parameterType="string" resultType="inquiryVO">
-		select * from tbl_inquiry where inquiry_num = #{inquiryNum} and inquiry_pw = #{inquiryPw}
+<!-- 문의글 불러오기 -->
+	<select id="view" parameterType="inquiryVO" resultType="inquiryVO">
+		select * from tbl_inquiry where inquiry_num = #{inquiryNum}
 	</select>
 
 <!-- 전체 문의 보기 -->
-	<select id="allview" parameterType="inquiryVO" resultType="inquiryVO">
+	<select id="list" parameterType="inquiryVO" resultType="inquiryVO">
 		select inquiry_num, inquiry_process, user_num, inquiry_day from tbl_inquiry order by inquiry_num desc
 	</select>
-
-
-
 
 
 

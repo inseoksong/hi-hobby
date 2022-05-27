@@ -30,7 +30,7 @@
 	</select>
 
 <!-- 내 정보 불러오기 -->
-	<select id="print" parameterType="userVO" resultType="userVO">
+	<select id="view" parameterType="userVO" resultType="userVO">
 		select * from tbl_user where user_num = #{userNum}
 	</select>
 	
