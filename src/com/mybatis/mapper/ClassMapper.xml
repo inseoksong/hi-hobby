@@ -19,19 +19,34 @@
 		update tbl_class set class_status = #{classStatus} where class_num = #{classNum}
 	</update>
 	
-<!-- 클래스 보기 -->
+<!-- 지정한 클래스 조회 -->
 	<select id="view" parameterType="classVO" resultType="classVO">
 		select * from tbl_class where class_num = #{classNum}
 	</select>	
 
 <!-- 내가 개설한 클래스 보기 -->
-	<select id="myView" parameterType="classVO" resultType="classVO">
+	<select id="viewMine" parameterType="String" resultType="classVO">
 		select * from tbl_class where user_num = #{userNum}
 	</select>	
 	
 <!-- 승인 대기 클래스 보기 -->
-	<select id="myView" parameterType="classVO" resultType="classVO">
-		select * from tbl_class where class_approve==false
+	<select id="pending" parameterType="String" resultType="classVO">
+		select * from tbl_class where class_approve=false
 	</select>
+	
+	
+<!-- -------------------------------- -->
+	
+<!-- 클래스 승인 -->
+	<update id="approve" parameterType="classVO" resultType="classVO">
+		update tbl_class set class_approve = #{classApprove} where class_num = #{classNum}
+	</update>
+
+<!-- 전체 클래스 조회 -->
+	<select id="allView" parameterType="classVO" resultType="classVO">
+		select * from tbl_class where class_approve = #{classApprove}
+	</select>
+
+
 
 </mapper>
