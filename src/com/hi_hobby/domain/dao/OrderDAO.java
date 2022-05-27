@@ -15,17 +15,14 @@ public class OrderDAO {
 	}
 	
 	// 주문 생성
-	public void create(OrderVO orderVO) {
-		sqlSession.insert("Order.create", orderVO);
+	public void create() {
 	}
 	
 	// 주문 불러오기
-	public void view (OrderVO orderVO) {
-		sqlSession.selectOne("Order.view", orderVO);
+	public void view () {
 	}
 	
 	// 주문 취소
-	public void cancel(OrderVO orderVO) {
-		sqlSession.update("Order.cancel", orderVO);
+	public void cancel() {
 	}
 }

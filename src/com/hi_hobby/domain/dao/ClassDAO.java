@@ -15,18 +15,15 @@ public class ClassDAO {
 	}
 	
 	// 클래스 생성
-	public void create(ClassVO classVO) {
-		sqlSession.insert("Class.create", classVO);
+	public void create() {
 	}
 	
 	// 클래스 수정
-	public void modify (ClassVO classVO) {
-		sqlSession.update("Class.modify", classVO);
+	public void modify () {
 	}
 	
 	// 클래스 삭제
-	public void del(ClassVO classVO) {
-		sqlSession.update("Class.del", classVO);
+	public void del() {
 	}
 	
 	// 전체 클래스 조회
@@ -35,23 +32,19 @@ public class ClassDAO {
 	}
 	
 	// 클래스 조회
-	public void view(ClassVO classVO) {
-		sqlSession.selectOne("Class.view", classVO);
+	public void view() {
 	}
 	
 	// 내가 개설한 클래스 보기 
-	public void viewMine(String userNum) {
-		sqlSession.selectOne("Class.viewMine", userNum);
+	public void viewMine() {
 	}
 	
 	// 승인대기 클래스 조회
-	public void pending (String classApprove) {
-		sqlSession.selectOne("Class.peding", classApprove);
+	public void pending () {
 	}
 	
 	// 클래스 승인
-	public void confirm(ClassVO classVO) {
-		sqlSession.update("Class.confirm", classVO);
+	public void confirm() {
 	}
 	
 	

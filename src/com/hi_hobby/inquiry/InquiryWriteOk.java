@@ -12,28 +12,7 @@ import com.hi_hobby.domain.vo.InquiryVO;
 
 public class InquiryWriteOk implements Action{
 
-	@Override
-	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		
-		req.setCharacterEncoding("UTF-8");
-		InquiryVO inquiryVO = new InquiryVO();
-		InquiryDAO inquiryDAO = new InquiryDAO();
-		ActionInfo actionInfo = new ActionInfo();
-		
-		inquiryVO.setInquiryNum("inquiryNum");
-		inquiryVO.setInquiryPw("inquiryPw");
-		inquiryVO.setInquiryDay("inquiryDay");
-		inquiryVO.setInquiryContent("inquiryContent");
-		inquiryVO.setInquiryTitle("inquiryTitle");
-		inquiryVO.setInquiryProcess("inquiryProcess");
-		inquiryVO.setUserNum("userNum");
-		
-		inquiryDAO.write(inquiryVO);
-		
-		actionInfo.setRedirect(false);
-		actionInfo.setPath("/csView.jsp");
-		
-		return null;
+	 return null;
 	}
 	
 	
