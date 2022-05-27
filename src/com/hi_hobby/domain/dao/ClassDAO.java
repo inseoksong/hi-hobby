@@ -49,5 +49,11 @@ public class ClassDAO {
 		sqlSession.selectOne("Class.peding", classApprove);
 	}
 	
+	// 클래스 승인
+	public void confirm(ClassVO classVO) {
+		sqlSession.update("Class.confirm", classVO);
+	}
+	
+	
 
 }
