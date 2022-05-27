@@ -31,6 +31,14 @@ public class AdminVO {
 	public void setAdminPw(String adminPw) {
 		this.adminPw = adminPw;
 	}
+
+	public int getClassNum() {
+		return classNum;
+	}
+
+	public void setClassNum(int classNum) {
+		this.classNum = classNum;
+	}
 	
 	
 }

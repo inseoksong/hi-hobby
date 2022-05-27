@@ -34,6 +34,14 @@ public class OrderVO {
 	public void setOrderStatus(boolean orderStatus) {
 		this.orderStatus = orderStatus;
 	}
+	
+	public boolean isOrderApprove() {
+		return orderApprove;
+	}
+
+	public void setOrderApprove(boolean orderApprove) {
+		this.orderApprove = orderApprove;
+	}
 
 	public int getClassNum() {
 		return classNum;
