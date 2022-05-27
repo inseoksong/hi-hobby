@@ -25,14 +25,13 @@ public class UserDAO {
 	}
 	
 	// 로그인
-	public String loginCheck(String userEmail) {
-		return sqlSession.selectOne("User.loginCheck", userEmail);
+	public boolean loginCheck(UserVO userVO) {
+		return (Integer)sqlSession.selectOne("User.loginCheck", userVO) == 1;
 	}
 	
 	// 내 정보 불러오기
-	public UserVO view(String userNum) {
-		return sqlSession.selectOne("User.view", userNum);
-		
+	public void view(UserVO userVO) {
+		sqlSession.selectOne("User.view", userVO);
 	}
 	
 	// 정보 수정
@@ -41,8 +40,8 @@ public class UserDAO {
 	}
 	
 	// 회원 탈퇴
-	public void del(String userNum) {
-		sqlSession.delete("User.del", userNum);
+	public void del(UserVO userVO) {
+		sqlSession.delete("User.del", userVO);
 	}
 	
 }

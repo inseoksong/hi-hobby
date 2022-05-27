@@ -23,26 +23,17 @@ public class UserLoginOk implements Action {
 		  ActionInfo actionInfo = new ActionInfo();
 		  UserVO userVO = new UserVO();
 		  UserDAO userDAO = new UserDAO();
+		  JSONObject resultJSON = new JSONObject();
 		  
-		  String userEmail = req.getParameter("userEmail");
-		  String userPw = req.getParameter("userPw");
-		  JSONObject loginJSON = new JSONObject();
+		  userVO.setUserEmail(req.getParameter("userEmail"));
+		  userVO.setUserPw(req.getParameter("usePw"));
 		  
-		  loginJSON.put("check", userDAO.loginCheck(userEmail));
+		  resultJSON.put("check", userDAO.loginCheck(userVO));
 		  
-		  if(loginJSON.check == userPw) {
-			  
-			  actionInfo.setRedirect(false);
-			  actionInfo.setPath("main.jsp");
-			  return actionInfo;
-			  
-		  } else {
-			  
-			  actionInfo.setRedirect(true);
-			  return null;
-		  }
-		  
-		  
+		 actionInfo.setRedirect(false);
+		 actionInfo.setPath("/main.jsp");
+		 
+		 return actionInfo;
 	  }
 	  
 }

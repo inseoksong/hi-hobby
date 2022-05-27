@@ -27,6 +27,10 @@ public class ClassDAO {
 	// 클래스 삭제
 	public void del(ClassVO classVO) {
 		sqlSession.update("Class.del", classVO);
+	}
+	
+	// 전체 클래스 조회
+	public void allView() {
 		
 	}
 	
