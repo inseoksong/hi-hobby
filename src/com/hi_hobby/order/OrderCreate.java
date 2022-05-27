@@ -12,27 +12,7 @@ import com.hi_hobby.domain.vo.OrderVO;
 
 public class OrderCreate implements Action{
 
-	@Override
-	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		
-		 req.setCharacterEncoding("UTF-8");
-		 OrderVO orderVO = new OrderVO();
-		 OrderDAO orderDAO = new OrderDAO();
-		 ActionInfo actionInfo = new ActionInfo();
-		 
-		 orderVO.setOrderNum("classNum");
-		 orderVO.setOrderReservation("orderReservation");
-		 orderVO.setOrderStatus("orderStatus");
-		 orderVO.setOrderApprove("orderApprove");
-		 orderVO.setClassNum("classNum");
-		 orderVO.setUserNum("userNum");
-		 
-		 orderDAO.create(orderVO);
-		 
-		 actionInfo.setRedirect(false);
-		 actionInfo.setPath("");
-		
-		return actionInfo;
+	 return null;
 	}
 	
 }

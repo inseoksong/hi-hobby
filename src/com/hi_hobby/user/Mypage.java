@@ -15,28 +15,8 @@ import com.hi_hobby.domain.dao.UserDAO;
 
 public class Mypage implements Action{
 	
-	@Override
-	   public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		
-		 req.setCharacterEncoding("UTF-8");
-		  ActionInfo actionInfo = new ActionInfo();
-		  UserDAO userDAO = new UserDAO();
-		  UserVO userVO = new userVO();
-		  
-		  userVO.setUserNum(req.getParameter("userNum"));
-		  userVO.setUserPhoneNum(req.getParameter("userPhoneNum"));
-		  userVO.setUserEmail(req.getParameter("userEmail"));
-		  userVO.setUserName(req.getParameter("userName"));
-		  userVO.setUserPw(req.getParameter("userPw"));
-		  userVO.setUserProfile(req.getParameter("userProfile"));
-		  userVO.setUserStatus(req.getParameter("userStatus"));
-			
-		  userDAO.view(userVO);
-		  
-		  actionInfo.setRedirect(false);
-		  actionInfo.setPath("/myPage101jsp");
-		  
-		  return actionInfo;
+
+	 return null;
 	}
 		  
 
