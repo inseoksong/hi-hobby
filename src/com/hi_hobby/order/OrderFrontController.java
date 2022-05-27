@@ -27,26 +27,16 @@ public class OrderFrontController extends HttpServlet {
 		ActionInfo actionInfo = null;
 		
 		if(command.equals("OrderCreate.or")) {
-			actionInfo = new OrderCreate().execute(req, resp);
+			
 		}
 		else if(command.equals("OrderCancel.or")) {
-			actionInfo = new OrderCancel().execute(req, resp);
+			
 		}
 		else if(command.equals("OrderView.or")) {
-			actionInfo = new OrderView().execute(req, resp);
+			
 		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
-		}
-		
-		if(actionInfo != null) {
-			if(actionInfo.isRedirect()) {
-				resp.sendRedirect(actionInfo.getPath());
-			}
-			else {
-				RequestDispatcher dispatcher = req.getRequestDispatcher(actionInfo.getPath());
-				dispatcher.forward(req, resp);
-			}
 		}
 	}
 }
