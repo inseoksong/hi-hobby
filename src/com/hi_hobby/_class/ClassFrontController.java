@@ -52,6 +52,9 @@ public class ClassFrontController extends HttpServlet {
 		else if(command.equals("ClassPending.cl")) {
 			actionInfo = new ClassDelete().execute(req, resp);
 		}
+		else if(command.equals("ClassConfirm.cl")) {
+			actionInfo = new ClassConfirm().execute(req, resp);
+		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
 		}
