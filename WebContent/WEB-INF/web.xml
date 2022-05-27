@@ -12,7 +12,7 @@
   
   <servlet>
     <servlet-name>UserFrontController</servlet-name>
-    <servlet-class>com.hi_hobby.UserFrontController</servlet-class>
+    <servlet-class>com.hi_hobby.user.UserFrontController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>UserFrontController</servlet-name>
@@ -21,7 +21,7 @@
   
   <servlet>
     <servlet-name>ClassFrontController</servlet-name>
-    <servlet-class>com.hi_hobby.ClassFrontController</servlet-class>
+    <servlet-class>com.hi_hobby._class.ClassFrontController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ClassFrontController</servlet-name>
@@ -30,7 +30,7 @@
   
   <servlet>
     <servlet-name>InquiryFrontController</servlet-name>
-    <servlet-class>com.hi_hobby.InquiryFrontController</servlet-class>
+    <servlet-class>com.hi_hobby.inquiry.InquiryFrontController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>InquiryFrontController</servlet-name>
@@ -39,7 +39,7 @@
   
   <servlet>
     <servlet-name>OrderFrontController</servlet-name>
-    <servlet-class>com.hi_hobby.OrderFrontController</servlet-class>
+    <servlet-class>com.hi_hobby.order.OrderFrontController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>OrderFrontController</servlet-name>
@@ -48,7 +48,7 @@
   
   <servlet>
     <servlet-name>AdminFrontController</servlet-name>
-    <servlet-class>com.hi_hobby.AdminFrontController</servlet-class>
+    <servlet-class>com.hi_hobby.admin.AdminFrontController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AdminFrontController</servlet-name>
@@ -57,7 +57,7 @@
   
   <servlet>
     <servlet-name>CouponFrontController</servlet-name>
-    <servlet-class>com.hi_hobby.CouponFrontController</servlet-class>
+    <servlet-class>com.hi_hobby.coupon.CouponFrontController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CouponFrontController</servlet-name>
