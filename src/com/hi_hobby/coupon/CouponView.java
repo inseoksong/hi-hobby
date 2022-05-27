@@ -19,11 +19,11 @@ public class CouponView implements Action {
 		CouponDAO couponDAO = new CouponDAO();
 		CouponVO couponVO = new CouponVO();
 		
-		CouponVO.setCouponNum(req.getParameter("couponNum"));
-		CouponVO.setCouponStatus(req.getParameter("couponStatus"));
-		CouponVO.setUserNum(req.getParameter("userNum"));
+		couponVO.setCouponNum(req.getParameter("couponNum"));
+		couponVO.setCouponStatus(req.getParameter("couponStatus"));
+		couponVO.setUserNum(req.getParameter("userNum"));
 		
-		couponDAO.viewCoupon(couponVO);
+		couponDAO.view(couponVO);
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/myCoupons101.jsp");
