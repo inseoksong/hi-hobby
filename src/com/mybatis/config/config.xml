@@ -35,6 +35,4 @@
 		<mapper resource="com/mybatis/mapper/OrderMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/AdminMapper.xml"/>
 	</mappers>
-
-
 </configuration>
