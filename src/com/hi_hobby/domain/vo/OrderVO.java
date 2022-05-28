@@ -8,8 +8,7 @@ public class OrderVO {
 	int classNum;				// 주문한 클래스 번호
 	int userNum;				// 주문한 유저 번호
 	
-	
-	public void OrderVO() {;}
+	public OrderVO() {;}
 
 	public int getOrderNum() {
 		return orderNum;

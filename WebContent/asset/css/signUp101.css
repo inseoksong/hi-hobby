@@ -508,7 +508,11 @@ span.jwNHGa{
 	font-size: 13px !important;
 }
 
-#buttonColor:hover{
+#phoneNumCheck, #emailCheck {
+	margin-top: 16px;
+}
+
+#phoneNumCheck:hover, #emailCheck:hover{
 	background-color: #DCDCDC;
 }
 

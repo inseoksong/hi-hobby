@@ -39,12 +39,12 @@
 									<h2 class="text_Login2">로그인</h2>
 								</div>
 								<p>
-								<form action="#">
+								<form action="LoginOk.us" method="post" name="loginForm">
 									<div class="input_box01 input_box02">
 										<label class="input_label">이메일</label>
 										<div class="input_box04">
 											<input class="emailV input_box05 input_box06"
-												type="email" name="email" autocomplete="username"
+												type="email" name="userEmail" autocomplete="username"
 												placeholder="example@naver.com" value>
 										</div>
 										<div class="erMem" style="display: none;">
@@ -55,7 +55,7 @@
 										<label class="input_label">비밀번호</label>
 										<div class="input_box04">
 											<input class="passwordV input_box05 input_box06"
-												type="password" name="password"
+												type="password" name="userPw"
 												autocomplete="current-password" placeholder="********" value>
 										</div>
 										<div class="erMpw" style="display: none;">
@@ -117,9 +117,9 @@
 	</div>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script>
-	
 	function loginTotal() {
 		
 	    function emNul(idx) {
