@@ -1,5 +1,7 @@
 package com.hi_hobby.domain.dao;
 
+import java.util.HashMap;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -15,15 +17,18 @@ public class UserDAO {
 	}
 	
 	// 회원가입
-	public void join() {
+	public void join(UserVO userVO) {
+		sqlSession.insert("User.join", userVO);
 	}
 	
 	// 이메일 중복검사
 	public void checkEmail() {
+		
 	}
 	
 	// 로그인
-	public void loginCheck() {
+	public Integer login(HashMap<String, String> userMap) {
+		return sqlSession.selectOne("User.login", userMap);
 	}
 	
 	// 내 정보 불러오기
