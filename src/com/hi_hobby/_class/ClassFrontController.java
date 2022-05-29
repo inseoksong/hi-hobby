@@ -27,7 +27,7 @@ public class ClassFrontController extends HttpServlet {
 		ActionInfo actionInfo = null;
 		
 		if(command.equals("ClassCreateOk.cl")) {
-			
+			actionInfo = new ClassCreateOk().execute(req, resp);
 		}
 		else if(command.equals("ClassCreate.cl")) {
 			
