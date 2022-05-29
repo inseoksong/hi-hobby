@@ -30,7 +30,8 @@ public class ClassFrontController extends HttpServlet {
 			actionInfo = new ClassCreateOk().execute(req, resp);
 		}
 		else if(command.equals("ClassCreate.cl")) {
-			
+			actionInfo.setRedirect(true);
+			actionInfo.setPath(req.getContextPath() + "/onedayClassCreate.jsp");
 		}
 		else if(command.equals("ClassModify.cl")) {
 			
@@ -38,8 +39,8 @@ public class ClassFrontController extends HttpServlet {
 		else if(command.equals("ClassView.cl")) {
 			
 		}
-		else if(command.equals("ClassAllView.cl")) {
-			
+		else if(command.equals("createrCenter.jsp")) {
+			actionInfo = new ClassView().execute(req, resp);
 		}
 		else if(command.equals("ClassDelete.cl")) {
 			

@@ -109,7 +109,7 @@
                                                         </svg> </span>
 											</div>
 										</div>
-										<div class="css-a1maoc" style="display: none;"
+										<div class="css-a1maoc classAllView" style="display: none;"
 											onclick="notice(4)">전체 상품</div>
 										<div class="css-1wbal16" style="display: none;"
 											onclick="notice(5)">클래스 댓글</div>
@@ -602,21 +602,38 @@
 					<div class="css-ywnkfc" style="display: none;">
 						<div class="css-xc25bh">
 							<h3 class="css-1gqy0up">클래스</h3>
-							<button class="css-9fzpu4" onclick="notice(1)">
-								<span class="css-3kqv01">
-									<span class="css-1u6oz3l">
-										<svg
-											xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-											class="css-1oe6l0y">
-                                                       <path
-														d="M21.75 11h-8.5V2.25c0-.14-.11-.25-.25-.25h-2c-.14 0-.25.11-.25.25V11h-8.5c-.14 0-.25.11-.25.25v2c0 .14.11.25.25.25h8.5v8.25c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25V13.5h8.5c.14 0 .25-.11.25-.25v-2c0-.14-.11-.25-.25-.25Z"
-														class="css-1b224fx"></path>
-                                           </svg>
-                                       </span>
-									<div class="css-1gxj1fi"></div>
-									<span class="css-13g5vis">클래스 만들기</span>
-								</span>
-							</button>
+							<div class=buttonWrap>
+								<button class="css-9fzpu4" onclick="classAllView();">
+									<span class="css-3kqv01">
+										<span class="css-1u6oz3l">
+											<svg
+												xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+												class="css-1oe6l0y">
+	                                                       <path
+															d="M21.75 11h-8.5V2.25c0-.14-.11-.25-.25-.25h-2c-.14 0-.25.11-.25.25V11h-8.5c-.14 0-.25.11-.25.25v2c0 .14.11.25.25.25h8.5v8.25c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25V13.5h8.5c.14 0 .25-.11.25-.25v-2c0-.14-.11-.25-.25-.25Z"
+															class="css-1b224fx"></path>
+	                                           </svg>
+	                                       </span>
+										<div class="css-1gxj1fi"></div>
+										<span class="css-13g5vis">클래스 조회하기</span>
+									</span>
+								</button>
+								<button class="css-9fzpu4" onclick="notice(1)">
+									<span class="css-3kqv01">
+										<span class="css-1u6oz3l">
+											<svg
+												xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+												class="css-1oe6l0y">
+	                                                       <path
+															d="M21.75 11h-8.5V2.25c0-.14-.11-.25-.25-.25h-2c-.14 0-.25.11-.25.25V11h-8.5c-.14 0-.25.11-.25.25v2c0 .14.11.25.25.25h8.5v8.25c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25V13.5h8.5c.14 0 .25-.11.25-.25v-2c0-.14-.11-.25-.25-.25Z"
+															class="css-1b224fx"></path>
+	                                           </svg>
+	                                       </span>
+										<div class="css-1gxj1fi"></div>
+										<span class="css-13g5vis">클래스 만들기</span>
+									</span>
+								</button>
+							</div>
 						</div>
 						<div class="css-um3vb4">
 							<div class="css-zsf0gj">
@@ -722,6 +739,7 @@
 																title=""></span>
 														</div>
 													</div>
+													<c:forEach var="class" items="${memberList}">
 													<div aria-label="grid"
 														class="ReactVirtualized__Grid ReactVirtualized__Table__Grid"
 														role="rowgroup" tabindex="0"
@@ -852,6 +870,7 @@
 															</div>
 														</div>
 													</div>
+													</c:forEach>
 												</div>
 											</div>
 										</div>
@@ -1179,4 +1198,9 @@
 <script src="asset/js/createrCenter.js"></script>
 <script src="asset/js/onedayClassCreate.js"></script>
 <script src="asset/js/createrCenter.js"></script>
+<script>
+	function classAllView(){
+		
+	}
+</script>
 </html>
