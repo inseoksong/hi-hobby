@@ -410,7 +410,7 @@
 							</div>
 						</div>
 						<!-- 내 정보 수정 -->
-						<form>
+						<form action="" name= "creatorInfo" method="post">
 							<div
 								class="Grid__StyledDiv-sc-81d45n-0 iIwnuy CreatorAccountProfileViewController__Container-sc-1u2e1vs-0 jrlbMn"
 								style="display: none;">
