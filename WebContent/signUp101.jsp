@@ -43,7 +43,8 @@
 										<div class="erMem" style="display: none;">
                                             <p class="erMText">이메일을 입력해주세요</p>
                                         </div>
-                                        <button id="emailCheck" type="button" class="buttonTool1 buttonTool2" color="default" fill="false">
+                                        <p id="emailCheckMsg"></p>
+                                        <button id="emailCheck" type="button" class="buttonTool1 buttonTool2" color="default" fill="false" onclick="checkEmail()">
 											<span class="jwNHGa">중복 확인</span>
 										</button>
 									</div>
@@ -79,9 +80,14 @@
 											<div class="text_box03">
 												<input class="input_box phone_num" type="text" name="userPhoneNum" placeholder="010-0000-0000" autocomplete="off" >
 											</div>
+											<label class="text_label injeung">인증 번호 입력</label>
+											<div class="text_box03">
+												<input class="input_box injeung-number" type="text" name="userPhoneNum" placeholder="인증 번호 6자리를 입력해주세요." autocomplete="off" >
+											</div>
 											<div class="erMpn" style="display: none;">
                                             	<p class="erMText">휴대폰 번호 인증을 해주세요</p>
                                         	</div>
+                                        	<p id="phoneCheckMsg"></p>
 											<button id="phoneNumCheck" type="button" class="buttonTool1 buttonTool2" color="default" fill="false">
 												<span class="jwNHGa">인증하기</span>
 											</button>
@@ -130,9 +136,35 @@
 		</div>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="asset/js/header.js"></script>
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script>
+	function checkEmail() {
+		$.ajax({
+			url: "/hi_hobby/CheckEmailOk.us",
+			type: "get",
+			data: {userEmail:$("input[name='userEmail']").val()},
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function(result) {
+				console.log(result);
+				if(result.check) {
+					$("p#emailCheckMsg").text("중복된 이메일입니다.");
+				}
+				else {
+					$("p#emailCheckMsg").text("사용 가능한 이메일입니다.");
+				}
+			},
+			error: function(request, status, error) {
+				console.log("실패");
+				console.log(request);
+				console.log(status);
+				console.log(error);
+			}
+		});
+	}
+
 	function sighUpTotal() {
 		function nmNul(idx) {
 			var input101 = document.getElementsByClassName("nameV")[0]; 

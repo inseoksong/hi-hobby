@@ -156,6 +156,7 @@
 		    }
 	    }else{         // 입력 됐을때
 	        emNul(2);
+	        loginForm.submit();
 	        if(ps.value == ""){   // 패스워드가 입력되지 않았을때
 		        psNul(1);
 		    }

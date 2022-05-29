@@ -10,7 +10,10 @@
 	</insert>
 
 	<!-- 이메일 중복검사 -->
-
+	<select id="checkEmail" parameterType="string" resultType="_int">
+		select count(user_email) from tbl_user
+		where user_email = #{userEmail}
+	</select>
 
 	<!-- 프로필 수정 -->
 
@@ -25,5 +28,10 @@
 	</select>
 
 	<!-- 내 정보 불러오기 -->
-
+	<select id="view" parameterType="_int" resultType="userVO">
+		select user_name, user_email, user_pw, user_phone_num from tbl_user
+		where user_num = #{userNum}
+	</select>
+	
+	<!-- 비밀번호 변경 -->
 </mapper>
