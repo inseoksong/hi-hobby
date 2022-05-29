@@ -42,17 +42,20 @@ public class UserFrontController extends HttpServlet {
 			actionInfo.setRedirect(true);
 			actionInfo.setPath(req.getContextPath() + "/login101.jsp");
 		}
-		else if(command.equals("Mypage.us")) {
-			
+		else if(command.equals("MyPage.us")) {
+			actionInfo = new MyPage().execute(req, resp);
 		}
-		else if(command.equals("MypageModify.us")) {
-			
+		else if(command.equals("MyPageModify.us")) {
+			actionInfo = new MyPageModify().execute(req, resp);
+		}
+		else if(command.equals("ChangePw.us")) {
+			actionInfo = new MyPageModify().execute(req, resp);
 		}
 		else if(command.equals("UserDelete.us")) {
 			
 		}
 		else if(command.equals("CheckEmailOk.us")) {
-			
+			new CheckEmailOk().execute(req, resp);
 		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성

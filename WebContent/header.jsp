@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -100,20 +101,35 @@
                     </div>
                 </div>
                 <div class="header-right">
-                    <a href="../createrSupport.jsp">
+                    <a href="createrSupport.jsp">
                         <p>크리에이터 지원</p>
                     </a>
                     <div style="width:24px;"></div> <!-- 공백 블록 -->
                     <a href="cs.jsp">
                         <p>고객센터</p>
                     </a>
-                    <div style="width:24px;"></div> <!-- 공백 블록 -->
-                    <a href="login101.jsp">
-                        <p>로그인</p>
-                    </a>
+					<c:choose>
+						<c:when test="${sessionScope.userNum eq null}">
+							<div style="width:24px;"></div> <!-- 공백 블록 -->
+		                    <a href="login101.jsp">
+		                        <p>로그인</p>
+		                    </a>
+						</c:when>
+						<c:otherwise>
+							<div style="width:24px;"></div> <!-- 공백 블록 -->
+							<a href="MyPage.us">
+		                        <p>마이페이지</p>
+		                    </a>
+		                    <div style="width:24px;"></div> <!-- 공백 블록 -->
+		                    <a href="logout.jsp">
+		                        <p>로그아웃</p>
+		                    </a>
+						</c:otherwise>
+					</c:choose>
                 </div>
             </div>
         </header>
 </body>
 <script src="asset/js/header.js">
-</script></html>
+</script>
+</html>

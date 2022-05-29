@@ -57,5 +57,4 @@ public class UserVO {
 	public void setUserStatus(boolean userStatus) {
 		this.userStatus = userStatus;
 	}
-
 }
