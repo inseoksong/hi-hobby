@@ -451,14 +451,14 @@ svg:not(:root){
 	background-color: #F0EEEE;
 }
 
+.bxTXNb {
+	margin-bottom: 32px;
+}
 
+form[name='PwChangeForm'] {
+	display: none;
+}
 
-
-
-
-
-
-
-
-
-
+form[name='PwChangeForm'] .dGxueP {
+	margin-bottom: 32px;
+}
