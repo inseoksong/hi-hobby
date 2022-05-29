@@ -1,4 +1,3 @@
-var genChe = true;
 function male(idx) {
     var btn = document.getElementsByClassName('RadioIcon-taoxkc-0 eVmqxF')[0];
     var len = document.getElementsByClassName('RadioButton__RadioButtonText-sc-1j3ywll-1 cGbvXG')[0];
@@ -38,6 +37,7 @@ function notice(idx){
     var fou = document.getElementsByClassName('Grid__StyledDiv-sc-81d45n-0 iIwnuy CreatorAccountProfileViewController__Container-sc-1u2e1vs-0 jrlbMn')[0];
     var fiv = document.getElementsByClassName('css-ywnkfc')[0];
     var six = document.getElementsByClassName('Spacing__Box-sc-47wgmh-0 fvDAgv')[0];
+    var sev = document.getElementById('classInputOn');
 
     var col1in = document.getElementsByClassName('css-zsoya5 in')[0];
 
@@ -51,6 +51,7 @@ function notice(idx){
 	    	fou.style.display='none';
             fiv.style.display='none';
             six.style.display='none';
+            sev.style.display='none';
 	    	break;
         case 2:
             col2.style.border= '1px solid #000000';
@@ -62,6 +63,7 @@ function notice(idx){
             fou.style.display='none';
             fiv.style.display='none';
             six.style.display='none';
+            sev.style.display='none';
             break;
             css-ywnkfc
         case 3:
@@ -83,6 +85,7 @@ function notice(idx){
             fou.style.display='none';
             fiv.style.display='block';
             six.style.display='none';
+            sev.style.display='none';
             break;
         case 5:
             col2.style.border= '1px solid #ffffff';
@@ -94,6 +97,7 @@ function notice(idx){
             fou.style.display='none';
             fiv.style.display='none';
             six.style.display='block';
+            sev.style.display='none';
             break;
         case 6:
 	    	one.style.display='none';
@@ -102,6 +106,7 @@ function notice(idx){
 	    	fou.style.display='none';
             fiv.style.display='none';
             six.style.display='none';
+            sev.style.display='none';
         	break;
         case 7:
         	one.style.display='none';
@@ -109,7 +114,17 @@ function notice(idx){
             thr.style.display='none';
             fou.style.display='block';
             fiv.style.display='none';
-            six.style.display='none';                
+            six.style.display='none';
+            sev.style.display='none';
+            break;
+        case 8:
+        	one.style.display='none';
+        	two.style.display='none';
+            thr.style.display='none';
+            fou.style.display='none';
+            fiv.style.display='none';
+            six.style.display='none';
+	    	sev.style.display='block';
             break;
     }
 

@@ -13,9 +13,10 @@ public class ClassVO {
 	private String classImg;		// 이미지 자료형
 	private boolean classOne;		// 원데이, 온라인 클래스 구분
 	private boolean classStatus;	// 클래스 삭제 여부
+	private String classIntroduce;	// 클래스 설명
 	private int userNum;			// 유저 고유번호(크리에이터 정보를 가져오기 위해)
 	
-	public void ClassVO() {;}
+	public ClassVO() {;}
 
 	public int getClassNum() {
 		return classNum;
@@ -112,6 +113,14 @@ public class ClassVO {
 
 	public void setClassStatus(boolean classStatus) {
 		this.classStatus = classStatus;
+	}
+
+	public String getClassIntroduce() {
+		return classIntroduce;
+	}
+
+	public void setClassIntroduce(String classIntroduce) {
+		this.classIntroduce = classIntroduce;
 	}
 
 	public int getUserNum() {

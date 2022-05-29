@@ -9,7 +9,7 @@ public class InquiryVO {
 	boolean inquiryProcess;	// 문의글 처리 현황
 	int userNum;			// 작성한 유저의 고유 넘버
 	
-	public void InquiryVO() {;}
+	public InquiryVO() {;}
 
 	public int getInquiryNum() {
 		return inquiryNum;

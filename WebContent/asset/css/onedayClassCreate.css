@@ -135,6 +135,20 @@ div.class-category select {
 	padding-right: 8px;
 }
 
+div.class-price p {
+	font-size: 14px;
+	color: #a2a2a2;
+	padding-top: 16px;
+}
+
+div.class-price input {
+	width: 892px;
+	height: 50px;
+	margin-top: 16px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
 div.class-place p {
 	font-size: 14px;
 	color: #a2a2a2;
@@ -252,6 +266,16 @@ div.application-button button {
     font-size: 14px;
     font-weight: 700;
     margin-top: 16px;
+}
+
+div.flexWrap{
+	display : flex;
+	align-iems : center;
+}
+
+p.input-required{
+	margin-left: 5px;
+    color : rgb(255, 82, 82);
 }
 
 div.bottomside input, div.bottomside select, div.bottomside textarea {

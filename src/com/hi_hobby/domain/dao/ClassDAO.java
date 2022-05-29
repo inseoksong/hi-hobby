@@ -15,7 +15,8 @@ public class ClassDAO {
 	}
 	
 	// 클래스 생성
-	public void create() {
+	public void create(ClassVO classVO) {
+		sqlSession.insert("Class.create", classVO);
 	}
 	
 	// 클래스 수정
