@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
@@ -19,6 +20,7 @@ public class ClassCreateOk implements Action {
 			ClassVO classVO = new ClassVO();
 			ClassDAO classDAO = new ClassDAO();
 			ActionInfo actionInfo = new ActionInfo();		
+			HttpSession session = req.getSession();
 			
 			classVO.setClassNickname(req.getParameter("classNickname"));                      // 클래스 생성자 닉네임                   
 			classVO.setClassTitle(req.getParameter("classTitle"));                            // 클래스 제목                        
@@ -30,7 +32,7 @@ public class ClassCreateOk implements Action {
 //			classVO.setClassImg(req.getParameter("classImg"));                                // 이미지 자료형                       
 //			classVO.setClassOne(req.getParameter("classOne"));                                // 원데이, 온라인 클래스 구분               
 			classVO.setClassIntroduce(req.getParameter("classIntroduce"));                          // 클래스 설명                     
-//			classVO.setUserNum(Integer.parseInt(req.getParameter("userNum")));                             // 유저 고유번호(크리에이터 정보를 가져오기 위해)
+//			classVO.setUserNum(session.getAttribute("userNum"));                             // 유저 고유번호(크리에이터 정보를 가져오기 위해)
 			
 			classDAO.create(classVO);
 			actionInfo.setRedirect(false);
