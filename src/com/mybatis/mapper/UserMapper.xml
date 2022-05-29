@@ -32,4 +32,6 @@
 		select user_name, user_email, user_pw, user_phone_num from tbl_user
 		where user_num = #{userNum}
 	</select>
+	
+	<!-- 비밀번호 변경 -->
 </mapper>
