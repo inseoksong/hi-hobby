@@ -4,6 +4,9 @@
 
 <!-- 클래스 생성 -->
 	<insert id="create" parameterType="classVO">
+		insert into tbl_class
+		(class_nickname, class_title, class_category, class_place, class_price, class_start, class_end, class_approve, class_img, class_one, class_status, user_num, class_introduce)
+		values (#{classNickname}, #{classTitle}, #{classCategory}, #{classPlace}, #{classPrice}, #{classStart}, #{classEnd}, #{classApprove}, #{classImg}, #{classOne}, #{classStatus}, #{userNum}, #{classIntroduce})
 	</insert>
 	
 <!-- 클래스 수정 -->
@@ -27,7 +30,7 @@
 	</select>
 	
 <!-- 클래스 승인 -->
-	<update id="confirm" parameterType="classVO" resultType="classVO">
+	<update id="confirm" parameterType="classVO">
 	</update>
 
 <!-- 전체 클래스 조회 -->
