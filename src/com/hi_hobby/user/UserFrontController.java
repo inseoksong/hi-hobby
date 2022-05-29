@@ -49,7 +49,7 @@ public class UserFrontController extends HttpServlet {
 			actionInfo = new MyPageModify().execute(req, resp);
 		}
 		else if(command.equals("ChangePw.us")) {
-			actionInfo = new MyPageModify().execute(req, resp);
+			actionInfo = new ChangePw().execute(req, resp);
 		}
 		else if(command.equals("UserDelete.us")) {
 			
