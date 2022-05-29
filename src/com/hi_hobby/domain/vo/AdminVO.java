@@ -6,7 +6,7 @@ public class AdminVO {
 	private String adminPw;	// 관리자 비밀번호
 	private int classNum;	// 클래스 번호 가져오기
 	
-	public void AdminVO() {;}
+	public AdminVO() {;}
 
 	public int getAdminNum() {
 		return adminNum;
