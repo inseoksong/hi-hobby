@@ -110,17 +110,15 @@
 							<div class="edxcPn">
 								<label class="jbmNLF">현재 비밀번호</label>
 								<div class="dGxueP">
-									<input class="eQAnnk" type="text" name="userPw" placeholder="현재 비밀번호를 입력해주세요.">
+									<input class="eQAnnk" type="password" name="userPw" placeholder="현재 비밀번호를 입력해주세요.">
 								</div>
-														
 								<label class="jbmNLF">새 비밀번호</label>
 								<div class="dGxueP">
-									<input class="eQAnnk" type="text" name="userPw" placeholder="새 비밀번호를 입력해주세요.">
+									<input class="eQAnnk" type="password" name="userNewPw" placeholder="새 비밀번호를 입력해주세요.">
 								</div>
-														
 								<label class="jbmNLF">새 비밀번호 확인</label>
 								<div class="dGxueP">
-									<input class="eQAnnk" type="text" id="userPw" placeholder="새 비밀번호를 한 번 더 입력해주세요.">
+									<input class="eQAnnk" type="password" id="userNewPw" placeholder="새 비밀번호를 한 번 더 입력해주세요.">
 								</div>
 								<button id="pwCheckBtn" type="button" class="gQyJNI bfBEyV" color="default" fill="false">
 									<span class="jwNHGa">비밀번호 변경하기</span>
