@@ -16,116 +16,118 @@
 	<jsp:include page="header.jsp"/>
 	<!-- ↑ 헤더 부분 -->
 	<section class="final-wrap">
-		<div class="container-wrap">
-			<div class="container">
-				<div class="class-wrap">
-					<div class="class-image">
-						<div class="arrow prev">
-							<button type="button">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-									<path fill-rule="evenodd" d="M15.5 5.5l-6 6.5 6 6.5L14 20l-7.5-8L14 4l1.5 1.5z" fill="#1a1a1a"></path>
-								</svg>
-							</button>
-						</div>
-						<div class="images">
-							<div class="image"><img src="https://cdn.class101.net/images/e5e360d3-dadb-42b8-bd6d-f8b59c7c00dc/1920xauto.webp"></div>
-							<div class="image"><img src="https://cdn.class101.net/images/e5e360d3-dadb-42b8-bd6d-f8b59c7c00dc/1920xauto.webp"></div>
-							<div class="image"><img src="https://cdn.class101.net/images/e5e360d3-dadb-42b8-bd6d-f8b59c7c00dc/1920xauto.webp"></div>
-							<div class="image"><img src="https://cdn.class101.net/images/e5e360d3-dadb-42b8-bd6d-f8b59c7c00dc/1920xauto.webp"></div>
-						</div>
-						<div class="arrow next">
-							<button type="button">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-									<path fill-rule="evenodd" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z" fill="#1a1a1a"></path>
-								</svg>
-							</button>
-						</div>
-					</div>
-					<div class="aperture"></div>
-					<div class="line"></div>
-					<div class="aperture"></div>
-					<div class="class-buy">
-						<div class="sticky">
-							<div class="class-explan">
-								<div class="class-name">
-									<h4>프로크리에이트 도장 브러시로 그리는 일러스트</h4>
-								</div>
-								<div class="class-crea">달콩</div>
-								<div class="class-price">25,000원</div>
-							</div>
-							<div class="reservation-button">
-								<button type="button">클래스 구매하기</button>
-							</div>
-							<div class="push-share">
-								<button type="button" class="push">
-									<span class="push-share-img">
-										<img class="empty" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FtUiuQ%2FbtrCNOnpIbK%2FtYcpNGwOjSNCd7tzUtBja0%2Fimg.png">
-									</span>
-									<span>174</span>
-								</button>
-								<button type="button" class="share" onclick="copy()">
-									<span class="push-share-img">
-										<img class="share" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdxCmQV%2FbtrCNNaYKY9%2Fy6C0gZn57MfEyiimoL3eNk%2Fimg.png">
-									</span>
-									<span>공유하기</span>
+			<div class="container-wrap">
+				<div class="container">
+					<div class="class-wrap">
+						<div class="class-image">
+							<div class="arrow prev">
+								<button type="button">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+										<path fill-rule="evenodd" d="M15.5 5.5l-6 6.5 6 6.5L14 20l-7.5-8L14 4l1.5 1.5z" fill="#1a1a1a"></path>
+									</svg>
 								</button>
 							</div>
-							<div class="line"></div>
-							<div class="section-wrap">
-								<div class="main-section">
-									<div class="header-cover">
-										<div class="header">
-											<h3>결제하기</h3>
-											<div class="encryption">s
-												<img src="https://class101.net/images/ic-shield-yellow.png">
-												<p>암호화 중</p>
-											</div>
-										</div>
+							<div class="images">
+								<div class="image"><img src="https://cdn.class101.net/images/e5e360d3-dadb-42b8-bd6d-f8b59c7c00dc/1920xauto.webp"></div>
+								<div class="image"><img src="https://cdn.class101.net/images/e5e360d3-dadb-42b8-bd6d-f8b59c7c00dc/1920xauto.webp"></div>
+								<div class="image"><img src="https://cdn.class101.net/images/e5e360d3-dadb-42b8-bd6d-f8b59c7c00dc/1920xauto.webp"></div>
+								<div class="image"><img src="https://cdn.class101.net/images/e5e360d3-dadb-42b8-bd6d-f8b59c7c00dc/1920xauto.webp"></div>
+							</div>
+							<div class="arrow next">
+								<button type="button">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+										<path fill-rule="evenodd" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z" fill="#1a1a1a"></path>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="aperture"></div>
+						<div class="line"></div>
+						<div class="aperture"></div>
+						<div class="class-buy">
+							<div class="sticky">
+								<div class="class-explan">
+									<div class="class-name">
+										<h4>프로크리에이트 도장 브러시로 그리는 일러스트</h4>
 									</div>
-									<section class="main">
-										<div class="point">
-											<div class="point-text-big">쿠폰</div>
-											<div class="point-text-small">쿠폰</div>
-											<div class="point-use">
-												<input type="text" name="point" placeholder="쿠폰 번호를 입력해주세요.">
-												<input type="button" value="쿠폰 확인">
-											</div>
-											<div class="coupon-check"></div>
-										</div>
-										<div class="line"></div>
-										<div class="amount-of-payment">
-											<div class="payment-text-big">결제 금액</div>
-											<div class="payment-price">
-												<p>총 상품 금액</p>
-												<p>25,000원</p>
-											</div>
-											<div class="payment-line"></div>
-											<div class="payment-point">
-												<p>사용 포인트</p>
-												<p>- 0 원</p>
-											</div>
-											<div class="payment-line"></div>
-											<div class="payment-final">
-												<p>최종 가격</p>
-												<p>25,000원</p>
-											</div>
-										</div>
-										<div class="line"></div>
-										<div class="payment-method">
-											<div class="method-text">결제 방식</div>
-											<div class="payment-buttons">
-												<button type="button" class="payment-card clicked">
-													<img src="https://class101.net/images/payment/CreditCard.png">
-													<p>카드 결제</p>
-												</button>
-												<button type="button" class="payment-kakao">
-													<img src="https://class101.net/images/payment/img_kakaopay.png">
-												</button>
-											</div>
-											<div class="go-payment">
-												<button>결제하기</button>
+									<div class="class-crea">달콩</div>
+									<div class="class-price">25,000원</div>
+								</div>
+								<div class="reservation-button">
+									<button type="button">클래스 구매하기</button>
+								</div>
+								<div class="push-share">
+									<button type="button" class="push">
+										<span class="push-share-img">
+											<img class="empty" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FtUiuQ%2FbtrCNOnpIbK%2FtYcpNGwOjSNCd7tzUtBja0%2Fimg.png">
+										</span>
+										<span>174</span>
+									</button>
+									<button type="button" class="share" onclick="copy()">
+										<span class="push-share-img">
+											<img class="share" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdxCmQV%2FbtrCNNaYKY9%2Fy6C0gZn57MfEyiimoL3eNk%2Fimg.png">
+										</span>
+										<span>공유하기</span>
+									</button>
+								</div>
+								<div class="line"></div>
+								<div class="section-wrap">
+									<div class="main-section">
+										<div class="header-cover">
+											<div class="header">
+												<h3>결제하기</h3>
+												<div class="encryption">s
+													<img src="https://class101.net/images/ic-shield-yellow.png">
+													<p>암호화 중</p>
+												</div>
 											</div>
 										</div>
+										<section class="main">
+											<form action="OrderCreateOn.or" name="createOnForm" method="post">
+											<div class="point">
+												<div class="point-text-big">쿠폰</div>
+												<div class="point-text-small">쿠폰</div>
+												<div class="point-use">
+													<input type="text" name="point" placeholder="쿠폰 번호를 입력해주세요.">
+													<input type="button" value="쿠폰 확인">
+												</div>
+												<div class="coupon-check"></div>
+											</div>
+											<div class="line"></div>
+											<div class="amount-of-payment">
+												<div class="payment-text-big">결제 금액</div>
+												<div class="payment-price">
+													<p>총 상품 금액</p>
+													<p>25,000원</p>
+												</div>
+												<div class="payment-line"></div>
+												<div class="payment-point">
+													<p>사용 포인트</p>
+													<p>- 0 원</p>
+												</div>
+												<div class="payment-line"></div>
+												<div class="payment-final">
+													<p>최종 가격</p>
+													<p>25,000원</p>
+												</div>
+											</div>
+											<div class="line"></div>
+											<div class="payment-method">
+												<div class="method-text">결제 방식</div>
+												<div class="payment-buttons">
+													<button type="button" class="payment-card clicked">
+														<img src="https://class101.net/images/payment/CreditCard.png">
+														<p>카드 결제</p>
+													</button>
+													<button type="button" class="payment-kakao">
+														<img src="https://class101.net/images/payment/img_kakaopay.png">
+													</button>
+												</div>
+												<div class="go-payment">
+													<button>결제하기</button>
+												</div>
+											</div>
+										</form>
 									</section>
 								</div>
 							</div>

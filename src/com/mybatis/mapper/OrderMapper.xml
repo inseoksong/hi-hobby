@@ -2,21 +2,31 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Order">
 
-<!-- 주문 생성-->
-	<insert id="create" parameterType="orderVO">
+<!-- 원데이 주문 생성-->
+	<insert id="createOne" parameterType="orderVO">
+	insert into tbl_order
+	(order_reservation, order_status, order_approve, class_num, user_num, order_coupon)
+	values(#{orderReservation}, #{orderStatus}, #{orderApprove}, #{classNum}, #{userNum}, #{orderCoupon})
 	</insert>
-
+	
+<!-- 온라인 주문 생성-->
+	<insert id="createOn" parameterType="orderVO">
+	insert into tbl_order
+	(order_status, order_approve, class_num, user_num<!-- , order_coupon -->)
+	values(#{orderStatus}, #{orderApprove}, #{classNum}, #{userNum}<!-- , #{orderCoupon} -->)
+	</insert>
+	
 <!-- 주문 불러오기 -->
-	<select id="view" parameterType="orderVO" resultType="orderVO">
+	<select id="view" resultType="orderVO">
+	select order_num, order_reservation, order_status, order_approve, class_num, user_num, order_coupon
+	from tbl_order
 	</select>
 
 <!-- 주문 취소 -->
-	<update id="cancel" parameterType="orderVO">
+ 	<update id="cancel" parameterType="orderVO">
+ 	update tbl_order
+	set order_approve=#{orderApprove}
+	where order_num=#{orderNum};
 	</update>
-
-
-
-
-
 
 </mapper>
