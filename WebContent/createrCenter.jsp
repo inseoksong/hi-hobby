@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -108,7 +109,8 @@
                                                         </svg> </span>
 											</div>
 										</div>
-										<div class="css-a1maoc" style="display: none;"
+										<!-- onclick=location.href='' -->
+										<div class="css-a1maoc classAllView" style="display: none;"
 											onclick="notice(4)">전체 상품</div>
 										<div class="css-1wbal16" style="display: none;"
 											onclick="notice(5)">클래스 댓글</div>
@@ -360,12 +362,16 @@
 									<div class="class-choice">
 										<img src="https://cdn.class101.net/images/a034a402-0a5b-487c-b0ab-308a06ba6f20/3840xauto.webp">
 										<h6>원데이 클래스</h6>
-										<button type="button" onclick="notice(6)">만들기</button>
+										<a href="onedayClassCreate.jsp">
+											<button type="button" onclick="notice(6)">만들기</button>
+										</a>
 									</div>
 									<div class="class-choice" >
 										<img src="https://cdn.class101.net/images/94fe8872-2d7c-4d99-b903-264f03ec037b/3840xauto.webp">
 										<h6>온라인 클래스</h6>
-										<button type="button" onclick="notice(8)">만들기</button>
+										<a href="onedayClassCreate.jsp">
+											<button type="button" onclick="notice(8)">만들기</button>
+										</a>
 									</div>
 								</div>
 							</section>
@@ -601,21 +607,23 @@
 					<div class="css-ywnkfc" style="display: none;">
 						<div class="css-xc25bh">
 							<h3 class="css-1gqy0up">클래스</h3>
-							<button class="css-9fzpu4" onclick="notice(1)">
-								<span class="css-3kqv01">
-									<span class="css-1u6oz3l">
-										<svg
-											xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-											class="css-1oe6l0y">
-                                                       <path
-														d="M21.75 11h-8.5V2.25c0-.14-.11-.25-.25-.25h-2c-.14 0-.25.11-.25.25V11h-8.5c-.14 0-.25.11-.25.25v2c0 .14.11.25.25.25h8.5v8.25c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25V13.5h8.5c.14 0 .25-.11.25-.25v-2c0-.14-.11-.25-.25-.25Z"
-														class="css-1b224fx"></path>
-                                           </svg>
-                                       </span>
-									<div class="css-1gxj1fi"></div>
-									<span class="css-13g5vis">클래스 만들기</span>
-								</span>
-							</button>
+							<div class=buttonWrap>
+								<button class="css-9fzpu4" onclick="notice(1)">
+									<span class="css-3kqv01">
+										<span class="css-1u6oz3l">
+											<svg
+												xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+												class="css-1oe6l0y">
+	                                                       <path
+															d="M21.75 11h-8.5V2.25c0-.14-.11-.25-.25-.25h-2c-.14 0-.25.11-.25.25V11h-8.5c-.14 0-.25.11-.25.25v2c0 .14.11.25.25.25h8.5v8.25c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25V13.5h8.5c.14 0 .25-.11.25-.25v-2c0-.14-.11-.25-.25-.25Z"
+															class="css-1b224fx"></path>
+	                                           </svg>
+	                                       </span>
+										<div class="css-1gxj1fi"></div>
+										<span class="css-13g5vis">클래스 만들기</span>
+									</span>
+								</button>
+							</div>
 						</div>
 						<div class="css-um3vb4">
 							<div class="css-zsf0gj">
@@ -778,7 +786,9 @@
 																	role="gridcell"
 																	style="overflow: hidden; flex: 0 1 200px;">
 																	<div class="css-b3mawz">
-																		<p class="css-sur10j">클래스명을 입력해주세요.</p>
+																		<%-- <c:forEach var="class" items="${classList}"> --%>
+																		<p class="css-sur10j">클래스 제목<%-- <c:out value="${class.get(0).getClassTitle()}"/> --%></p>
+																		<%-- </c:forEach> --%>
 																	</div>
 																</div>
 																<div aria-colindex="4"
@@ -1178,4 +1188,9 @@
 <script src="asset/js/createrCenter.js"></script>
 <script src="asset/js/onedayClassCreate.js"></script>
 <script src="asset/js/createrCenter.js"></script>
+<script>
+	function classAllView(){
+		
+	}
+</script>
 </html>

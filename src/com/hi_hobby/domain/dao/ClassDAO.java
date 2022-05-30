@@ -1,5 +1,7 @@
 package com.hi_hobby.domain.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -24,28 +26,33 @@ public class ClassDAO {
 	}
 	
 	// 클래스 삭제
-	public void del() {
+	public void del(int classNum) {
+		sqlSession.update("Class.del", classNum);
 	}
 	
-	// 전체 클래스 조회
-	public void allView() {
-		
+	// 클래스 목록 조회
+	public List <ClassVO> listView() {
+		return sqlSession.selectList("Class.listView");
 	}
 	
 	// 클래스 조회
-	public void view() {
+	public ClassVO view(int classNum) {
+		return sqlSession.selectOne("Class.view");
 	}
 	
 	// 내가 개설한 클래스 보기 
-	public void viewMine() {
+	public List <ClassVO> viewMine(int userNum) {
+		return sqlSession.selectList("Class.viewMine");
 	}
 	
 	// 승인대기 클래스 조회
-	public void pending () {
+	public List <ClassVO> pending () {
+		return sqlSession.selectList("Class.viewMine");
 	}
 	
 	// 클래스 승인
-	public void confirm() {
+	public void confirm(int classNum) {
+		sqlSession.update("Class.confirm");
 	}
 	
 	
