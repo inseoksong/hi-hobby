@@ -1,22 +1,45 @@
 package com.hi_hobby.user;
 
 import java.io.IOException;
+import java.util.Base64;
+import java.util.HashMap;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
 import com.hi_hobby.domain.dao.UserDAO;
-import com.hi_hobby.domain.vo.UserVO;
-
-import org.json.simple.JSONObject;
 
 public class UserLoginOk implements Action {
-
-	 return null;
-	  }
-	  
+	@Override
+	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		req.setCharacterEncoding("UTF-8");
+		
+		ActionInfo actionInfo = new ActionInfo();
+		HttpSession session = req.getSession();
+		HashMap<String, String> userMap = new HashMap<>();
+		UserDAO userDAO = new UserDAO();
+		String userEmail = req.getParameter("userEmail");
+		String userPw = req.getParameter("userPw");
+		int userNum = 0;
+		userPw = new String(Base64.getEncoder().encode(userPw.getBytes()));
+		
+		userMap.put("userEmail", userEmail);
+		userMap.put("userPw", userPw);
+		
+		try {
+			userNum = userDAO.login(userMap);
+			session.setAttribute("userNum", userNum);
+			actionInfo.setRedirect(false);
+			actionInfo.setPath("/main.jsp");
+		} catch (Exception e) {
+			System.out.println("로그인 실패");
+			actionInfo.setRedirect(false);
+			actionInfo.setPath("/login101_2.jsp");
+		}
+		
+		return actionInfo;
+	}
 }
-

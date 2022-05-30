@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,79 +32,39 @@
                                 <th width="35%">제목</th>
                                 <th width="15%">작성자</th>
                                 <th width="14%">작성일</th>
-                                <th width="10%">조회수</th>
+                                <!-- <th width="10%">조회수</th> -->
                             </tr>
+                            <c:forEach var="inquiry" items="${inquiryList}">
                             <tr>
-                                <td>21354</td>
-                                <td class="waiting">답변 대기</td>
-                                <td class="qnaTitle">비밀글입니다</td>
-                                <td>부천오함마</td>
-                                <td>2222-05-22</td>
-                                <td>0</td>
+                                <td><c:out value="${inquiry.getInquiryNum()}"/></td>
+                                <td class="waiting"><c:choose><c:when test="${member.getInquiryProcess()}">답변 완료</c:when><c:otherwise>답변 대기</c:otherwise></c:choose></td>
+                                <td class="qnaTitle">
+                                	<a class="qnaTitle1" onclick="pwChange()">비밀글입니다</a>	
+                                	<form action="InquiryAllView.in" method="post" name="pwForm">
+                                	<a class="qnaTitle2" style="display:none">
+                                		<input type="password" name="inquiryPw" placeholder="비밀번호">
+                                		<input type="button" value="확인" class="pwSubBtn" onclick="pwSub()">
+                                	</a>
+                                	</form>
+                                </td>
+                                <td><c:out value="${inquiry.getUserName()}"/></td>
+                                <td><c:out value="${inquiry.getInquiryDay()}"/></td>
                             </tr>
-                            <tr>
-                                <td>21353</td>
-                                <td class="waiting">답변 대기</td>
-                                <td class="qnaTitle">비밀글입니다</td>
-                                <td>부천척추킬러</td>
-                                <td>2222-05-22</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>21352</td>
-                                <td class="waiting">답변 대기</td>
-                                <td class="qnaTitle">비밀글입니다</td>
-                                <td>안산서열0위</td>
-                                <td>2222-05-21</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>21351</td>
-                                <td class="waiting">답변 대기</td>
-                                <td class="qnaTitle">비밀글입니다</td>
-                                <td>안산피갈비</td>
-                                <td>2222-05-19</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>21350</td>
-                                <td class="status">답변 완료</td>
-                                <td class="qnaTitle">비밀글입니다</td>
-                                <td>평택지옥견</td>
-                                <td>2222-05-19</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>21349</td>
-                                <td class="status">답변 완료</td>
-                                <td class="qnaTitle">비밀글입니다</td>
-                                <td>예산쇠빠따</td>
-                                <td>2222-05-19</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td>21348</td>
-                                <td class="status">답변 완료</td>
-                                <td class="qnaTitle">비밀글입니다</td>
-                                <td>안서영네왕자</td>
-                                <td>2222-05-18</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>21347</td>
-                                <td class="status">답변 완료</td>
-                                <td class="qnaTitle">비밀글입니다</td>
-                                <td>여리</td>
-                                <td>2222-05-18</td>
-                                <td>2</td>
-                            </tr>
+                            </c:forEach>
                             <tr class="lastData">
-                                <td>21346</td>
+                                <td>00000</td>
                                 <td class="status">답변 완료</td>
-                                <td class="qnaTitle">비밀글입니다</td>
-                                <td>포리</td>
-                                <td>2222-05-17</td>
-                                <td>1</td>
+                                <td class="qnaTitle">
+                                	<a class="qnaTitle1" onclick="pwChange()">비밀글입니다</a>
+                                	<form action="InquiryAllView.in" method="post" name="pwForm">
+                                	<a class="qnaTitle2" style="display:none">
+                                		<input type="password" name="inquiryPw" placeholder="비밀번호">
+                                		<input type="button" value="확인" class="pwSubBtn" onclick="pwSub()">
+                                	</a>
+                                	</form>
+                                </td>
+                                <td>관리자</td>
+                                <td>2022-05-28</td>
                             </tr>
                         </table>
                     </div>
@@ -142,6 +103,7 @@
     <!-- 푸터 영역 -->
 	<jsp:include page="footer.jsp"/>
 </body>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="asset/js/cs.js"></script>
 </html>

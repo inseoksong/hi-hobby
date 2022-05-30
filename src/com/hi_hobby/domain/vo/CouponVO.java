@@ -5,7 +5,7 @@ public class CouponVO {
 	private boolean couponStatus;	// 쿠폰 사용 여부
 	private int userNum;			// 쿠폰을 갖고 있는 유저 넘버
 	
-	public void CouponVO() {;}
+	public CouponVO() {;}
 
 	public int getCouponNum() {
 		return couponNum;

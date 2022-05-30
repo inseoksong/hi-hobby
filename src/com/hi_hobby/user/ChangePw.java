@@ -1,4 +1,4 @@
-package com.hi_hobby.inquiry;
+package com.hi_hobby.user;
 
 import java.io.IOException;
 
@@ -7,14 +7,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
-import com.hi_hobby.domain.dao.InquiryDAO;
-import com.hi_hobby.domain.vo.InquiryVO;
 
-public class InquiryWriteOk implements Action{
-
-	 return null;
+public class ChangePw implements Action {
+	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		return null;
 	}
-	
-	
-
 }

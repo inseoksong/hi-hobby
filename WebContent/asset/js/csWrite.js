@@ -1,5 +1,4 @@
-
-const confirmBtn = document.querySelector('button.confirm');
+const confirmBtn = document.querySelector('input.confirm');
 const alertMsg = document.querySelector('div.alert');
 
 confirmBtn.addEventListener("click",complete);
@@ -10,5 +9,6 @@ function complete() {
     }
 
     window.setTimeout(
-        "window.open('cs.jsp','_self')",3000);
+        "inquiryWriteForm.submit()",3000);
+    	
 }

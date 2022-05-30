@@ -20,7 +20,7 @@ a:-webkit-any-link {
 }
 
 body{
-    overflow: hidden;
+    overflow: auto;
 }
 
 section{
@@ -200,4 +200,9 @@ div.number-buttons button.number-select {
 	color: #fff;
 	font-weight: 500;
 	font-size: 14px;
+}
+
+.pwSubBtn{
+	margin: -1px;
+	padding-top: 0px;
 }

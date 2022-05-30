@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +18,6 @@
 	<div id="__next">
 		<div id="wrapper">
 			<div class="wrapper2">
-				
 				<section class="css-ud1xbe">
 					<header class="css-3h2b4c">
 						<div class="css-1n2mv2k">
@@ -46,31 +46,25 @@
 							<a target="_self" class="iDrVSO">프로필 수정</a>
 						</div>
 					</div>
-					<div class="jhcaMk">
-						<label class="jeRPsg">
-							<input type="file" accept="image/*">
-							<div size="88" class="kUwCvR">
-								<div size="88" class="kDfSSS">
-									<span class="hssdGY kHDrtN">
-										<picture class="kWswCZ JCHSH">
-											<img sizes="100vw" src="	https://class101.net/images/default-user.png">
-										</picture>
-									</span>
-								</div>
-								<div class="ihiYJU">
-									<svg xmlns="https://www.google.co.kr/" width="24" height="24" fill="none" viewBox="0 0 24 24">
-										<path fill="#FFF" fill-rule="evenodd" d="M4 21a1 1 0 01-1-1v-4a1 1 0 01.293-.707l11-11a3.83 3.83 0 015.414 0 3.83 3.83 0 010 5.414l-11 11A1 1 0 018 21H4zm1-2h2.586l.707-.707-2.586-2.586-.707.707V19z"></path>
-									</svg>
-								</div>
-							</div>
-						</label>
-					</div>
-					<form action="#">
+					<c:forEach var="user" items="${userProfile}">
+						<c:set var="userName" value="${user.getUserName()}"/>
+						<c:set var="userEmail" value="${user.getUserEmail()}"/>
+						<c:set var="userPhoneNum" value="${user.getUserPhoneNum()}"/>
+					</c:forEach>
+					<form name="MyPageForm">
 						<div class="gUToOv">
 							<div class="edxcPn">
 								<label class="jbmNLF">이름</label>
 								<div class="dGxueP">
-									<input class="eQAnnk" type="text" placeholder="홍길동" name="name" value>
+									<input class="eQAnnk" type="text" name="userName" value="${userName}" disabled>
+								</div>
+							</div>
+						</div>
+						<div class="gUToOv">
+							<div class="edxcPn">
+								<label class="jbmNLF">이메일</label>
+								<div class="dGxueP">
+									<input class="eQAnnk" type="text" name="userName" value="${userEmail}" disabled>
 								</div>
 							</div>
 						</div>
@@ -84,23 +78,20 @@
 						</div>	 -->
 						<div class="gUToOv">
 							<div class="edxcPn">
-								<label class="jbmNLF">휴대폰 번호</label>
-								<div class="kDVUuj">
-									<div class="dGxueP">
-										<input class="eQAnnk jAuirA" type="text" placeholder="-을 제외한 휴대폰 번호를 입력해주세요." disabled value="01012345678">
-									</div>
-									<button id="buttonColor" type="button" class="gQyJNI hvGluD" color="default" fill="false">
-										<span class="jwNHGa">수정</span>
-									</button>
-								</div>
+								<label class="jbmNLF">비밀번호 변경</label>
+								<button id="pageFormBtn" type="button" class="gQyJNI bfBEyV pwChange" color="default" fill="false">
+									<span class="jwNHGa">비밀번호 변경하기</span>
+								</button>
 							</div>
 						</div>
 						<div class="gUToOv">
 							<div class="edxcPn">
-								<label class="jbmNLF">비밀번호 변경</label>
-								<button id="buttonColor" type="button" class="gQyJNI hvGluD" color="default" fill="false">
-									<span class="jwNHGa">비밀번호 변경하기</span>
-								</button>
+								<label class="jbmNLF">휴대폰 번호</label>
+								<div class="kDVUuj">
+									<div class="dGxueP">
+										<input class="eQAnnk jAuirA" type="text" name="userPhoneNum" value="${userPhoneNum}" disabled>
+									</div>
+								</div>
 							</div>
 						</div>
 						<!-- <div class="gUToOv">
@@ -113,17 +104,35 @@
 								</div>
 							</div>
 						</div> -->
-						<div class="fHScIF">
-							<button type="button" class="gQyJNI bfBEyV" color="orange" fill="true">
-								<span class="jwNHGa">수정하기</span>
-							</button>
+					</form>
+					<form action="MyPageModify.us" method="post" name="PwChangeForm">
+						<div class="gUToOv">
+							<div class="edxcPn">
+								<label class="jbmNLF">현재 비밀번호</label>
+								<div class="dGxueP">
+									<input class="eQAnnk" type="text" name="userPw" placeholder="현재 비밀번호를 입력해주세요.">
+								</div>
+														
+								<label class="jbmNLF">새 비밀번호</label>
+								<div class="dGxueP">
+									<input class="eQAnnk" type="text" name="userPw" placeholder="새 비밀번호를 입력해주세요.">
+								</div>
+														
+								<label class="jbmNLF">새 비밀번호 확인</label>
+								<div class="dGxueP">
+									<input class="eQAnnk" type="text" id="userPw" placeholder="새 비밀번호를 한 번 더 입력해주세요.">
+								</div>
+								<button id="pwCheckBtn" type="button" class="gQyJNI bfBEyV" color="default" fill="false">
+									<span class="jwNHGa">비밀번호 변경하기</span>
+								</button>
+							</div>
 						</div>
 					</form>
 				</div>
 				<div class="jeuZzp"></div>
 				<div class="ezUgvc">
 					<div class="hZVALn">
-						<button  id="buttonColor" type="button" class="gQyJNI hBfywk" color="default" fill="true">
+						<button id="buttonColor" type="button" class="gQyJNI hBfywk" color="default" fill="true">
 							<span class="jwNHGa">회원탈퇴</span>
 						</button>
 					</div>
@@ -159,12 +168,10 @@
 						</div>
 					</div>
 				</footer>
-			
 			</div>
 		</div>
 	</div>
 </body>
-<script>
-
-</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="asset/js/myProfile101.js"></script>
 </html>

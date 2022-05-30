@@ -9,8 +9,7 @@ public class OrderVO {
 	int userNum;				// 주문한 유저 번호
 	boolean orderCoupon;		// 쿠폰 사용 여부
 	
-	
-	public void OrderVO() {;}
+	public OrderVO() {;}
 
 	public int getOrderNum() {
 		return orderNum;

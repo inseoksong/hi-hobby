@@ -508,7 +508,11 @@ span.jwNHGa{
 	font-size: 13px !important;
 }
 
-#buttonColor:hover{
+#phoneNumCheck, #emailCheck {
+	margin-top: 8px;
+}
+
+#phoneNumCheck:hover, #emailCheck:hover{
 	background-color: #DCDCDC;
 }
 
@@ -523,3 +527,15 @@ span.jwNHGa{
     text-align: left !important;
 }
 
+p#emailCheckMsg, p#phoneCheckMsg {
+	margin-top: 8px;
+	color: red;
+}
+
+label.injeung {
+	margin-top: 16px;
+}
+
+input.injeung-number {
+	border: 1px solid #efefef;
+}

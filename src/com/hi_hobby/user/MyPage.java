@@ -12,7 +12,7 @@ import com.hi_hobby.action.ActionInfo;
 import com.hi_hobby.domain.dao.UserDAO;
 import com.hi_hobby.domain.vo.UserVO;
 
-public class MyPageModify implements Action {
+public class MyPage implements Action {
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");
@@ -26,7 +26,7 @@ public class MyPageModify implements Action {
 		req.setAttribute("userProfile", userProfile);
 		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("/myProfile101.jsp");
+		actionInfo.setPath("/myPage101.jsp");
 		
 		return actionInfo;
 	}
