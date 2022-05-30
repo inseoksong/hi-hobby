@@ -3,29 +3,43 @@
 <mapper namespace="Inquiry">
 
 
-<!-- 문의글 작성-->
-	<insert id="write" parameterType="inquiryVO">
+<!-- 문의글 작성1-->
+	<insert id="inquiryWrite" parameterType="inquiryVO">
+		insert into tbl_inquiry
+		(inquiry_pw, inquiry_day, inquiry_content, inquiry_title, user_num)
+		values(#{inquiryPw}, #{inquiryDay}, #{inquiryContent}, #{inquiryTitle}, #{userNum})
 	</insert>
 
-<!-- 문의글 수정 -->
-	<update id="modify" parameterType="inquiryVO">
+<!-- 전체 문의 보기 2-->
+	<select id="inquiryList" resultType="inquiryVO">
+		select inquiry_num, inquiry_Day, inquiry_process, user_num
+		from tbl_inquiry order by inquiry_num desc
+	</select>
+
+<!-- 내가 쓴 문의글 불러오기 3-->
+	<select id="inquiryMyView" parameterType="inquiryVO" resultType="inquiryVO">
+		select inquiry_content, inquiry_title from tbl_inquiry where inquiry_num = #{inquiryNum}
+	</select>
+
+<!-- 문의글 수정 4-->
+	<update id="inquiryModify" parameterType="inquiryVO">
+		update tbl_inquiry set inquiry_day = #{inquiryDay}, inquiry_content = #{inquiryContent}, inquiry_title = #{inquiryTitle} where inquiry_num = #{inquiryNum}
 	</update>
 
-<!-- 문의글 삭제 -->
-	<delete id="del" parameterType="inquiryVO">
+<!-- 문의글 삭제 5-->
+	<delete id="inquiryDelete" parameterType="inquiryVO">
+		delete tbl_inquiry where inquiry_num = #{inquiryNum}
 	</delete>
 
-<!-- 문의글 불러오기 -->
-	<select id="view" parameterType="inquiryVO" resultType="inquiryVO">
+<!-- 문의글 답변 완료  6-->
+	<update id="inquiryOk" parameterType="inquiryVO">
+		update tbl_inquiry set inquiry_process = #{inquiryProcess} where inquiry_num = #{inquiryNum}
+	</update>
+
+<!-- 비밀번호 검사 -->
+	<select id="pwOk" parameterType="String" resultType="_int">
+		select inquiry_num from tbl_inquiry
+		where user_num = #{userNum} and inquiry_pw = #{inquiryPw}
 	</select>
-
-<!-- 전체 문의 보기 -->
-	<select id="list" parameterType="inquiryVO" resultType="inquiryVO">
-	</select>
-
-
-
-
-
 
 </mapper>
