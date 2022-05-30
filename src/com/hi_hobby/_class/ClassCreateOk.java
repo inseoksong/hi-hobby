@@ -1,6 +1,7 @@
 package com.hi_hobby._class;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -38,7 +39,7 @@ public class ClassCreateOk implements Action {
 			actionInfo.setRedirect(false);
 			actionInfo.setPath("/createrCenter.jsp");
 	
-			return null;
+			return actionInfo;
 		
 	}
 	

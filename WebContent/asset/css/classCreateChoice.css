@@ -99,6 +99,7 @@ div#createrChoice div.class-choice button {
 	font-size: 14px;
 	font-weight: 700;
 	border: none;
+	left : 25px;
 }
 
 div#createrChoice div.class-choice:first-child {

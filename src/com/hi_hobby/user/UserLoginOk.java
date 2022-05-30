@@ -32,16 +32,14 @@ public class UserLoginOk implements Action {
 		try {
 			userNum = userDAO.login(userMap);
 			session.setAttribute("userNum", userNum);
+			actionInfo.setRedirect(false);
+			actionInfo.setPath("/main.jsp");
 		} catch (Exception e) {
-			// 로그인 실패
 			System.out.println("로그인 실패");
 			actionInfo.setRedirect(false);
 			actionInfo.setPath("/login101_2.jsp");
 		}
-		actionInfo.setRedirect(false);
-		actionInfo.setPath("/main.jsp");
 		
 		return actionInfo;
 	}
 }
-
