@@ -19,13 +19,13 @@ public class OrderDAO {
 	// 원데이 주문 생성
 	public void createOne(OrderVO orderVO) {
 		System.out.println("one dao들어옴");
-		sqlSession.insert("Class.createOne", orderVO);
+		sqlSession.insert("Order.createOne", orderVO);
 	}
 	
 	// 온데이 주문 생성
 	public void createOn(OrderVO orderVO) {
 		System.out.println("on dao들어옴");
-		sqlSession.insert("Class.create", orderVO);
+		sqlSession.insert("Order.createOn", orderVO);
 	}
 	
 	// 주문 불러오기
