@@ -15,7 +15,7 @@ public class AdminDAO {
 	}
 	
 	// 로그인
-	public boolean loginCheck() {
-		}
-	
+	public void loginCheck() {
+		
+	}
 }

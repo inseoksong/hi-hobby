@@ -29,7 +29,7 @@
 									<div class="text_box01 text_box02">
 										<label class="text_label">이름</label>
 										<div class="text_box03">
-											<input class="input_box nameV" type="text" name="userName" data-element-name="register-form-name-input" autocomplete="off" placeholder="홍길동" value>
+											<input class="input_box nameV" type="text" name="userName" data-element-name="register-form-name-input" autocomplete="off" placeholder="이름을 입력해 주세요." value>
 										</div>
 										<div class="erMnm" style="display: none;">
                                             <p class="erMText">이름을 입력해주세요</p>
@@ -38,7 +38,7 @@
 									<div class="text_box01 text_box02">
 										<label class="text_label">이메일</label>
 										<div class="text_box03">
-											<input class="input_box emailV" type="text" name="userEmail" data-element-name="register-form-email-input" autocomplete="off" placeholder="example@example.com" value>
+											<input class="input_box emailV" type="text" name="userEmail" data-element-name="register-form-email-input" autocomplete="off" placeholder="이메일을 입력해 주세요." value>
 										</div>
 										<div class="erMem" style="display: none;">
                                             <p class="erMText">이메일을 입력해주세요</p>
@@ -52,7 +52,7 @@
 										<label class="text_label">비밀번호</label>
 										<div>
 											<div class="text_box03">
-												<input class="input_box passwordV" type="password" name="userPw" data-element-name="register-form-password-input" placeholder="********" value>
+												<input class="input_box passwordV" type="password" name="userPw" data-element-name="register-form-password-input" placeholder="비밀번호를 입력해 주세요." value>
 											</div>
 											<div class="erMpw" style="display: none;">
                                                 <p class="erMText">비밀번호를 입력해주세요</p>
@@ -68,7 +68,7 @@
 									<div class="text_box01 text_box02">
 										<label class="text_label">비밀번호 확인</label>
 										<div class="text_box03">
-											<input class="input_box password2V" type="password" id="userPwRe" data-element-name="register-form-password-confirm-input" autocomplete="off" placeholder="********" value>
+											<input class="input_box password2V" type="password" id="userPwRe" data-element-name="register-form-password-confirm-input" autocomplete="off" placeholder="비밀번호 확인을 입력해 주세요." value>
 										</div>
 										<div class="erMpw2" style="display: none;">
                                             <p class="erMText">비밀번호를 다시 입력해주세요</p>
@@ -80,15 +80,19 @@
 											<div class="text_box03">
 												<input class="input_box phone_num" type="text" name="userPhoneNum" placeholder="010-0000-0000" autocomplete="off" >
 											</div>
-											<label class="text_label injeung">인증 번호 입력</label>
+											<p id="SendPhone"></p>
+											<button id="phoneNumCheck" type="button" class="buttonTool1 buttonTool2" color="default" fill="false" onclick="sendSMS()">
+												<span class="jwNHGa">인증번호 보내기</span>
+											</button>
+											<label class="text_label injeung">인증번호 입력</label>
 											<div class="text_box03">
-												<input class="input_box injeung-number" type="text" name="userPhoneNum" placeholder="인증 번호 6자리를 입력해주세요." autocomplete="off" >
+												<input class="input_box injeung-number" type="text" name="userInjeungNum" placeholder="인증번호 6자리를 입력해주세요." autocomplete="off" >
 											</div>
 											<div class="erMpn" style="display: none;">
                                             	<p class="erMText">휴대폰 번호 인증을 해주세요</p>
                                         	</div>
-                                        	<p id="phoneCheckMsg"></p>
-											<button id="phoneNumCheck" type="button" class="buttonTool1 buttonTool2" color="default" fill="false">
+                                        	<p id="checkPhone"></p>
+											<button id="phoneNumCheck" type="button" class="buttonTool1 buttonTool2" color="default" fill="false" onclick="checkSMS()">
 												<span class="jwNHGa">인증하기</span>
 											</button>
 										</div>
@@ -140,6 +144,8 @@
 <script src="asset/js/header.js"></script>
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script>
+	let checkPhoneNum = false;
+
 	function checkEmail() {
 		$.ajax({
 			url: "/hi_hobby/CheckEmailOk.us",
@@ -148,19 +154,53 @@
 			contentType: "application/json; charset=utf-8",
 			dataType: "json",
 			success: function(result) {
-				console.log(result);
 				if(result.check) {
 					$("p#emailCheckMsg").text("중복된 이메일입니다.");
+					$("p#emailCheckMsg").css("color", "red");
 				}
 				else {
 					$("p#emailCheckMsg").text("사용 가능한 이메일입니다.");
+					$("p#emailCheckMsg").css("color", "#19ce60");
 				}
-			},
-			error: function(request, status, error) {
-				console.log("실패");
-				console.log(request);
-				console.log(status);
-				console.log(error);
+			}
+		});
+	}
+	
+	function sendSMS() {
+		$.ajax({
+			url: "/hi_hobby/SendSMS.us",
+			type: "get",
+			data: {userPhoneNum:$("input[name='userPhoneNum']").val()},
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function(result) {
+				if(result) {
+					$("p#SendPhone").text("인증번호를 보냈습니다.");
+					$("p#SendPhone").css("color", "#19ce60");
+					document.cookie = "injeungNum=" + result.userInjeungNum;
+				}
+			}
+		});
+	}
+	
+	function checkSMS() {
+		$.ajax({
+			url: "/hi_hobby/CheckSMS.us",
+			type: "get",
+			data: {userInjeungNum:$("input[name='userInjeungNum']").val()},
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function(result) {
+				if(result.check) {
+					$("p#checkPhone").text("인증번호가 일치합니다.");
+					$("p#checkPhone").css("color", "#19ce60");
+					checkPhoneNum = true;
+				}
+				else {
+					$("p#checkPhone").text("인증번호가 일치하지 않습니다.");
+					$("p#checkPhone").css("color", "red");
+					checkPhoneNum = false;
+				}
 			}
 		});
 	}
@@ -275,7 +315,9 @@
 						}
 						else{  // 휴대폰 번호가 입력됐을 때
 							phnNul(2);
-							joinForm.submit();
+							if(checkPhoneNum) {
+								joinForm.submit();
+							}
 						}
 					}
 				}

@@ -30,7 +30,7 @@ public class InquiryDAO {
 		
 	// 내가 쓴 문의글 불러오기
 	public List<InquiryVO> inquiryView(InquiryVO inquiryVO) {
-		return sqlSession.seleteList("Inquiry.inquiryMyView", inquiryVO);
+		return sqlSession.selectList("Inquiry.inquiryMyView", inquiryVO);
 	}
 
 	// 문의 글 수정 

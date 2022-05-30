@@ -9,8 +9,8 @@ import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
 
 public class InquiryDelete implements Action {
-
+	@Override
+	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		return null;
 	}
-	
 }
