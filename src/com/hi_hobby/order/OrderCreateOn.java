@@ -27,15 +27,16 @@ public class OrderCreateOn implements Action{
 		
 		orderVO.setOrderStatus(false);
 		orderVO.setOrderApprove(false);
-		orderVO.setClassNum(Integer.parseInt((session.getAttribute("classNum")+"")));
-		orderVO.setUserNum(Integer.parseInt((session.getAttribute("userNum")+"")));
+//		orderVO.setClassNum(Integer.parseInt((session.getAttribute("classNum")+"")));
+//		orderVO.setUserNum(Integer.parseInt((session.getAttribute("userNum")+"")));
 //		orderVO.setOrderCoupon(session.getAttribute("coupon"));
 		
+		orderDAO.createOn(orderVO);
 //		orderDAO.view(orderVO);
 		
-		req.setAttribute("orderNumber", orderVO.getOrderNum());
+//		req.setAttribute("orderNumber", orderVO.getOrderNum());
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("myOrder.jsp");
+//		actionInfo.setPath("/myOrder.jsp");
 		return actionInfo;
 	}
 	

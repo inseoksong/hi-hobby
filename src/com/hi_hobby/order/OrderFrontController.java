@@ -36,9 +36,9 @@ public class OrderFrontController extends HttpServlet {
 		}
 		else if(command.equals("OrderView.or")) {
 			System.out.println("주문조회 프론트 들어옴");
-			actionInfo = new ActionInfo();
-			actionInfo.setRedirect(false);
-			actionInfo.setPath(req.getContextPath() + "/myOrder.jsp");
+//			actionInfo = new ActionInfo();
+//			actionInfo.setRedirect(false);
+//			actionInfo.setPath(req.getContextPath() + "/myOrder.jsp");
 		}
 		else if(command.equals("OrderCancel.or")) {
 			System.out.println("주문조회 프론트 들어옴");
