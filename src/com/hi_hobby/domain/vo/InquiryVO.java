@@ -1,13 +1,13 @@
 package com.hi_hobby.domain.vo;
 
 public class InquiryVO {
-	int inquiryNum;			// 문의글 고유 번호
-	String inquiryPw;		// 문의글 비밀번호
-	String inquiryDay;		// 문의글 작성 날짜
-	String inquiryContent;	// 문의글 내용
-	String inquiryTitle;	// 문의글 제목
-	boolean inquiryProcess;	// 문의글 처리 현황
-	int userNum;			// 작성한 유저의 고유 넘버
+	private int inquiryNum;			// 문의글 고유 번호
+	private String inquiryPw;		// 문의글 비밀번호
+	private String inquiryDay;		// 문의글 작성 날짜
+	private String inquiryContent;	// 문의글 내용
+	private String inquiryTitle;	// 문의글 제목
+	private boolean inquiryProcess;	// 문의글 처리 현황
+	private int userNum;			// 작성한 유저의 고유 넘버 (외래키)
 	
 	public InquiryVO() {;}
 

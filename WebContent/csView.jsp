@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,31 +18,28 @@
 <section>
         <div class="csViewWrap">
             <di class="contentWrap">
+				<c:set var="inquiryMyView" value="${inquiryMyView}"/>
                 <div class="csTitle">
-                    <span>제목 입니다.</span>
+                    <span><c:out value="${inquiryMyView.getInquiryTitle}"/></span>
                 </div>
                 <div class="docInfoWrap">
-                    <div><span>작성일 : </span><span>22-05-25</span></div>
-                    <div><span>작성자 : </span><span>여리</span></div>
+                    <div><span>작성일 : </span><span><c:out value="${inquiryMyView.getInquiryDay}"/></span></div>
+                    <div><span>작성자 : </span><span><c:out value="${inquiryMyView.getUserName}"/></span></div>
                 </div>
                 <div class="textAreaWrap">
-                    <textarea>내용 입니다.내용 입니다.
-                        내용 입니다.
-                        내용 입니다.
-                        내용 입니다.
-                        내용 입니다.
-                        내용 입니다.
-                        내용 입니다.
-                        내용 입니다.
-                        내용 입니다.
+                    <textarea><c:out value="${inquiryMyView.getInquiryContent}"/>
                     </textarea>
                 </div>
                 <div class="buttonWrap">
+                	<a href="csEdit.jsp">
+                        <button type="button" class="goToEdit">수정하기</button>
+                    </a>
                     <a href="cs.jsp">
                         <button type="button" class="goToList">목록</button>
                     </a>
                 </div>
-                <div class="listWrap prev">
+                
+                <!-- <div class="listWrap prev">
                     <a href="">
                         <div class="prevDoc titleText">
                             <span><img class="arrowUp" src="asset/img/csViewArrowUp.png"></span>
@@ -58,7 +56,8 @@
                             <span class="title">제목</span>
                         </div>
                     </a>
-                </div>
+                </div> -->
+            
             </div>
         </div>
     </section>

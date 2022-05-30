@@ -114,13 +114,17 @@ button {
     background-color: #18a550;
     border : none;
     color : white;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
     letter-spacing: 2px;
     border-radius: 32px;
     cursor: pointer;
     margin-right: 10px;
     font-family: inherit;
+}
+
+button.goToEdit{
+	right:80px;
 }
 
 .listWrap{
@@ -165,5 +169,3 @@ span > img{
 span.title{
     padding-left: 30px;
 }
-
-
