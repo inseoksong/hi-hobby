@@ -276,7 +276,7 @@
         <div class="main-content">
             <div class="layer floor1">
                 <div class="title-wrap" style="clear:both;">
-                    <a href="">
+                    <a style="cursor: pointer;" href="location.href='oneday.jsp'">
                         <p class="title">원데이 클래스 TOP 10</p>
                     </a>
                     <a href="">
@@ -288,7 +288,7 @@
                 </button>
                 <div class="container-hidden">
                     <div class="container-full">
-                        <div class="timedeal-container">
+                        <div class="timedeal-container" style="cursor: pointer;" onclick="location.href='onedayClass.jsp'">
                             <div>
                                 <a>
                                     <div class="thumb-pic">
@@ -524,7 +524,7 @@
             <a name="target2"></a>
             <div class="layer floor1">
                 <div class="title-wrap" style="clear:both;">
-                    <a href="">
+                    <a style="cursor: pointer;" href="location.href='onlineClass.jsp'">
                         <p class="title">온라인 클래스 TOP 10</p>
                     </a>
                     <a href="">
@@ -534,7 +534,7 @@
                 <button type="button" class="swipe-btn prev prev-btn">
                     <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M15.5 5.5l-6 6.5 6 6.5L14 20l-7.5-8L14 4l1.5 1.5z" fill="#1a1a1a"></path></svg></span>
                 </button>
-                <div class="container-hidden">
+                <div class="container-hidden" style="cursor: pointer;" onclick="location.href='onlineClass.jsp'">
                     <div class="container-full">
                         <div class="timedeal-container">
                             <div>
@@ -1019,7 +1019,7 @@
             </div> 
             <div class="layer floor1">
                 <div class="title-wrap" style="clear:both;">
-                    <a href="">
+                    <a style="cursor: pointer;" href="location.href='onedayClass.jsp'">
                         <p class="title">원데이 클래스</p>
                     </a>
                     <a href="">
@@ -1029,7 +1029,7 @@
                 <button type="button" class="swipe-btn prev prev-btn">
                     <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M15.5 5.5l-6 6.5 6 6.5L14 20l-7.5-8L14 4l1.5 1.5z" fill="#1a1a1a"></path></svg></span>
                 </button>
-                <div class="container-hidden">
+                <div class="container-hidden" style="cursor: pointer;" onclick="location.href='onedayClass.jsp'">
                     <div class="container-full">
                         <div class="timedeal-container">
                             <div>
@@ -1266,7 +1266,7 @@
             </div>
             <div class="layer floor1">
                 <div class="title-wrap" style="clear:both;">
-                    <a href="">
+                    <a style="cursor: pointer;" href="location.href='onlineClass.jsp'">
                         <p class="title">온라인 클래스</p>
                     </a>
                     <a href="">
@@ -1276,7 +1276,7 @@
                 <button type="button" class="swipe-btn prev prev-btn">
                     <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M15.5 5.5l-6 6.5 6 6.5L14 20l-7.5-8L14 4l1.5 1.5z" fill="#1a1a1a"></path></svg></span>
                 </button>
-                <div class="container-hidden">
+                <div class="container-hidden" style="cursor: pointer;" onclick="location.href='onlineClass.jsp'">
                     <div class="container-full">
                         <div class="timedeal-container">
                             <div>
