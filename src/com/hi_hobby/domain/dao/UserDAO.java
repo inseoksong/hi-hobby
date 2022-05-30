@@ -37,9 +37,14 @@ public class UserDAO {
 		return sqlSession.selectList("User.view", userNum);
 	}
 	
-	// 정보 수정
+	// 정보 수정 페이지
 	public List<UserVO> modify(int userNum) {
 		return sqlSession.selectList("User.view", userNum);
+	}
+	
+	// 비밀번호 변경
+	public void changePw(UserVO userVO) {
+		
 	}
 	
 	// 회원 탈퇴

@@ -30,7 +30,7 @@
                     <div class="css-86rnjd"></div>
                     <div class="css-15zhte1">
                         <div class="css-zsoya5">
-                            <form action="/LoginOk.us" name="creatorLoginForm" novalidate="" style="width: auto; height: auto;">
+                            <form action="/LoginOk.us" name="creatorLoginForm" method="post" novalidate="" style="width: auto; height: auto;">
                                 <div class="css-6mf4i3"><label>
                                         <div class="css-15zhte1">
                                             <p class="css-1spcipk">이메일</p>
@@ -84,7 +84,7 @@
                                         <p class="css-yjlz19">비밀번호를 잊으셨나요?</p>
                                     </a>
                                 </div>
-                                <button type="button" class="css-qri5zn" onclick="loginTotal()" onclick="creatorLogin()">
+                                <button type="button" class="css-qri5zn" onclick="loginTotal()">
                                     <span class="css-3kqv01">
                                         <span class="css-1ai31h">로그인</span>
                                     </span>
@@ -187,7 +187,8 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="asset/js/createrLogin.js"></script>
 <script>
-	function creatorLogin(){
+	function loginTotal(){
+		console.log("로그인 버튼 누름");
 		creatorLoginForm.submit();
 	}
 </script>
