@@ -30,29 +30,29 @@ public class ClassFrontController extends HttpServlet {
 			actionInfo = new ClassCreateOk().execute(req, resp);
 		}
 		else if(command.equals("ClassCreate.cl")) {
-			actionInfo.setRedirect(true);
-			actionInfo.setPath(req.getContextPath() + "/onedayClassCreate.jsp");
+			actionInfo.setRedirect(false);
+			actionInfo.setPath(req.getContextPath() + "/createrCenter.jsp");
 		}
 		else if(command.equals("ClassModify.cl")) {
-			
+			actionInfo = new ClassModify().execute(req, resp);
 		}
 		else if(command.equals("ClassView.cl")) {
-			
+			actionInfo = new ClassView().execute(req, resp);
 		}
 		else if(command.equals("createrCenter.jsp")) {
 			actionInfo = new ClassView().execute(req, resp);
 		}
 		else if(command.equals("ClassDelete.cl")) {
-			
+			actionInfo = new ClassDelete().execute(req, resp);
 		}
 		else if(command.equals("ClassMine.cl")) {
-			
+			actionInfo = new ClassMine().execute(req, resp);
 		}
 		else if(command.equals("ClassPending.cl")) {
-			
+			actionInfo = new ClassPending().execute(req, resp);
 		}
 		else if(command.equals("ClassConfirm.cl")) {
-			
+			actionInfo = new ClassApprove().execute(req, resp);
 		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성

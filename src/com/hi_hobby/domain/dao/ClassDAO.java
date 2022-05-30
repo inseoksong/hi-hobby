@@ -26,7 +26,8 @@ public class ClassDAO {
 	}
 	
 	// 클래스 삭제
-	public void del() {
+	public void del(int classNum) {
+		sqlSession.update("Class.del", classNum);
 	}
 	
 	// 클래스 목록 조회
@@ -35,19 +36,23 @@ public class ClassDAO {
 	}
 	
 	// 클래스 조회
-	public void view() {
+	public ClassVO view(int classNum) {
+		return sqlSession.selectOne("Class.view");
 	}
 	
 	// 내가 개설한 클래스 보기 
-	public void viewMine() {
+	public List <ClassVO> viewMine(int userNum) {
+		return sqlSession.selectList("Class.viewMine");
 	}
 	
 	// 승인대기 클래스 조회
-	public void pending () {
+	public List <ClassVO> pending () {
+		return sqlSession.selectList("Class.viewMine");
 	}
 	
 	// 클래스 승인
-	public void confirm() {
+	public void confirm(int classNum) {
+		sqlSession.update("Class.confirm");
 	}
 	
 	

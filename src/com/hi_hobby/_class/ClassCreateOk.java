@@ -1,6 +1,7 @@
 package com.hi_hobby._class;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -32,13 +33,11 @@ public class ClassCreateOk implements Action {
 			classVO.setClassIntroduce(req.getParameter("classIntroduce"));                          // 클래스 설명                     
 //			classVO.setUserNum(Integer.parseInt(req.getParameter("userNum")));                             // 유저 고유번호(크리에이터 정보를 가져오기 위해)
 			
-			req.setAttribute("classList", classDAO.listView());
-			
 			classDAO.create(classVO);
 			actionInfo.setRedirect(false);
 			actionInfo.setPath("/createrCenter.jsp");
 	
-			return null;
+			return actionInfo;
 		
 	}
 	

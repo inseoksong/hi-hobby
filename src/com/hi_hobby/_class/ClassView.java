@@ -1,6 +1,7 @@
 package com.hi_hobby._class;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,7 +20,8 @@ public class ClassView implements Action {
 			ClassDAO classDAO = new ClassDAO();
 			ActionInfo actionInfo = new ActionInfo();
 			
-			req.setAttribute("classList", classDAO.listView());
+			List<ClassVO> classList = classDAO.listView();
+			req.setAttribute("classList", classList);
 			
 			actionInfo.setRedirect(false);
 			actionInfo.setPath("/creatorCenter.jsp");

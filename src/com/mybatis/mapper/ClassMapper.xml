@@ -14,30 +14,43 @@
 	</update>
 	
 <!-- 클래스 삭제 -->
-	<update id="del" parameterType="classVO">
+	<update id="del" parameterType="_int">
+	update tbl_class set class_status = '1' 
+	where class_num = '#{classNum}';
 	</update>
 	
 <!-- 지정한 클래스 조회 -->
-	<select id="view" parameterType="classVO" resultType="classVO">
+	<select id="view" parameterType="_int" resultType="classVO">
+	select class_num, class_nickname, class_title, class_category, class_place, class_start, class_end, class_approve, class_img, class_one, class_status, class_introduce, user_num
+	from tbl_class
+	where class_num = '#{classNum}'
 	</select>	
 
 <!-- 내가 개설한 클래스 보기 -->
-	<select id="viewMine" parameterType="String" resultType="classVO">
+	<select id="viewMine" parameterType="_int" resultType="classVO">
+	select class_num, class_nickname, class_title, class_category, class_place, class_start, class_end, class_approve, class_img, class_one, class_status, class_introduce
+	from tbl_class
+	where user_num = '#{userNum}'
 	</select>	
 	
 <!-- 승인 대기 클래스 보기 -->
-	<select id="pending" parameterType="String" resultType="classVO">
+	<select id="pending" parameterType="_int" resultType="classVO">
+	select class_num, class_nickname, class_title, class_category, class_place, class_start, class_end, class_img, class_one, class_status, class_introduce, user_num
+	from tbl_class
+	where class_approve = '0'
 	</select>
 	
 <!-- 클래스 승인 -->
 	<update id="confirm" parameterType="classVO">
+	update tbl_class set class_approve = '1' 
+	where class_num = '#{classNum}';
 	</update>
 
 <!-- 클래스 목록 조회 -->
 	<select id="listView" resultType="classVO">
 		<!--select class_num, class_nickname, class_title, class_category, class_place, class_start, class_end, class_approve, class_img, class_one, class_status, class_introduce, user_num-->
 		select class_title
-		from tbl_class order by member_name desc
+		from tbl_class
 	</select>
 
 
