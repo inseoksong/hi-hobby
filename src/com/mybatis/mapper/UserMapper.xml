@@ -15,9 +15,6 @@
 		where user_email = #{userEmail}
 	</select>
 
-	<!-- 프로필 수정 -->
-
-
 	<!-- 회원 탈퇴 -->
 
 
@@ -33,5 +30,9 @@
 		where user_num = #{userNum}
 	</select>
 	
-	<!-- 비밀번호 변경 -->
+	<!-- 현재 비밀번호 확인 -->
+	<!-- <select id="checkPw" parameterType="userVO" resultType="_int">
+		select count(user_pw) from tbl_user
+		where user_num = #{userNum} and user_pw = #{userPw}
+	</select> -->
 </mapper>
