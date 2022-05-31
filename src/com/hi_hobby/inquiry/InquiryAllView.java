@@ -27,34 +27,13 @@ public class InquiryAllView implements Action{
 		InquiryVO inquiryVO = new InquiryVO();
 		InquiryDAO inquiryDAO = new InquiryDAO();
 		UserDAO userDAO = new UserDAO();
-		Integer userNum = (Integer)inquiryVO.getUserNum();
-
-		String inquiryPw = req.getParameter("inquiryPw");
+		/*int userNum2 = (Integer)session.getAttribute("userNum");*/
 		
-/*		int inquiryNum = 0;
+		List<InquiryVO> inquiryList = inquiryDAO.inquiryList();/*
+		List<UserVO> userProfile = userDAO.view(userNum2);*/
 		
-		
-		try {
-//			비밀번호 실패시, null들어온다!
-//			그래서 int로 못바꾸니까 Exception 뜸!
-			inquiryNum = inquiryDAO.pwOk(inquiryPw);
-			//여기 밑으로 내려오는 건 로그인 성공 시에만 가능
-			session.setAttribute("inquiryNum", inquiryNum);
-
-			actionInfo.setRedirect(false);
-			actionInfo.setPath("/csView.jsp");
-		} catch (Exception e) {
-			//로그인 실패
-			System.out.println("비밀번호 불일치");
-			actionInfo.setRedirect(false);
-			actionInfo.setPath("/cs.jsp");
-		}*/
-		
-		List<InquiryVO> inquiryList = inquiryDAO.inquiryList();
-		List<UserVO> userProfile = userDAO.view(userNum);
-		
-		req.setAttribute("inquiryList", inquiryList);
-		req.setAttribute("inquiryList", userProfile);
+		req.setAttribute("inquiryList", inquiryList);/*
+		req.setAttribute("inquiryList", userProfile);*/
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/cs.jsp");

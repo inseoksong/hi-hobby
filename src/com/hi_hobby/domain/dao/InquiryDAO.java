@@ -28,9 +28,14 @@ public class InquiryDAO {
 		return sqlSession.selectList("Inquiry.inquiryList");
 	}
 		
+	//비밀번호 검사
+	public Integer pwOk(HashMap<String, String> inquiryMap) {
+		return sqlSession.selectOne("Inquiry.pwOk", inquiryMap);
+	}
+
 	// 내가 쓴 문의글 불러오기
-	public List<InquiryVO> inquiryView(InquiryVO inquiryVO) {
-		return sqlSession.selectList("Inquiry.inquiryMyView", inquiryVO);
+	public List<InquiryVO> inquiryMyView(int inquiryNum) {
+		return sqlSession.selectList("Inquiry.inquiryMyView", inquiryNum);
 	}
 
 	// 문의 글 수정 
@@ -38,16 +43,9 @@ public class InquiryDAO {
 		sqlSession.update("Inquiry.inquiryModify", inquiryVO);
 	}
 		
-	// 문의 글 삭제
-	public void inquiryDelete() {
-	}
-		
 	// 문의글 답변 완료
-	public void inquiryOk() {
+	public void inquiryOk(int inquiryNum) {
+		sqlSession.update("Inquiry.inquiryOk", inquiryNum);
 	}
 	
-	//비밀번호 검사
-	public Integer pwOk(String inquiryPw) {
-		return sqlSession.selectOne("Inquiry.pwOk", inquiryPw);
-	}
 }

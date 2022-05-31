@@ -16,30 +16,26 @@
 		from tbl_inquiry order by inquiry_num desc
 	</select>
 
-<!-- 내가 쓴 문의글 불러오기 3-->
-	<select id="inquiryMyView" parameterType="inquiryVO" resultType="inquiryVO">
-		select inquiry_content, inquiry_title from tbl_inquiry where inquiry_num = #{inquiryNum}
-	</select>
-
-<!-- 문의글 수정 4-->
-	<update id="inquiryModify" parameterType="inquiryVO">
-		update tbl_inquiry set inquiry_day = #{inquiryDay}, inquiry_content = #{inquiryContent}, inquiry_title = #{inquiryTitle} where inquiry_num = #{inquiryNum}
-	</update>
-
-<!-- 문의글 삭제 5-->
-	<delete id="inquiryDelete" parameterType="inquiryVO">
-		delete tbl_inquiry where inquiry_num = #{inquiryNum}
-	</delete>
-
-<!-- 문의글 답변 완료  6-->
-	<update id="inquiryOk" parameterType="inquiryVO">
-		update tbl_inquiry set inquiry_process = #{inquiryProcess} where inquiry_num = #{inquiryNum}
-	</update>
-
-<!-- 비밀번호 검사 -->
+<!-- 비밀번호 검사 3-->
 	<select id="pwOk" parameterType="String" resultType="_int">
 		select inquiry_num from tbl_inquiry
 		where user_num = #{userNum} and inquiry_pw = #{inquiryPw}
 	</select>
+
+<!-- 내가 쓴 문의글 불러오기 4-->
+	<select id="inquiryMyView" parameterType="_int" resultType="inquiryVO">
+		select inquiry_num, inquiry_content, inquiry_title from tbl_inquiry where inquiry_num = #{inquiryNum}
+	</select>
+
+<!-- 문의글 수정 5-->
+	<update id="inquiryModify" parameterType="inquiryVO">
+		update tbl_inquiry set inquiry_content = #{inquiryContent}, inquiry_title = #{inquiryTitle} where inquiry_num = #{inquiryNum}
+	</update>
+
+<!-- 문의글 답변 완료 6-->
+	<update id="inquiryOk" parameterType="_int">
+		update tbl_inquiry set inquiry_process = 1 where inquiry_num = #{inquiryNum}
+	</update>
+
 
 </mapper>

@@ -18,22 +18,33 @@
 <section>
         <div class="csViewWrap">
             <di class="contentWrap">
-				<c:set var="inquiryMyView" value="${inquiryMyView}"/>
+				
+				<c:forEach var="inquiry"  items="${inquiryMyView}">
+                		<c:set var="inquiryTitle" value="${inquiry.getInquiryTitle()}"/>
+                		<c:set var="inquiryDay" value="${inquiry.getInquiryDay()}"/>
+                		<c:set var="userName" value="${inquiry.getUserName()}"/>
+                		<c:set var="inquiryContent" value="${inquiry.getInquiryContent()}"/>
+                		<c:set var="inquiryNum" value="${inquiry.getInquiryNum()}"/>
+                </c:forEach>
+                
                 <div class="csTitle">
-                    <span><c:out value="${inquiryMyView.getInquiryTitle}"/></span>
+                    <span><c:out value="${inquiryTitle}"/></span>
                 </div>
                 <div class="docInfoWrap">
-                    <div><span>작성일 : </span><span><c:out value="${inquiryMyView.getInquiryDay}"/></span></div>
-                    <div><span>작성자 : </span><span><c:out value="${inquiryMyView.getUserName}"/></span></div>
+                    <div><span>작성일 : </span><span><c:out value="${inquiryDay}"/></span></div>
+                    <div><span>작성자 : </span><span><c:out value="${userName}"/></span></div>
                 </div>
                 <div class="textAreaWrap">
-                    <textarea><c:out value="${inquiryMyView.getInquiryContent}"/>
+                    <textarea><c:out value="${inquiryContent}"/>
                     </textarea>
                 </div>
                 <div class="buttonWrap">
-                	<a href="csEdit.jsp">
-                        <button type="button" class="goToEdit">수정하기</button>
-                    </a>
+                	<form action="InquiryGoEdit.in" name="inquiryGoEditForm" method="post">
+                    	<div style="display:none;" name="inquiryNum" ><c:out value="${inquiryNum}"/></div>
+                		<a >
+                        	<button type="button" class="goToEdit" onclick="inquiryGoEdit()">수정하기</button>
+                    	</a>
+                    </form>
                     <a href="cs.jsp">
                         <button type="button" class="goToList">목록</button>
                     </a>

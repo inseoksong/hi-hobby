@@ -30,20 +30,28 @@ public class InquiryFrontController extends HttpServlet {
 		if(command.equals("InquiryWrite.in")) {
 			actionInfo = new InquiryWrite().execute(req, resp);
 		}
+		else if(command.equals("InquiryPwOk.in")) {
+			actionInfo = new InquiryPwOk().execute(req, resp);
+		}
+		else if(command.equals("InquiryGoEdit.in")) {
+			actionInfo = new InquiryGoEdit().execute(req, resp);
+		}
 		else if(command.equals("InquiryModify.in")) {
-			actionInfo = new ActionInfo();
-			actionInfo.setRedirect(true);
-			actionInfo.setPath(req.getContextPath() + "/cs.jsp");
+			actionInfo = new InquiryModify().execute(req, resp);
 		}			
 		else if(command.equals("InquiryAllView.in")) {
-			actionInfo = new ActionInfo();
-			actionInfo.setRedirect(true);
-			actionInfo.setPath(req.getContextPath() + "/csView.jsp");			
+			actionInfo = new InquiryAllView().execute(req, resp);
+		}
+		else if(command.equals("InquiryAdminView.in")) {
+			actionInfo = new InquiryAdminView().execute(req, resp);
+		}
+		else if(command.equals("InquiryAdminProcessOk.in")) {
+			actionInfo = new InquiryProcessOk().execute(req, resp);
 		}
 		else if(command.equals("InquiryDelete.in")) {
 			
 		}
-		else if(command.equals("InquiryAllView.in")) {
+		else if(command.equals("InquiryView.in")) {
 			
 		}
 		else {
@@ -53,7 +61,7 @@ public class InquiryFrontController extends HttpServlet {
 		
 		
 		if(actionInfo != null) {
-			if(!actionInfo.isRedirect()) {
+			if(actionInfo.isRedirect()) {
 				resp.sendRedirect(actionInfo.getPath());
 			}else {
 				RequestDispatcher dispatcher = req.getRequestDispatcher(actionInfo.getPath());

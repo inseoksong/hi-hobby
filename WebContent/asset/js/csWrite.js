@@ -12,3 +12,8 @@ function complete() {
         "inquiryWriteForm.submit()",3000);
     	
 }
+
+
+function inquiryProcess(){
+	inquiryProcessForm.submit();
+}
