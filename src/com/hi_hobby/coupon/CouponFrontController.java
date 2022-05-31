@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.hi_hobby.action.ActionInfo;
+import com.hi_hobby.user.UserLoginOk;
 
 public class CouponFrontController extends HttpServlet {
 	@Override
@@ -26,13 +27,13 @@ public class CouponFrontController extends HttpServlet {
 		String command = requestURL.substring(requestURL.lastIndexOf("/") + 1);
 		ActionInfo actionInfo = null;
 		
-		if(command.equals("CouponGetOk.co")) {
+		if(command.equals("CreateCoupon.co")) {
+			actionInfo = new CreateCoupon().execute(req, resp);
+		}
+		else if(command.equals("UseCoupon.co")) {
 			
 		}
-		else if(command.equals("CouponUse.co")) {
-			
-		}
-		else if(command.equals("CouponView.co")) {
+		else if(command.equals("ViewCoupon.co")) {
 			
 		}
 		else {

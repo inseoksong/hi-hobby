@@ -11,7 +11,7 @@ import com.hi_hobby.action.ActionInfo;
 import com.hi_hobby.domain.dao.CouponDAO;
 import com.hi_hobby.domain.vo.CouponVO;
 
-public class CouponView implements Action {
+public class ViewCoupon implements Action {
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		return null;

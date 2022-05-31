@@ -30,6 +30,13 @@ $userPwRe.keyup(function name() {
 
 $pwCheckBtn.click(function() {
 	if(check) {
+		alert("비밀번호가 정상적으로 변경되었습니다.");
 		$pwChangeForm.submit();
 	}
+});
+
+const $deleteBtn = $("button#deleteBtn");
+
+$deleteBtn.click(function() {
+	alert("정상적으로 탈퇴되었습니다.");
 });

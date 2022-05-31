@@ -14,7 +14,7 @@
 <body>
     <div class="top-line-banner">
         <div class="top-line-content">
-            <span>지금 가입하고 클래스 체험권 & 12만원 쿠폰팩 받기 ></span>
+            <span>지금 회원가입하고 스페셜한 쿠폰 받기! ></span>
             <button type="button" class="xBtn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M18.5 4L12 10.5 5.5 4 4 5.5l6.5 6.5L4 18.5 5.5 20l6.5-6.5 6.5 6.5 1.5-1.5-6.5-6.5L20 5.5 18.5 4z" fill="white"></path></svg>
             </button>
