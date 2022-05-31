@@ -34,6 +34,15 @@ public class UserFrontController extends HttpServlet {
 			actionInfo.setRedirect(true);
 			actionInfo.setPath(req.getContextPath() + "/signUp101.jsp");
 		}
+		else if(command.equals("CheckEmailOk.us")) {
+			new CheckEmailOk().execute(req, resp);
+		}
+		else if(command.equals("SendSMS.us")) {
+			new SendSMS().execute(req, resp);
+		}
+		else if(command.equals("CheckSMS.us")) {
+			new CheckSMS().execute(req, resp);
+		}
 		else if(command.equals("LoginOk.us")) {
 			actionInfo = new UserLoginOk().execute(req, resp);
 		}
@@ -53,9 +62,6 @@ public class UserFrontController extends HttpServlet {
 		}
 		else if(command.equals("UserDelete.us")) {
 			
-		}
-		else if(command.equals("CheckEmailOk.us")) {
-			new CheckEmailOk().execute(req, resp);
 		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성

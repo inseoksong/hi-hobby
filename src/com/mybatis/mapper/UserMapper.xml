@@ -11,12 +11,9 @@
 
 	<!-- 이메일 중복검사 -->
 	<select id="checkEmail" parameterType="string" resultType="_int">
-		select count(user_email) from tbl_user
+		select count(user_num) from tbl_user
 		where user_email = #{userEmail}
 	</select>
-
-	<!-- 회원 탈퇴 -->
-
 
 	<!-- 로그인 -->
 	<select id="login" parameterType="map" resultType="_int">
@@ -30,9 +27,13 @@
 		where user_num = #{userNum}
 	</select>
 	
-	<!-- 현재 비밀번호 확인 -->
-	<!-- <select id="checkPw" parameterType="userVO" resultType="_int">
-		select count(user_pw) from tbl_user
-		where user_num = #{userNum} and user_pw = #{userPw}
-	</select> -->
+	<!-- 비밀번호 수정 -->
+	<update id="changePw" parameterType="userVO">
+		update tbl_user
+		set user_pw = #{userPw}
+		where user_num = #{userNum}
+	</update>
+	
+	<!-- 회원 탈퇴 -->
+
 </mapper>

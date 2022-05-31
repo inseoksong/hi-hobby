@@ -17,6 +17,21 @@ import com.hi_hobby.domain.vo.UserVO;
 
 public class ChangePw implements Action {
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		return null;
+		req.setCharacterEncoding("UTF-8");
+		ActionInfo actionInfo = new ActionInfo();
+		UserVO userVO = new UserVO();
+		UserDAO userDAO = new UserDAO();
+		HttpSession session = req.getSession();
+		Integer userNum = (Integer)session.getAttribute("userNum");
+		
+		userVO.setUserNum(userNum);
+		userVO.setUserPw(new String(Base64.getEncoder().encode(req.getParameter("userPw").getBytes())));
+		
+		userDAO.changePw(userVO);
+		
+		actionInfo.setRedirect(false);
+		actionInfo.setPath("/MyPage.us");
+		
+		return actionInfo;
 	}
 }

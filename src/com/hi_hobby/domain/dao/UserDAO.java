@@ -44,11 +44,10 @@ public class UserDAO {
 	
 	// 비밀번호 변경
 	public void changePw(UserVO userVO) {
-		
+		sqlSession.update("User.changePw", userVO);
 	}
 	
 	// 회원 탈퇴
 	public void del() {
 	}
-	
 }

@@ -11,6 +11,8 @@ import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
 
 public class AdminLoginOk implements Action {
-	return null;
-	  }
+	@Override
+	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		return null;
+	}
 }
