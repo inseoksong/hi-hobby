@@ -527,9 +527,8 @@ span.jwNHGa{
     text-align: left !important;
 }
 
-p#emailCheckMsg, p#phoneCheckMsg {
+p#emailCheckMsg, p#SendPhone, p#checkPhone {
 	margin-top: 8px;
-	color: red;
 }
 
 label.injeung {

@@ -462,3 +462,12 @@ form[name='PwChangeForm'] {
 form[name='PwChangeForm'] .dGxueP {
 	margin-bottom: 32px;
 }
+
+form[name='PwChangeForm'] #userPwRe {
+	margin-bottom: 16px;
+}
+
+p#result {
+	margin-bottom: 16px;
+	font-size: 12px;
+}
