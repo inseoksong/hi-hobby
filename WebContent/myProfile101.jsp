@@ -127,7 +127,7 @@
 				<div class="jeuZzp"></div>
 				<div class="ezUgvc">
 					<div class="hZVALn">
-						<button id="buttonColor" type="button" class="gQyJNI hBfywk" color="default" fill="true">
+						<button id="deleteBtn" type="button" class="gQyJNI hBfywk" color="default" fill="true" onClick="location.href='UserDelete.us'">
 							<span class="jwNHGa">회원탈퇴</span>
 						</button>
 					</div>

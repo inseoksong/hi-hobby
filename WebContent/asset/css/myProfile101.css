@@ -443,7 +443,7 @@ svg:not(:root){
     align-items: center;
 }
 
-#buttonColor:hover{
+#deleteBtn:hover{
 	background-color: #DCDCDC;
 }
 
