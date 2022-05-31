@@ -31,11 +31,13 @@ public class OrderDAO {
 	// 주문 불러오기
 	public List<OrderVO> view() {
 		// 하나 가져올 때는 selectOne
-		System.out.println("on dao들어옴");
+		System.out.println("view dao들어옴");
 		return sqlSession.selectList("Order.view");
 	}
 	
 	// 주문 취소
-	public void cancel() {
+	public void cancel(OrderVO orderVO) {
+		System.out.println("cancel dao들어옴");
+		sqlSession.update("Order.cancel", orderVO);
 	}
 }
