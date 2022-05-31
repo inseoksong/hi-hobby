@@ -1,6 +1,7 @@
 package com.hi_hobby.inquiry;
 
 import java.io.IOException;
+import java.sql.Date;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,19 +22,22 @@ public class InquiryWrite implements Action{
 		InquiryVO inquiryVO = new InquiryVO();
 		InquiryDAO inquiryDAO = new InquiryDAO();
 		
-		inquiryVO.setInquiryPw(req.getParameter("inquiryPw"));/*
-		inquiryVO.setInquiryDay(req.getParameter("inquiryDay"));*/
+		long miliseconds = System.currentTimeMillis();
+        Date date = new Date(miliseconds);
+		String date2 = String.valueOf(date);
+		System.out.println(date2);
+		
+		inquiryVO.setInquiryPw(req.getParameter("inquiryPw"));
+		inquiryVO.setInquiryDay(date2);
 		inquiryVO.setInquiryTitle(req.getParameter("inquiryTitle"));
 		inquiryVO.setInquiryContent(req.getParameter("inquiryContent"));
-		/*inquiryVO.setUserNum((Integer)session.getAttribute("userNum"));*/		
+		/*inquiryVO.setUserNum((Integer)session.getAttribute("userNum"));*/ // 여기서 NullPointerException 뜨니까 강사님께 여쭤보기(외래키 문제인 듯)
 		
 		inquiryDAO.inquiryWrite(inquiryVO);
 		
-		req.setAttribute("inquiryList", inquiryDAO.inquiryList());
-		
 		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("cs.jsp");
+		actionInfo.setPath("InquiryAllView.in");
 		
 		return actionInfo;
 	}

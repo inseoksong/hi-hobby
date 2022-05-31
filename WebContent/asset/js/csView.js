@@ -4,3 +4,6 @@ const listBtn = document.querySelector('button.goToList');
     window.open("cs.jsp","_self");
 }) */
 
+function inquiryGoEdit(){
+	inquiryGoEditForm.submit();
+}

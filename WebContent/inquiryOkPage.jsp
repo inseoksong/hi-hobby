@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
     <link rel="shortcut icon" href="asset/img/favicon.ico">
 
-<title>하이하비 | 문의하기</title>
+<title>하이하비 | 관리자 문의 확인하기</title>
 </head>
 <body>
 <jsp:include page="header.jsp"/>
@@ -18,10 +18,7 @@
         <div class="csWrap">
             <div class="helpWrap">
                 <div class="helpTop">
-                    <div class="helpTitle"><span>문의하기</span></div>
-                    <a href="csWrite.jsp">
-                        <button class="confirm">글쓰기</button>
-                    </a>
+                    <div class="helpTitle"><span>문의 목록</span></div>
                 </div>
                 <div class="helpAll">
                     <div class="tableWrap">
@@ -39,12 +36,9 @@
                                 <td><c:out value="${inquiry.getInquiryNum()}"/></td>
                                 <td class="waiting"><c:choose><c:when test="${member.getInquiryProcess()}">답변 완료</c:when><c:otherwise>답변 대기</c:otherwise></c:choose></td>
                                 <td class="qnaTitle">
-                                	<a class="qnaTitle1" onclick="pwChange()">비밀글입니다</a>	
-                                	<form action="InquiryPwOk.in" method="post" name="pwForm">
-                                	<a class="qnaTitle2" style="display:none">
-                                		<input type="password" name="inquiryPw" placeholder="비밀번호">
-                                		<input type="button" value="확인" class="pwSubBtn" onclick="pwSub()">
-                                	</a>
+                                	<form action="InquiryAdminView.in" name="inquiryAdminViewForm" method="post">
+                                		<div style="display:none;" name="inquiryNum" ><c:out value="${inquiry.getInquiryNum()}"/></div>
+	                                	<input type="button" class="confirm" value="문의 내용 보기" onclick="adminInquiry()"/>	
                                 	</form>
                                 </td>
                                 <%-- <td><c:out value="${inquiry.getUserName()}"/></td> --%>

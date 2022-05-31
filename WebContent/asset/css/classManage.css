@@ -104,7 +104,7 @@ div.child-menu > span {
 }
 
 nav{
-    position: fixed;
+    position: absolute;
     width : 240px;
     height : calc(100% - 80px);
     border-right: 1px rgb(229, 229, 229) solid;
@@ -188,7 +188,7 @@ section{
 
 div.class-wrap{
     width : fit-content;
-    padding : 50px;
+    padding : 14px;
     margin-left: auto;
     margin-right: auto;
 }

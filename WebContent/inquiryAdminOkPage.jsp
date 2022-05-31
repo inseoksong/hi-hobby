@@ -10,36 +10,34 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 <link rel="stylesheet" href="resource/summernote-lite.css">
-<title>하이하비 | 수정하기</title>
+<title>하이하비 | 문의 내용 확인하기</title>
 </head>
 <body>
 <jsp:include page="header.jsp"/>
 <!-- 헤더 영역 -->
 <section>
-        <div class="alert">
-            <div><span>수정 완료! 3초 후 목록으로 이동합니다.</span></div>
-        </div>
         <div class="writeWrap">
             <div class="customerWrap">
-                <form action="InquiryModify.in" name="inquiryWriteForm" method="post">
-                	<c:forEach var="inquiry"  items="${inquiryMyView}">
+                	<c:forEach var="inquiry"  items="${inquiryAdminOkView}">
                 		<c:set var="inquiryTitle" value="${inquiry.getInquiryTitle()}"/>
                 		<c:set var="inquiryContent" value="${inquiry.getInquiryContent()}"/>
                 		<c:set var="inquiryNum" value="${inquiry.getInquiryNum()}"/>
                 	</c:forEach>
-	                <div class="buttonWrap">
-	                	
-	                    <input type="button" class="confirm" value="수정 완료" >
+                	
+                    <form action="InquiryAdminProcessOk.in" name="inquiryProcessForm" method="post">
+                    	<div style="display:none;" name="inquiryNum" ><c:out value="${inquiryNum}"/></div>
+	                	<div class="buttonWrap">
+	                    	<input type="button" class="processButton" value="답변 완료" onclick="inquiryProcess()"/>
+	                	</div>
+	                </form>
+	                
 	                </div>
-	                </div>
-	                <div style="display:none;" name="inquiryNum" ><c:out value="${inquiryNum}"/></div>
 	                <div class="titleWrap">
 	                    <input type = "text" class="title" name="inquiryTitle" value="<c:out value='${inquiryTItle}'/>">
 	                </div>
 	                <div class="contentsWrap">
 	                    <textarea class="content" name="inquiryContent"><c:out value="${inquiryContent}"/></textarea>
 	                </div>
-	            </form>
             </div>
         </div>
     </section>
