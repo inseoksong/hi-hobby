@@ -15,12 +15,12 @@ public class ClassView implements Action {
 
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-			
 			req.setCharacterEncoding("UTF-8");
-			ClassDAO classDAO = new ClassDAO();
 			ActionInfo actionInfo = new ActionInfo();
+			ClassDAO classDAO = new ClassDAO();
 			
 			List<ClassVO> classList = classDAO.listView();
+			
 			req.setAttribute("classList", classList);
 			
 			actionInfo.setRedirect(false);

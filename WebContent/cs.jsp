@@ -37,7 +37,7 @@
                             <c:forEach var="inquiry" items="${inquiryList}">
                             <tr>
                                 <td><c:out value="${inquiry.getInquiryNum()}"/></td>
-                                <td class="waiting"><c:choose><c:when test="${member.getInquiryProcess()}">답변 완료</c:when><c:otherwise>답변 대기</c:otherwise></c:choose></td>
+                                <td class="waiting"><c:choose><c:when test="${inquiry.isInquiryProcess()}"><span style="color: green">답변 완료</span></c:when><c:otherwise>답변 대기</c:otherwise></c:choose></td>
                                 <td class="qnaTitle">
                                 	<a class="qnaTitle1" onclick="pwChange()">비밀글입니다</a>	
                                 	<form action="InquiryPwOk.in" method="post" name="pwForm">

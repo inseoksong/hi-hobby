@@ -144,11 +144,11 @@
 <script src="asset/js/header.js"></script>
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script>
-	let checkPhoneNum = false;
+	let contextPath = "${pageContext.request.contextPath}";
 
 	function checkEmail() {
 		$.ajax({
-			url: "/hi_hobby/CheckEmailOk.us",
+			url: contextPath + "/CheckEmailOk.us",
 			type: "get",
 			data: {userEmail:$("input[name='userEmail']").val()},
 			contentType: "application/json; charset=utf-8",
@@ -166,43 +166,34 @@
 		});
 	}
 	
+	let number;
+	let checkPhoneNum = false;
 	function sendSMS() {
 		$.ajax({
-			url: "/hi_hobby/SendSMS.us",
+			url: contextPath + "/SendSMS.us",
 			type: "get",
 			data: {userPhoneNum:$("input[name='userPhoneNum']").val()},
 			contentType: "application/json; charset=utf-8",
 			dataType: "json",
 			success: function(result) {
-				if(result) {
-					$("p#SendPhone").text("인증번호를 보냈습니다.");
-					$("p#SendPhone").css("color", "#19ce60");
-					document.cookie = "injeungNum=" + result.userInjeungNum;
-				}
+				number = result.userInjeungNum;
+				$("p#SendPhone").text("인증번호를 보냈습니다.");
+				$("p#SendPhone").css("color", "#19ce60");
 			}
 		});
 	}
 	
 	function checkSMS() {
-		$.ajax({
-			url: "/hi_hobby/CheckSMS.us",
-			type: "get",
-			data: {userInjeungNum:$("input[name='userInjeungNum']").val()},
-			contentType: "application/json; charset=utf-8",
-			dataType: "json",
-			success: function(result) {
-				if(result.check) {
-					$("p#checkPhone").text("인증번호가 일치합니다.");
-					$("p#checkPhone").css("color", "#19ce60");
-					checkPhoneNum = true;
-				}
-				else {
-					$("p#checkPhone").text("인증번호가 일치하지 않습니다.");
-					$("p#checkPhone").css("color", "red");
-					checkPhoneNum = false;
-				}
-			}
-		});
+		if(number == $("input[name='userInjeungNum']").val()) {
+			$("p#checkPhone").text("인증번호가 일치합니다.");
+			$("p#checkPhone").css("color", "#19ce60");
+			check = true;
+		}
+		else {
+			$("p#checkPhone").text("인증번호가 일치하지 않습니다.");
+			$("p#checkPhone").css("color", "red");
+			check = false;
+		}
 	}
 
 	function sighUpTotal() {
@@ -315,7 +306,7 @@
 						}
 						else{  // 휴대폰 번호가 입력됐을 때
 							phnNul(2);
-							if(checkPhoneNum) {
+							if(check) {
 								joinForm.submit();
 							}
 						}

@@ -1,6 +1,7 @@
-package com.hi_hobby.inquiry;
+package com.hi_hobby.admin;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,27 +13,33 @@ import org.json.simple.JSONObject;
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
 import com.hi_hobby.domain.dao.InquiryDAO;
+import com.hi_hobby.domain.dao.UserDAO;
 import com.hi_hobby.domain.vo.InquiryVO;
+import com.hi_hobby.domain.vo.UserVO;
 import com.sun.security.jgss.InquireType;
 
-public class InquiryProcessOk implements Action{
+public class InquiryOkPage implements Action{
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");
-
 		ActionInfo actionInfo = new ActionInfo();
-		HttpSession session = req.getSession();
 		InquiryVO inquiryVO = new InquiryVO();
 		InquiryDAO inquiryDAO = new InquiryDAO();
+		UserDAO userDAO = new UserDAO();
+		/*Integer userNum2 = (Integer)session.getAttribute("userNum");*/
 		
-		int inquiryNum = (Integer.parseInt(req.getParameter("inquiryNum")));
-
-		inquiryDAO.inquiryOk(inquiryNum);
+		List<InquiryVO> inquiryList = inquiryDAO.inquiryList();
+		/*List<UserVO> userProfile = userDAO.view(userNum2);*/
+		
+		req.setAttribute("inquiryList2", inquiryList);
+		/*req.setAttribute("inquiryList", userProfile);*/
 		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("/InquiryOkPage.ad");
+		actionInfo.setPath("/inquiryOkPage.jsp");
+		
 		
 		return actionInfo;
 	}
 	
+
 }

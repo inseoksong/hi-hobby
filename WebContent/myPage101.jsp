@@ -44,7 +44,7 @@
 							<aside class="ipCzuu">
 								<section class="LaCvk cgWehN">
 									<h4 class="jdPAHA dyWeXC">내 정보</h4>
-									<a class="eYKbXT" onclick="location.href='myCoupons101.jsp'">
+									<a class="eYKbXT" onclick="location.href='ViewCoupon.co'">
 										<div class="cqZvVN gkiCmL">
 											내 쿠폰
 										</div>
@@ -188,10 +188,6 @@
 												</button>
 											</div>
 										</div>
-										
-										
-										
-										
 									</section>
 								</div>
 							</div>

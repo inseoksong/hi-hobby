@@ -18,6 +18,10 @@ function pwSub(){
 	pwForm.submit();
 }
 
+//어드민에서 문의글 확인하기
+function adminInquiry(){
+	inquiryAdminViewForm.submit();
+}
 
 // 9개 이상이면 다음으로 넘기기
 function allHelpList() {
@@ -39,9 +43,4 @@ function allHelpList() {
 		
 		
 	}	
-}
-
-//어드민에서 문의글 확인하기
-function adminInquiry(){
-	inquiryAdminViewForm.submit();
 }

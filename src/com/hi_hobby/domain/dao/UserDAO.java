@@ -48,6 +48,7 @@ public class UserDAO {
 	}
 	
 	// 회원 탈퇴
-	public void del() {
+	public void delete(int userNum) {
+		sqlSession.delete("User.delete", userNum);
 	}
 }

@@ -1,4 +1,4 @@
-const remainTime = document.querySelector('span#remain-time');
+/*const remainTime = document.querySelector('span#remain-time');
 
 function dDay(){
     const endTime = new Date('2022-06-01');
@@ -15,10 +15,10 @@ function dDay(){
 };
 
 dDay();
-setInterval(dDay, 1000); 
+setInterval(dDay, 1000);*/
 /* 딜레이를 없애기 위해 1초마다 실행해줌 */
 
-const heartAr = document.querySelectorAll('svg.heart');
+/*const heartAr = document.querySelectorAll('svg.heart');
 
 heartAr.forEach((heart) => {
     heart.addEventListener("click", function(){
@@ -34,9 +34,9 @@ heartAr.forEach((heart) => {
             console.log("색상 채우기");
         }
     })
-})
+})*/
 
-const shareBtn = document.querySelector('div.share');
+/*const shareBtn = document.querySelector('div.share');
 const modal = document.querySelector('div.share-modal');
 const xBtn = document.querySelector('span.xBtn');
 
@@ -51,4 +51,4 @@ shareBtn.addEventListener("click", function () {
             }
         })
     }
-})
+})*/

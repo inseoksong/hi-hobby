@@ -33,6 +33,7 @@ public class ClassDAO {
 	
 	// 클래스 목록 조회
 	public List <ClassVO> listView() {
+		System.out.println("리스트 뷰 들어옴2");
 		return sqlSession.selectList("Class.listView");
 	}
 	

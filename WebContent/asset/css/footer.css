@@ -94,7 +94,7 @@ p.qna-bottom-text{
 div.footer-bottom{
     width : 100%;
     display: flex;
-    padding-bottom: 120px;
+    padding-bottom: 50px;
     justify-content: space-between;
 }
 

@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Coupon">
-
-<!-- 쿠폰 생성 -->
-	<insert id="resister" parameterType="couponVO">
+	<!-- 쿠폰 생성 (사용 가능 : 1, 사용함 : 0) -->
+	<insert id="create" parameterType="couponVO">
+		insert into tbl_coupon
+		(coupon_num, user_num)
+		values(#{couponNum}, #{userNum})
 	</insert>
 
-<!-- 쿠폰 사용-->
-	<update id="use" parameterType="couponVO">
-	</update>
-
-<!-- 쿠폰 정보 가져오기 -->
-	<select id="view" parameterType="couponVO" resultType="couponVO">
+	<!-- 쿠폰 발급 여부 검사 -->
+	<select id="checkCreate" parameterType="_int" resultType="_int">
+		select count(user_num) from tbl_coupon
+		where user_num = #{userNum}
 	</select>
-
-
-
-
+	
+	<!-- 쿠폰 정보 가져오기 -->
+	<select id="view" parameterType="_int" resultType="couponVO">
+		select coupon_num, coupon_status from tbl_coupon
+		where user_num = #{userNum}
+	</select>
+	
+	<!-- 쿠폰 사용-->
+	
+	
+	<!-- 쿠폰 사용 여부 확인 -->
+	<select id="checkCoupon" parameterType="string" resultType="_int">
+		select count(coupon_user)
+		from tbl_coupon
+		where coupon_user = #{userNum}
+	</select>
 </mapper>

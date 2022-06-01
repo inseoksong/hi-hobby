@@ -27,17 +27,21 @@ public class InquiryWrite implements Action{
 		String date2 = String.valueOf(date);
 		System.out.println(date2);
 		
+		Integer userNum = (Integer)session.getAttribute("userNum");
+		
 		inquiryVO.setInquiryPw(req.getParameter("inquiryPw"));
 		inquiryVO.setInquiryDay(date2);
 		inquiryVO.setInquiryTitle(req.getParameter("inquiryTitle"));
 		inquiryVO.setInquiryContent(req.getParameter("inquiryContent"));
-		/*inquiryVO.setUserNum((Integer)session.getAttribute("userNum"));*/ // 여기서 NullPointerException 뜨니까 강사님께 여쭤보기(외래키 문제인 듯)
+		/*inquiryVO.setUserNum(userNum);*/ // 여기서 NullPointerException 뜨니까 강사님께 여쭤보기(외래키 문제인 듯)
 		
 		inquiryDAO.inquiryWrite(inquiryVO);
 		
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("InquiryAllView.in");
+		
+		
 		
 		return actionInfo;
 	}

@@ -130,7 +130,6 @@ div.linkCopy{
 }
 
 div.parent{
-    position: relative;
     width : 100%;
     margin : 0;
     padding : 0;
@@ -138,7 +137,7 @@ div.parent{
 }
 
 .backgroundWrap{
-	padding-bottom:4650px;
+	padding-bottom: 3065px;
 }
 
 div.top-block{
@@ -154,7 +153,7 @@ div.content-wrap {
     float : left;
     position : absolute;
     z-index: 1000;
-    top: 3%;
+    top: 4%;
     margin: 0 auto;
     left: 50%;
     transform: translate(-50%, 0%)
@@ -224,7 +223,6 @@ div.time-content a{
 
 div.time-block {
     width: 320px;
-    height: 290px;
     background-color: white;
     position: sticky;
     top: 110px;
@@ -434,25 +432,41 @@ div.goToJoin {
     margin-top: 90px;
 }
 
+div.goToJoin button {
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	font-family: inherit;
+	font-weight: 500;
+	color: #fff;
+	background-color: #1a1a1a;
+	border: none;
+	cursor: pointer;
+}
+
 div.share {
     margin-top: 18px;
     text-align: center;
     color: #cacaca;
 }
 
+div.share a {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+
+div.share a svg {
+	margin-right: 5px;
+}
+
 div.event-notice {
     background-color: rgb(248, 248, 248);
     position: absolute;
-    top: 4700px;
+    top: 3400px;
     bottom : 0;
     width : 100%;
-    height : 320px;
-}
-
-div.event-notice > div{
-    width : 80%;
-    margin : 0 auto;
-    margin-top: 50px;
+    height : fit-content;
 }
 
 div.notice-wrap{
@@ -460,6 +474,7 @@ div.notice-wrap{
     float : left;
     width : 100%;
     justify-content: center;
+    padding: 50px 0;
 }
 
 div.notice-title{
