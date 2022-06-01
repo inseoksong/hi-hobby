@@ -31,20 +31,20 @@
                                 <th width="14%">작성일</th>
                             </tr>
                             <div id="helpInquiryList">
-                            <c:forEach var="inquiry" items="${inquiryList}">
-                            <tr>
-                                <td><c:out value="${inquiry.getInquiryNum()}"/></td>
-                                <td class="waiting"><c:choose><c:when test="${member.getInquiryProcess()}">답변 완료</c:when><c:otherwise>답변 대기</c:otherwise></c:choose></td>
-                                <td class="qnaTitle">
-                                	<form action="InquiryAdminView.in" name="inquiryAdminViewForm" method="post">
-                                		<div style="display:none;" name="inquiryNum" ><c:out value="${inquiry.getInquiryNum()}"/></div>
-	                                	<input type="button" class="confirm" value="문의 내용 보기" onclick="adminInquiry()"/>	
-                                	</form>
-                                </td>
-                                <%-- <td><c:out value="${inquiry.getUserName()}"/></td> --%>
-                                <td><c:out value="${inquiry.getInquiryDay()}"/></td>
-                            </tr>
-                            </c:forEach>
+	                            <c:forEach var="inquiry" items="${inquiryList2}">
+	                            <tr>
+	                                <td><c:out value="${inquiry.getInquiryNum()}"/></td>
+	                                <td class="waiting"><c:choose><c:when test="${inquiry.isInquiryProcess()}"><span style="color: green">답변 완료</span></c:when><c:otherwise>답변 대기</c:otherwise></c:choose></td>
+	                                <td class="qnaTitle">
+	                                	<form action="InquiryAdminView.in" name="inquiryAdminViewForm" method="post">
+	                                		<input style="display:none;" name="inquiryNum" value="<c:out value="${inquiry.getInquiryNum()}"/>"/>
+		                                	<input type="submit" value="문의 내용 보기"/>	
+	                                	</form>
+	                                </td>
+	                                <%-- <td><c:out value="${inquiry.getUserName()}"/></td> --%>
+	                                <td><c:out value="${inquiry.getInquiryDay()}"/></td>
+	                            </tr>
+	                            </c:forEach>
                             </div>
                             
                         </table>

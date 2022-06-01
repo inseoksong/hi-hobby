@@ -27,13 +27,14 @@ public class InquiryAllView implements Action{
 		InquiryVO inquiryVO = new InquiryVO();
 		InquiryDAO inquiryDAO = new InquiryDAO();
 		UserDAO userDAO = new UserDAO();
-		/*int userNum2 = (Integer)session.getAttribute("userNum");*/
+		/*Integer userNum2 = (Integer)session.getAttribute("userNum");*/
 		
 		List<InquiryVO> inquiryList = inquiryDAO.inquiryList();/*
 		List<UserVO> userProfile = userDAO.view(userNum2);*/
 		
 		req.setAttribute("inquiryList", inquiryList);/*
 		req.setAttribute("inquiryList", userProfile);*/
+		
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/cs.jsp");
