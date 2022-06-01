@@ -53,6 +53,10 @@ $numButtons.click(function() {
 	$(this).addClass("number-select");
 });
 
+function inquirySub() {
+	inquiryOkForm.submit();
+}
+
 
 /* const allCheck = document.querySelector('input#checkall');
 const checkAr = document.querySelectorAll('input.childCheck');

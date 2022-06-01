@@ -25,7 +25,8 @@ loginPass.addEventListener('click', function(){
 			inputPw.style.border = "1px rgb(243, 33, 59) solid";
 			inputPw.focus();
 		} else {
-			if(inputId.value=='admin1234' && inputPw.value=='pw1234'){ 
+			adminLoginForm.submit();
+			/*if(inputId.value=='admin1234' && inputPw.value=='pw1234'){ 
 				console.log("로그인 성공");
 				loginPass.disabled = false;
 				window.open('classManage.jsp','_self', true);
@@ -40,7 +41,11 @@ loginPass.addEventListener('click', function(){
 					setTimeout(()=>{
 						alertBox.classList.remove('visible')},2500);
 				}
-			}
+			}*/
 		}
 	}
 });
+
+
+
+

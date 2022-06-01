@@ -25,15 +25,15 @@
                 	</c:forEach>
                 	
                     <form action="InquiryAdminProcessOk.in" name="inquiryProcessForm" method="post">
-                    	<div style="display:none;" name="inquiryNum" ><c:out value="${inquiryNum}"/></div>
+                    	<input style="display:none;" name="inquiryNum" value="<c:out value="${inquiryNum}"/>"/>
 	                	<div class="buttonWrap">
-	                    	<input type="button" class="processButton" value="답변 완료" onclick="inquiryProcess()"/>
+	                    	<input type="submit" class="processButton" value="답변 완료"/>
 	                	</div>
 	                </form>
 	                
 	                </div>
 	                <div class="titleWrap">
-	                    <input type = "text" class="title" name="inquiryTitle" value="<c:out value='${inquiryTItle}'/>">
+	                    <input type = "text" class="title" name="inquiryTitle" value="<c:out value='${inquiryTitle}'/>">
 	                </div>
 	                <div class="contentsWrap">
 	                    <textarea class="content" name="inquiryContent"><c:out value="${inquiryContent}"/></textarea>

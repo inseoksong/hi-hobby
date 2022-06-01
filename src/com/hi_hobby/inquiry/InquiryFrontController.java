@@ -27,25 +27,25 @@ public class InquiryFrontController extends HttpServlet {
 		String command = requestURL.substring(requestURL.lastIndexOf("/") + 1);
 		ActionInfo actionInfo = null;
 		
-		if(command.equals("InquiryWrite.in")) {
+		if(command.equals("InquiryWrite.in")) { // 문의글 작성하기
 			actionInfo = new InquiryWrite().execute(req, resp);
 		}
-		else if(command.equals("InquiryPwOk.in")) {
+		else if(command.equals("InquiryPwOk.in")) { // 문의글 pw 검사
 			actionInfo = new InquiryPwOk().execute(req, resp);
 		}
-		else if(command.equals("InquiryGoEdit.in")) {
+		else if(command.equals("InquiryGoEdit.in")) { // 문의 수정으로 넘어가기
 			actionInfo = new InquiryGoEdit().execute(req, resp);
 		}
-		else if(command.equals("InquiryModify.in")) {
+		else if(command.equals("InquiryModify.in")) { // 문의 수정하기
 			actionInfo = new InquiryModify().execute(req, resp);
 		}			
-		else if(command.equals("InquiryAllView.in")) {
+		else if(command.equals("InquiryAllView.in")) { // 문의 전체 목록 보기
 			actionInfo = new InquiryAllView().execute(req, resp);
 		}
-		else if(command.equals("InquiryAdminView.in")) {
+		else if(command.equals("InquiryAdminView.in")) { //관리자가 문의 내용 보는 페이지
 			actionInfo = new InquiryAdminView().execute(req, resp);
 		}
-		else if(command.equals("InquiryAdminProcessOk.in")) {
+		else if(command.equals("InquiryAdminProcessOk.in")) { // 관리자가 문의 답변 완료
 			actionInfo = new InquiryProcessOk().execute(req, resp);
 		}
 		else if(command.equals("InquiryDelete.in")) {
