@@ -36,6 +36,9 @@ public class CouponFrontController extends HttpServlet {
 		else if(command.equals("ViewCoupon.co")) {
 			
 		}
+		else if(command.equals("CheckCoupon.co")) {
+			new CheckCouponOk().execute(req, resp);
+		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
 		}

@@ -55,7 +55,6 @@ public class ClassFrontController extends HttpServlet {
 			actionInfo = new ClassApprove().execute(req, resp);
 		}
 		else if(command.equals("ClassListView.cl")) {
-			System.out.println("리스트 뷰 들어옴");
 			actionInfo = new ClassApprove().execute(req, resp);
 		}
 		else {

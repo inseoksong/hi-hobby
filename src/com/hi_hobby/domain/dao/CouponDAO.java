@@ -26,4 +26,8 @@ public class CouponDAO {
 	public void view() {
 	}
 	
+	// 쿠폰 사용여부 검사
+	public boolean checkCoupon(String userNum) {
+		return (Integer)sqlSession.selectOne("Coupon.checkCoupon",userNum) == 1;
+	}
 }

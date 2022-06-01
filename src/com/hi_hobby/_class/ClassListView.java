@@ -12,7 +12,6 @@ import com.hi_hobby.domain.dao.ClassDAO;
 import com.hi_hobby.domain.vo.ClassVO;
 
 public class ClassListView implements Action {
-
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 			req.setCharacterEncoding("UTF-8");
@@ -22,11 +21,10 @@ public class ClassListView implements Action {
 			
 			List<ClassVO> classList = classDAO.listView();
 			
-			System.out.println(classDAO.listView().get(0).getClassNickname());
 			req.setAttribute("classList", classList);
 			
 			actionInfo.setRedirect(false);
-			actionInfo.setPath("/main.jsp");
+			actionInfo.setPath("${pageContext.request.contextPath}/main.jsp");
 			
 			return actionInfo;
 		
