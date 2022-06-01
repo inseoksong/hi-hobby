@@ -54,6 +54,10 @@ public class ClassFrontController extends HttpServlet {
 		else if(command.equals("ClassConfirm.cl")) {
 			actionInfo = new ClassApprove().execute(req, resp);
 		}
+		else if(command.equals("ClassListView.cl")) {
+			System.out.println("리스트 뷰 들어옴");
+			actionInfo = new ClassApprove().execute(req, resp);
+		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
 		}
