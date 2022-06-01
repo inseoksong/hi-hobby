@@ -18,7 +18,7 @@ public class UserDelete  implements Action{
 		ActionInfo actionInfo = new ActionInfo();
 		UserDAO userDAO = new UserDAO();
 		HttpSession session = req.getSession();
-		Integer userNum = (Integer)session.getAttribute("userNum");
+		int userNum = (Integer)session.getAttribute("userNum");
 		
 		userDAO.delete(userNum);
 		session.invalidate();

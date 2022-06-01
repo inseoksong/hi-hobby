@@ -39,6 +39,11 @@ div.top-line-content{
     align-items: center;
 }
 
+div.top-line-content a {
+	color: #fff;
+	font-size: 14px;
+}
+
 div.top-line-content span{
     width : 100%;
     display: inline-block;

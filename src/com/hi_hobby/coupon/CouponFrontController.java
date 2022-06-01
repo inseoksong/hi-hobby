@@ -28,12 +28,15 @@ public class CouponFrontController extends HttpServlet {
 		ActionInfo actionInfo = null;
 		
 		if(command.equals("CreateCoupon.co")) {
-			actionInfo = new CreateCoupon().execute(req, resp);
+			new CreateCoupon().execute(req, resp);
 		}
-		else if(command.equals("UseCoupon.co")) {
-			
+		else if(command.equals("CheckCreate.co")) {
+			new CheckCreate().execute(req, resp);
 		}
 		else if(command.equals("ViewCoupon.co")) {
+			actionInfo = new ViewCoupon().execute(req, resp);
+		}
+		else if(command.equals("UseCoupon.co")) {
 			
 		}
 		else if(command.equals("CheckCoupon.co")) {
@@ -41,6 +44,16 @@ public class CouponFrontController extends HttpServlet {
 		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
+		}
+		
+		if(actionInfo != null) {
+			if(actionInfo.isRedirect()) {
+				resp.sendRedirect(actionInfo.getPath());
+			}
+			else {
+				RequestDispatcher dispatcher = req.getRequestDispatcher(actionInfo.getPath());
+				dispatcher.forward(req, resp);
+			}
 		}
 	}
 }

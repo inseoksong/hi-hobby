@@ -1,33 +1,40 @@
 package com.hi_hobby.coupon;
 
 import java.io.IOException;
-import java.util.List;
+import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.json.simple.JSONObject;
+
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
 import com.hi_hobby.domain.dao.CouponDAO;
-import com.hi_hobby.domain.vo.CouponVO;
 
-public class ViewCoupon implements Action {
+public class CheckCreate implements Action {
+
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");
-		ActionInfo actionInfo = new ActionInfo();
+		PrintWriter out = resp.getWriter();
 		CouponDAO couponDAO = new CouponDAO();
+		JSONObject resultJSON = new JSONObject();
+		
 		HttpSession session = req.getSession();
 		int userNum = (Integer)session.getAttribute("userNum");
 		
-		List<CouponVO> couponInfo = couponDAO.view(userNum);
+		if(couponDAO.checkCreate(userNum)) {
+			resultJSON.put("result", "fail");
+		}
+		else {
+			resultJSON.put("result", "success");
+		}
 		
-		req.setAttribute("couponInfo", couponInfo);
-		
-		actionInfo.setRedirect(false);
-		actionInfo.setPath("/myCoupons101.jsp");
-		
-		return actionInfo;
+		out.print(resultJSON.toJSONString());
+		out.close();
+		return null;
 	}
+
 }

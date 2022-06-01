@@ -19,7 +19,7 @@ public class MyPage implements Action {
 		ActionInfo actionInfo = new ActionInfo();
 		UserDAO userDAO = new UserDAO();
 		HttpSession session = req.getSession();
-		Integer userNum = (Integer)session.getAttribute("userNum");
+		int userNum = (Integer)session.getAttribute("userNum");
 		
 		List<UserVO> userProfile = userDAO.view(userNum);
 		

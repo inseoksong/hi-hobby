@@ -22,7 +22,7 @@ public class ChangePw implements Action {
 		UserVO userVO = new UserVO();
 		UserDAO userDAO = new UserDAO();
 		HttpSession session = req.getSession();
-		Integer userNum = (Integer)session.getAttribute("userNum");
+		int userNum = (Integer)session.getAttribute("userNum");
 		
 		userVO.setUserNum(userNum);
 		userVO.setUserPw(new String(Base64.getEncoder().encode(req.getParameter("userPw").getBytes())));

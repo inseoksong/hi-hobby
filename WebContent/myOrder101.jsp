@@ -41,7 +41,7 @@
 					<div class="dkpqLE">
 						<div class="bxTXNb">
 							<div id="buttonMyPage" class="iTUWBy">
-								<a target="_self" class="iDrVSO myP" onclick="location.href='myPage101.jsp'">마이페이지</a>
+								<a target="_self" class="iDrVSO myP" onclick="location.href='MyPage.us'">마이페이지</a>
 							</div>
 							<div class="lkWmez"></div>
 							<div class="CDUoo">

@@ -73,10 +73,6 @@
                 <a href="joinEvent.jsp">
                     <p>회원가입 혜택</p>
                 </a>
-                <div style="width:28px;"></div> <!-- 공백 블록 -->
-                <a href="blockB.jsp">
-                    <p>블록버스터 감사세일</p>
-                </a>
                 <div style="width:28px;"></div>
                 <a href="#target1">
                     <p>원데이 클래스 TOP 10</p>
