@@ -1,3 +1,5 @@
+var contextPath = "${pageContext.request.contextPath }";
+
 function male(idx) {
     var btn = document.getElementsByClassName('RadioIcon-taoxkc-0 eVmqxF')[0];
     var len = document.getElementsByClassName('RadioButton__RadioButtonText-sc-1j3ywll-1 cGbvXG')[0];
@@ -86,6 +88,37 @@ function notice(idx){
             fiv.style.display='block';
             six.style.display='none';
             sev.style.display='none';
+            
+            // 클래스 목록 불러오기
+         // var contextPath = "${pageContext.request.contextPath }"; - 상단에 선언
+            		
+            $.ajax({
+        		url : contextPath+"/_class/ClassListView.cl",
+        		type : "get",
+        		contentType : "application/json; charset:UTF-8",
+        		dataType : "json",
+        		success : function(resultArr){
+//        			console.log(resultArr[0]["title"]);
+        			const numAr =  document.querySelectorAll('p.classNum');
+        			const titleAr = document.querySelectorAll('p.classTitle');
+        			const cateAr = document.querySelectorAll('p.classCategory');
+        			const priceAr = document.querySelectorAll('p.classPrice');
+        			
+                    for(i = 0; i < 10; i++ ){
+                    	numAr[i].innerText = resultArr[i]["num"];
+                        titleAr[i].innerText= resultArr[i]["title"];
+                        cateAr[i].innerText = resultArr[i]["category"];
+                        priceAr[i].innerText = resultArr[i]["price"];
+                    }
+        		},
+        		error : function(request, error, a, b, c){
+        			console.log("실패..");
+        			alert("code:" + request.status + "\n" + "message : " + request.reponseText + "\n" + "error : " + error);
+        			console.log(a);
+        			console.log(b);
+        			console.log(c);
+        		}
+        	});
             break;
         case 5:
             col2.style.border= '1px solid #ffffff';
@@ -107,6 +140,43 @@ function notice(idx){
             fiv.style.display='none';
             six.style.display='none';
             sev.style.display='none';
+            
+            // 클래스 수정화면 -- 클릭한 버튼의 classNum 가져오는법 확인
+            $.ajax({
+            	url : contextPath + "/_class/ClassModify.cl",
+            	type : "get",
+            	data : {classNum : "1"},
+            	dataType : "json",
+            	success : function(obj){
+            		console.log("ajax 들어옴");
+            		let $title = $("input[name='classTitle']");
+            		let $category = $("select[name='classCategory']");
+            		let $place = $("input[name='classPlace']");
+            		let $placeDetail = $("input[name='classPlaceDetail']");
+            		let $start = $("input[name='classStart']");
+            		let $end = $("input[name='classEnd']");
+            		let $introduce = $("textarea[name='classIntroduce']");
+            		let $price = $("input[name='classPrice']");
+            		let $nickname = $("input[name='classNickname']");
+            		
+            		$title.val(obj["title"]);
+            		$category.val(obj["category"]);
+            		$place.val(obj["place"]);
+            		$placeDetail.val(obj["placeDetail"]);
+            		$start.val(obj["start"]);
+            		$end.val(obj["end"]);
+            		$introduce.val(obj["introduce"]);
+            		$price.val(obj["price"]);
+            		$nickname.val(obj["nickname"]);
+            	}, 
+            	error :function(request, error, a, b, c){
+        			console.log("실패..");
+        			alert("code:" + request.status + "\n" + "message : " + request.reponseText + "\n" + "error : " + error);
+        			console.log(a);
+        			console.log(b);
+        			console.log(c);
+            	}
+            });
         	break;
         case 7:
         	one.style.display='none';
@@ -234,4 +304,52 @@ function secc(idx){
             }
             break;
     }
+};
+
+function classDel(){
+	let check = false;
+	check = confirm("클래스를 삭제하시겠습니까?");
+	$.ajax({
+		url : contextPAth + "/_class/ClassDelete.cl",
+		type : get,
+		daya : json,
+		success : function(){
+			
+			if(check==false){
+				
+			} else {
+				notice(4);
+			}
+			
+		}
+	});
+	
 }
+
+/*var contextPath = "${pageContext.request.contextPath }"; -상단에 선언
+
+//클래스 목록 불러오기
+            		
+            $.ajax({
+        		url : contextPath+"/_class/ClassListView.cl",
+        		type : "get",
+        		contentType : "application/json; charset:UTF-8",
+        		dataType : "json",
+        		success : function(resultArr){
+//        			console.log(resultArr[0]["title"]);
+        			const titleAr = document.querySelectorAll('p.classTitle');
+        			const cateAr = document.querySelectorAll('p.classCategory');
+        			
+                        for(i = 0; i < 10; i++ ){
+                                titleAr[i].innerText= resultArr[i]["title"];
+                                cateAr[i].innerText = resultArr[i]["category"];
+                        }
+        		},
+        		error : function(request, error, a, b, c){
+        			console.log("실패..");
+        			alert("code:" + request.status + "\n" + "message : " + request.reponseText + "\n" + "error : " + error);
+        			console.log(a);
+        			console.log(b);
+        			console.log(c);
+        		}
+        	}); */

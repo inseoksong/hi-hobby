@@ -174,7 +174,13 @@
 							</div>
 							<div class="class-place">
 								<p>장소</p>
-								<input type="text" name="classPlace" placeholder="클래스가 진행되는 장소를 추가해주세요.">
+								<!-- <input type="text" name="classPlace" placeholder="클래스가 진행되는 장소를 추가해주세요."> -->
+								<div class="searchPlaceWrap">
+									<input type="text" name ="classPlace" class="searchPlaceWrap1" id="sample5_address" placeholder="클래스가 진행되는 장소를 추가해주세요.">
+									<input type="button" class="searchPlaceWrap2" onclick="sample5_execDaumPostcode()" value="주소 검색"><br>
+								</div>
+								<input type="text" name="classPlaceDetail" placeholder="상세 주소를 입력해주세요.">
+								<div id="map" style="width:300px;height:300px;margin-top:10px;display:none"></div>
 							</div>
 							<div class="class-time">
 								<p>시간</p>
@@ -205,14 +211,14 @@
 								</div>
 								<input type="text" name="classNickname" placeholder="사용하시는 닉네임을 입력해주세요.">
 							</div>
-							<div class="creator-introduce">
+<!-- 							<div class="creator-introduce">
 								<p>크리에이터 소개</p>
 								<textarea rows="10" cols="45"></textarea>
 							</div>
 							<div class="creator-phone">
 								<p>크리에이터 소개</p>
 								<input type="text" name="creatorPhone" placeholder="연락 가능한 연락처를 입력해주세요. (- 제외)">
-							</div>
+							</div> -->
 						</div>
 						<div class="application-button">
 							<button onclick="oneRegister()">신청하기</button>

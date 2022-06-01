@@ -33,8 +33,11 @@ public class ClassFrontController extends HttpServlet {
 			actionInfo.setRedirect(false);
 			actionInfo.setPath(req.getContextPath() + "/createrCenter.jsp");
 		}
-		else if(command.equals("ClassModify.cl")) {
+		else if(command.equals("ClassModify.cl")) { //수정한 당시 시간 받아오기
 			actionInfo = new ClassModify().execute(req, resp);
+		}
+		else if(command.equals("ClassListView.cl")) {
+			actionInfo = new ClassListView().execute(req, resp);
 		}
 		else if(command.equals("ClassView.cl")) {
 			actionInfo = new ClassView().execute(req, resp);

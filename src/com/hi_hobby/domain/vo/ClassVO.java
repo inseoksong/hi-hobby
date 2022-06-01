@@ -6,13 +6,31 @@ public class ClassVO {
 	private String classTitle;		// 클래스 제목
 	private String classCategory;	// 클래스 카테고리
 	private String classPlace;		// 원데이 클래스 장소
+	private String classPlaceDetail;		// 원데이 클래스 장소
 	private int classPrice;			// 클래스 가격
 	private String classStart;		// 시작시간 (시간 자료형)
 	private String classEnd;		// 끝나는 시간(시간 자료형)
+	private String classUpdate;		// 끝나는 시간(시간 자료형)
 	private boolean classApprove;	// 승인 여부
 	private String classImg;		// 이미지 자료형
 	private boolean classOne;		// 원데이, 온라인 클래스 구분
 	private boolean classStatus;	// 클래스 삭제 여부
+	public String getClassPlaceDetail() {
+		return classPlaceDetail;
+	}
+
+	public void setClassPlaceDetail(String classPlaceDetail) {
+		this.classPlaceDetail = classPlaceDetail;
+	}
+
+	public String getClassUpdate() {
+		return classUpdate;
+	}
+
+	public void setClassUpdate(String classUpdate) {
+		this.classUpdate = classUpdate;
+	}
+
 	private String classIntroduce;	// 클래스 설명
 	private int userNum;			// 유저 고유번호(크리에이터 정보를 가져오기 위해)
 	
