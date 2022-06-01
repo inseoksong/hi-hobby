@@ -48,9 +48,8 @@
 
 <!-- 클래스 목록 조회 -->
 	<select id="listView" resultType="classVO">
-		<!--select class_num, class_nickname, class_title, class_category, class_place, class_start, class_end, class_approve, class_img, class_one, class_status, class_introduce, user_num-->
-		select class_title
-		from tbl_class
+		select class_num, class_nickname, class_title, class_category, class_place, class_start, class_end, class_img, class_introduce
+		from tbl_class <!-- where class_approve = true -->
 	</select>
 
 

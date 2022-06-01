@@ -11,20 +11,22 @@ import com.hi_hobby.action.ActionInfo;
 import com.hi_hobby.domain.dao.ClassDAO;
 import com.hi_hobby.domain.vo.ClassVO;
 
-public class ClassView implements Action {
+public class ClassListView implements Action {
 
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 			req.setCharacterEncoding("UTF-8");
 			ActionInfo actionInfo = new ActionInfo();
 			ClassDAO classDAO = new ClassDAO();
+			System.out.println("리스트 뷰 들어옴1");
 			
 			List<ClassVO> classList = classDAO.listView();
 			
+			System.out.println(classDAO.listView().get(0).getClassNickname());
 			req.setAttribute("classList", classList);
 			
 			actionInfo.setRedirect(false);
-			actionInfo.setPath("/creatorCenter.jsp");
+			actionInfo.setPath("/main.jsp");
 			
 			return actionInfo;
 		
