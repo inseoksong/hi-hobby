@@ -36,6 +36,9 @@ public class ClassFrontController extends HttpServlet {
 		else if(command.equals("ClassModify.cl")) {
 			actionInfo = new ClassModify().execute(req, resp);
 		}
+		else if(command.equals("ClassListView.cl")) {
+			actionInfo = new ClassListView().execute(req, resp);
+		}
 		else if(command.equals("ClassView.cl")) {
 			actionInfo = new ClassView().execute(req, resp);
 		}

@@ -86,6 +86,33 @@ function notice(idx){
             fiv.style.display='block';
             six.style.display='none';
             sev.style.display='none';
+            
+            // 클래스 목록 불러오기
+            var contextPath = "${pageContext.request.contextPath }"; 
+            		
+            $.ajax({
+        		url : contextPath+"/_class/ClassListView.cl",
+        		type : "get",
+        		contentType : "application/json; charset:UTF-8",
+        		dataType : "json",
+        		success : function(resultArr){
+//        			console.log(resultArr[0]["title"]);
+        			const titleAr = document.querySelectorAll('p.classTitle');
+        			const cateAr = document.querySelectorAll('p.classCategory');
+        			
+                        for(i = 0; i < 10; i++ ){
+                                titleAr[i].innerText= resultArr[i]["title"];
+                                cateAr[i].innerText = resultArr[i]["category"];
+                        }
+        		},
+        		error : function(request, error, a, b, c){
+        			console.log("실패..");
+        			alert("code:" + request.status + "\n" + "message : " + request.reponseText + "\n" + "error : " + error);
+        			console.log(a);
+        			console.log(b);
+        			console.log(c);
+        		}
+        	});
             break;
         case 5:
             col2.style.border= '1px solid #ffffff';
@@ -234,4 +261,33 @@ function secc(idx){
             }
             break;
     }
-}
+};
+
+/*var contextPath = "${pageContext.request.contextPath }";
+
+//클래스 목록 불러오기
+var contextPath = "${pageContext.request.contextPath }"; 
+            		
+            $.ajax({
+        		url : contextPath+"/_class/ClassListView.cl",
+        		type : "get",
+        		contentType : "application/json; charset:UTF-8",
+        		dataType : "json",
+        		success : function(resultArr){
+//        			console.log(resultArr[0]["title"]);
+        			const titleAr = document.querySelectorAll('p.classTitle');
+        			const cateAr = document.querySelectorAll('p.classCategory');
+        			
+                        for(i = 0; i < 10; i++ ){
+                                titleAr[i].innerText= resultArr[i]["title"];
+                                cateAr[i].innerText = resultArr[i]["category"];
+                        }
+        		},
+        		error : function(request, error, a, b, c){
+        			console.log("실패..");
+        			alert("code:" + request.status + "\n" + "message : " + request.reponseText + "\n" + "error : " + error);
+        			console.log(a);
+        			console.log(b);
+        			console.log(c);
+        		}
+        	}); */

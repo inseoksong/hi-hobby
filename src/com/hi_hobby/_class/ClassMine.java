@@ -1,13 +1,18 @@
 package com.hi_hobby._class;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletResponse;import org.eclipse.jdt.internal.compiler.lookup.ClassScope;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
 import com.hi_hobby.domain.dao.ClassDAO;
+import com.hi_hobby.domain.vo.ClassVO;
 
 public class ClassMine implements Action{
 
@@ -16,17 +21,39 @@ public class ClassMine implements Action{
 		
 		req.setCharacterEncoding("UTF-8");
 		ClassDAO classDAO = new ClassDAO();
-		ActionInfo actionInfo = new ActionInfo();
-		
+		// userNum 받아오기
 		int userNum = Integer.parseInt(req.getParameter("userNum"));
-		classDAO.viewMine(userNum);
+										// userNum 과 일치하는 ClassVO -> List 에 담기
+		List <ClassVO> list = classDAO.viewMine(userNum);
 		
-		req.setAttribute("MyClassList", classDAO.viewMine(userNum));
 		
-		actionInfo.setRedirect(false);
-		actionInfo.setPath("/creatorCenter.jsp");
+		JSONArray resultArr = new JSONArray();
+		PrintWriter out = resp.getWriter();
 		
-		return actionInfo;
+		// List 에 담긴 각각의 ClassVO 에서 항목별로 <키:밸류> JSON Object 에 넣어줌
+		list.forEach(classs -> {
+			JSONObject obj = new JSONObject();
+			obj.put("title", classs.getClassTitle());
+			obj.put("category", classs.getClassCategory());
+			// 생성한 obj 를 Json Array 에 넣어줌 
+			resultArr.add(obj);
+		});
+		
+//		// 발달된 for문..인데 필요없음
+//		int idx = 0;
+//		for(ClassVO classs : list) {
+//			JSONObject obj = new JSONObject();
+//			obj.put(Integer.toString(idx), classs.getClassTitle());
+//			resultArr.add(obj);
+//			idx++;
+//		}
+		
+		resp.setCharacterEncoding("UTF-8");
+		// Json 을 string 으로 변환
+		out.print(resultArr.toJSONString());
+		out.close();
+		
+		return null;
 	}
 
 
