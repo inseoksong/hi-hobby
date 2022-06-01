@@ -9,9 +9,11 @@
 		values (#{classNickname}, #{classTitle}, #{classCategory}, #{classPlace}, #{classPrice}, #{classStart}, #{classEnd}, #{classApprove}, #{classImg}, #{classOne}, #{classStatus}, #{userNum}, #{classIntroduce})
 	</insert>
 	
-<!-- 클래스 수정 -->
-	<update id="modify" parameterType="classVO">
-	</update>
+<!-- 클래스 수정 --> <!-- parameterType = _int 추가하기 -->
+	<select id="modify" resultType="classVO">
+		select class_num, class_nickname, class_title, class_category, class_place, class_place_detail, class_start, class_end, class_price, class_approve, class_img, class_one, class_status, class_introduce
+		from tbl_class where class_num = '1'<!--  '#{classNum}' -->
+	</select>
 	
 <!-- 클래스 삭제 -->
 	<update id="del" parameterType="_int">
@@ -19,11 +21,11 @@
 	where class_num = '#{classNum}';
 	</update>
 	
-<!-- 지정한 클래스 조회 -->
-	<select id="view" parameterType="_int" resultType="classVO">
-	select class_num, class_nickname, class_title, class_category, class_place, class_start, class_end, class_approve, class_img, class_one, class_status, class_introduce, user_num
+<!-- 내가 개설한 클래스 보기 (크리에이터센터)-->
+	<select id="viewMine" parameterType="_int" resultType="classVO">
+	select class_num, class_nickname, class_title, class_category, class_place, class_start, class_end, class_approve, class_img, class_one, class_status, class_introduce
 	from tbl_class
-	where class_num = '#{classNum}'
+	where user_num = '#{userNum}'
 	</select>	
 
 <!-- 내가 개설한 클래스 보기 -->
