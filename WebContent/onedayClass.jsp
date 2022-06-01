@@ -98,7 +98,8 @@
 												<div class="point-text-small">쿠폰</div>
 												<div class="point-use">
 													<input type="text" name="point" placeholder="쿠폰 번호를 입력해주세요.">
-													<input type="button" value="쿠폰 확인">
+													<input type="button" value="쿠폰 확인" onclick="checkCoupon()">
+													<p id="result"></p>
 												</div>
 												<div class="coupon-check"></div>
 											</div>
@@ -264,4 +265,30 @@
 <script src="asset/js/onedayClass.js"></script>
 <script src="asset/js/onedayPayment.js"></script>
 <script src="asset/js/header.js"></script>
+<script>
+	function checkCoupon(){
+		$.ajax({
+			url:"${pageContext.request.contextPath}/CouponCheck.co",
+			type: "get",
+			data: {userNum: $("input[name='point']").val()},
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function(result){
+				console.log(result);
+				if(result.check){
+					$("p#result").text("사용 불가능한 쿠폰입니다.");
+				}else{
+					$("p#result").text("사용가능한 쿠폰입니다.");
+				}
+			},
+			error: function(request, status, error){
+				console.log("실패..");
+				console.log(request);
+				console.log(status);
+				console.log(error);
+			}
+		});
+		});
+	}
+</script>
 </html>

@@ -290,7 +290,7 @@
                     <div class="container-full">
                         <div class="timedeal-container">
                             <div>
-                                <a href="onedayClass.jsp" style="cursor: pointer;" >
+                                <a href="onedayClass.jsp" style="cursor: pointer;">
                                     <div class="thumb-pic">
                                         <div>
 	                                        <c:forEach var="class" items="${classList}">
