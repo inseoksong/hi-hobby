@@ -18,7 +18,7 @@ public class ClassMine implements Action{
 
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		
+		resp.setContentType("text/html;charset=UTF-8"); 
 		req.setCharacterEncoding("UTF-8");
 		ClassDAO classDAO = new ClassDAO();
 		// userNum 받아오기
@@ -33,6 +33,7 @@ public class ClassMine implements Action{
 		// List 에 담긴 각각의 ClassVO 에서 항목별로 <키:밸류> JSON Object 에 넣어줌
 		list.forEach(classs -> {
 			JSONObject obj = new JSONObject();
+			obj.put("num", classs.getClassNum());
 			obj.put("title", classs.getClassTitle());
 			obj.put("category", classs.getClassCategory());
 			// 생성한 obj 를 Json Array 에 넣어줌 

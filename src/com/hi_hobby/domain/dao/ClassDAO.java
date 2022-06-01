@@ -21,8 +21,9 @@ public class ClassDAO {
 		sqlSession.insert("Class.create", classVO);
 	}
 	
-	// 클래스 수정
-	public void modify () {
+	// 클래스 수정화면
+	public ClassVO modify () { // classNum 가져오면 수정하기
+		return sqlSession.selectOne("Class.modify");
 	}
 	
 	// 클래스 삭제

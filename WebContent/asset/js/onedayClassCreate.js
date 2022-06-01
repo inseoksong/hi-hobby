@@ -80,16 +80,17 @@ classFile4.addEventListener("change", function(event) {
     }
 });
 
-creatorFile1.addEventListener("change", function(event) {
-    let reader = new FileReader();
-    reader.readAsDataURL(event.target.files[0]);
-    reader.onload = function(event) {
-        let url = event.target.result;
-        if(url.includes("image")) {
-        	creatorThumbnail1.src = url;
-        }
-        else {
-        	creatorThumbnail1.src = "https://creator.class101.net/images/ic-unknown.png";
-        }
-    }
-});
+// 오류로 잠시 닫음
+//creatorFile1.addEventListener("change", function(event) {
+//    let reader = new FileReader();
+//    reader.readAsDataURL(event.target.files[0]);
+//    reader.onload = function(event) {
+//        let url = event.target.result;
+//        if(url.includes("image")) {
+//        	creatorThumbnail1.src = url;
+//        }
+//        else {
+//        	creatorThumbnail1.src = "https://creator.class101.net/images/ic-unknown.png";
+//        }
+//    }
+//});

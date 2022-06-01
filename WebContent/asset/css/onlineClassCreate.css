@@ -313,3 +313,23 @@ div.css-2pw500 label[for='video-file'] div {
     background-size: 100% 100%;
     cursor: pointer;
 }
+
+.searchPlaceWrap {
+	display : flex;
+	height : 100%;
+	width : 100%;
+}
+
+.searchPlaceWrap1 {
+	display: inline-block;
+	width : 70%;
+}
+
+.searchPlaceWrap1{
+	display: inline-block;
+	width : 30%;
+}
+
+div.flexWrap {
+    display: flex;
+}

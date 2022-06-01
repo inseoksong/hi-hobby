@@ -42,13 +42,15 @@ public class ClassListView implements Action {
 			
 			list.forEach(classs -> {
 				JSONObject obj = new JSONObject();
+				obj.put("num", classs.getClassNum());
 				obj.put("title", classs.getClassTitle());
 				obj.put("category", classs.getClassCategory());
+				obj.put("price", classs.getClassPrice());
 				resultArr.add(obj);
 			});
 			
 			resp.setCharacterEncoding("UTF-8");
-			System.out.println(resultArr);
+//			System.out.println(resultArr);
 			out.print(resultArr.toJSONString());
 			out.close();
 			

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8" 
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
@@ -293,11 +293,11 @@
 													</div>
 													<div class="class-name">
 														<p>클래스 제목</p>
-														<input type="text" name="className" placeholder="클래스를 대표할 수 있는 제목을 작성해주세요.">
+														<input type="text" name="classTitle" placeholder="클래스를 대표할 수 있는 제목을 작성해주세요.">
 													</div>
 													<div class="class-category">
 														<p>카테고리</p>
-														<select name="category">
+														<select name="classCategory">
 															<option value="drawing">드로잉</option>
 															<option value="crafts">공예</option>
 															<option value="cooking">요리 · 베이킹</option>
@@ -308,12 +308,21 @@
 													</div>
 													<div class="class-place">
 														<p>장소</p>
-														<input type="text" name="classPlace" placeholder="클래스가 진행되는 장소를 추가해주세요.">
+														<!-- <input type="text" name="classPlace" placeholder="클래스가 진행되는 장소를 추가해주세요."> -->
+														<div class="searchPlaceWrap">
+															<input type="text" name ="classPlace" class="searchPlaceWrap1" id="sample5_address" placeholder="클래스가 진행되는 장소를 추가해주세요.">
+															<input type="button" class="searchPlaceWrap2" onclick="sample5_execDaumPostcode()" value="주소 검색"><br>
+														</div>
+														<input type="text" name="classPlaceDetail" placeholder="상세 주소를 입력해주세요.">
+													<div id="map" style="width:300px;height:300px;margin-top:10px;display:none"></div>
 													</div>
 													<div class="class-time">
 														<p>시간</p>
-														<input type="text" name="classtimeSt" placeholder="클래스가 진행되는 시작 시간을 추가해주세요.(0000년00월00일00시00분)">
-														<input type="text" name="classtimeEnd" placeholder="클래스가 진행되는 끝 시간을 추가해주세요.(0000년00월00일00시00분)">
+														<!-- <input type="text" name="classtimeSt" placeholder="클래스가 진행되는 시작 시간을 추가해주세요.(0000년00월00일00시00분)">
+														<input type="text" name="classtimeEnd" placeholder="클래스가 진행되는 끝 시간을 추가해주세요.(0000년00월00일00시00분)"> -->
+														<div class="flexWrap">
+															<input type="datetime-local" name="classStart"><p style="margin : 0 10px; font-size: 20px; line-height: 47px;">~</p><input type="datetime-local"  name="classEnd">
+														</div>
 													</div>
 													<div class="class-introduce">
 														<p>클래스 소개</p>
@@ -328,11 +337,11 @@
 													<h4>크리에이터 정보</h4>
 													<div class="creator-name">
 														<p>크리에이터 닉네임</p>
-														<input type="text" name="creatorName" placeholder="사용하시는 닉네임을 입력해주세요.">
+														<input type="text" name="classNickname" placeholder="사용하시는 닉네임을 입력해주세요.">
 													</div>
 												</div>
-												<div class="application-button">
-													<button type="submit" onclick="notice(4)">신청하기</button>
+												<div class="application-button"> <!-- onclick="notice(4) -->
+													<button id="class-del-btn" type="submit" onclick = "classDel()">삭제하기</button>
 												</div>
 											</div>
 										</div>
@@ -637,9 +646,9 @@
 														<div class="ReactVirtualized__Table__headerColumn"
 															role="columnheader"
 															style="display: flex; height: 100%; flex: 0 1 44px;">
-															<span
-																class="ReactVirtualized__Table__headerTruncatedText">
 																<div class="css-1qms59t">
+															<span
+																class="ReactVirtualized__Table__headerTruncatedText">번호
 																	<!-- <label class="css-165sxpi to" onclick="secc(1)"
 																		style="cursor: pointer;">
 																		<div class="css-d5khiz">
@@ -701,7 +710,8 @@
 															style="display: flex; padding: 19px 16px; flex: 0 1 100px;">
 															<span
 																class="ReactVirtualized__Table__headerTruncatedText">
-																<div class="css-1qti8at">노출 여부</div>
+																<!-- <div class="css-1qti8at">노출 여부</div> -->
+																<div class="css-1qti8at">수강료</div>
 															</span>
 														</div>
 														<div class="ReactVirtualized__Table__headerColumn"
@@ -710,7 +720,8 @@
 															<span
 																class="ReactVirtualized__Table__headerTruncatedText">
 																<div class="css-9c48d3">
-																	<p class="css-n0d300">생성일</p>
+																	<!-- <p class="css-n0d300">생성일</p> -->
+																	<p class="css-n0d300">마지막 수정 날짜</p>
 																	<span class="css-ujih8e"><svg
 																			xmlns="http://www.w3.org/2000/svg"
 																			viewBox="0 0 24 24" class="css-skwyyj">
@@ -749,10 +760,11 @@
  																			<div class="css-d5khiz">
 																				<div class="css-1fw7cg7">
 																					<span class="css-1e7z94r">
-																						<svg
+																						<!-- <svg
 																							xmlns="http://www.w3.org/2000/svg"
 																							viewBox="0 0 24 24" class="css-1k1e1mg">
-                                                                                        </svg>
+                                                                                        </svg> -->
+                                                                                        <p class="classNum css-sur10j"></p>
 																					</span>
 																				</div>
 																			</div>
@@ -823,7 +835,7 @@
 																	role="gridcell"
 																	style="overflow: hidden; flex: 0 1 100px;">
 																	<div class="css-b3mawz">
-																		<span class="css-58su99"><span
+																		<span class="css-58su99"><!-- <span
 																			class="css-1lncszd"><svg
 																					xmlns="http://www.w3.org/2000/svg"
 																					viewBox="0 0 24 24" class="css-skwyyj">
@@ -831,9 +843,9 @@
 																						d="M19.6 7.6c1.15 1.45 1.85 3.2 1.9 5.15 0 .15.1.25.25.25h1c.15 0 .25-.1.25-.25-.05-2.35-.95-4.5-2.35-6.2L19.6 7.6ZM16.45 15.2c-.3 1.9-1.85 3.45-3.75 3.75-1.35.2-2.55-.2-3.5-.95l-1.05 1.05c1.2 1.05 2.85 1.6 4.65 1.4 2.7-.35 4.85-2.5 5.2-5.2.2-1.75-.35-3.4-1.4-4.65l-1.05 1.05c.7.95 1.1 2.2.9 3.55ZM21.95 2.8l-.7-.7c-.1-.1-.25-.1-.35 0l-2.45 2.45c-1.8-1.25-4.05-2-6.45-2C6 2.55 1.15 7.1 1 12.8c0 .15.1.25.25.25h1c.15 0 .25-.1.25-.25.15-4.85 4.35-8.75 9.5-8.75 2 0 3.85.6 5.35 1.6l-3.3 3.3C13.4 8.7 12.7 8.6 12 8.6c-3.3 0-6 2.7-6 6 0 .75.15 1.4.35 2.05l-4.3 4.3c-.1.1-.1.25 0 .35l.7.7c.1.1.25.1.35 0L21.9 3.2c.1-.15.1-.3.05-.4ZM7.6 15.35c-.05-.3-.1-.55-.1-.85 0-2.5 2-4.5 4.5-4.5.3 0 .55.05.85.1L7.6 15.35Z"
 																						class="css-sy7xp0">
                                                                                             </path>
-                                                                                        </svg></span>
+                                                                                        </svg></span> -->
 																			<div class="css-iiuncx"></div>
-																			<p class="css-esz8sy">비공개</p> </span>
+																			<p class="classPrice css-esz8sy"></p> </span>
 																	</div>
 																</div>
 																<div aria-colindex="8"
@@ -852,7 +864,7 @@
 																		<div class="css-i2rvrf">
 																			<button class="css-1estejg" onclick="notice(6)">
 																				<span class="css-3kqv01"><span
-																					class="css-13g5vis">작성하기</span></span>
+																					class="css-13g5vis">수정하기</span></span>
 																			</button>
 																		</div>
 																	</div>
@@ -880,10 +892,11 @@
  																			<div class="css-d5khiz">
 																				<div class="css-1fw7cg7">
 																					<span class="css-1e7z94r">
-																						<svg
+																						<!-- <svg
 																							xmlns="http://www.w3.org/2000/svg"
 																							viewBox="0 0 24 24" class="css-1k1e1mg">
-                                                                                        </svg>
+                                                                                        </svg> -->
+                                                                                        <p class="classNum css-sur10j"></p>
 																					</span>
 																				</div>
 																			</div>
@@ -954,7 +967,7 @@
 																	role="gridcell"
 																	style="overflow: hidden; flex: 0 1 100px;">
 																	<div class="css-b3mawz">
-																		<span class="css-58su99"><span
+																		<span class="css-58su99"><!-- <span
 																			class="css-1lncszd"><svg
 																					xmlns="http://www.w3.org/2000/svg"
 																					viewBox="0 0 24 24" class="css-skwyyj">
@@ -962,9 +975,9 @@
 																						d="M19.6 7.6c1.15 1.45 1.85 3.2 1.9 5.15 0 .15.1.25.25.25h1c.15 0 .25-.1.25-.25-.05-2.35-.95-4.5-2.35-6.2L19.6 7.6ZM16.45 15.2c-.3 1.9-1.85 3.45-3.75 3.75-1.35.2-2.55-.2-3.5-.95l-1.05 1.05c1.2 1.05 2.85 1.6 4.65 1.4 2.7-.35 4.85-2.5 5.2-5.2.2-1.75-.35-3.4-1.4-4.65l-1.05 1.05c.7.95 1.1 2.2.9 3.55ZM21.95 2.8l-.7-.7c-.1-.1-.25-.1-.35 0l-2.45 2.45c-1.8-1.25-4.05-2-6.45-2C6 2.55 1.15 7.1 1 12.8c0 .15.1.25.25.25h1c.15 0 .25-.1.25-.25.15-4.85 4.35-8.75 9.5-8.75 2 0 3.85.6 5.35 1.6l-3.3 3.3C13.4 8.7 12.7 8.6 12 8.6c-3.3 0-6 2.7-6 6 0 .75.15 1.4.35 2.05l-4.3 4.3c-.1.1-.1.25 0 .35l.7.7c.1.1.25.1.35 0L21.9 3.2c.1-.15.1-.3.05-.4ZM7.6 15.35c-.05-.3-.1-.55-.1-.85 0-2.5 2-4.5 4.5-4.5.3 0 .55.05.85.1L7.6 15.35Z"
 																						class="css-sy7xp0">
                                                                                             </path>
-                                                                                        </svg></span>
+                                                                                        </svg></span> -->
 																			<div class="css-iiuncx"></div>
-																			<p class="css-esz8sy">비공개</p> </span>
+																			<p class="classPrice css-esz8sy"></p> </span>
 																	</div>
 																</div>
 																<div aria-colindex="8"
@@ -983,7 +996,7 @@
 																		<div class="css-i2rvrf">
 																			<button class="css-1estejg" onclick="notice(6)">
 																				<span class="css-3kqv01"><span
-																					class="css-13g5vis">작성하기</span></span>
+																					class="css-13g5vis">수정하기</span></span>
 																			</button>
 																		</div>
 																	</div>
@@ -1318,4 +1331,53 @@
 <script src="asset/js/createrCenter.js"></script>
 <script src="asset/js/onedayClassCreate.js"></script>
 <script src="asset/js/createrCenter.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+/* var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+mapOption = {
+    center: new daum.maps.LatLng(37.537187, 127.005476), // 지도의 중심좌표
+    level: 5 // 지도의 확대 레벨
+};
+
+//지도를 미리 생성
+var map = new daum.maps.Map(mapContainer, mapOption);
+//주소-좌표 변환 객체를 생성
+var geocoder = new daum.maps.services.Geocoder();
+//마커를 미리 생성
+var marker = new daum.maps.Marker({
+position: new daum.maps.LatLng(37.537187, 127.005476),
+map: map
+});
+
+
+function sample5_execDaumPostcode() {
+new daum.Postcode({
+    oncomplete: function(data) {
+        var addr = data.address; // 최종 주소 변수
+
+        // 주소 정보를 해당 필드에 넣는다.
+        document.getElementById("sample5_address").value = addr;
+        // 주소로 상세 정보를 검색
+        geocoder.addressSearch(data.address, function(results, status) {
+            // 정상적으로 검색이 완료됐으면
+            if (status === daum.maps.services.Status.OK) {
+
+                var result = results[0]; //첫번째 결과의 값을 활용
+
+                // 해당 주소에 대한 좌표를 받아서
+                var coords = new daum.maps.LatLng(result.y, result.x);
+                // 지도를 보여준다.
+                mapContainer.style.display = "block";
+                map.relayout();
+                // 지도 중심을 변경한다.
+                map.setCenter(coords);
+                // 마커를 결과값으로 받은 위치로 옮긴다.
+                marker.setPosition(coords)
+            }
+        });
+    }
+}).open();
+}
+ */
+</script>
 </html>
