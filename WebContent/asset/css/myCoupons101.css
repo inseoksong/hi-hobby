@@ -204,7 +204,7 @@ a{
 .gxwndi{
     display: flex;
     align-items: flex-end;
-    margin: 72px 0px 3px;
+    margin-top: 16px;
 }
 
 .dmhaXF{
@@ -472,28 +472,21 @@ a{
 
 .css-1f8m7mx{
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
-    flex-direction: row;
-    -webkit-box-pack: justify;
     justify-content: space-between;
+    margin-bottom: 14px;
 }
 
 .bnDXmG{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
     color: rgb(0, 0, 0);
     line-height: 26px;
 }
 
 .gbisaG{
-    width: 62%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: rgb(0, 0, 0);
-    margin-top: 4px;
-    font-size: 13px;
+    color: #000;
+    font-size: 14px;
 }
 
 .jABwSZ{
@@ -501,10 +494,9 @@ a{
 }
 
 .fdzdeR{
-    font-size: 13px;
+    font-size: 14px;
     line-height: 18px;
-    color: rgb(243, 33, 59);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .ikoJVN{
@@ -531,14 +523,14 @@ svg:not(:root){
     overflow: hidden;
 }
 
+div.coupon-number {
+	font-size: 20px;
+	font-weight: 700;
+	color: #19ce60;
+}
 
-
-
-
-
-
-
-
-
-
-
+a.copy-coupon {
+	font-size: 14px;
+	color: #666666;
+	text-decoration: underline;
+}

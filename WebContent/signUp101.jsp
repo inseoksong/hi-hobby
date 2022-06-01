@@ -144,7 +144,6 @@
 <script src="asset/js/header.js"></script>
 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script>
-	let checkPhoneNum = false;
 	let contextPath = "${pageContext.request.contextPath}";
 
 	function checkEmail() {
@@ -168,6 +167,7 @@
 	}
 	
 	let number;
+	let checkPhoneNum = false;
 	function sendSMS() {
 		$.ajax({
 			url: contextPath + "/SendSMS.us",
