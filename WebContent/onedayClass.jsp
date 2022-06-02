@@ -83,7 +83,7 @@
 										</div>
 									</div>
 									<section class="main">
-										<form action="OrderCreateOne.or" name="createOneForm" method="post">
+										<form action="OrderCreateOne.or" name="createOneForm" method="post" onsubmit="orderCheck()">
 											<div class="reservation">
 												<div class="reservation-text-big">예약</div>
 												<div class="reservation-text-small">예약</div>
@@ -98,7 +98,9 @@
 												<div class="point-text-small">쿠폰</div>
 												<div class="point-use">
 													<input type="text" name="point" placeholder="쿠폰 번호를 입력해주세요.">
-													<input type="button" value="쿠폰 확인" onclick="checkCoupon()">
+													<input type="button" value="쿠폰 확인" onclick="checkCoupon()" style="cursor: pointer;">
+												</div>
+												<div>
 													<p id="result"></p>
 												</div>
 												<div class="coupon-check"></div>
@@ -270,15 +272,17 @@
 		$.ajax({
 			url:"${pageContext.request.contextPath}/CouponCheck.co",
 			type: "get",
-			data: {userNum: $("input[name='point']").val()},
+			data: {couponUser: $("input[name='point']").val()},
 			contentType: "application/json; charset=utf-8",
 			dataType: "json",
 			success: function(result){
 				console.log(result);
-				if(result.check){
+				if(!result.result){
 					$("p#result").text("사용 불가능한 쿠폰입니다.");
+					$("p#result").css("color","red")
 				}else{
 					$("p#result").text("사용가능한 쿠폰입니다.");
+					$("p#result").css("color","blue")
 				}
 			},
 			error: function(request, status, error){
@@ -288,7 +292,11 @@
 				console.log(error);
 			}
 		});
-		});
+	}
+	
+	function orderCheck(){
+		alert("주문이 완료 되었습니다.");
+		location.href="myOrderjsp";
 	}
 </script>
 </html>

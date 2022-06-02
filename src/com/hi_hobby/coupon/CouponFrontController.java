@@ -27,7 +27,7 @@ public class CouponFrontController extends HttpServlet {
 		String command = requestURL.substring(requestURL.lastIndexOf("/") + 1);
 		ActionInfo actionInfo = null;
 		
-		if(command.equals("CreateCoupon.co")) {
+/*		if(command.equals("CreateCoupon.co")) {
 			new CreateCoupon().execute(req, resp);
 		}
 		else if(command.equals("CheckCreate.co")) {
@@ -36,10 +36,10 @@ public class CouponFrontController extends HttpServlet {
 		else if(command.equals("ViewCoupon.co")) {
 			actionInfo = new ViewCoupon().execute(req, resp);
 		}
-		else if(command.equals("UseCoupon.co")) {
+		else */if(command.equals("UseCoupon.co")) {
 			
 		}
-		else if(command.equals("CheckCoupon.co")) {
+		else if(command.equals("CouponCheck.co")) {
 			new CheckCouponOk().execute(req, resp);
 		}
 		else {

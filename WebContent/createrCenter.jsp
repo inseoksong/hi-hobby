@@ -721,7 +721,7 @@
 																class="ReactVirtualized__Table__headerTruncatedText">
 																<div class="css-9c48d3">
 																	<!-- <p class="css-n0d300">생성일</p> -->
-																	<p class="css-n0d300">마지막 수정 날짜</p>
+																	<p class="css-n0d300">마지막 수정 날짜</p>	
 																	<span class="css-ujih8e"><svg
 																			xmlns="http://www.w3.org/2000/svg"
 																			viewBox="0 0 24 24" class="css-skwyyj">

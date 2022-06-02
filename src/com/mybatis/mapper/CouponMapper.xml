@@ -25,8 +25,8 @@
 	
 	<!-- 쿠폰 사용 여부 확인 -->
 	<select id="checkCoupon" parameterType="string" resultType="_int">
-		select count(coupon_user)
+		select count(coupon_num)
 		from tbl_coupon
-		where coupon_user = #{userNum}
+		where coupon_num = #{couponNum}
 	</select>
 </mapper>
