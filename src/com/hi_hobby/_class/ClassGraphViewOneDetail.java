@@ -6,8 +6,6 @@ import java.util.HashMap;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.board.app.domain.dao.BoardDAO;
-import com.board.app.domain.dao.FileDAO;
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
 import com.hi_hobby.domain.dao.ClassDAO;
@@ -20,8 +18,9 @@ public class ClassGraphViewOneDetail implements Action {
 			ActionInfo actionInfo = new ActionInfo();
 			ClassDAO classDAO = new ClassDAO();
 			
-			//사용자가 선택한 게시글 번호를 파라미터로 전달받는다.
-			int classNum = Integer.parseInt(req.getParameter("classNum"));
+			//사용자가 선택한 클래스 번호를 파라미터로 전달받는다.
+//			int classNum = Integer.parseInt(req.getParameter("classNum"));
+			int classNum = Integer.parseInt("2");
 			int page = Integer.parseInt(req.getParameter("page"));
 			
 			//게시글 번호로 조회한 게시글의 전체 정보를 requestScope에 저장한다.
