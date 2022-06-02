@@ -21,19 +21,6 @@
 	where class_num = '#{classNum}'
 	</update>
 	
-<!-- 내가 개설한 클래스 보기 (크리에이터센터)-->
-	<select id="viewMine" parameterType="_int" resultType="classVO">
-	select class_num, class_nickname, class_title, class_category, class_place, class_start, class_end, class_approve, class_img, class_one, class_status, class_introduce
-	from tbl_class
-	where user_num = '#{userNum}'
-	</select>	
-
-<!-- 내가 개설한 클래스 보기 -->
-<!--  	<select id="viewMine" parameterType="_int" resultType="classVO">
-	select class_num, class_nickname, class_title, class_category, class_place, class_start, class_end, class_approve, class_img, class_one, class_status, class_introduce
-	from tbl_class
-	where user_num = '#{userNum}'
-	</select> -->
 	
 <!-- 승인 대기 클래스 보기 -->
 	<select id="pending" parameterType="_int" resultType="classVO">

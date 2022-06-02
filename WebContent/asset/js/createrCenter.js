@@ -89,12 +89,13 @@ function notice(idx){
             six.style.display='none';
             sev.style.display='none';
             
-            // 클래스 목록 불러오기
+           // 클래스 목록 불러오기 - userNum 받아온 후 전체적으로 수정
          // var contextPath = "${pageContext.request.contextPath }"; - 상단에 선언
             		
             $.ajax({
-        		url : contextPath+"/_class/ClassListView.cl",
+        		url : contextPath+"/_class/ClassMine.cl",
         		type : "get",
+        		data : {"userNum" : 1 },
         		contentType : "application/json; charset:UTF-8",
         		dataType : "json",
         		success : function(resultArr){
@@ -309,8 +310,10 @@ function secc(idx){
 function classDel(){
 	let check = false;
 	check = confirm("클래스를 삭제하시겠습니까?");
+	
 	$.ajax({
 		url : contextPAth + "/_class/ClassDelete.cl",
+		data : {"classNum" : 10},
 		type : get,
 		daya : json,
 		success : function(){

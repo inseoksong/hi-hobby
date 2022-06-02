@@ -14,17 +14,19 @@ public class ClassDelete implements Action{
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
+		resp.setContentType("text/html;charset=UTF-8");
 		req.setCharacterEncoding("UTF-8");
+		
+		int classNum = Integer.parseInt(req.getParameter("classNum"));
 		ClassDAO classDAO = new  ClassDAO();
 		ActionInfo actionInfo = new ActionInfo();
 		
-		int classNum = Integer.parseInt((req.getParameter("classNum")));
 		classDAO.del(classNum);
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/createrCenter");
 		
-		return actionInfo;
+		return null;
 	}
 
 }

@@ -311,7 +311,7 @@
 														<!-- <input type="text" name="classPlace" placeholder="클래스가 진행되는 장소를 추가해주세요."> -->
 														<div class="searchPlaceWrap">
 															<input type="text" name ="classPlace" class="searchPlaceWrap1" id="sample5_address" placeholder="클래스가 진행되는 장소를 추가해주세요.">
-															<input type="button" class="searchPlaceWrap2" onclick="sample5_execDaumPostcode()" value="주소 검색"><br>
+															<input type="button" class="searchPlaceWrap2" onclick="sample5_execDaumPostcode()" value="주소 검색" style="cursor : pointer"><br>
 														</div>
 														<input type="text" name="classPlaceDetail" placeholder="상세 주소를 입력해주세요.">
 													<div id="map" style="width:300px;height:300px;margin-top:10px;display:none"></div>
@@ -340,8 +340,18 @@
 														<input type="text" name="classNickname" placeholder="사용하시는 닉네임을 입력해주세요.">
 													</div>
 												</div>
-												<div class="application-button"> <!-- onclick="notice(4) -->
-													<button id="class-del-btn" type="submit" onclick = "classDel()">삭제하기</button>
+												<div class="bottomBtnWrap">
+													<div class="application-button backBtn">
+														<button class="backBtn">뒤로가기</button>
+													</div>
+													<div class="rightBtnWrap">
+														<div class="application-button">
+															<button>수정하기</button>
+														</div>
+														<div class="application-button"> <!-- onclick="notice(4) -->
+															<button id="class-del-btn" type="submit" onclick = "classDel()">삭제하기</button>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -1333,7 +1343,7 @@
 <script src="asset/js/createrCenter.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
-/* var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 mapOption = {
     center: new daum.maps.LatLng(37.537187, 127.005476), // 지도의 중심좌표
     level: 5 // 지도의 확대 레벨
@@ -1378,6 +1388,5 @@ new daum.Postcode({
     }
 }).open();
 }
- */
 </script>
 </html>
