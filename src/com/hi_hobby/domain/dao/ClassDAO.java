@@ -42,8 +42,8 @@ public class ClassDAO {
 		return sqlSession.selectOne("Class.view");
 	}
 	
-	// 내가 개설한 클래스 보기 - 크리에이터센터
-	public List <ClassVO> viewMine(int userNum) {
+	// 내가 개설한 클래스 보기 - 크리에이터센터 (매개변수 추가 필요)
+	public List <ClassVO> viewMine() {
 		return sqlSession.selectList("Class.viewMine");
 	}
 	

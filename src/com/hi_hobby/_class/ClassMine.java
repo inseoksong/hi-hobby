@@ -18,14 +18,16 @@ public class ClassMine implements Action{
 
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		// !!추가해줘야 화면단에서 한글 안깨짐!!
 		resp.setContentType("text/html;charset=UTF-8"); 
 		req.setCharacterEncoding("UTF-8");
+		
 		ClassDAO classDAO = new ClassDAO();
 		// userNum 받아오기
 		int userNum = Integer.parseInt(req.getParameter("userNum"));
 										// userNum 과 일치하는 ClassVO -> List 에 담기
-		List <ClassVO> list = classDAO.viewMine(userNum);
-		
+		System.out.println("컨트롤러 int userNum : " + userNum);
+		List <ClassVO> list = classDAO.viewMine(); //매개변수 추가 필요
 		
 		JSONArray resultArr = new JSONArray();
 		PrintWriter out = resp.getWriter();
