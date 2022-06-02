@@ -89,12 +89,13 @@ function notice(idx){
             six.style.display='none';
             sev.style.display='none';
             
-            // 클래스 목록 불러오기
+            // 클래스 목록 불러오기 - userNum 받아온 후 전체적으로 수정
          // var contextPath = "${pageContext.request.contextPath }"; - 상단에 선언
             		
             $.ajax({
-        		url : contextPath+"/_class/ClassListView.cl",
+        		url : contextPath+"/_class/ClassMine.cl",
         		type : "get",
+        		data : {userNum : 1 },
         		contentType : "application/json; charset:UTF-8",
         		dataType : "json",
         		success : function(resultArr){
