@@ -17,8 +17,10 @@ public class ClassModify implements Action {
 
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		
+		// !!추가해줘야 화면단에서 한글 안깨짐!!
+		resp.setContentType("text/html;charset=UTF-8"); 
 		req.setCharacterEncoding("UTF-8");
+		
 		ClassDAO classDAO = new ClassDAO();
 		JSONObject obj = new JSONObject();
 		ClassVO classVO = new ClassVO();
