@@ -6,7 +6,6 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.board.app.domain.vo.BoardDTO;
 import com.hi_hobby.domain.vo.ClassVO;
 import com.mybatis.config.MyBatisConfig;
 
@@ -66,8 +65,8 @@ public class ClassDAO {
 	}
 	
 	//클래스 정보 조회
-	public BoardDTO selectDetail(int boardNumber) {
-		return sqlSession.selectOne("Board.selectDetail", boardNumber);
+	public ClassVO selectDetail(int classNum) {
+		return sqlSession.selectOne("Class.selectDetail", classNum);
 	}
 
 	
