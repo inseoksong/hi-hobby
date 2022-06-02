@@ -340,6 +340,9 @@
 														<input type="text" name="classNickname" placeholder="사용하시는 닉네임을 입력해주세요.">
 													</div>
 												</div>
+												<div class="application-button">
+													<button>신청하기</button>
+												</div>
 												<div class="application-button"> <!-- onclick="notice(4) -->
 													<button id="class-del-btn" type="submit" onclick = "classDel()">삭제하기</button>
 												</div>
@@ -1333,7 +1336,7 @@
 <script src="asset/js/createrCenter.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
-/* var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 mapOption = {
     center: new daum.maps.LatLng(37.537187, 127.005476), // 지도의 중심좌표
     level: 5 // 지도의 확대 레벨
@@ -1378,6 +1381,5 @@ new daum.Postcode({
     }
 }).open();
 }
- */
 </script>
 </html>
