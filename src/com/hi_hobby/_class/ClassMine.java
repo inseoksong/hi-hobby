@@ -36,11 +36,12 @@ public class ClassMine implements Action{
 			obj.put("num", classs.getClassNum());
 			obj.put("title", classs.getClassTitle());
 			obj.put("category", classs.getClassCategory());
+			obj.put("price", classs.getClassPrice());
 			// 생성한 obj 를 Json Array 에 넣어줌 
 			resultArr.add(obj);
 		});
 		
-//		// 발달된 for문..인데 필요없음
+//		// 발달된 for문..인데 필요
 //		int idx = 0;
 //		for(ClassVO classs : list) {
 //			JSONObject obj = new JSONObject();
