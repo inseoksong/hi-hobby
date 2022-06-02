@@ -3532,6 +3532,14 @@ div.listPointBlock {
     }
 }
 
+.class-category select{
+	cursor : pointer;
+}
+
+select option {
+	cursor : pointer;
+}
+
 .searchPlaceWrap {
 	display : flex;
 	height : 100%;
@@ -3552,7 +3560,42 @@ div.flexWrap {
     display: flex;
 }
 
+div.class-time input {
+	cursor : pointer;
+}
+
 button#class-del-btn{
 	background-color: rgb(243, 33, 59);
 	border: 1px solid rgb(243, 33, 59);
+}
+
+div.bottomBtnWrap{
+	display : flex;
+	justify-content: space-between;
+	width : 100%;
+	height : fit-content;
+}
+
+div.bottomBtnWrap button{
+	cursor : pointer;
+	width : 100px;
+	height : 42px;
+}
+
+div.rightBtnWrap{
+	display : flex;
+}
+
+div.rightBtnWrap button{
+	margin-left: 15px;
+}
+
+div.backBtn button.backBtn{
+	background-color : white;
+	border : 1px solid #a2a2a2;
+	color : rgb(26, 26, 26);
+}
+
+div.backBtn button.backBtn:hover{
+	background-color: rgb(248, 248, 248);
 }
