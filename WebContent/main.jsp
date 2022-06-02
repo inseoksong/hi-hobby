@@ -275,7 +275,7 @@
                     <a style="cursor: pointer;" href="location.href='oneday.jsp'">
                         <p class="title">원데이 클래스 TOP 10</p>
                     </a>
-                    <a href="">
+                    <a href="ClassGraphViewOne.cl">
                         <p class="more-class">전체 클래스 보기</p>
                     </a>
                 </div>
@@ -286,33 +286,27 @@
                     <div class="container-full">
                         <div class="timedeal-container">
                             <div>
+                            <c:forEach var="classs" items="${classList}">
                                 <a href="onedayClass.jsp" style="cursor: pointer;">
                                     <div class="thumb-pic">
                                         <div>
-	                                        <c:forEach var="class" items="${classList}">
 		                                        <c:out value="${classs.getClassImg()}"/>
-					                       	</c:forEach>    
                                         </div>
                                     </div>
                                     <p class="creator-name">
-                               			<c:forEach var="class" items="${classList}">	                                    
                                     		<c:out value="${classs.getClassNickname()}"/>
-				                       	</c:forEach>    
                               		</p>
                                     <p class="class-name">
-	                                   	<c:forEach var="class" items="${classList}">
 	                                    	<c:out value="${classs.getClassTitle()}"/>
-				                       	</c:forEach>    
                                     <p>
                                     <div class="linediv"></div>
                                     <div class="price-wrap">
 	                                    <p class="price">
-    	                                	<c:forEach var="class" items="${classList}">
         	                                	<c:out value="${classs.getClassPrice()}"/>
-					                       	</c:forEach>    
             	                        </p>
                                     </div>
                                 </a>
+                            </c:forEach>
                             </div> 
                         </div> 
                     </div>
@@ -1836,4 +1830,28 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="asset/js/main.js"></script>
+<!-- <script>
+function oneListView(){
+	$.ajax({
+		url:"${pageContext.request.contextPath}/ClassGraphViewOne.cl",
+		type: "get",
+		contentType: "application/json; charset=utf-8",
+		dataType: "json",
+		success: function(result){
+			console.log(result);
+			if(!result.result){
+				
+			}else{
+				
+			}
+		},
+		error: function(request, status, error){
+			console.log("실패..");
+			console.log(request);
+			console.log(status);
+			console.log(error);
+		}
+	});
+}
+</script> -->
 </html>

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +14,15 @@
 <link rel="shortcut icon" href="asset/img/favicon.ico">
 </head>
 <body>
+	<c:set var="classViewOne" value="${classViewOne}"/>
+	<c:set var="page" value="${page}"/>
+	<c:set var="startPage" value="${startPage}"/>
+	<c:set var="endPage" value="${endPage}"/>
+	<c:set var="realEndPage" value="${realEndPage}"/>
+	<c:set var="total" value="${total}"/>
+	<c:set var="i" value="0" />
+	<c:set var="j" value="3" />
+	
 	<jsp:include page="header.jsp"/>
 	<!-- ↑ 헤더 부분 -->
 	<section class="final-wrap">
@@ -34,210 +45,82 @@
 						</div>
 						<div class="class-wrap">
 							<div class="classes-wrap">
-								<ul class="classes">
-									<li class="first">
-										<a href="onedayClass.jsp">
-											<div class="img-wrap">
-												<img src="https://cdn.class101.net/images/e8757945-bdcd-423a-b0be-2c99e41a6654/375xauto.webp">
-											</div>
-											<div class="class-explanation">
-												<div class="class-author">달콩</div>
-												<div class="class-title">프로크리에이트 도장 브러시로 그리는 일러스트</div>
-												<div class="class-push">
-													<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24">
-														<path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path>
-													</svg>
-													173
-												</div>
-												<div class="line"></div>
-												<div class="class-price">25,000원</div>
-											</div>
-										</a>
-									</li>
-									<li class="normal">
-										<a href="onedayClass.jsp">
-											<div class="img-wrap">
-												<img src="https://cdn.class101.net/images/5d1105e2-330e-4119-a16b-8a0149be277d/750xauto.webp">
-											</div>
-											<div class="class-explanation">
-												<div class="class-author">셀아빠</div>
-												<div class="class-title"><아이디어 무한 생산법 첫 번째> <부기보드> 편</div>
-												<div class="class-push">
-													<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24">
-														<path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path>
-													</svg>
-													49
-												</div>
-												<div class="line"></div>
-												<div class="class-price">990원</div>
-											</div>
-										</a>
-									</li>
-									<li class="last">
-										<a href="onedayClass.jsp">
-											<div class="img-wrap">
-												<img src="https://cdn.class101.net/images/9dba0edf-e8f1-4ce8-b1fa-be964ffb5517/750xauto.webp">
-											</div>
-											<div class="class-explanation">
-												<div class="class-author">달콩</div>
-												<div class="class-title">오토데스크 스케치북으로 그리는 나만의 라인 캐리커처</div>
-												<div class="class-push">
-													<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24">
-														<path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path>
-													</svg>
-													899
-												</div>
-												<div class="line"></div>
-												<div class="class-price">25,000원</div>
-											</div>
-										</a>
-									</li>
-								</ul>
-								<ul class="classes">
-									<li class="first">
-										<a href="onedayClass.jsp">
-											<div class="img-wrap">
-												<img src="https://cdn.class101.net/images/e8757945-bdcd-423a-b0be-2c99e41a6654/375xauto.webp">
-											</div>
-											<div class="class-explanation">
-												<div class="class-author">달콩</div>
-												<div class="class-title">프로크리에이트 도장 브러시로 그리는 일러스트</div>
-												<div class="class-push">
-													<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24">
-														<path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path>
-													</svg>
-													173
-												</div>
-												<div class="line"></div>
-												<div class="class-price">25,000원</div>
-											</div>
-										</a>
-									</li>
-									<li class="normal">
-										<a href="onedayClass.jsp">
-											<div class="img-wrap">
-												<img src="https://cdn.class101.net/images/5d1105e2-330e-4119-a16b-8a0149be277d/750xauto.webp">
-											</div>
-											<div class="class-explanation">
-												<div class="class-author">셀아빠</div>
-												<div class="class-title"><아이디어 무한 생산법 첫 번째> <부기보드> 편</div>
-												<div class="class-push">
-													<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24">
-														<path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path>
-													</svg>
-													49
-												</div>
-												<div class="line"></div>
-												<div class="class-price">990원</div>
-											</div>
-										</a>
-									</li>
-									<li class="last">
-										<a href="onedayClass.jsp">
-											<div class="img-wrap">
-												<img src="https://cdn.class101.net/images/9dba0edf-e8f1-4ce8-b1fa-be964ffb5517/750xauto.webp">
-											</div>
-											<div class="class-explanation">
-												<div class="class-author">달콩</div>
-												<div class="class-title">오토데스크 스케치북으로 그리는 나만의 라인 캐리커처</div>
-												<div class="class-push">
-													<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24">
-														<path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path>
-													</svg>
-													899
-												</div>
-												<div class="line"></div>
-												<div class="class-price">25,000원</div>
-											</div>
-										</a>
-									</li>
-								</ul>
-								<ul class="classes">
-									<li class="first">
-										<a href="onedayClass.jsp">
-											<div class="img-wrap">
-												<img src="https://cdn.class101.net/images/e8757945-bdcd-423a-b0be-2c99e41a6654/375xauto.webp">
-											</div>
-											<div class="class-explanation">
-												<div class="class-author">달콩</div>
-												<div class="class-title">프로크리에이트 도장 브러시로 그리는 일러스트</div>
-												<div class="class-push">
-													<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24">
-														<path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path>
-													</svg>
-													173
-												</div>
-												<div class="line"></div>
-												<div class="class-price">25,000원</div>
-											</div>
-										</a>
-									</li>
-									<li class="normal">
-										<a href="onedayClass.jsp">
-											<div class="img-wrap">
-												<img src="https://cdn.class101.net/images/5d1105e2-330e-4119-a16b-8a0149be277d/750xauto.webp">
-											</div>
-											<div class="class-explanation">
-												<div class="class-author">셀아빠</div>
-												<div class="class-title"><아이디어 무한 생산법 첫 번째> <부기보드> 편</div>
-												<div class="class-push">
-													<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24">
-														<path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path>
-													</svg>
-													49
-												</div>
-												<div class="line"></div>
-												<div class="class-price">990원</div>
-											</div>
-										</a>
-									</li>
-									<li class="last">
-										<a href="onedayClass.jsp">
-											<div class="img-wrap">
-												<img src="https://cdn.class101.net/images/9dba0edf-e8f1-4ce8-b1fa-be964ffb5517/750xauto.webp">
-											</div>
-											<div class="class-explanation">
-												<div class="class-author">달콩</div>
-												<div class="class-title">오토데스크 스케치북으로 그리는 나만의 라인 캐리커처</div>
-												<div class="class-push">
-													<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24">
-														<path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path>
-													</svg>
-													899
-												</div>
-												<div class="line"></div>
-												<div class="class-price">25,000원</div>
-											</div>
-										</a>
-									</li>
-								</ul>
+								<c:choose>
+									<c:when test="${GraphViewOne != null and fn:length(GraphViewOne) > 0}">
+										<c:forEach var="classs" items="${GraphViewOne}">
+											<c:if test="${i%j == 0 }">
+											<ul class="classes">
+											</c:if>
+												<li class="first"">
+													<a href="${pageContext.request.contextPath }/ClassGraphViewOneDetail.cl?classNum=${classs.getClassNum}&page=${page}"></a>
+														<div class="img-wrap">
+															<c:out value="${classs.getClassImg()}"/>
+														</div>
+														<div class="class-explanation">
+															<div class="class-author">
+					                                    		<c:out value="${classs.getClassNickname()}"/>
+															</div>
+															<div class="class-title">
+						                                    	<c:out value="${classs.getClassTitle()}"/>
+															</div>
+															<div class="class-push">
+																<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24">
+																	<path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path>
+																</svg>
+																173
+															</div>
+															<div class="line"></div>
+															<div class="class-price">
+				        	                                	<c:out value="${classs.getClassPrice()}"/>
+															</div>
+														</div>
+													</a>
+												</li>
+											<c:if test="${i%j == j-1 }">
+											</ul>
+											</c:if>
+											<c:set var="i" value="${i+1 }" />
+										</c:forEach>
+									</c:when>
+									<c:otherwise>
+										<tr>
+											<td colspan="5" align="center">등록된 게시물이 없습니다.</td>
+										</tr>
+									</c:otherwise>
+								</c:choose>
 							</div>
 							<div class="page-number">
 								<div class="number-buttons">
-									<button type="button">
-										<span>
-											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-												<path fill-rule="evenodd" d="M15.5 5.5l-6 6.5 6 6.5L14 20l-7.5-8L14 4l1.5 1.5z" fill="#1a1a1a"></path>
-											</svg>
-										</span>
-									</button>
-									<button type="button" class="number-select numButton">
-										<span>
-											1
-										</span>
-									</button>
-									<button type="button" class="numButton">
-										<span>
-											2
-										</span>
-									</button>
-									<button type="button">
-										<span>
-											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-												<path fill-rule="evenodd" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z" fill="#1a1a1a"></path>
-											</svg>
-										</span>
-									</button>
+									<c:if test="${startPage > 1}">
+										<a href="${pageContext.request.contextPath}/oneDayList.cl?page=${startPage - 1}">
+											<span>
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+													<path fill-rule="evenodd" d="M15.5 5.5l-6 6.5 6 6.5L14 20l-7.5-8L14 4l1.5 1.5z" fill="#1a1a1a"></path>
+												</svg>
+											</span>
+										</a>
+									</c:if>
+									
+									<c:forEach var="i" begin="${startPage}" end="${endPage}">
+										<c:choose>
+											<c:when test="${i eq page}">
+												<c:out value="${i}"/>&nbsp;&nbsp;
+											</c:when>
+											<c:otherwise>
+												<a href="${pageContext.request.contextPath}/oneDayList.cl?page=${i}"><c:out value="${i}"/></a>&nbsp;&nbsp;
+											</c:otherwise>
+										</c:choose>
+									</c:forEach>
+									
+									<c:if test="${endPage < realEndPage}">
+										<a href="${pageContext.request.contextPath}/oneDayList.cl?page=${endPage + 1}">
+											<span>
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+													<path fill-rule="evenodd" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z" fill="#1a1a1a"></path>
+												</svg>
+											</span>
+										</a>
+									</c:if>
 								</div>
 							</div>
 						</div>

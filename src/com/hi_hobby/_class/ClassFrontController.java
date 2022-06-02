@@ -57,11 +57,24 @@ public class ClassFrontController extends HttpServlet {
 		else if(command.equals("ClassConfirm.cl")) {
 			actionInfo = new ClassApprove().execute(req, resp);
 		}
-		else if(command.equals("ClassListView.cl")) {
-			actionInfo = new ClassApprove().execute(req, resp);
+		else if(command.equals("ClassGraphViewOne.cl")) {
+			actionInfo = new ClassGraphViewOne().execute(req, resp);
+		}
+		else if(command.equals("ClassGraphViewOneDetail.cl")) {
+			System.out.println("프론트 들어옴");
+			actionInfo = new ClassGraphViewOneDetail().execute(req, resp);
 		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
+		}
+		
+		if(actionInfo != null) {
+			if(actionInfo.isRedirect()) {
+				resp.sendRedirect(actionInfo.getPath());
+			}else {
+				RequestDispatcher dispatcher = req.getRequestDispatcher(actionInfo.getPath());
+				dispatcher.forward(req, resp);
+			}
 		}
 	}
 }

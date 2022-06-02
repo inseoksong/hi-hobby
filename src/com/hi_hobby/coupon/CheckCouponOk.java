@@ -23,12 +23,14 @@ public class CheckCouponOk implements Action {
 			CouponDAO couponDAO = new CouponDAO();
 			JSONObject resultJSON = new JSONObject();
 			
-			String userNum = req.getParameter("userNum");
-			resultJSON.put("result",couponDAO.checkCoupon(userNum));
+			String couponUser = req.getParameter("couponUser");
+			resultJSON.put("result",couponDAO.checkCoupon(couponUser));
+			
+			System.out.println(resultJSON.toJSONString());
 			
 			out.print(resultJSON.toJSONString());
 			out.close();
-			return actionInfo;
+			return null;
 		
 	}
 	
