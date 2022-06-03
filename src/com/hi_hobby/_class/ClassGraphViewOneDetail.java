@@ -19,16 +19,15 @@ public class ClassGraphViewOneDetail implements Action {
 			ClassDAO classDAO = new ClassDAO();
 			
 			//사용자가 선택한 클래스 번호를 파라미터로 전달받는다.
-//			int classNum = Integer.parseInt(req.getParameter("classNum"));
-			int classNum = Integer.parseInt("2");
+			int classNum = Integer.parseInt(req.getParameter("classNum"));
 			int page = Integer.parseInt(req.getParameter("page"));
 			
 			//게시글 번호로 조회한 게시글의 전체 정보를 requestScope에 저장한다.
-			req.setAttribute("board", classDAO.selectDetail(classNum));
+			req.setAttribute("classOne", classDAO.selectDetail(classNum));
 			req.setAttribute("page", page);
 			
 			//requestScope에 데이터를 담았기 때문에 forward로 페이지까지 req객체를 유지한다.
-			System.out.println("컨트롤러 들어옴");
+			System.out.println("디테일 컨트롤러 들어옴");
 			actionInfo.setRedirect(false);
 			actionInfo.setPath("/onedayClass.jsp");
 			

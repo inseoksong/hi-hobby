@@ -64,7 +64,7 @@ public class ClassFrontController extends HttpServlet {
 			actionInfo = new ClassGraphViewOne().execute(req, resp);
 		}
 		else if(command.equals("ClassGraphViewOneDetail.cl")) {
-			System.out.println("프론트 들어옴");
+			System.out.println("디테일 프론트 들어옴");
 			actionInfo = new ClassGraphViewOneDetail().execute(req, resp);
 		}
 		
