@@ -1,4 +1,3 @@
-var contextPath = "${pageContext.request.contextPath }";
 
 function male(idx) {
     var btn = document.getElementsByClassName('RadioIcon-taoxkc-0 eVmqxF')[0];
@@ -89,8 +88,8 @@ function notice(idx){
             six.style.display='none';
             sev.style.display='none';
             
-           // 클래스 목록 불러오기 - userNum 받아온 후 전체적으로 수정
-         // var contextPath = "${pageContext.request.contextPath }"; - 상단에 선언
+          // 클래스 목록 불러오기 - userNum 받아온 후 전체적으로 수정
+         // var contextPath = "${pageContext.request.contextPath }"; - jsp script 상단에 작성
             		
             $.ajax({
         		url : contextPath+"/_class/ClassMine.cl",
@@ -98,7 +97,7 @@ function notice(idx){
         		data : {"userNum" : 1 },
         		contentType : "application/json; charset:UTF-8",
         		dataType : "json",
-        		success : function(resultArr){
+        		success : function(result){
         			
         			const numAr =  document.querySelectorAll('p.classNum');
         			const titleAr = document.querySelectorAll('p.classTitle');
@@ -106,10 +105,10 @@ function notice(idx){
         			const priceAr = document.querySelectorAll('p.classPrice');
         			
                     for(i = 0; i < 10; i++ ){
-                    	numAr[i].innerText = resultArr[i]["num"];
-                        titleAr[i].innerText= resultArr[i]["title"];
-                        cateAr[i].innerText = resultArr[i]["category"];
-                        priceAr[i].innerText = resultArr[i]["price"];
+                    	numAr[i].innerText = result[i]["numb"];
+                        titleAr[i].innerText= result[i]["title"];
+                        cateAr[i].innerText = result[i]["category"];
+                        priceAr[i].innerText = result[i]["price"];
                     }
         		},
         		error : function(request, error, a, b, c){
@@ -148,7 +147,7 @@ function notice(idx){
 //            console.log($classNum.text());
             
             $.ajax({
-            	url : contextPath + "/_class/ClassModify.cl",
+            	url : contextPath + "/_class/ClassModify.cl?classNum="+ ${classNum}},
             	type : "get",
             	data : {"classNum" : 1},
             	dataType : "json",

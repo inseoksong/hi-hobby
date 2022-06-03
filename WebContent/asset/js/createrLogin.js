@@ -1,10 +1,10 @@
 function loginTotal() {
-    var em = document.getElementsByClassName("css-bgb2hv")[0];
-    var ps = document.getElementsByClassName('css-1oat6fh')[0];
-    var msg = document.getElementsByClassName('css-19j6hji')[0];
-    if (em.value == "") {
+    var em = document.getElementsByClassName("css-bgb2hv")[0];	// input email
+    var ps = document.getElementsByClassName('css-1oat6fh')[0];	// input pw
+    var msg = document.getElementsByClassName('css-19j6hji')[0];	// 안내 메세지
+    if (em.value == "") {	// 이메일 빈칸
         emNul(1)
-        if (ps.value == "") {
+        if (ps.value == "") {	// 패스워드 빈칸
             psNul(1);
         } else {
             psNul(2);
@@ -12,7 +12,7 @@ function loginTotal() {
         return;
     } else {
         emNul(2);
-        if (!emChe() && ps.value != "") {
+        if (!emChe() && ps.value != "") { // 이메일 유효하지 않고, pw 공백
             // msg.addEventListener()
             psNul(2);
             $(".css-1tqn2bv").text("올바르지 않은 이메일입니다. 이메일 형식에 맞추어 입력해주세요.");
@@ -25,6 +25,9 @@ function loginTotal() {
         } else if (emChe() && ps.value == 1) { //value값 수정
             msg.style.display = 'none';
             location.href = 'createrCenterJoin.jsp';
+           
+            // 로그인 유효성 검사
+            creatorLoginForm.submit();
         }
     }
 
@@ -64,7 +67,7 @@ function psNul(idx) {
 }
 
 function emChe() {
-    var input = document.getElementsByClassName("css-bgb2hv")[0].value;
+    var input = document.getElementsByClassName("css-bgb2hv")[0].value;	// input email
 
     var reg = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
     var ch = reg.test(input);

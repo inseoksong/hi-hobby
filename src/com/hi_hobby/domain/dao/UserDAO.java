@@ -51,4 +51,9 @@ public class UserDAO {
 	public void delete(int userNum) {
 		sqlSession.delete("User.delete", userNum);
 	}
+	
+	// 크리에이터로 변경
+	public void setCreator(int userNum) {
+		sqlSession.update("User.creator", userNum);
+	}
 }
