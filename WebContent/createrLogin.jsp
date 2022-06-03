@@ -30,7 +30,7 @@
                     <div class="css-86rnjd"></div>
                     <div class="css-15zhte1">
                         <div class="css-zsoya5">
-                            <form action="${pageContext.request.contextPath }/CreatorLogin.us" name="creatorLoginForm" method="post" style="width: auto; height: auto;">
+                            <form action="${pageContext.request.contextPath }/user/CreatorLogin.us" name="creatorLoginForm" method="post" style="width: auto; height: auto;">
                                 <div class="css-6mf4i3"><label>
                                         <div class="css-15zhte1">
                                             <p class="css-1spcipk">이메일</p>

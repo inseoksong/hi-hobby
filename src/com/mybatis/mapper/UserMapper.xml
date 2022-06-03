@@ -40,9 +40,10 @@
 	</delete>
 	
 	<!-- 크리에이터 설정 -->
-	<upadate id = "creator" parameterType="_int">
+	<update id = "creator" parameterType="_int">
 		update tbl_user
 		set user_status = 0
 		where user_num = #{userNum}
-	</upadate>
+	</update>
+	
 </mapper>

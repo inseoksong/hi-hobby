@@ -25,15 +25,17 @@ public class CreatorLoginOk implements Action {
 		ActionInfo actionInfo = new ActionInfo();
 		HttpSession session = req.getSession();
 		
-//		userPw = new String(Base64.getEncoder().encode(userPw.getBytes()));
+		userPw = new String(Base64.getEncoder().encode(userPw.getBytes()));
+		System.out.println(userPw);
 		
-		userMap.put("userId", userEmail);
+		userMap.put("userEmail", userEmail);
 		userMap.put("userPw", userPw);
 		
 		userNum = userDAO.login(userMap);
+		System.out.println(userNum);
+
 		userDAO.setCreator(userNum);
 		
-		System.out.println(userNum);
 		session.setAttribute("userNum", userNum);
 		
 		actionInfo.setRedirect(false);

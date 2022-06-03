@@ -2,6 +2,7 @@ function loginTotal() {
     var em = document.getElementsByClassName("css-bgb2hv")[0];	// input email
     var ps = document.getElementsByClassName('css-1oat6fh')[0];	// input pw
     var msg = document.getElementsByClassName('css-19j6hji')[0];	// 안내 메세지
+    
     if (em.value == "") {	// 이메일 빈칸
         emNul(1)
         if (ps.value == "") {	// 패스워드 빈칸
@@ -17,17 +18,18 @@ function loginTotal() {
             psNul(2);
             $(".css-1tqn2bv").text("올바르지 않은 이메일입니다. 이메일 형식에 맞추어 입력해주세요.");
             msg.style.display = 'block';
-        } else if (emChe() && ps.value != 1) { //value값 수정
-            psNul(2);
-            $(".css-1tqn2bv").text("아이디 또는 비밀번호를 다시 확인하세요. 아이디 또는 비밀번호를 잘못 입력하셨습니다.");
-            msg.style.display = 'block';
-
-        } else if (emChe() && ps.value == 1) { //value값 수정
-            msg.style.display = 'none';
-            location.href = 'createrCenterJoin.jsp';
+//        } else if (emChe() && ps.value != 1) { //value값 수정
+//            psNul(2);
+//            $(".css-1tqn2bv").text("아이디 또는 비밀번호를 다시 확인하세요. 아이디 또는 비밀번호를 잘못 입력하셨습니다.");
+//            msg.style.display = 'block';
+//
+//        } else if (emChe() && ps.value == 1) { //value값 수정
+//            msg.style.display = 'none';
+//            location.href = 'createrCenterJoin.jsp';
            
-            // 로그인 유효성 검사
-            creatorLoginForm.submit();
+        } else{
+        	// 로그인 & userStatus 변경
+        	creatorLoginForm.submit();
         }
     }
 
