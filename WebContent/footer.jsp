@@ -5,8 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title></title>
-
-<link rel="stylesheet" href="asset/css/footer.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/asset/css/footer.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 </head>
 <body>

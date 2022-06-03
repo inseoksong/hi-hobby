@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title></title>
-<link rel="stylesheet" href="asset/css/header.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/asset/css/header.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 </head>
 <body>
@@ -25,7 +25,7 @@
 	        <div class="header-left">
 	            <a href="main.jsp">
 	                <span>
-	                    <div class="main-logo"><img src="asset/img/hihobbyLogo2.png"></div>
+	                    <div class="main-logo"><img src="${pageContext.request.contextPath}/asset/img/hihobbyLogo2.png" /></div>
 	                </span>
 	            </a>
 	            <div style="width: 36px;"></div> <!-- 공백 블록 -->
@@ -105,7 +105,7 @@
 	                <p>크리에이터 지원</p>
 	            </a>
 	            <div style="width:24px;"></div> <!-- 공백 블록 -->
-	            <a href="cs.jsp">
+	            <a class="csGoGo" onclick="location.href = '${pageContext.request.contextPath}/inquiry/InquiryAllView.in'">
 	                <p>고객센터</p>
 	            </a>
 				<c:choose>
@@ -130,6 +130,5 @@
 	    </div>
 	</header>
 </body>
-<script src="asset/js/header.js">
-</script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/asset/js/header.js"></script>
 </html>

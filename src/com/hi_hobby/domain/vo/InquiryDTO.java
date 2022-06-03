@@ -1,6 +1,6 @@
 package com.hi_hobby.domain.vo;
 
-public class InquiryVO {
+public class InquiryDTO {
 	private int inquiryNum;			// 문의글 고유 번호
 	private String inquiryPw;		// 문의글 비밀번호
 	private String inquiryDay;		// 문의글 작성 날짜
@@ -8,9 +8,24 @@ public class InquiryVO {
 	private String inquiryTitle;	// 문의글 제목
 	private boolean inquiryProcess;	// 문의글 처리 현황
 	private int userNum;			// 작성한 유저 고유 번호 (외래키)
+	private String userName;			// 작성한 유저 이름 (외래키)	
 	
-	public InquiryVO() {;}
+	public InquiryDTO() {;}
 
+	public InquiryDTO(InquiryVO inquiryVO){
+		super();
+		this.userNum = inquiryVO.getUserNum();
+		this.inquiryNum = inquiryVO.getInquiryNum();
+		this.inquiryPw = inquiryVO.getInquiryPw();
+		this.inquiryTitle = inquiryVO.getInquiryTitle();
+		this.inquiryContent = inquiryVO.getInquiryContent();
+		this.inquiryDay = inquiryVO.getInquiryDay();
+		this.inquiryProcess = inquiryVO.isInquiryProcess();
+	}
+	
+	
+	
+	
 	public int getInquiryNum() {
 		return inquiryNum;
 	}
@@ -67,5 +82,12 @@ public class InquiryVO {
 		this.userNum = userNum;
 	}
 	
+	public String getUserName() {
+		return userName;
+	}
+	
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 	
 }

@@ -30,8 +30,11 @@ public class InquiryFrontController extends HttpServlet {
 		if(command.equals("InquiryWrite.in")) { // 문의글 작성하기
 			actionInfo = new InquiryWrite().execute(req, resp);
 		}
-		else if(command.equals("InquiryPwOk.in")) { // 문의글 pw 검사
-			actionInfo = new InquiryPwOk().execute(req, resp);
+		else if(command.equals("InquiryGoWrite.in")) { // 문의글 작성으로 넘어가기
+			actionInfo = new InquiryGoWrite().execute(req, resp);
+		}
+		else if(command.equals("InquiryMyView.in")) { // 내가 쓴 글로 넘어가기
+			actionInfo = new InquiryDetailOk().execute(req, resp);
 		}
 		else if(command.equals("InquiryGoEdit.in")) { // 문의 수정으로 넘어가기
 			actionInfo = new InquiryGoEdit().execute(req, resp);

@@ -21,6 +21,7 @@ public class InquiryModify implements Action{
 		InquiryVO inquiryVO = new InquiryVO();
 		InquiryDAO inquiryDAO = new InquiryDAO();
 		
+		int page = Integer.parseInt(req.getParameter("page"));
 		int inquiryNum = (Integer.parseInt(req.getParameter("inquiryNum")));
 
 		inquiryVO.setInquiryTitle(req.getParameter("inquiryTitle"));
@@ -29,8 +30,8 @@ public class InquiryModify implements Action{
 
 		inquiryDAO.inquiryModify(inquiryVO);
 		
-		actionInfo.setRedirect(false);
-		actionInfo.setPath("InquiryAllView.in");
+		actionInfo.setRedirect(true);
+		actionInfo.setPath(req.getContextPath() + "/inquiry/InquiryAllView.in?page=" + page);
 		
 		return actionInfo;
 		
