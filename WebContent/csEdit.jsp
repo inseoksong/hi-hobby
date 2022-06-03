@@ -6,13 +6,14 @@
 <head>
 <meta charset="UTF-8">
 <link rel="shortcut icon" href="asset/img/favicon.ico">
-<link rel="stylesheet" href="asset/css/csWrite.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/asset/css/csWrite.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 <link rel="stylesheet" href="resource/summernote-lite.css">
 <title>하이하비 | 수정하기</title>
 </head>
 <body>
+<c:set var="inquiry" value="${inquiry}"/>
 <jsp:include page="header.jsp"/>
 <!-- 헤더 영역 -->
 <section>
@@ -22,22 +23,21 @@
         <div class="writeWrap">
             <div class="customerWrap">
                 <form action="InquiryModify.in" name="inquiryWriteForm" method="post">
-                	<c:forEach var="inquiry"  items="${inquiryMyView}">
-                		<c:set var="inquiryTitle" value="${inquiry.getInquiryTitle()}"/>
-                		<c:set var="inquiryContent" value="${inquiry.getInquiryContent()}"/>
-                		<c:set var="inquiryNum" value="${inquiry.getInquiryNum()}"/>
-                	</c:forEach>
+                	<input type="hidden" name="inquiryNum" value="${inquiry.getInquiryNum()}">
+					<input type="hidden" name="page" value="${page}">
 	                <div class="buttonWrap">
 	                	
 	                    <input type="button" class="confirm" value="수정 완료" >
 	                </div>
 	                </div>
-	                <div style="display:none;" name="inquiryNum" ><c:out value="${inquiryNum}"/></div>
+	                <div class="idWrap">
+	                        <p style="text-align:left; margin-bottom:1%; margin-top:-1.75em;">작성자 : ${inquiry.getUserName()}</p>
+	                </div>
 	                <div class="titleWrap">
-	                    <input type = "text" class="title" name="inquiryTitle" value="<c:out value='${inquiryTItle}'/>">
+	                    <input type = "text" class="title" name="inquiryTitle" maxlength="27" value="${inquiry.getInquiryTitle()}">
 	                </div>
 	                <div class="contentsWrap">
-	                    <textarea class="content" name="inquiryContent"><c:out value="${inquiryContent}"/></textarea>
+	                    <textarea class="content" name="inquiryContent">${inquiry.getInquiryContent()}</textarea>
 	                </div>
 	            </form>
             </div>
@@ -50,5 +50,5 @@
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 <script src="resource/summernote-lite.js"></script>
 <script src="resource/lang/summernote-ko-KR.min.js"></script>
-<script src="asset/js/csWrite.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/asset/js/csWrite.js"></script>
 </html>

@@ -13,6 +13,7 @@
 		<typeAlias type="com.hi_hobby.domain.vo.InquiryVO" alias="inquiryVO"/>
 		<typeAlias type="com.hi_hobby.domain.vo.OrderVO" alias="orderVO"/>
 		<typeAlias type="com.hi_hobby.domain.vo.AdminVO" alias="adminVO"/>
+		<typeAlias type="com.hi_hobby.domain.vo.InquiryDTO" alias="inquiryDTO"/>
 	</typeAliases>
 	
 	<environments default="mysql">
