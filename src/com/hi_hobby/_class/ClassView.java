@@ -19,7 +19,8 @@ public class ClassView implements Action {
 			ActionInfo actionInfo = new ActionInfo();
 			ClassDAO classDAO = new ClassDAO();
 			
-			List<ClassVO> classList = classDAO.listView();
+			int userNum = Integer.parseInt(req.getParameter("userNum"));
+			List<ClassVO> classList = classDAO.viewMine(userNum);
 			
 			req.setAttribute("classList", classList);
 			

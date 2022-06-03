@@ -99,7 +99,7 @@ function notice(idx){
         		contentType : "application/json; charset:UTF-8",
         		dataType : "json",
         		success : function(resultArr){
-//        			console.log(resultArr[0]["title"]);
+        			
         			const numAr =  document.querySelectorAll('p.classNum');
         			const titleAr = document.querySelectorAll('p.classTitle');
         			const cateAr = document.querySelectorAll('p.classCategory');
@@ -142,14 +142,18 @@ function notice(idx){
             six.style.display='none';
             sev.style.display='none';
             
-            // 클래스 수정화면 -- 클릭한 버튼의 classNum 가져오는법 확인
+            // 클래스 수정화면
+            
+//            const $classNum =  $(this).parents('.ReactVirtualized__Table__rowColumn').siblings("div[aria-colindex='1']").children("p[class='classNum']");
+//            console.log($classNum.text());
+            
             $.ajax({
             	url : contextPath + "/_class/ClassModify.cl",
             	type : "get",
-            	data : {classNum : "1"},
+            	data : {"classNum" : 1},
             	dataType : "json",
             	success : function(obj){
-            		console.log("ajax 들어옴");
+            		
             		let $title = $("input[name='classTitle']");
             		let $category = $("select[name='classCategory']");
             		let $place = $("input[name='classPlace']");
@@ -310,23 +314,12 @@ function secc(idx){
 function classDel(){
 	let check = false;
 	check = confirm("클래스를 삭제하시겠습니까?");
-	
-	$.ajax({
-		url : contextPAth + "/_class/ClassDelete.cl",
-		data : {"classNum" : 10},
-		type : get,
-		daya : json,
-		success : function(){
 			
-			if(check==false){
-				
+			if(!check){
+				location.href = contextPath + "/createrCenter.jsp";
 			} else {
-				notice(4);
+				location.href = contextPath + "/_class/ClassDelete.cl";
 			}
-			
-		}
-	});
-	
 }
 
 /*var contextPath = "${pageContext.request.contextPath }"; -상단에 선언
@@ -356,3 +349,23 @@ function classDel(){
         			console.log(c);
         		}
         	}); */
+
+function modifyOk(){
+	$.ajax({
+		url : contextPath + "/_class/ClassModifyOk.cl",
+		type : "get",
+		data : {"classNum" : 1},
+		contentType : "application/json; charset:UTF-8",
+		dataType : "json",
+		success : function(result){
+			console.log("수정 성공!");
+		},
+		error :function(request, error, a, b, c){
+			console.log("실패..");
+			alert("code:" + request.status + "\n" + "message : " + request.reponseText + "\n" + "error : " + error);
+			console.log(a);
+			console.log(b);
+			console.log(c);
+    	}
+	})
+}

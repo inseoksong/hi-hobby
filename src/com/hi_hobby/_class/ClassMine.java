@@ -5,7 +5,8 @@ import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;import org.eclipse.jdt.internal.compiler.lookup.ClassScope;
+import javax.servlet.http.HttpServletResponse;
+import org.eclipse.jdt.internal.compiler.lookup.ClassScope;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -26,8 +27,8 @@ public class ClassMine implements Action{
 		// userNum 받아오기
 		int userNum = Integer.parseInt(req.getParameter("userNum"));
 										// userNum 과 일치하는 ClassVO -> List 에 담기
-		System.out.println("컨트롤러 int userNum : " + userNum);
-		List <ClassVO> list = classDAO.viewMine(); //매개변수 추가 필요
+//		System.out.println("컨트롤러 int userNum : " + userNum);
+		List <ClassVO> list = classDAO.viewMine(userNum); //매개변수 추가 필요
 		
 		JSONArray resultArr = new JSONArray();
 		PrintWriter out = resp.getWriter();
@@ -39,9 +40,11 @@ public class ClassMine implements Action{
 			obj.put("title", classs.getClassTitle());
 			obj.put("category", classs.getClassCategory());
 			obj.put("price", classs.getClassPrice());
-			// 생성한 obj 를 Json Array 에 넣어줌 
 			resultArr.add(obj);
+			// 생성한 obj 를 Json Array 에 넣어줌 
 		});
+		
+//		System.out.println(resultArr);
 		
 //		// 발달된 for문..인데 필요
 //		int idx = 0;
