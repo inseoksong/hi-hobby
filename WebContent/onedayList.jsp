@@ -51,9 +51,8 @@
 											<c:if test="${i%j == 0 }">
 											<ul class="classes">
 											</c:if>
-													<a href="${pageContext.request.contextPath }/ClassGraphViewOneDetail.cl?&page=${page}">
-												<li class="first"">
-													<%-- <a href="${pageContext.request.contextPath }/ClassGraphViewOneDetail.cl?classNum=${classs.getClassNum}&page=${page}"></a> --%>
+												<a href="${pageContext.request.contextPath }/ClassGraphViewOneDetail.cl?classNum=${classs.getClassNum()}&page=${page}">
+													<li class="first"">
 														<div class="img-wrap">
 															<c:out value="${classs.getClassImg()}"/>
 														</div>
@@ -75,8 +74,7 @@
 				        	                                	<c:out value="${classs.getClassPrice()}"/>
 															</div>
 														</div>
-													</a>
-												</li>
+													</li>
 												</a>
 											<c:if test="${i%j == j-1 }">
 											</ul>

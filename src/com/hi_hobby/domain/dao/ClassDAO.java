@@ -54,18 +54,17 @@ public class ClassDAO {
 	
 	// 원데이 클래스 목록 조회
 	public List<ClassVO> GraphViewOne(Map<String, Integer> classMap) {
-		System.out.println("다오 들어옴");
 		return sqlSession.selectList("Class.GraphViewOne", classMap);
 	}
 	
 	//클래스 전체 개수
 	public int getTotal() {
-		System.out.println("다오 들어옴1");
 		return sqlSession.selectOne("Class.getTotal");
 	}
 	
 	//클래스 정보 조회
 	public ClassVO selectDetail(int classNum) {
+		System.out.println("디테일 다오 들어옴");
 		return sqlSession.selectOne("Class.selectDetail", classNum);
 	}
 

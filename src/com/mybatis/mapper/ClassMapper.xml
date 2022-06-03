@@ -55,7 +55,7 @@
 	</select>
 		
 <!-- 원데이 클래스 목록 조회 -->
-	<select id="selectDetail" resultType="classVO">
+	<select id="selectDetail" parameterType="_int" resultType="classVO">
 		select class_num, class_nickname, class_title, class_category, class_place, class_price, class_start, class_end, class_img, class_introduce
 		from tbl_class
 		where class_num = #{classNum}
