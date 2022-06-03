@@ -279,20 +279,10 @@ div.layer {
     position : relative;
 }
 
-div.floor1, div.floor4, div.floor5 {
+div.floor1 {
     width : 1216px;
-    height: 464px;
     margin: 0 auto;
-}
-
-div.floor2{
-    width : 100%;
-    height : 610px;
-}
-
-div.floor3{
-    width : 100%;
-    height : 396px;
+    margin-top: 16px;
 }
 
 button.swipe-btn{

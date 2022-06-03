@@ -45,12 +45,10 @@
 								<section class="LaCvk cgWehN">
 									<h4 class="jdPAHA dyWeXC">내 정보</h4>
 									<a class="eYKbXT" onclick="location.href='ViewCoupon.co'">
-										<div class="cqZvVN gkiCmL">
-											내 쿠폰
-										</div>
+										<div class="cqZvVN gkiCmL">내 쿠폰</div>
 									</a>
 									<a class="eYKbXT" onclick="location.href='myOrder101.jsp'">
-										<div class="cqZvVN gkiCmL">주문 내역</div>
+										<div class="cqZvVN gkiCmL">구매 내역</div>
 									</a>
 									<!-- <a class="eYKbXT" onclick="location.href='myReview101.jsp'">
 										<div class="cqZvVN gkiCmL">내 후기</div>
@@ -59,11 +57,9 @@
 								<section class="LaCvk cgWehN fXhCUc">
 									<h4 class="jdPAHA dyWeXC">메뉴</h4>
 									<a class="eYKbXT" target="_blank" rel="noreferrer" onclick="location.href='createrSupport.jsp'">
-										<div class="cqZvVN gkiCmL">
-										크리에이터 센터가기
-										</div>
+										<div class="cqZvVN gkiCmL">크리에이터 센터가기</div>
 									</a>
-									<a class="eYKbXT" href="logout.jsp">
+									<a class="eYKbXT" href="Logout.us">
 										<div class="cqZvVN gkiCmL">로그아웃</div>
 									</a>
 								</section>
@@ -83,12 +79,9 @@
 											<svg xmlns="https://www.google.co.kr/" width="32" height="32" fill="none" viewBox="0 0 24 24">
 												<path fill-rule="evenodd" fill="#1B1C1D" d="M10.649 13.351l3.602.901-.901-3.602-2.702 2.702zM12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 100 16zm4.596-4.132a1 1 0 01-1.213.728L9 15 7.404 8.617a1 1 0 011.213-1.213L15 9l1.596 6.383a1 1 0 010 .485z"></path>
 											</svg>
-											<div>아직 둘러보신 클래스가 없어요!</div>
+											<div>아직 구매하신 클래스가 없어요!</div>
 										</div>
-										
-										
-										<!-- 데이터 입력받으면 위 div는 display는 none으로 바꾸고 밑 div가 생성되게 해야 함.  -->
-										
+										<!-- 데이터 입력받으면 위 div는 display는 none으로 바꾸고 밑 div가 생성되게 해야 함. -->
 										<div class="cXOrCl" style="diaplay:block;">
 											<div class="eDQPYt">
 												<button type="button" class="gQyJNI fEVWYc jWkqON " color="transparent">

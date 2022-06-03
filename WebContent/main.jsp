@@ -9,7 +9,6 @@
 <title>하이하비 | 메인</title>
 <link rel="stylesheet" href="asset/css/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-
 </head>
 <body>
 <jsp:include page="header.jsp"/>
@@ -106,9 +105,7 @@
                                     </div>
                                     <div class="text-wrap">
                                         <div class="text-top">
-                                            <div class="text01">쿠폰도 블록버스터 급! 
-                                                <br>
-                                                총 45만원 쿠폰팩</div>
+                                            <div class="text01">쿠폰도 블록버스터 급!<br>총 45만원 쿠폰팩</div>
                                             <div class="text02">지금 쿠폰팩 받고 클래스 시작하세요!</div>
                                         </div>
                                         <div class="text-bottom">
@@ -153,10 +150,7 @@
                                 </div>
                                 <div class="text-wrap">
                                     <div class="text-top">
-                                        <div class="text01">원하던 캐릭터 그리기
-                                            <br>
-                                            #디지털드로잉
-                                            </div>
+                                        <div class="text01">원하던 캐릭터 그리기<br>#디지털드로잉</div>
                                         <div class="text02">일러스트, iPad, 이모티콘 등 디지털 드로잉의 모든 것</div>
                                     </div>
                                     <div class="text-bottom">
@@ -177,10 +171,7 @@
                                 </div>
                                 <div class="text-wrap">
                                     <div class="text-top">
-                                        <div class="text01">0원 세미나 신청이
-                                            <br>
-                                            곧 마감됩니다
-                                            </div>
+                                        <div class="text01">0원 세미나 신청이<br>곧 마감됩니다</div>
                                         <div class="text02">듣고 싶던 영어강의 무료로 듣고 5만원 특별 쿠폰까지!</div>
                                     </div>
                                     <div class="text-bottom">
@@ -201,12 +192,8 @@
                                 </div>
                                 <div class="text-wrap">
                                     <div class="text-top">
-                                        <div class="text01">101 ACADEMY
-                                            <br>
-                                            무료 세미나권 증정!
-                                            </div>
-                                        <div class="text02">
-                                            디지털 드로잉 실시간 피드백 클래스</div>
+                                        <div class="text01">101 ACADEMY<br>무료 세미나권 증정!</div>
+                                        <div class="text02">디지털 드로잉 실시간 피드백 클래스</div>
                                     </div>
                                     <div class="text-bottom">
                                         <div class="thisNum">
@@ -226,9 +213,7 @@
                                 </div>
                                 <div class="text-wrap">
                                     <div class="text-top">
-                                        <div class="text01">은퇴와 재테크는,<br>
-                                        					빠를수록 좋으니까!
-                                        </div>
+                                        <div class="text01">은퇴와 재테크는,<br>빠를수록 좋으니까!</div>
                                         <div class="text02">수익 파이프라인 만드는 노하우가 한 곳에</div>
                                     </div>
                                     <div class="text-bottom">
@@ -249,9 +234,7 @@
                                 </div>
                                 <div class="text-wrap">
                                     <div class="text-top">
-                                        <div class="text01">수강 알림 등록하고 
-                                            <br>에어팟 프로 받자!
-                                            </div>
+                                        <div class="text01">수강 알림 등록하고<br>에어팟 프로 받자!</div>
                                         <div class="text02">내가 원하는 시간에 메세지를 보내 드려요!</div>
                                     </div>
                                     <div class="text-bottom">

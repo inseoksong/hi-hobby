@@ -26,7 +26,7 @@
 							<!-- 좌측 상단 바 -->
 							<div class="screenLeftTop2">
 								<!-- 좌측 상단 바 -->
-								<a class="screenLeftTopLogo" href="/"> <!-- 좌측 상단 로고 -->
+								<a class="screenLeftTopLogo" href="main.jsp"> <!-- 좌측 상단 로고 -->
 									<img src="asset/img/hihobbyLogo2.png">
 								</a>
 							</div>
