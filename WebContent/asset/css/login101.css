@@ -460,7 +460,7 @@ a{
     margin: 0px;
     display: block;
     text-align: right;
-    color: rgb(202, 202, 202) !important;
+    color: #606060 !important;
     cursor: pointer;
 }
 
@@ -542,4 +542,36 @@ a{
 
 a.screenLeftTopLogo img {
 	width: 85px;
+}
+
+div.login-lower {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+div.save-email-auto-login {
+	display: flex;
+	font-size: 14px;
+	color: #606060;
+}
+
+div.save-email {
+	margin-right: 10px;
+}
+
+div.save-email, div.auto-login {
+	display: flex;
+	align-items: center;
+}
+
+input[type="checkbox"] {
+	accent-color: #19ce60;
+	color-scheme: light;
+	margin-right: 5px;
+}
+
+input[type="checkbox"], div.save-email-auto-login label {
+	cursor: pointer;
 }

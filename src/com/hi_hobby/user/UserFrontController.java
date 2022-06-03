@@ -44,9 +44,7 @@ public class UserFrontController extends HttpServlet {
 			actionInfo = new UserLoginOk().execute(req, resp);
 		}
 		else if(command.equals("Login.us")) {
-			actionInfo = new ActionInfo();
-			actionInfo.setRedirect(true);
-			actionInfo.setPath(req.getContextPath() + "/login101.jsp");
+			actionInfo = new UserLogin().execute(req, resp);
 		}
 		else if(command.equals("MyPage.us")) {
 			actionInfo = new MyPage().execute(req, resp);
@@ -56,6 +54,9 @@ public class UserFrontController extends HttpServlet {
 		}
 		else if(command.equals("ChangePw.us")) {
 			actionInfo = new ChangePw().execute(req, resp);
+		}
+		else if(command.equals("Logout.us")) {
+			actionInfo = new UserLogout().execute(req, resp);
 		}
 		else if(command.equals("UserDelete.us")) {
 			actionInfo = new UserDelete().execute(req, resp);
