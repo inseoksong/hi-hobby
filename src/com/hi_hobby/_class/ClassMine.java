@@ -36,10 +36,11 @@ public class ClassMine implements Action{
 		// List 에 담긴 각각의 ClassVO 에서 항목별로 <키:밸류> JSON Object 에 넣어줌
 		list.forEach(classs -> {
 			JSONObject obj = new JSONObject();
-			obj.put("num", classs.getClassNum());
+			obj.put("numb", classs.getClassNum());
 			obj.put("title", classs.getClassTitle());
 			obj.put("category", classs.getClassCategory());
 			obj.put("price", classs.getClassPrice());
+			
 			resultArr.add(obj);
 			// 생성한 obj 를 Json Array 에 넣어줌 
 		});

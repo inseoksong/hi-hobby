@@ -1338,6 +1338,9 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+var contextPath = "${pageContext.request.contextPath }";
+</script>
 <script src="asset/js/createrCenter.js"></script>
 <script src="asset/js/onedayClassCreate.js"></script>
 <script src="asset/js/createrCenter.js"></script>

@@ -67,6 +67,7 @@ public class ClassFrontController extends HttpServlet {
 			System.out.println("프론트 들어옴");
 			actionInfo = new ClassGraphViewOneDetail().execute(req, resp);
 		}
+		
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
 		}
