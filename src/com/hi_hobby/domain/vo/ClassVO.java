@@ -19,22 +19,6 @@ public class ClassVO {
 	private String classIntroduce;		// 클래스 설명
 	private int userNum;				// 유저 고유번호(크리에이터 정보를 가져오기 위해)
 	
-	public String getClassPlaceDetail() {
-		return classPlaceDetail;
-	}
-
-	public void setClassPlaceDetail(String classPlaceDetail) {
-		this.classPlaceDetail = classPlaceDetail;
-	}
-
-	public String getClassUpdate() {
-		return classUpdate;
-	}
-
-	public void setClassUpdate(String classUpdate) {
-		this.classUpdate = classUpdate;
-	}
-
 	
 	public ClassVO() {;}
 
@@ -158,5 +142,20 @@ public class ClassVO {
 		this.userNum = userNum;
 	}
 	
-	
+	public String getClassPlaceDetail() {
+		return classPlaceDetail;
+	}
+
+	public void setClassPlaceDetail(String classPlaceDetail) {
+		this.classPlaceDetail = classPlaceDetail;
+	}
+
+	public String getClassUpdate() {
+		return classUpdate;
+	}
+
+	public void setClassUpdate(String classUpdate) {
+		this.classUpdate = classUpdate;
+	}
+
 }
