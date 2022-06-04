@@ -252,30 +252,37 @@ function classDel(){
 	
 }
 
-/*var contextPath = "${pageContext.request.contextPath }"; -상단에 선언
 
-//클래스 목록 불러오기
-            		
-            $.ajax({
-        		url : contextPath+"/_class/ClassListView.cl",
-        		type : "get",
-        		contentType : "application/json; charset:UTF-8",
-        		dataType : "json",
-        		success : function(resultArr){
-//        			console.log(resultArr[0]["title"]);
-        			const titleAr = document.querySelectorAll('p.classTitle');
-        			const cateAr = document.querySelectorAll('p.classCategory');
-        			
-                        for(i = 0; i < 10; i++ ){
-                                titleAr[i].innerText= resultArr[i]["title"];
-                                cateAr[i].innerText = resultArr[i]["category"];
-                        }
-        		},
-        		error : function(request, error, a, b, c){
-        			console.log("실패..");
-        			alert("code:" + request.status + "\n" + "message : " + request.reponseText + "\n" + "error : " + error);
-        			console.log(a);
-        			console.log(b);
-        			console.log(c);
-        		}
-        	}); */
+function classMine(){
+	// 클래스 목록 불러오기 - userNum 받아온 후 전체적으로 수정
+	// var contextPath = "${pageContext.request.contextPath }"; - 상단에 선언
+		
+		$.ajax({
+			url : contextPath+"/_class/ClassMine.cl",
+			type : "get",
+			data : {"userNum" : 1 },
+			contentType : "application/json; charset:UTF-8",
+			dataType : "json",
+			success : function(resultArr){
+	//			console.log(resultArr[0]["title"]);
+				const numAr =  document.querySelectorAll('p.classNum');
+				const titleAr = document.querySelectorAll('p.classTitle');
+				const cateAr = document.querySelectorAll('p.classCategory');
+				const priceAr = document.querySelectorAll('p.classPrice');
+				
+				for(i = 0; i < 10; i++ ){
+					numAr[i].innerText = resultArr[i]["num"];
+					titleAr[i].innerText= resultArr[i]["title"];
+					cateAr[i].innerText = resultArr[i]["category"];
+					priceAr[i].innerText = resultArr[i]["price"];
+				}
+			},
+			error : function(request, error, a, b, c){
+				console.log("실패..");
+				alert("code:" + request.status + "\n" + "message : " + request.reponseText + "\n" + "error : " + error);
+				console.log(a);
+				console.log(b);
+				console.log(c);
+			}
+		});
+}

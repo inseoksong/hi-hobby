@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,10 +16,10 @@
 	href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css"
 	rel="stylesheet">
 <link rel="stylesheet" type="text/css"
-	href="asset/css/createrCenter.css">
-<link rel="shortcut icon" href="asset/img/favicon.ico">
-<link rel="stylesheet" href="asset/css/classCreateChoice.css">
-<link rel="stylesheet" href="asset/css/onedayClassCreate.css">
+	href="${pageContext.request.contextPath}/asset/css/createrCenter.css">
+<link rel="shortcut icon" href="${pageContext.request.contextPath}/asset/img/favicon.ico">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/asset/css/classCreateChoice.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/asset/css/onedayClassCreate.css">
 <title>클래스101 크리에이터 센터 | 온라인 클래스 부터 전자책, 디지털 파일까지 크리에이터의 삶은
 	클래스101에서 시작해 2022세요</title>
 </head>
@@ -85,10 +86,24 @@
 												</div>
 											</div>
 										</div>
-
-										<!-- onclick=location.href='' -->
-										<div class="css-a1maoc" style="display: block; border: 1px solid #000000"
-											onclick="notice(1)" id="classList">전체 상품</div>
+										<a href="${pageContext.request.contextPath}/_class/ClassMine.cl?userNum=1">
+											<div class="css-165esj4 3" onclick="notice(3)" onmouseout="this.style.background='#ffffff'" onmouseover="this.style.background='rgb(248, 248, 248)';" style="background: rgb(255, 255, 255);">
+												<div class="css-1f8m7mx">
+													<div class="css-1m6hr3p">
+														<span class="css-l67hwq"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-skwyyj">
+	                                                                <path d="M8.298 4.5v3.75h-3.75V4.5h3.75Zm2.2-2.5h-8.2c-.15 0-.3.15-.3.3v8.2c0 .15.15.3.3.3h8.2c.15 0 .3-.15.3-.3V2.3c0-.15-.15-.3-.3-.3ZM19.502 4.5v3.75h-3.75V4.5h3.75Zm2.2-2.5h-8.2c-.15 0-.3.15-.3.3v8.2c0 .15.15.3.3.3h8.2c.15 0 .3-.15.3-.3V2.3c0-.15-.15-.3-.3-.3ZM8.298 15.7v3.75h-3.75V15.7h3.75Zm2.2-2.5h-8.2c-.15 0-.3.15-.3.3v8.2c0 .15.15.3.3.3h8.2c.15 0 .3-.15.3-.3v-8.2c0-.15-.15-.3-.3-.3ZM19.502 15.7v3.75h-3.75V15.7h3.75Zm2.2-2.5h-8.2c-.15 0-.3.15-.3.3v8.2c0 .15.15.3.3.3h8.2c.15 0 .3-.15.3-.3v-8.2c0-.15-.15-.3-.3-.3Z" class="css-sy7xp0"></path>
+	                                                            </svg></span>
+														<div class="css-84g0ej"></div>
+														<span class="css-15zs1or">클래스 관리</span>
+													</div>
+													<!-- <span class="css-8ciuji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-skwyyj">
+	                                                            <path d="M2.075 8.825 3.49 7.41c.1-.1.255-.1.355 0L12 15.565l8.16-8.16c.1-.1.255-.1.355 0L21.93 8.82c.1.1.1.255 0 .355l-9.75 9.75c-.1.1-.255.1-.355 0L2.075 9.18c-.1-.1-.1-.26 0-.355Z" class="css-sy7xp0"></path>
+	                                                        </svg> </span> -->
+												</div>
+											</div>
+										</a>
+<!-- 										<div class="css-a1maoc" style="display: block; border: 1px solid #000000"
+											onclick="notice(1)" id="classList">전체 상품</div> -->
 									</div>
 								</div>
 							</div>
@@ -217,7 +232,7 @@
 						</div>
 						
 						<!-- 원데이 클래스 작성 부분 -->
-						<div id="classInput" style="display: none;">
+<!-- 						<div id="classInput" style="display: none;">
 							<section class="main">
 								<form action=" ClassCreateOk.cl" name="ClassCreateOKForm" method="post">
 									<div class="container-wrap">
@@ -228,7 +243,7 @@
 													<div class="basic-information">기본 정보</div>
 												</nav>
 											</div>
-											<!-- 기본 정보 -->
+											기본 정보
 											<div class="bottomside">
 												<div class="class-information">
 													<h4>클래스 정보</h4>
@@ -283,7 +298,7 @@
 													</div>
 													<div class="class-place">
 														<p>장소</p>
-														<!-- <input type="text" name="classPlace" placeholder="클래스가 진행되는 장소를 추가해주세요."> -->
+														<input type="text" name="classPlace" placeholder="클래스가 진행되는 장소를 추가해주세요.">
 														<div class="searchPlaceWrap">
 															<input type="text" name ="classPlace" class="searchPlaceWrap1" id="sample5_address" placeholder="클래스가 진행되는 장소를 추가해주세요.">
 															<input type="button" class="searchPlaceWrap2" onclick="sample5_execDaumPostcode()" value="주소 검색" style="cursor : pointer"><br>
@@ -293,8 +308,8 @@
 													</div>
 													<div class="class-time">
 														<p>시간</p>
-														<!-- <input type="text" name="classtimeSt" placeholder="클래스가 진행되는 시작 시간을 추가해주세요.(0000년00월00일00시00분)">
-														<input type="text" name="classtimeEnd" placeholder="클래스가 진행되는 끝 시간을 추가해주세요.(0000년00월00일00시00분)"> -->
+														<input type="text" name="classtimeSt" placeholder="클래스가 진행되는 시작 시간을 추가해주세요.(0000년00월00일00시00분)">
+														<input type="text" name="classtimeEnd" placeholder="클래스가 진행되는 끝 시간을 추가해주세요.(0000년00월00일00시00분)">
 														<div class="flexWrap">
 															<input type="datetime-local" name="classStart"><p style="margin : 0 10px; font-size: 20px; line-height: 47px;">~</p><input type="datetime-local"  name="classEnd">
 														</div>
@@ -323,7 +338,7 @@
 														<div class="application-button">
 															<button>수정하기</button>
 														</div>
-														<div class="application-button"> <!-- onclick="notice(4) -->
+														<div class="application-button"> onclick="notice(4)
 															<button id="class-del-btn" type="submit" onclick = "classDel()">삭제하기</button>
 														</div>
 													</div>
@@ -334,7 +349,7 @@
 								</form>
 							</section>
 						</div>
-						
+						 -->
 						<!-- 크리에이터 선택 창 -->
 						<div id="createrChoice" style="display: none;">
 							<header>
@@ -484,6 +499,7 @@
 													</div>
 													
 													<!-- 클래스 목록 시작 -->
+												<c:forEach var="classs" items="${classList}" >
 													<div aria-label="grid"
 														class="ReactVirtualized__Grid ReactVirtualized__Table__Grid"
 														role="rowgroup" tabindex="0"
@@ -507,7 +523,7 @@
 																							xmlns="http://www.w3.org/2000/svg"
 																							viewBox="0 0 24 24" class="css-1k1e1mg">
                                                                                         </svg> -->
-                                                                                        <p class="classNum css-sur10j"></p>
+                                                                                        	<p class="classNum css-sur10j"><c:out value="${classs.getClassNum()}"/></p>
 																					</span>
 																				</div>
 																			</div>
@@ -542,7 +558,7 @@
 																	role="gridcell"
 																	style="overflow: hidden; flex: 0 1 200px;">
 																	<div class="css-b3mawz">
-																		<p class="classTitle css-sur10j"></p>
+																		<p class="classTitle css-sur10j"><c:out value="${classs.getClassTitle()}"/></p>
 																	</div>
 																</div>
 																<div aria-colindex="4"
@@ -570,7 +586,7 @@
 																	role="gridcell"
 																	style="overflow: hidden; flex: 0 1 170px;">
 																	<div class="css-b3mawz">
-																		<p class="classCategory css-esz8sy"></p>
+																		<p class="classCategory css-esz8sy"><c:out value="${classs.getClassCategory()}"/></p>
 																	</div>
 																</div>
 																<div aria-colindex="7"
@@ -588,7 +604,7 @@
                                                                                             </path>
                                                                                         </svg></span> -->
 																			<div class="css-iiuncx"></div>
-																			<p class="classPrice css-esz8sy"></p> </span>
+																			<p class="classPrice css-esz8sy"><c:out value="${classs.getClassPrice()}"/></p> </span>
 																	</div>
 																</div>
 																<div aria-colindex="8"
@@ -605,7 +621,7 @@
 																	style="overflow: hidden; flex: 0 1 155px;">
 																	<div class="css-b3mawz">
 																		<div class="css-i2rvrf">
-																			<button class="css-1estejg" onclick="">
+																			<button class="css-1estejg" onclick="location.href='${pageContext.request.contextPath}/_class/ClassModify.cl?classNum=${classs.getClassNum()}'">
 																				<span class="css-3kqv01"><span
 																					class="css-13g5vis">수정하기</span></span>
 																			</button>
@@ -615,139 +631,7 @@
 															</div>
 														</div>
 													</div>
-													
-													<!-- 클래스 목록 시작 -->
-													<div aria-label="grid"
-														class="ReactVirtualized__Grid ReactVirtualized__Table__Grid"
-														role="rowgroup" tabindex="0"
-														style="box-sizing: border-box; direction: ltr; height: fit-content; position: relative; width: 1232px; will-change: transform; overflow: hidden;">
-														<div class="ReactVirtualized__Grid__innerScrollContainer"
-															role="rowgroup"
-															style="width: auto; height: 72px; max-width: 1232px; max-height: 72px; overflow: hidden; position: relative;">
-															<div aria-rowindex="1" aria-label="row" tabindex="0"
-																class="ReactVirtualized__Table__row" role="row"
-																style="height: 72px; left: 0px; position: absolute; top: 0px; width: 1232px; overflow: hidden; padding-right: 0px; border-bottom: 1px solid rgb(248, 248, 248); background-color: transparent;">
-																<div aria-colindex="1"
-																	class="ReactVirtualized__Table__rowColumn"
-																	role="gridcell"
-																	style="overflow: hidden; flex: 0 1 44px;">
-																	<div class="css-wzmicz">
-																		<label class="css-165sxpi te" onclick="secc(1);" style="cursor: pointer;">
- 																			<div class="css-d5khiz">
-																				<div class="css-1fw7cg7">
-																					<span class="css-1e7z94r">
-																						<!-- <svg
-																							xmlns="http://www.w3.org/2000/svg"
-																							viewBox="0 0 24 24" class="css-1k1e1mg">
-                                                                                        </svg> -->
-                                                                                        <p class="classNum css-sur10j"></p>
-																					</span>
-																				</div>
-																			</div>
-																			<input type="checkbox" name="check" class="css-1bcxbx9 term">
-																		</label>
-																	</div>
-																</div>
-																<div aria-colindex="2"
-																	class="ReactVirtualized__Table__rowColumn"
-																	role="gridcell"
-																	style="overflow: hidden; flex: 0 1 73px;">
-																	<div class="css-b3mawz">
-																		<div class="css-7pdxto">
-																			<div class="css-15l1tlc">
-																				<div class="css-1ct1iq3">
-																					<div class="css-1ql6znx">
-																						<picture class="css-4rx3j2">
-																						<source type="image/webp"
-																							srcset="https://cdn.class101.net/images/c45a317b-f30d-41be-9f17-2950fa2b821e/640xauto.webp 640w,https://cdn.class101.net/images/c45a317b-f30d-41be-9f17-2950fa2b821e/750xauto.webp 750w,https://cdn.class101.net/images/c45a317b-f30d-41be-9f17-2950fa2b821e/828xauto.webp 828w,https://cdn.class101.net/images/c45a317b-f30d-41be-9f17-2950fa2b821e/1080xauto.webp 1080w,https://cdn.class101.net/images/c45a317b-f30d-41be-9f17-2950fa2b821e/1200xauto.webp 1200w,https://cdn.class101.net/images/c45a317b-f30d-41be-9f17-2950fa2b821e/1920xauto.webp 1920w,https://cdn.class101.net/images/c45a317b-f30d-41be-9f17-2950fa2b821e/2048xauto.webp 2048w,https://cdn.class101.net/images/c45a317b-f30d-41be-9f17-2950fa2b821e/3840xauto.webp 3840w">
-																						<img
-																							srcset="https://cdn.class101.net/images/c45a317b-f30d-41be-9f17-2950fa2b821e/640xauto 640w,https://cdn.class101.net/images/c45a317b-f30d-41be-9f17-2950fa2b821e/750xauto 750w,https://cdn.class101.net/images/c45a317b-f30d-41be-9f17-2950fa2b821e/828xauto 828w,https://cdn.class101.net/images/c45a317b-f30d-41be-9f17-2950fa2b821e/1080xauto 1080w,https://cdn.class101.net/images/c45a317b-f30d-41be-9f17-2950fa2b821e/1200xauto 1200w,https://cdn.class101.net/images/c45a317b-f30d-41be-9f17-2950fa2b821e/1920xauto 1920w,https://cdn.class101.net/images/c45a317b-f30d-41be-9f17-2950fa2b821e/2048xauto 2048w,https://cdn.class101.net/images/c45a317b-f30d-41be-9f17-2950fa2b821e/3840xauto 3840w"
-																							src="https://cdn.class101.net/images/c45a317b-f30d-41be-9f17-2950fa2b821e"
-																							class="css-pwvohb"> </picture>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div aria-colindex="3"
-																	class="ReactVirtualized__Table__rowColumn"
-																	role="gridcell"
-																	style="overflow: hidden; flex: 0 1 200px;">
-																	<div class="css-b3mawz">
-																		<p class="classTitle css-sur10j"></p>
-																	</div>
-																</div>
-																<div aria-colindex="4"
-																	class="ReactVirtualized__Table__rowColumn"
-																	role="gridcell"
-																	style="overflow: hidden; flex: 0 1 170px;">
-																	<div class="css-b3mawz">
-																		<div class="css-b83688">
-																			<div class="css-q9e5d2"></div>
-																			<div class="css-iiuncx"></div>
-																			<p class="css-hrg016">수요조사 준비</p>
-																		</div>
-																	</div>
-																</div>
-																<div aria-colindex="5"
-																	class="ReactVirtualized__Table__rowColumn"
-																	role="gridcell"
-																	style="overflow: hidden; flex: 0 1 120px;">
-																	<div class="css-b3mawz">
-																		<p class="css-esz8sy">정규 클래스</p>
-																	</div>
-																</div>
-																<div aria-colindex="6"
-																	class="ReactVirtualized__Table__rowColumn"
-																	role="gridcell"
-																	style="overflow: hidden; flex: 0 1 170px;">
-																	<div class="css-b3mawz">
-																		<p class="classCategory css-esz8sy"></p>
-																	</div>
-																</div>
-																<div aria-colindex="7"
-																	class="ReactVirtualized__Table__rowColumn"
-																	role="gridcell"
-																	style="overflow: hidden; flex: 0 1 100px;">
-																	<div class="css-b3mawz">
-																		<span class="css-58su99"><!-- <span
-																			class="css-1lncszd"><svg
-																					xmlns="http://www.w3.org/2000/svg"
-																					viewBox="0 0 24 24" class="css-skwyyj">
-                                                                                            <path
-																						d="M19.6 7.6c1.15 1.45 1.85 3.2 1.9 5.15 0 .15.1.25.25.25h1c.15 0 .25-.1.25-.25-.05-2.35-.95-4.5-2.35-6.2L19.6 7.6ZM16.45 15.2c-.3 1.9-1.85 3.45-3.75 3.75-1.35.2-2.55-.2-3.5-.95l-1.05 1.05c1.2 1.05 2.85 1.6 4.65 1.4 2.7-.35 4.85-2.5 5.2-5.2.2-1.75-.35-3.4-1.4-4.65l-1.05 1.05c.7.95 1.1 2.2.9 3.55ZM21.95 2.8l-.7-.7c-.1-.1-.25-.1-.35 0l-2.45 2.45c-1.8-1.25-4.05-2-6.45-2C6 2.55 1.15 7.1 1 12.8c0 .15.1.25.25.25h1c.15 0 .25-.1.25-.25.15-4.85 4.35-8.75 9.5-8.75 2 0 3.85.6 5.35 1.6l-3.3 3.3C13.4 8.7 12.7 8.6 12 8.6c-3.3 0-6 2.7-6 6 0 .75.15 1.4.35 2.05l-4.3 4.3c-.1.1-.1.25 0 .35l.7.7c.1.1.25.1.35 0L21.9 3.2c.1-.15.1-.3.05-.4ZM7.6 15.35c-.05-.3-.1-.55-.1-.85 0-2.5 2-4.5 4.5-4.5.3 0 .55.05.85.1L7.6 15.35Z"
-																						class="css-sy7xp0">
-                                                                                            </path>
-                                                                                        </svg></span> -->
-																			<div class="css-iiuncx"></div>
-																			<p class="classPrice css-esz8sy"></p> </span>
-																	</div>
-																</div>
-																<div aria-colindex="8"
-																	class="ReactVirtualized__Table__rowColumn"
-																	role="gridcell"
-																	style="overflow: hidden; flex: 0 1 180px;">
-																	<div class="css-b3mawz">
-																		<p class="css-esz8sy">2022. 5. 22. 오전 3:36</p>
-																	</div>
-																</div>
-																<div aria-colindex="9"
-																	class="ReactVirtualized__Table__rowColumn"
-																	role="gridcell"
-																	style="overflow: hidden; flex: 0 1 155px;">
-																	<div class="css-b3mawz">
-																		<div class="css-i2rvrf">
-																			<button class="css-1estejg" onclick="">
-																				<span class="css-3kqv01"><span
-																					class="css-13g5vis">수정하기</span></span>
-																			</button>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
+												</c:forEach>
 												</div>
 											</div>
 										</div>

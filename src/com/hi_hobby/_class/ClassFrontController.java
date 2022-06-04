@@ -76,6 +76,7 @@ public class ClassFrontController extends HttpServlet {
 			}else {
 				RequestDispatcher dispatcher = req.getRequestDispatcher(actionInfo.getPath());
 				dispatcher.forward(req, resp);
+				System.out.println("actionInfo 반환완료");
 			}
 		}
 	}

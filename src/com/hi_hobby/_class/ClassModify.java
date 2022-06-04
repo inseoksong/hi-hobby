@@ -24,27 +24,32 @@ public class ClassModify implements Action {
 		ClassDAO classDAO = new ClassDAO();
 		JSONObject obj = new JSONObject();
 		ClassVO classVO = new ClassVO();
-		PrintWriter out = resp.getWriter();
+//		PrintWriter out = resp.getWriter();
+		ActionInfo actionInfo = new ActionInfo();
 		
 		int classNum = Integer.parseInt(req.getParameter("classNum"));
 		System.out.println(classNum);
 		classVO = classDAO.modify(classNum);
 		
-		obj.put("title", classVO.getClassTitle());
-		obj.put("category", classVO.getClassCategory());
-		obj.put("place", classVO.getClassPlace());
-		obj.put("placeDetail", classVO.getClassPlaceDetail());
-		obj.put("start", classVO.getClassStart());
-		obj.put("end", classVO.getClassEnd());
-		obj.put("introduce", classVO.getClassIntroduce());
-		obj.put("price", classVO.getClassPrice());
-		obj.put("nickname", classVO.getClassNickname());
+//		obj.put("title", classVO.getClassTitle());
+//		obj.put("category", classVO.getClassCategory());
+//		obj.put("place", classVO.getClassPlace());
+//		obj.put("placeDetail", classVO.getClassPlaceDetail());
+//		obj.put("start", classVO.getClassStart());
+//		obj.put("end", classVO.getClassEnd());
+//		obj.put("introduce", classVO.getClassIntroduce());
+//		obj.put("price", classVO.getClassPrice());
+//		obj.put("nickname", classVO.getClassNickname());
 		
-		System.out.println(obj);
-		out.print(obj.toJSONString());
-		out.close();
+//		System.out.println(obj);
 		
-		return null;
+		req.setAttribute("classVO", classVO);
+		System.out.println(classVO);
+		
+		actionInfo.setRedirect(false);
+		actionInfo.setPath("/creatorClassModify.jsp");
+		
+		return actionInfo;
 	}
 		
 }

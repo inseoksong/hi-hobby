@@ -60,7 +60,7 @@
 								<div class="css-1q7ezph">
 									<div class="css-zsoya5">
 										<div class="css-qg5d2b"></div>
-										<div class="css-165esj4 1" onclick="notice(1)" onmouseout="this.style.background='#ffffff'" onmouseover="this.style.background='rgb(248, 248, 248)';" style="background: rgb(255, 255, 255);">
+										<!-- <div class="css-165esj4 1" onclick="notice(1)" onmouseout="this.style.background='#ffffff'" onmouseover="this.style.background='rgb(248, 248, 248)';" style="background: rgb(255, 255, 255);">
 											<div class="css-1f8m7mx">
 												<div class="css-1m6hr3p">
 													<span class="css-l67hwq"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-skwyyj">
@@ -72,7 +72,7 @@
 													<span class="css-15zs1or">공지사항</span>
 												</div>
 											</div>
-										</div>
+										</div> -->
 										<div class="css-1mg3xmk 2" onclick="notice(2)" onmouseout="this.style.background='#ffffff'" onmouseover="this.style.background='rgb(248, 248, 248)';" style="background: rgb(255, 255, 255);">
 											<div class="css-1f8m7mx">
 												<div class="css-1m6hr3p">
@@ -84,22 +84,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="css-165esj4 3" onclick="notice(3)" onmouseout="this.style.background='#ffffff'" onmouseover="this.style.background='rgb(248, 248, 248)';" style="background: rgb(255, 255, 255);">
-											<div class="css-1f8m7mx">
-												<div class="css-1m6hr3p">
-													<span class="css-l67hwq"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-skwyyj">
-                                                                <path d="M8.298 4.5v3.75h-3.75V4.5h3.75Zm2.2-2.5h-8.2c-.15 0-.3.15-.3.3v8.2c0 .15.15.3.3.3h8.2c.15 0 .3-.15.3-.3V2.3c0-.15-.15-.3-.3-.3ZM19.502 4.5v3.75h-3.75V4.5h3.75Zm2.2-2.5h-8.2c-.15 0-.3.15-.3.3v8.2c0 .15.15.3.3.3h8.2c.15 0 .3-.15.3-.3V2.3c0-.15-.15-.3-.3-.3ZM8.298 15.7v3.75h-3.75V15.7h3.75Zm2.2-2.5h-8.2c-.15 0-.3.15-.3.3v8.2c0 .15.15.3.3.3h8.2c.15 0 .3-.15.3-.3v-8.2c0-.15-.15-.3-.3-.3ZM19.502 15.7v3.75h-3.75V15.7h3.75Zm2.2-2.5h-8.2c-.15 0-.3.15-.3.3v8.2c0 .15.15.3.3.3h8.2c.15 0 .3-.15.3-.3v-8.2c0-.15-.15-.3-.3-.3Z" class="css-sy7xp0"></path>
-                                                            </svg></span>
-													<div class="css-84g0ej"></div>
-													<span class="css-15zs1or">클래스</span>
+										<a href="${pageContext.request.contextPath}/_class/ClassMine.cl?userNum=1">
+											<div class="css-165esj4 3" onclick="notice(3)" onmouseout="this.style.background='#ffffff'" onmouseover="this.style.background='rgb(248, 248, 248)';" style="background: rgb(255, 255, 255);">
+												<div class="css-1f8m7mx">
+													<div class="css-1m6hr3p">
+														<span class="css-l67hwq"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-skwyyj">
+	                                                                <path d="M8.298 4.5v3.75h-3.75V4.5h3.75Zm2.2-2.5h-8.2c-.15 0-.3.15-.3.3v8.2c0 .15.15.3.3.3h8.2c.15 0 .3-.15.3-.3V2.3c0-.15-.15-.3-.3-.3ZM19.502 4.5v3.75h-3.75V4.5h3.75Zm2.2-2.5h-8.2c-.15 0-.3.15-.3.3v8.2c0 .15.15.3.3.3h8.2c.15 0 .3-.15.3-.3V2.3c0-.15-.15-.3-.3-.3ZM8.298 15.7v3.75h-3.75V15.7h3.75Zm2.2-2.5h-8.2c-.15 0-.3.15-.3.3v8.2c0 .15.15.3.3.3h8.2c.15 0 .3-.15.3-.3v-8.2c0-.15-.15-.3-.3-.3ZM19.502 15.7v3.75h-3.75V15.7h3.75Zm2.2-2.5h-8.2c-.15 0-.3.15-.3.3v8.2c0 .15.15.3.3.3h8.2c.15 0 .3-.15.3-.3v-8.2c0-.15-.15-.3-.3-.3Z" class="css-sy7xp0"></path>
+	                                                            </svg></span>
+														<div class="css-84g0ej"></div>
+														<span class="css-15zs1or">클래스 관리</span>
+													</div>
+													<!-- <span class="css-8ciuji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-skwyyj">
+	                                                            <path d="M2.075 8.825 3.49 7.41c.1-.1.255-.1.355 0L12 15.565l8.16-8.16c.1-.1.255-.1.355 0L21.93 8.82c.1.1.1.255 0 .355l-9.75 9.75c-.1.1-.255.1-.355 0L2.075 9.18c-.1-.1-.1-.26 0-.355Z" class="css-sy7xp0"></path>
+	                                                        </svg> </span> -->
 												</div>
-												<span class="css-8ciuji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-skwyyj">
-                                                            <path d="M2.075 8.825 3.49 7.41c.1-.1.255-.1.355 0L12 15.565l8.16-8.16c.1-.1.255-.1.355 0L21.93 8.82c.1.1.1.255 0 .355l-9.75 9.75c-.1.1-.255.1-.355 0L2.075 9.18c-.1-.1-.1-.26 0-.355Z" class="css-sy7xp0"></path>
-                                                        </svg> </span>
 											</div>
-										</div>
-										<div class="css-a1maoc" style="display: none;" onclick= "notice(4)" >전체 상품</div>
-										<div class="css-1wbal16" style="display: none;" onclick="notice(5)">클래스 댓글</div>
+										</a>
+<!-- 										<div class="css-a1maoc" style="display: none;" onclick= "notice(4)" >전체 상품</div>
+										<div class="css-1wbal16" style="display: none;" onclick="notice(5)">클래스 댓글</div> -->
 									</div>
 								</div>
 							</div>
@@ -196,15 +198,6 @@
 						</div>
 						<div class="creator-information">
 							<h4>크리에이터 정보</h4>
-							<div class="creator-image">
-								<p>프로필 사진</p>
-								<label for="creator-img">
-									<div>
-										<img src="https://creator.class101.net/images/ic-unknown.png">
-									</div>
-								</label>
-								<input type="file" id="creator-img" class="creator-image-file" name="creatorImage">
-							</div>
 							<div class="creator-name">
 								<div class="flexWrap">
 									<p>크리에이터 닉네임</p><!-- <p class=input-required>*</p> -->
@@ -219,9 +212,18 @@
 								<p>크리에이터 소개</p>
 								<input type="text" name="creatorPhone" placeholder="연락 가능한 연락처를 입력해주세요. (- 제외)">
 							</div> -->
-						</div>
-						<div class="application-button">
-							<button onclick="oneRegister()">신청하기</button>
+						<div class="bottomBtnWrap">
+							<div class="application-button backBtn">
+								<button class="backBtn" onclick="goToClassMine()">뒤로가기</button>
+							</div>
+							<div class="rightBtnWrap">
+								<div class="application-button">
+									<button onclick="modifyOk()">수정하기</button>
+								</div>
+								<div class="application-button"> <!-- onclick="notice(4) -->
+									<button id="class-del-btn" type="submit" onclick = "classDel()">삭제하기</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</form>

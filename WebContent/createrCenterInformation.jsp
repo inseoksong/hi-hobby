@@ -14,11 +14,10 @@
 <link
 	href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css"
 	rel="stylesheet">
-<link rel="stylesheet" type="text/css"
-	href="asset/css/createrCenter.css">
-<link rel="shortcut icon" href="asset/img/favicon.ico">
-<link rel="stylesheet" href="asset/css/classCreateChoice.css">
-<link rel="stylesheet" href="asset/css/onedayClassCreate.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/asset/css/createrCenter.css">
+<link rel="shortcut icon" href="${pageContext.request.contextPath}/asset/img/favicon.ico">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/asset/css/classCreateChoice.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/asset/css/onedayClassCreate.css">
 <title>클래스101 크리에이터 센터 | 온라인 클래스 부터 전자책, 디지털 파일까지 크리에이터의 삶은
 	클래스101에서 시작해 2022세요</title>
 </head>
@@ -86,8 +85,10 @@
 												</div>
 											</div>
 										</div>
-										<div class="css-a1maoc" style="display: block;"
-											onclick="location.href='createrCenterAllClass.jsp'" id="classList">전체 상품</div>
+										<a href="${pageContext.request.contextPath}/_class/ClassMine.cl?userNum=1">
+											<div class="css-a1maoc" style="display: block;" id="classList">전체 상품</div>
+										</a>
+											<!-- userNum 받아와서 수정하기 -->
 									</div>
 								</div>
 							</div>
@@ -434,6 +435,9 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+var contextPath = "${pageContext.request.contextPath }";
+</script>
 <script src="asset/js/createrCenterInformation.js"></script>
 <script src="asset/js/onedayClassCreate.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
