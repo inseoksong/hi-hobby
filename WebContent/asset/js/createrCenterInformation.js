@@ -1,3 +1,4 @@
+var contextPath = "${pageContext.request.contextPath }";
 
 function male(idx) {
     var btn = document.getElementsByClassName('RadioIcon-taoxkc-0 eVmqxF')[0];
@@ -28,60 +29,29 @@ function famale() {
     genChe = false;
 }
 function notice(idx){
-    var  col2 = document.getElementsByClassName('css-1mg3xmk 2')[0];
-    var  col3 = document.getElementsByClassName('css-165esj4 3')[0];
-    var co = document.getElementsByClassName('css-a1maoc')[0];
-    var one = document.getElementById('createrChoice');
-    var two = document.getElementById('classInput');
-    var thr = document.getElementsByClassName('css-154w5w9')[0];
-    var fou = document.getElementsByClassName('Grid__StyledDiv-sc-81d45n-0 iIwnuy CreatorAccountProfileViewController__Container-sc-1u2e1vs-0 jrlbMn')[0];
-    var fiv = document.getElementsByClassName('css-ywnkfc')[0];
-    var six = document.getElementsByClassName('Spacing__Box-sc-47wgmh-0 fvDAgv')[0];
-    var sev = document.getElementById('classInputOn');
-
-    var col1in = document.getElementsByClassName('css-zsoya5 in')[0];
-
-    var save = document.getElementById('save');
-    var del = document.getElementById('del');
+    var creator = document.getElementsByClassName('css-154w5w9')[0];		// 크리에이터 정보 창
+    var creatorUpdate = document.getElementsByClassName('Grid__StyledDiv-sc-81d45n-0')[0];		// 크리에이터 정보 변경 창
+    var classChoice = document.getElementById('createrChoice');				// 클래스 종류 선택 창
+    
     switch(idx){
 	    case 1:
-	    	one.style.display='block';
-	    	two.style.display='none';
-	    	thr.style.display='none';
-	    	fou.style.display='none';
-            fiv.style.display='none';
-            six.style.display='none';
-            sev.style.display='none';
+	    	creator.style.display='block';
+	    	creatorUpdate.style.display='none';
 	    	break;
         case 2:
-            col2.style.border= '1px solid #000000';
-            co.style.border= '1px solid #ffffff';
-            one.style.display='none';
-            two.style.display='none';
-            thr.style.display='block';
-            fou.style.display='none';
-            fiv.style.display='none';
-            six.style.display='none';
-            sev.style.display='none';
+        	creator.style.display='none';
+        	creatorUpdate.style.display='block';
             break;
-            css-ywnkfc
         case 3:
-                co.style.display='none';
-                co.style.display='block';
+        	allList.style.display='none';
+        	classChoice.style.display='none';
+        	classOne.style.display='block';
+        	classOn.style.display='none';
             break;
         case 4:
-            col2.style.border= '1px solid #ffffff';
-            co.style.border= '1px solid #000000';
-            one.style.display='none';
-            two.style.display='none';
-            thr.style.display='none';
-            fou.style.display='none';
-            fiv.style.display='block';
-            six.style.display='none';
-            sev.style.display='none';
-            
-          // 클래스 목록 불러오기 - userNum 받아온 후 전체적으로 수정
-         // var contextPath = "${pageContext.request.contextPath }"; - jsp script 상단에 작성
+        	
+           // 클래스 목록 불러오기 - userNum 받아온 후 전체적으로 수정
+         // var contextPath = "${pageContext.request.contextPath }"; - 상단에 선언
             		
             $.ajax({
         		url : contextPath+"/_class/ClassMine.cl",
@@ -89,18 +59,18 @@ function notice(idx){
         		data : {"userNum" : 1 },
         		contentType : "application/json; charset:UTF-8",
         		dataType : "json",
-        		success : function(result){
-        			
+        		success : function(resultArr){
+//        			console.log(resultArr[0]["title"]);
         			const numAr =  document.querySelectorAll('p.classNum');
         			const titleAr = document.querySelectorAll('p.classTitle');
         			const cateAr = document.querySelectorAll('p.classCategory');
         			const priceAr = document.querySelectorAll('p.classPrice');
         			
                     for(i = 0; i < 10; i++ ){
-                    	numAr[i].innerText = result[i]["numb"];
-                        titleAr[i].innerText= result[i]["title"];
-                        cateAr[i].innerText = result[i]["category"];
-                        priceAr[i].innerText = result[i]["price"];
+                    	numAr[i].innerText = resultArr[i]["num"];
+                        titleAr[i].innerText= resultArr[i]["title"];
+                        cateAr[i].innerText = resultArr[i]["category"];
+                        priceAr[i].innerText = resultArr[i]["price"];
                     }
         		},
         		error : function(request, error, a, b, c){
@@ -112,38 +82,15 @@ function notice(idx){
         		}
         	});
             break;
-        case 5:
-            col2.style.border= '1px solid #ffffff';
-            co.style.border= '1px solid #ffffff';
-            one.style.display='none';
-            two.style.display='none';
-            thr.style.display='none';
-            fou.style.display='none';
-            fiv.style.display='none';
-            six.style.display='block';
-            sev.style.display='none';
-            break;
         case 6:
-	    	one.style.display='none';
-	    	two.style.display='block';
-	    	thr.style.display='none';
-	    	fou.style.display='none';
-            fiv.style.display='none';
-            six.style.display='none';
-            sev.style.display='none';
-            
-            // 클래스 수정화면
-            
-//            const $classNum =  $(this).parents('.ReactVirtualized__Table__rowColumn').siblings("div[aria-colindex='1']").children("p[class='classNum']");
-//            console.log($classNum.text());
-            
+            // 클래스 수정화면 -- 클릭한 버튼의 classNum 가져오는법 확인
             $.ajax({
-            	url : contextPath + "/_class/ClassModify.cl?classNum="+ ${classNum}},
+            	url : contextPath + "/_class/ClassModify.cl",
             	type : "get",
-            	data : {"classNum" : 1},
+            	data : {classNum : "1"},
             	dataType : "json",
             	success : function(obj){
-            		
+            		console.log("ajax 들어옴");
             		let $title = $("input[name='classTitle']");
             		let $category = $("select[name='classCategory']");
             		let $place = $("input[name='classPlace']");
@@ -173,24 +120,6 @@ function notice(idx){
             	}
             });
         	break;
-        case 7:
-        	one.style.display='none';
-        	two.style.display='none';
-            thr.style.display='none';
-            fou.style.display='block';
-            fiv.style.display='none';
-            six.style.display='none';
-            sev.style.display='none';
-            break;
-        case 8:
-        	one.style.display='none';
-        	two.style.display='none';
-            thr.style.display='none';
-            fou.style.display='none';
-            fiv.style.display='none';
-            six.style.display='none';
-	    	sev.style.display='block';
-            break;
     }
 
 }
@@ -304,12 +233,23 @@ function secc(idx){
 function classDel(){
 	let check = false;
 	check = confirm("클래스를 삭제하시겠습니까?");
+	
+	$.ajax({
+		url : contextPAth + "/_class/ClassDelete.cl",
+		data : {"classNum" : 10},
+		type : get,
+		daya : json,
+		success : function(){
 			
-			if(!check){
-				location.href = contextPath + "/createrCenter.jsp";
+			if(check==false){
+				
 			} else {
-				location.href = contextPath + "/_class/ClassDelete.cl";
+				notice(4);
 			}
+			
+		}
+	});
+	
 }
 
 /*var contextPath = "${pageContext.request.contextPath }"; -상단에 선언
@@ -339,23 +279,3 @@ function classDel(){
         			console.log(c);
         		}
         	}); */
-
-function modifyOk(){
-	$.ajax({
-		url : contextPath + "/_class/ClassModifyOk.cl",
-		type : "get",
-		data : {"classNum" : 1},
-		contentType : "application/json; charset:UTF-8",
-		dataType : "json",
-		success : function(result){
-			console.log("수정 성공!");
-		},
-		error :function(request, error, a, b, c){
-			console.log("실패..");
-			alert("code:" + request.status + "\n" + "message : " + request.reponseText + "\n" + "error : " + error);
-			console.log(a);
-			console.log(b);
-			console.log(c);
-    	}
-	})
-}
