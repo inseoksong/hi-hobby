@@ -82,9 +82,9 @@ function notice(idx){
             
           // 클래스 목록 불러오기 - userNum 받아온 후 전체적으로 수정
          // var contextPath = "${pageContext.request.contextPath }"; - jsp script 상단에 작성
-            		
-            $.ajax({
-        		url : contextPath+"/_class/ClassMine.cl",
+
+            	$.ajax({
+        		url : contextPath+"/_class/ClassMine.cl?userNum=1",
         		type : "get",
         		data : {"userNum" : 1 },
         		contentType : "application/json; charset:UTF-8",
@@ -138,7 +138,7 @@ function notice(idx){
 //            console.log($classNum.text());
             
             $.ajax({
-            	url : contextPath + "/_class/ClassModify.cl?classNum="+ ${classNum}},
+            	url : contextPath + "/_class/ClassModify.cl?classNum=1",
             	type : "get",
             	data : {"classNum" : 1},
             	dataType : "json",
@@ -358,4 +358,12 @@ function modifyOk(){
 			console.log(c);
     	}
 	})
+}
+
+
+function goToClassMine(){
+	location.href= contextPath+"/_class/ClassMine.cl?userNum=1";
+	console.log("뒤로가기 클릭");
+	notice(4);
+	console.log(contextPath+"/_class/ClassMine.cl?userNum=1");
 }

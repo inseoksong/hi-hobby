@@ -342,7 +342,7 @@
 												</div>
 												<div class="bottomBtnWrap">
 													<div class="application-button backBtn">
-														<button class="backBtn">뒤로가기</button>
+														<button class="backBtn" onclick="goToClassMine()">뒤로가기</button>
 													</div>
 													<div class="rightBtnWrap">
 														<div class="application-button">

@@ -37,7 +37,7 @@ public class ClassCreateOk implements Action {
 			
 			classDAO.create(classVO);
 			actionInfo.setRedirect(false);
-			actionInfo.setPath("/createrCenter.jsp");
+			actionInfo.setPath(req.getContextPath() + "/_class/ClassMine.cl?userNum=1");
 	
 			return actionInfo;
 		
