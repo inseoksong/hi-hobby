@@ -9,7 +9,6 @@
 <title>하이하비 | 메인</title>
 <link rel="stylesheet" href="asset/css/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-
 </head>
 <body>
 <jsp:include page="header.jsp"/>
@@ -106,9 +105,7 @@
                                     </div>
                                     <div class="text-wrap">
                                         <div class="text-top">
-                                            <div class="text01">쿠폰도 블록버스터 급! 
-                                                <br>
-                                                총 45만원 쿠폰팩</div>
+                                            <div class="text01">쿠폰도 블록버스터 급!<br>총 45만원 쿠폰팩</div>
                                             <div class="text02">지금 쿠폰팩 받고 클래스 시작하세요!</div>
                                         </div>
                                         <div class="text-bottom">
@@ -153,10 +150,7 @@
                                 </div>
                                 <div class="text-wrap">
                                     <div class="text-top">
-                                        <div class="text01">원하던 캐릭터 그리기
-                                            <br>
-                                            #디지털드로잉
-                                            </div>
+                                        <div class="text01">원하던 캐릭터 그리기<br>#디지털드로잉</div>
                                         <div class="text02">일러스트, iPad, 이모티콘 등 디지털 드로잉의 모든 것</div>
                                     </div>
                                     <div class="text-bottom">
@@ -177,10 +171,7 @@
                                 </div>
                                 <div class="text-wrap">
                                     <div class="text-top">
-                                        <div class="text01">0원 세미나 신청이
-                                            <br>
-                                            곧 마감됩니다
-                                            </div>
+                                        <div class="text01">0원 세미나 신청이<br>곧 마감됩니다</div>
                                         <div class="text02">듣고 싶던 영어강의 무료로 듣고 5만원 특별 쿠폰까지!</div>
                                     </div>
                                     <div class="text-bottom">
@@ -201,12 +192,8 @@
                                 </div>
                                 <div class="text-wrap">
                                     <div class="text-top">
-                                        <div class="text01">101 ACADEMY
-                                            <br>
-                                            무료 세미나권 증정!
-                                            </div>
-                                        <div class="text02">
-                                            디지털 드로잉 실시간 피드백 클래스</div>
+                                        <div class="text01">101 ACADEMY<br>무료 세미나권 증정!</div>
+                                        <div class="text02">디지털 드로잉 실시간 피드백 클래스</div>
                                     </div>
                                     <div class="text-bottom">
                                         <div class="thisNum">
@@ -226,9 +213,7 @@
                                 </div>
                                 <div class="text-wrap">
                                     <div class="text-top">
-                                        <div class="text01">은퇴와 재테크는,<br>
-                                        					빠를수록 좋으니까!
-                                        </div>
+                                        <div class="text01">은퇴와 재테크는,<br>빠를수록 좋으니까!</div>
                                         <div class="text02">수익 파이프라인 만드는 노하우가 한 곳에</div>
                                     </div>
                                     <div class="text-bottom">
@@ -249,9 +234,7 @@
                                 </div>
                                 <div class="text-wrap">
                                     <div class="text-top">
-                                        <div class="text01">수강 알림 등록하고 
-                                            <br>에어팟 프로 받자!
-                                            </div>
+                                        <div class="text01">수강 알림 등록하고<br>에어팟 프로 받자!</div>
                                         <div class="text02">내가 원하는 시간에 메세지를 보내 드려요!</div>
                                     </div>
                                     <div class="text-bottom">
@@ -286,27 +269,229 @@
                     <div class="container-full">
                         <div class="timedeal-container">
                             <div>
-                            <c:forEach var="classs" items="${classList}">
-                                <a href="onedayClass.jsp" style="cursor: pointer;">
+                                <a>
                                     <div class="thumb-pic">
-                                        <div>
-		                                        <c:out value="${classs.getClassImg()}"/>
+                                        <div><img src="https://cdn.class101.net/images/cb2119ec-b977-49e3-a1a4-b674081ed809/750xauto.webp"></div>
+                                    </div>
+                                    <p class="creator-name">콕스</p>
+                                    <p class="class-name">[💣24시간] 초보 그림러가 인기 작가가 되는 법, 콕스의 독학비법서<p>
+                                    <div class="good-icon">
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path></svg></span>
+                                            <p>24010</p>
+                                        </div>
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 10.68c0-.691.503-1.251 1.135-1.251h2.273V22H3.135C2.508 22 2 21.427 2 20.749V10.68zm11.361-2.508h6.366c1.255 0 2.272 1.126 2.272 2.514 0 .151-.012.301-.037.45l-1.616 9.832C20.25 21.566 19.779 22 19.23 22H7.681V9.429L11.089 0c1.704 0 2.84 1.257 2.84 3.143 0 1.257-.189 2.933-.568 5.029z" fill="#d7d7d7"></path></svg></span>
+                                            <p>99%</p>
                                         </div>
                                     </div>
-                                    <p class="creator-name">
-                                    		<c:out value="${classs.getClassNickname()}"/>
-                              		</p>
-                                    <p class="class-name">
-	                                    	<c:out value="${classs.getClassTitle()}"/>
-                                    <p>
                                     <div class="linediv"></div>
                                     <div class="price-wrap">
-	                                    <p class="price">
-        	                                	<c:out value="${classs.getClassPrice()}"/>
-            	                        </p>
+                                        <p class="per">35%</p>
+                                        <p class="price">월 50.400원</p>
+                                        <p class="period">(5개월)</p>
                                     </div>
-                                </a>
-                            </c:forEach>
+                                </a>    
+                            </div> 
+                            <div>
+                                <a>
+                                    <div class="thumb-pic">
+                                        <div><img src="asset/img/timedeal/time02.webp"></div>
+                                    </div>
+                                    <p class="creator-name">Zipcy</p>
+                                    <p class="class-name">[💣24시간] 잊을 수 없는 매혹적인 인물화, 아이패드로 수작업 감성과 감각적인 색감을 그려요<p>
+                                    <div class="good-icon">
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path></svg></span>
+                                            <p>18546</p>
+                                        </div>
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 10.68c0-.691.503-1.251 1.135-1.251h2.273V22H3.135C2.508 22 2 21.427 2 20.749V10.68zm11.361-2.508h6.366c1.255 0 2.272 1.126 2.272 2.514 0 .151-.012.301-.037.45l-1.616 9.832C20.25 21.566 19.779 22 19.23 22H7.681V9.429L11.089 0c1.704 0 2.84 1.257 2.84 3.143 0 1.257-.189 2.933-.568 5.029z" fill="#d7d7d7"></path></svg></span>
+                                            <p>99%</p>
+                                        </div>
+                                    </div>
+                                    <div class="linediv"></div>
+                                    <div class="price-wrap">
+                                        <p class="per">40%</p>
+                                        <p class="price">월 45.000원</p>
+                                        <p class="period">(5개월)</p>
+                                    </div>
+                                </a>    
+                            </div> 
+                            <div>
+                                <a>
+                                    <div class="thumb-pic">
+                                        <div><img src="asset/img/timedeal/time03.webp"></div>
+                                    </div>
+                                    <p class="creator-name">띠부</p>
+                                    <p class="class-name">[💣24시간] 유튜버 띠부와 함께, 폴리머클레이로 만드는 나만의 피규어 세상<p>
+                                    <div class="good-icon">
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path></svg></span>
+                                            <p>1720</p>
+                                        </div>
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 10.68c0-.691.503-1.251 1.135-1.251h2.273V22H3.135C2.508 22 2 21.427 2 20.749V10.68zm11.361-2.508h6.366c1.255 0 2.272 1.126 2.272 2.514 0 .151-.012.301-.037.45l-1.616 9.832C20.25 21.566 19.779 22 19.23 22H7.681V9.429L11.089 0c1.704 0 2.84 1.257 2.84 3.143 0 1.257-.189 2.933-.568 5.029z" fill="#d7d7d7"></path></svg></span>
+                                            <p>98%</p>
+                                        </div>
+                                    </div>
+                                    <div class="linediv"></div>
+                                    <div class="price-wrap">
+                                        <p class="per">25%</p>
+                                        <p class="price">월 68.266원</p>
+                                        <p class="period">(6개월)</p>
+                                    </div>
+                                </a>    
+                            </div> 
+                            <div>
+                                <a>
+                                    <div class="thumb-pic">
+                                        <div><img src="https://cdn.class101.net/images/cb2119ec-b977-49e3-a1a4-b674081ed809/750xauto.webp"></div>
+                                    </div>
+                                    <p class="creator-name">콕스</p>
+                                    <p class="class-name">[💣24시간] 초보 그림러가 인기 작가가 되는 법, 콕스의 독학비법서<p>
+                                    <div class="good-icon">
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path></svg></span>
+                                            <p>24010</p>
+                                        </div>
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 10.68c0-.691.503-1.251 1.135-1.251h2.273V22H3.135C2.508 22 2 21.427 2 20.749V10.68zm11.361-2.508h6.366c1.255 0 2.272 1.126 2.272 2.514 0 .151-.012.301-.037.45l-1.616 9.832C20.25 21.566 19.779 22 19.23 22H7.681V9.429L11.089 0c1.704 0 2.84 1.257 2.84 3.143 0 1.257-.189 2.933-.568 5.029z" fill="#d7d7d7"></path></svg></span>
+                                            <p>99%</p>
+                                        </div>
+                                    </div>
+                                    <div class="linediv"></div>
+                                    <div class="price-wrap">
+                                        <p class="per">35%</p>
+                                        <p class="price">월 50.400원</p>
+                                        <p class="period">(5개월)</p>
+                                    </div>
+                                </a>    
+                            </div> 
+                            <div>
+                                <a>
+                                    <div class="thumb-pic">
+                                        <div><img src="asset/img/timedeal/time02.webp"></div>
+                                    </div>
+                                    <p class="creator-name">Zipcy</p>
+                                    <p class="class-name">[💣24시간] 잊을 수 없는 매혹적인 인물화, 아이패드로 수작업 감성과 감각적인 색감을 그려요<p>
+                                    <div class="good-icon">
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path></svg></span>
+                                            <p>18546</p>
+                                        </div>
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 10.68c0-.691.503-1.251 1.135-1.251h2.273V22H3.135C2.508 22 2 21.427 2 20.749V10.68zm11.361-2.508h6.366c1.255 0 2.272 1.126 2.272 2.514 0 .151-.012.301-.037.45l-1.616 9.832C20.25 21.566 19.779 22 19.23 22H7.681V9.429L11.089 0c1.704 0 2.84 1.257 2.84 3.143 0 1.257-.189 2.933-.568 5.029z" fill="#d7d7d7"></path></svg></span>
+                                            <p>99%</p>
+                                        </div>
+                                    </div>
+                                    <div class="linediv"></div>
+                                    <div class="price-wrap">
+                                        <p class="per">40%</p>
+                                        <p class="price">월 45.000원</p>
+                                        <p class="period">(5개월)</p>
+                                    </div>
+                                </a>    
+                            </div> 
+                            <div>
+                                <a>
+                                    <div class="thumb-pic">
+                                        <div><img src="asset/img/timedeal/time03.webp"></div>
+                                    </div>
+                                    <p class="creator-name">띠부</p>
+                                    <p class="class-name">[💣24시간] 유튜버 띠부와 함께, 폴리머클레이로 만드는 나만의 피규어 세상<p>
+                                    <div class="good-icon">
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path></svg></span>
+                                            <p>1720</p>
+                                        </div>
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 10.68c0-.691.503-1.251 1.135-1.251h2.273V22H3.135C2.508 22 2 21.427 2 20.749V10.68zm11.361-2.508h6.366c1.255 0 2.272 1.126 2.272 2.514 0 .151-.012.301-.037.45l-1.616 9.832C20.25 21.566 19.779 22 19.23 22H7.681V9.429L11.089 0c1.704 0 2.84 1.257 2.84 3.143 0 1.257-.189 2.933-.568 5.029z" fill="#d7d7d7"></path></svg></span>
+                                            <p>98%</p>
+                                        </div>
+                                    </div>
+                                    <div class="linediv"></div>
+                                    <div class="price-wrap">
+                                        <p class="per">25%</p>
+                                        <p class="price">월 68.266원</p>
+                                        <p class="period">(6개월)</p>
+                                    </div>
+                                </a>    
+                            </div> 
+                            <div>
+                                <a>
+                                    <div class="thumb-pic">
+                                        <div><img src="https://cdn.class101.net/images/cb2119ec-b977-49e3-a1a4-b674081ed809/750xauto.webp"></div>
+                                    </div>
+                                    <p class="creator-name">콕스</p>
+                                    <p class="class-name">[💣24시간] 초보 그림러가 인기 작가가 되는 법, 콕스의 독학비법서<p>
+                                    <div class="good-icon">
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path></svg></span>
+                                            <p>24010</p>
+                                        </div>
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 10.68c0-.691.503-1.251 1.135-1.251h2.273V22H3.135C2.508 22 2 21.427 2 20.749V10.68zm11.361-2.508h6.366c1.255 0 2.272 1.126 2.272 2.514 0 .151-.012.301-.037.45l-1.616 9.832C20.25 21.566 19.779 22 19.23 22H7.681V9.429L11.089 0c1.704 0 2.84 1.257 2.84 3.143 0 1.257-.189 2.933-.568 5.029z" fill="#d7d7d7"></path></svg></span>
+                                            <p>99%</p>
+                                        </div>
+                                    </div>
+                                    <div class="linediv"></div>
+                                    <div class="price-wrap">
+                                        <p class="per">35%</p>
+                                        <p class="price">월 50.400원</p>
+                                        <p class="period">(5개월)</p>
+                                    </div>
+                                </a>    
+                            </div> 
+                            <div>
+                                <a>
+                                    <div class="thumb-pic">
+                                        <div><img src="asset/img/timedeal/time02.webp"></div>
+                                    </div>
+                                    <p class="creator-name">Zipcy</p>
+                                    <p class="class-name">[💣24시간] 잊을 수 없는 매혹적인 인물화, 아이패드로 수작업 감성과 감각적인 색감을 그려요<p>
+                                    <div class="good-icon">
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path></svg></span>
+                                            <p>18546</p>
+                                        </div>
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 10.68c0-.691.503-1.251 1.135-1.251h2.273V22H3.135C2.508 22 2 21.427 2 20.749V10.68zm11.361-2.508h6.366c1.255 0 2.272 1.126 2.272 2.514 0 .151-.012.301-.037.45l-1.616 9.832C20.25 21.566 19.779 22 19.23 22H7.681V9.429L11.089 0c1.704 0 2.84 1.257 2.84 3.143 0 1.257-.189 2.933-.568 5.029z" fill="#d7d7d7"></path></svg></span>
+                                            <p>99%</p>
+                                        </div>
+                                    </div>
+                                    <div class="linediv"></div>
+                                    <div class="price-wrap">
+                                        <p class="per">40%</p>
+                                        <p class="price">월 45.000원</p>
+                                        <p class="period">(5개월)</p>
+                                    </div>
+                                </a>    
+                            </div> 
+                            <div>
+                                <a>
+                                    <div class="thumb-pic">
+                                        <div><img src="asset/img/timedeal/time03.webp"></div>
+                                    </div>
+                                    <p class="creator-name">띠부</p>
+                                    <p class="class-name">[💣24시간] 유튜버 띠부와 함께, 폴리머클레이로 만드는 나만의 피규어 세상<p>
+                                    <div class="good-icon">
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path></svg></span>
+                                            <p>1720</p>
+                                        </div>
+                                        <div class="good-child">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 10.68c0-.691.503-1.251 1.135-1.251h2.273V22H3.135C2.508 22 2 21.427 2 20.749V10.68zm11.361-2.508h6.366c1.255 0 2.272 1.126 2.272 2.514 0 .151-.012.301-.037.45l-1.616 9.832C20.25 21.566 19.779 22 19.23 22H7.681V9.429L11.089 0c1.704 0 2.84 1.257 2.84 3.143 0 1.257-.189 2.933-.568 5.029z" fill="#d7d7d7"></path></svg></span>
+                                            <p>98%</p>
+                                        </div>
+                                    </div>
+                                    <div class="linediv"></div>
+                                    <div class="price-wrap">
+                                        <p class="per">25%</p>
+                                        <p class="price">월 68.266원</p>
+                                        <p class="period">(6개월)</p>
+                                    </div>
+                                </a>    
                             </div> 
                         </div> 
                     </div>

@@ -6,7 +6,6 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.hi_hobby.domain.vo.CouponVO;
-import com.hi_hobby.domain.vo.UserVO;
 import com.mybatis.config.MyBatisConfig;
 
 public class CouponDAO {
