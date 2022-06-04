@@ -29,58 +29,40 @@ function famale() {
     genChe = false;
 }
 function notice(idx){
-    var  col2 = document.getElementsByClassName('css-1mg3xmk 2')[0];
-    var  col3 = document.getElementsByClassName('css-165esj4 3')[0];
-    var co = document.getElementsByClassName('css-a1maoc')[0];
-    var one = document.getElementById('createrChoice');
-    var two = document.getElementById('classInput');
-    var thr = document.getElementsByClassName('css-154w5w9')[0];
-    var fou = document.getElementsByClassName('Grid__StyledDiv-sc-81d45n-0 iIwnuy CreatorAccountProfileViewController__Container-sc-1u2e1vs-0 jrlbMn')[0];
-    var fiv = document.getElementsByClassName('css-ywnkfc')[0];
-    var six = document.getElementsByClassName('Spacing__Box-sc-47wgmh-0 fvDAgv')[0];
-    var sev = document.getElementById('classInputOn');
-
-    var col1in = document.getElementsByClassName('css-zsoya5 in')[0];
+    var all = document.getElementsByClassName('css-a1maoc')[0];			// 전체 상품 메뉴바
+    var allList = document.getElementsByClassName('css-ywnkfc')[0];		// 전체 클래스 내부
+    var classChoice = document.getElementById('createrChoice');			// 클래스 종류 선택 창
+    var classOne = document.getElementById('classInput');				// 원데이 클래스 작성 부분
+    var classOn = document.getElementById('classInputOn');				// 온라인 클래스 작성 부분
 
     var save = document.getElementById('save');
     var del = document.getElementById('del');
+    
     switch(idx){
 	    case 1:
-	    	one.style.display='block';
-	    	two.style.display='none';
-	    	thr.style.display='none';
-	    	fou.style.display='none';
-            fiv.style.display='none';
-            six.style.display='none';
-            sev.style.display='none';
+	    	allList.style.display='block';
+	    	classChoice.style.display='none';
+	    	classOne.style.display='none';
+	    	classOn.style.display='none';
 	    	break;
         case 2:
-            col2.style.border= '1px solid #000000';
-            co.style.border= '1px solid #ffffff';
-            one.style.display='none';
-            two.style.display='none';
-            thr.style.display='block';
-            fou.style.display='none';
-            fiv.style.display='none';
-            six.style.display='none';
-            sev.style.display='none';
+        	allList.style.display='none';
+        	classChoice.style.display='block';
+        	classOne.style.display='none';
+        	classOn.style.display='none';
             break;
-            css-ywnkfc
         case 3:
-                co.style.display='none';
-                co.style.display='block';
+        	allList.style.display='none';
+        	classChoice.style.display='none';
+        	classOne.style.display='block';
+        	classOn.style.display='none';
             break;
         case 4:
-            col2.style.border= '1px solid #ffffff';
-            co.style.border= '1px solid #000000';
-            one.style.display='none';
-            two.style.display='none';
-            thr.style.display='none';
-            fou.style.display='none';
-            fiv.style.display='block';
-            six.style.display='none';
-            sev.style.display='none';
-            
+        	allList.style.display='none';
+        	classChoice.style.display='none';
+        	classOne.style.display='none';
+        	classOn.style.display='block';
+        	
            // 클래스 목록 불러오기 - userNum 받아온 후 전체적으로 수정
          // var contextPath = "${pageContext.request.contextPath }"; - 상단에 선언
             		
@@ -113,26 +95,7 @@ function notice(idx){
         		}
         	});
             break;
-        case 5:
-            col2.style.border= '1px solid #ffffff';
-            co.style.border= '1px solid #ffffff';
-            one.style.display='none';
-            two.style.display='none';
-            thr.style.display='none';
-            fou.style.display='none';
-            fiv.style.display='none';
-            six.style.display='block';
-            sev.style.display='none';
-            break;
         case 6:
-	    	one.style.display='none';
-	    	two.style.display='block';
-	    	thr.style.display='none';
-	    	fou.style.display='none';
-            fiv.style.display='none';
-            six.style.display='none';
-            sev.style.display='none';
-            
             // 클래스 수정화면 -- 클릭한 버튼의 classNum 가져오는법 확인
             $.ajax({
             	url : contextPath + "/_class/ClassModify.cl",
@@ -170,24 +133,6 @@ function notice(idx){
             	}
             });
         	break;
-        case 7:
-        	one.style.display='none';
-        	two.style.display='none';
-            thr.style.display='none';
-            fou.style.display='block';
-            fiv.style.display='none';
-            six.style.display='none';
-            sev.style.display='none';
-            break;
-        case 8:
-        	one.style.display='none';
-        	two.style.display='none';
-            thr.style.display='none';
-            fou.style.display='none';
-            fiv.style.display='none';
-            six.style.display='none';
-	    	sev.style.display='block';
-            break;
     }
 
 }

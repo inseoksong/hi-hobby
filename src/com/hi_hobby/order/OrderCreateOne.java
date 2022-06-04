@@ -36,7 +36,7 @@ public class OrderCreateOne implements Action{
 		
 //		req.setAttribute("orderNumber", orderVO.getOrderNum());
 		actionInfo.setRedirect(false);
-//		actionInfo.setPath("/myOrder.jsp");
+		actionInfo.setPath("/myOrder101.jsp");
 		return actionInfo;
 	}
 	
