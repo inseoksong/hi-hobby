@@ -33,8 +33,11 @@ public class ClassFrontController extends HttpServlet {
 			actionInfo.setRedirect(false);
 			actionInfo.setPath(req.getContextPath() + "/createrCenter.jsp");
 		}
-		else if(command.equals("ClassModify.cl")) { //수정한 당시 시간 받아오기
+		else if(command.equals("ClassModify.cl")) { 
 			actionInfo = new ClassModify().execute(req, resp);
+		}
+		else if(command.equals("ClassModifyOk.cl")) { //수정한 당시 시간 받아오기
+			actionInfo = new ClassModifyOk().execute(req, resp);
 		}
 		else if(command.equals("ClassListView.cl")) {
 			actionInfo = new ClassListView().execute(req, resp);
@@ -62,9 +65,6 @@ public class ClassFrontController extends HttpServlet {
 		}
 		else if(command.equals("ClassGraphViewOneDetail.cl")) {
 			actionInfo = new ClassGraphViewOneDetail().execute(req, resp);
-		}
-		else if(command.equals("ClassLike.cl")) {
-			actionInfo = new ClassLike().execute(req, resp);
 		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성

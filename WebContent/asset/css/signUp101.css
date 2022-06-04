@@ -538,3 +538,16 @@ label.injeung {
 input.injeung-number {
 	border: 1px solid #efefef;
 }
+
+p.erMText {
+	margin-top: 8px;
+}
+
+p#result {
+	margin-top: 8px;
+	font-size: 12px;
+}
+
+div#checkUserPw {
+	margin-bottom: 8px;
+}

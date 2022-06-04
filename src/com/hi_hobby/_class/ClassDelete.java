@@ -17,7 +17,8 @@ public class ClassDelete implements Action{
 		resp.setContentType("text/html;charset=UTF-8");
 		req.setCharacterEncoding("UTF-8");
 		
-		int classNum = Integer.parseInt(req.getParameter("classNum"));
+//		int classNum = Integer.parseInt(req.getParameter("classNum"));
+		int classNum = 10;
 		ClassDAO classDAO = new  ClassDAO();
 		ActionInfo actionInfo = new ActionInfo();
 		
@@ -26,7 +27,7 @@ public class ClassDelete implements Action{
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/createrCenter");
 		
-		return null;
+		return actionInfo;
 	}
 
 }

@@ -23,11 +23,17 @@ public class ClassDAO {
 	}
 	
 	// 클래스 수정화면
-	public ClassVO modify () { // classNum 가져오면 수정하기
-		return sqlSession.selectOne("Class.modify");
+	public ClassVO modify (int classNum) { 
+		return sqlSession.selectOne("Class.modify", classNum);
 	}
 	
-	// 클래스 삭제
+	// 클래스 수정정보 넣기
+	public void modifyOk(ClassVO classVO) {
+		System.out.println("수정하러 옴");
+		sqlSession.update("Class.modifyOk", classVO);
+	}
+	
+	// 클래스 비활성화
 	public void del(int classNum) {
 		sqlSession.update("Class.del", classNum);
 	}
@@ -37,9 +43,9 @@ public class ClassDAO {
 		return sqlSession.selectOne("Class.view");
 	}
 	
-	// 내가 개설한 클래스 보기 - 크리에이터센터 (매개변수 추가 필요)
-	public List <ClassVO> viewMine() {
-		return sqlSession.selectList("Class.viewMine");
+	// 내가 개설한 클래스 보기 - 크리에이터센터
+	public List <ClassVO> viewMine(int userNum) {
+		return sqlSession.selectList("Class.viewMine", userNum);
 	}
 	
 	// 승인대기 클래스 조회

@@ -1,17 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
- <link rel="stylesheet" href="asset/css/cs.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/asset/css/cs.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
     <link rel="shortcut icon" href="asset/img/favicon.ico">
 
 <title>하이하비 | 문의하기</title>
 </head>
 <body>
+
+		<c:set var="inquiryList" value="${inquiryList}"/>
+		<c:set var="page" value="${page}"/>
+		<c:set var="startPage" value="${startPage}"/>
+		<c:set var="endPage" value="${endPage}"/>
+		<c:set var="realEndPage" value="${realEndPage}"/>
+		<c:set var="total" value="${total}"/>
+
 <jsp:include page="header.jsp"/>
 <!-- 헤더영역 -->
     <section>
@@ -19,12 +28,13 @@
             <div class="helpWrap">
                 <div class="helpTop">
                     <div class="helpTitle"><span>문의하기</span></div>
-                    <a href="csWrite.jsp">
-                        <button class="confirm">글쓰기</button>
+                    <a >
+                        <button class="confirm" onclick="location.href = '${pageContext.request.contextPath}/inquiry/InquiryGoWrite.in'">글쓰기</button>
                     </a>
                 </div>
                 <div class="helpAll">
                     <div class="tableWrap">
+                    
                         <table class="helpList">
                             <tr>
                                 <th width="13%">NO</th>
@@ -34,29 +44,71 @@
                                 <th width="14%">작성일</th>
                             </tr>
                             <div id="helpInquiryList">
-                            <c:forEach var="inquiry" items="${inquiryList}">
-                            <tr>
-                                <td><c:out value="${inquiry.getInquiryNum()}"/></td>
-                                <td class="waiting"><c:choose><c:when test="${inquiry.isInquiryProcess()}"><span style="color: green">답변 완료</span></c:when><c:otherwise>답변 대기</c:otherwise></c:choose></td>
-                                <td class="qnaTitle">
-                                	<a class="qnaTitle1" onclick="pwChange()">비밀글입니다</a>	
-                                	<form action="InquiryPwOk.in" method="post" name="pwForm">
-                                	<a class="qnaTitle2" style="display:none">
-                                		<input type="password" name="inquiryPw" placeholder="비밀번호">
-                                		<input type="button" value="확인" class="pwSubBtn" onclick="pwSub()">
-                                	</a>
-                                	</form>
-                                </td>
-                                <%-- <td><c:out value="${inquiry.getUserName()}"/></td> --%>
-                                <td><c:out value="${inquiry.getInquiryDay()}"/></td>
-                            </tr>
-                            </c:forEach>
+                            
+                            <c:choose>
+								<c:when test="${inquiryList != null and fn:length(inquiryList) > 0}">
+		                            <c:forEach var="inquiry" items="${inquiryList}">
+		                            	<tr>
+		                                	<td><c:out value="${inquiry.getInquiryNum()}"/></td>
+			                                <td class="waiting"><c:choose><c:when test="${inquiry.isInquiryProcess()}"><span style="color: green">답변 완료</span></c:when><c:otherwise>답변 대기</c:otherwise></c:choose></td>
+			                                <td class="qnaTitle">
+			                                	<c:choose>
+			                                		<c:when test="${memberNumber eq board.getMemberNumber()}">
+			                                			<a class="qnaTitle1" href="${pageContext.request.contextPath }/inquiry/InquiryMyView.in?inquiryNum=${inquiry.getInquiryNum()}&page=${page}">${inquiry.getInquiryTitle()}</a>	
+			                                		</c:when>
+			                                		<c:otherwise>
+			                                			<a class="qnaTitle1">비밀글입니다</a>
+			                                		</c:otherwise>
+			                                	</c:choose>
+			                                </td>
+			                                <td><c:out value="${inquiry.getUserName()}"/></td> 
+			                                <td><c:out value="${inquiry.getInquiryDay()}"/></td>
+			                            </tr>
+		                            </c:forEach>
+                            	</c:when>
+                            	<c:otherwise>
+									<tr>
+										<td colspan="5" align="center">등록된 게시물이 없습니다.</td>
+									</tr>
+								</c:otherwise>
+                            </c:choose>
                             </div>
                             
                         </table>
+                        
                     </div>
                 </div>
-                <div class="page-number">
+                
+                <!-- 페이징처리 -->
+                
+                <table style="font-size:1.3rem; margin: auto;">
+					<tr align="center" valign="middle">
+						<td class="web-view">
+							<c:if test="${startPage > 1}">
+								<a href="${pageContext.request.contextPath}/inquiry/InquiryAllView.in?page=${startPage - 1}">&lt;</a>
+							</c:if>
+						
+							<c:forEach var="i" begin="${startPage}" end="${endPage}">
+								<c:choose>
+									<c:when test="${i eq page}">
+										<c:out value="${i}"/>&nbsp;&nbsp;
+									</c:when>
+									<c:otherwise>
+										<a href="${pageContext.request.contextPath}/inquiry/InquiryAllView.in?page=${i}"><c:out value="${i}"/></a>&nbsp;&nbsp;
+									</c:otherwise>
+								</c:choose>
+							</c:forEach>
+							
+							<c:if test="${endPage < realEndPage}">
+								<a href="${pageContext.request.contextPath}/inquiry/InquiryAllView.in?page=${endPage + 1}">&gt;</a>
+							</c:if>
+						</td>
+					</tr>
+				</table>
+                
+                
+                
+                <!-- <div class="page-number">
 					<div class="number-buttons">
 						<button type="button">
 							<span>
@@ -86,7 +138,10 @@
 							</span>
 						</button>
 					</div>
-				</div>
+				</div> -->
+				
+				
+				
             </div>
         </div>
     </section>
@@ -95,5 +150,5 @@
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="asset/js/cs.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/asset/js/cs.js"></script>
 </html>

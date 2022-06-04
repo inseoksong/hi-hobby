@@ -1,4 +1,3 @@
-var contextPath = "${pageContext.request.contextPath }";
 
 function male(idx) {
     var btn = document.getElementsByClassName('RadioIcon-taoxkc-0 eVmqxF')[0];
@@ -81,8 +80,8 @@ function notice(idx){
             six.style.display='none';
             sev.style.display='none';
             
-           // 클래스 목록 불러오기 - userNum 받아온 후 전체적으로 수정
-         // var contextPath = "${pageContext.request.contextPath }"; - 상단에 선언
+          // 클래스 목록 불러오기 - userNum 받아온 후 전체적으로 수정
+         // var contextPath = "${pageContext.request.contextPath }"; - jsp script 상단에 작성
             		
             $.ajax({
         		url : contextPath+"/_class/ClassMine.cl",
@@ -90,18 +89,18 @@ function notice(idx){
         		data : {"userNum" : 1 },
         		contentType : "application/json; charset:UTF-8",
         		dataType : "json",
-        		success : function(resultArr){
-//        			console.log(resultArr[0]["title"]);
+        		success : function(result){
+        			
         			const numAr =  document.querySelectorAll('p.classNum');
         			const titleAr = document.querySelectorAll('p.classTitle');
         			const cateAr = document.querySelectorAll('p.classCategory');
         			const priceAr = document.querySelectorAll('p.classPrice');
         			
                     for(i = 0; i < 10; i++ ){
-                    	numAr[i].innerText = resultArr[i]["num"];
-                        titleAr[i].innerText= resultArr[i]["title"];
-                        cateAr[i].innerText = resultArr[i]["category"];
-                        priceAr[i].innerText = resultArr[i]["price"];
+                    	numAr[i].innerText = result[i]["numb"];
+                        titleAr[i].innerText= result[i]["title"];
+                        cateAr[i].innerText = result[i]["category"];
+                        priceAr[i].innerText = result[i]["price"];
                     }
         		},
         		error : function(request, error, a, b, c){
@@ -133,14 +132,18 @@ function notice(idx){
             six.style.display='none';
             sev.style.display='none';
             
-            // 클래스 수정화면 -- 클릭한 버튼의 classNum 가져오는법 확인
+            // 클래스 수정화면
+            
+//            const $classNum =  $(this).parents('.ReactVirtualized__Table__rowColumn').siblings("div[aria-colindex='1']").children("p[class='classNum']");
+//            console.log($classNum.text());
+            
             $.ajax({
-            	url : contextPath + "/_class/ClassModify.cl",
+            	url : contextPath + "/_class/ClassModify.cl?classNum="+ ${classNum}},
             	type : "get",
-            	data : {classNum : "1"},
+            	data : {"classNum" : 1},
             	dataType : "json",
             	success : function(obj){
-            		console.log("ajax 들어옴");
+            		
             		let $title = $("input[name='classTitle']");
             		let $category = $("select[name='classCategory']");
             		let $place = $("input[name='classPlace']");
@@ -301,23 +304,12 @@ function secc(idx){
 function classDel(){
 	let check = false;
 	check = confirm("클래스를 삭제하시겠습니까?");
-	
-	$.ajax({
-		url : contextPAth + "/_class/ClassDelete.cl",
-		data : {"classNum" : 10},
-		type : get,
-		daya : json,
-		success : function(){
 			
-			if(check==false){
-				
+			if(!check){
+				location.href = contextPath + "/createrCenter.jsp";
 			} else {
-				notice(4);
+				location.href = contextPath + "/_class/ClassDelete.cl";
 			}
-			
-		}
-	});
-	
 }
 
 /*var contextPath = "${pageContext.request.contextPath }"; -상단에 선언
@@ -347,3 +339,23 @@ function classDel(){
         			console.log(c);
         		}
         	}); */
+
+function modifyOk(){
+	$.ajax({
+		url : contextPath + "/_class/ClassModifyOk.cl",
+		type : "get",
+		data : {"classNum" : 1},
+		contentType : "application/json; charset:UTF-8",
+		dataType : "json",
+		success : function(result){
+			console.log("수정 성공!");
+		},
+		error :function(request, error, a, b, c){
+			console.log("실패..");
+			alert("code:" + request.status + "\n" + "message : " + request.reponseText + "\n" + "error : " + error);
+			console.log(a);
+			console.log(b);
+			console.log(c);
+    	}
+	})
+}

@@ -30,13 +30,13 @@
                     <div class="css-86rnjd"></div>
                     <div class="css-15zhte1">
                         <div class="css-zsoya5">
-                            <form action="/LoginOk.us" name="creatorLoginForm" method="post" novalidate="" style="width: auto; height: auto;">
+                            <form action="${pageContext.request.contextPath }/user/CreatorLogin.us" name="creatorLoginForm" method="post" style="width: auto; height: auto;">
                                 <div class="css-6mf4i3"><label>
                                         <div class="css-15zhte1">
                                             <p class="css-1spcipk">이메일</p>
                                             <div class="css-1k5xfry"></div>
                                             <div class="css-15zhte1">
-                                                <input name="email" type="email"
+                                                <input name="userEmail" type="email"
                                                     onmouseover="this.style.border='#a5a5a5 solid 1px'"
                                                     onmouseout="this.style.border='#e5e5e5 solid 1px'"
                                                     onclick="this.style.border='#000000 solid 1px';" autocomplete="on"
@@ -54,7 +54,7 @@
                                             <div class="css-1k5xfry"></div>
                                             <div class="css-15zhte1">
                                                 <div class="css-7smspc">
-                                                    <input placeholder="********" name="password"
+                                                    <input placeholder="********" name="userPw"
                                                         onmouseover="this.style.border='#a5a5a5 solid 1px'"
                                                         onmouseout="this.style.border='#e5e5e5 solid 1px'"
                                                         onclick="this.style.border='#000000 solid 1px'"
@@ -187,9 +187,6 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="asset/js/createrLogin.js"></script>
 <script>
-	function loginTotal(){
-		console.log("로그인 버튼 누름");
-		creatorLoginForm.submit();
-	}
+var contextPath = "${pageContext.request.contextPath }";
 </script>
 </html>

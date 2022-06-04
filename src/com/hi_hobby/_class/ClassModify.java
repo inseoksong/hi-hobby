@@ -26,9 +26,9 @@ public class ClassModify implements Action {
 		ClassVO classVO = new ClassVO();
 		PrintWriter out = resp.getWriter();
 		
-//		int classNum = Integer.parseInt(req.getParameter("classNum"));
-//		classVO = classDAO.modify(classNum);
-		classVO = classDAO.modify();
+		int classNum = Integer.parseInt(req.getParameter("classNum"));
+		System.out.println(classNum);
+		classVO = classDAO.modify(classNum);
 		
 		obj.put("title", classVO.getClassTitle());
 		obj.put("category", classVO.getClassCategory());

@@ -346,7 +346,7 @@
 													</div>
 													<div class="rightBtnWrap">
 														<div class="application-button">
-															<button>수정하기</button>
+															<button onclick="modifyOk()">수정하기</button>
 														</div>
 														<div class="application-button"> <!-- onclick="notice(4) -->
 															<button id="class-del-btn" type="submit" onclick = "classDel()">삭제하기</button>
@@ -1338,12 +1338,15 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+var contextPath = "${pageContext.request.contextPath }";
+</script>
 <script src="asset/js/createrCenter.js"></script>
 <script src="asset/js/onedayClassCreate.js"></script>
 <script src="asset/js/createrCenter.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
- var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+/*  var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 mapOption = {
     center: new daum.maps.LatLng(37.537187, 127.005476), // 지도의 중심좌표
     level: 5 // 지도의 확대 레벨
@@ -1387,6 +1390,6 @@ new daum.Postcode({
         });
     }
 }).open();
-}
+} */
 </script>
 </html>

@@ -9,23 +9,38 @@
 		values (#{classNickname}, #{classTitle}, #{classCategory}, #{classPlace}, #{classPrice}, #{classStart}, #{classEnd}, #{classApprove}, #{classImg}, #{classOne}, #{classStatus}, #{userNum}, #{classIntroduce})
 	</insert>
 	
-<!-- 클래스 수정 --> <!-- parameterType = _int 추가하기 -->
-	<select id="modify" resultType="classVO">
+<!-- 클래스 수정화면 보기 --> <!-- parameterType = _int 추가하기 -->
+	<select id="modify" parameterType = "_int" resultType="classVO">
 		select class_num, class_nickname, class_title, class_category, class_place, class_place_detail, class_start, class_end, class_price, class_approve, class_img, class_one, class_status, class_introduce
-		from tbl_class where class_num = '1'<!--  '#{classNum}' -->
+		from tbl_class where class_num = #{classNum}
 	</select>
 	
-<!-- 클래스 삭제 -->
+<!-- 클래스 수정완료 -->
+	<update id="modifyOk" parameterType = "classVO">
+		update tbl_class set
+		class_title = #{classTitle},
+		class_category = #{classCategory},
+		class_price = #{classPrice},
+		class_place = #{classPlace},
+		class_place_detail = #{classPlaceDetail},
+		class_start = #{classStart},
+		class_end = #{classEnd},
+		class_introduce = #{classIntroduce},
+		class_nickname = #{classNickname}	
+		where class_num = #{classNum}
+</update>
+	
+<!-- 클래스 비활성화 -->
 	<update id="del" parameterType="_int">
 	update tbl_class set class_status = '1' 
-	where class_num = '#{classNum}'
+	where class_num = #{classNum}
 	</update>
 	
 <!-- 내가 개설한 클래스 보기 (크리에이터센터)-->
 	<select id="viewMine" parameterType="_int" resultType="classVO">
-	select class_num, class_nickname, class_title, class_category, class_place, class_start, class_end, class_approve, class_img, class_one, class_status, class_introduce
+	select class_num, class_nickname, class_title, class_category, class_place, class_start, class_end, class_approve, class_img, class_one, class_status, class_introduce, class_price
 	from tbl_class
-	where user_num = '#{userNum}'
+	where user_num = #{userNum}
 	</select>	
 	
 <!-- 승인 대기 클래스 보기 -->
