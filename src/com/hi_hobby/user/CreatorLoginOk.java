@@ -26,20 +26,26 @@ public class CreatorLoginOk implements Action {
 		HttpSession session = req.getSession();
 		
 		userPw = new String(Base64.getEncoder().encode(userPw.getBytes()));
-		System.out.println(userPw);
 		
 		userMap.put("userEmail", userEmail);
 		userMap.put("userPw", userPw);
 		
 		userNum = userDAO.login(userMap);
 		System.out.println(userNum);
-
-		userDAO.setCreator(userNum);
 		
-		session.setAttribute("userNum", userNum);
-		
-		actionInfo.setRedirect(false);
-		actionInfo.setPath("/createrCenter.jsp" );
+		if(userNum != -1) {
+			userDAO.setCreator(userNum);
+			
+			session.setAttribute("userNum", userNum);
+			
+			actionInfo.setRedirect(false);
+			actionInfo.setPath( req.getContextPath() + "/createrCenter.jsp" );
+			
+		} else {
+			actionInfo.setRedirect(true);
+			actionInfo.setPath (req.getContextPath() + "/createrLogin.jsp");
+			System.out.println("아이디 잘못 입력함");
+		}
 		
 		return actionInfo;
 	}
