@@ -28,40 +28,16 @@ public class ClassMine implements Action{
 		int userNum = Integer.parseInt(req.getParameter("userNum"));
 										// userNum 과 일치하는 ClassVO -> List 에 담기
 //		System.out.println("컨트롤러 int userNum : " + userNum);
-		List <ClassVO> list = classDAO.viewMine(userNum); //매개변수 추가 필요
+		List <ClassVO> classList = classDAO.viewMine(userNum); //매개변수 추가 필요
+		ActionInfo actionInfo = new ActionInfo();
 		
-		JSONArray resultArr = new JSONArray();
-		PrintWriter out = resp.getWriter();
+		req.setAttribute("classList", classList);
+		System.out.println(classList.get(0).getClassTitle());
 		
-		// List 에 담긴 각각의 ClassVO 에서 항목별로 <키:밸류> JSON Object 에 넣어줌
-		list.forEach(classs -> {
-			JSONObject obj = new JSONObject();
-			obj.put("numb", classs.getClassNum());
-			obj.put("title", classs.getClassTitle());
-			obj.put("category", classs.getClassCategory());
-			obj.put("price", classs.getClassPrice());
-			
-			resultArr.add(obj);
-			// 생성한 obj 를 Json Array 에 넣어줌 
-		});
+		actionInfo.setRedirect(false);
+		actionInfo.setPath("/createrCenterAllClass.jsp");
 		
-//		System.out.println(resultArr);
-		
-//		// 발달된 for문..인데 필요
-//		int idx = 0;
-//		for(ClassVO classs : list) {
-//			JSONObject obj = new JSONObject();
-//			obj.put(Integer.toString(idx), classs.getClassTitle());
-//			resultArr.add(obj);
-//			idx++;
-//		}
-		
-		resp.setCharacterEncoding("UTF-8");
-		// Json 을 string 으로 변환
-		out.print(resultArr.toJSONString());
-		out.close();
-		
-		return null;
+		return actionInfo;
 	}
 
 

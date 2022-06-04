@@ -362,8 +362,9 @@ function modifyOk(){
 
 
 function goToClassMine(){
-	location.href= contextPath+"/_class/ClassMine.cl?userNum=1";
+	location.href= "createrCenter.jsp";
 	console.log("뒤로가기 클릭");
 	notice(4);
+	console.log("notice(4) 들어옴");
 	console.log(contextPath+"/_class/ClassMine.cl?userNum=1");
 }

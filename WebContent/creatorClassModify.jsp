@@ -1,17 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>하이하비 크리에이터 센터 | 온라인 클래스 신청</title>
+<title>하이하비 크리에이터 센터 | 클래스 수정하기</title>
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="preload" as="style">
 <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="asset/css/createrCenter.css">
-<link rel="stylesheet" href="asset/css/onedayClassCreate.css">
-<link rel="shortcut icon" href="asset/img/favicon.ico">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/asset/css/createrCenter.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/asset/css/onedayClassCreate.css">
+<link rel="shortcut icon" href="${pageContext.request.contextPath}/asset/img/favicon.ico">
 </head>
 <body>
+	<c:set var="classs" value= "${classVO}"/>
 	<div class="css-13i5cls">
 		<div class="css-zsoya5">
 			<div class="css-7nulm7">
@@ -113,7 +116,7 @@
 		<div class="container-wrap" id="classInput">
 			<div class="container">
 				<div class="topside">
-					<h3>온라인 클래스 신청</h3>
+					<h3>클래스 수정</h3>
 					<nav>
 						<div class="basic-information">기본 정보</div>
 					</nav>
@@ -157,7 +160,7 @@
 							</div>
 							<div class="class-name">
 								<p>클래스 제목</p>
-								<input type="text" name="classTitle" placeholder="클래스를 대표할 수 있는 제목을 작성해주세요.">
+								<input type="text" name="classTitle" placeholder="클래스를 대표할 수 있는 제목을 작성해주세요." value="${classs.getClassTitle()}">
 							</div>
 							<div class="class-category">
 								<p>카테고리</p>
@@ -172,28 +175,30 @@
 							</div>
 							<div class="class-price">
 								<p>수강료</p>
-								<input type="text" name="classPrice" placeholder = "클래스의 수강비용을 입력해주세요.">
+								<input type="text" name="classPrice" placeholder = "클래스의 수강비용을 입력해주세요." value="${classs.getClassPrice()}">
 							</div>
 							<div class="class-place">
 								<p>장소</p>
 								<!-- <input type="text" name="classPlace" placeholder="클래스가 진행되는 장소를 추가해주세요."> -->
 								<div class="searchPlaceWrap">
-									<input type="text" name ="classPlace" class="searchPlaceWrap1" id="sample5_address" placeholder="클래스가 진행되는 장소를 추가해주세요.">
+									<input type="text" name ="classPlace" class="searchPlaceWrap1" id="sample5_address" placeholder="클래스가 진행되는 장소를 추가해주세요." value="${classs.getClassPlace()}">
 									<input type="button" class="searchPlaceWrap2" onclick="sample5_execDaumPostcode()" value="주소 검색"><br>
 								</div>
-								<input type="text" name="classPlaceDetail" placeholder="상세 주소를 입력해주세요.">
+								<input type="text" name="classPlaceDetail" placeholder="상세 주소를 입력해주세요." value="${classs.getClassPlaceDetail()}">
 								<div id="map" style="width:300px;height:300px;margin-top:10px;display:none"></div>
 							</div>
 							<div class="class-time">
 								<p>시간</p>
 								<div class="flexWrap">
-									<input type="datetime-local" name="classStart"><p style="margin : 0 10px; font-size: 20px; line-height: 47px;">~</p><input type="datetime-local"  name="classEnd">
+									<input type="datetime-local" name="classStart" value="${classs.getClassStart()}">
+									<p style="margin : 0 10px; font-size: 20px; line-height: 47px;">~</p>
+									<input type="datetime-local"  name="classEnd" value="${classs.getClassEnd()}">
 								</div>
 								<!-- <input type="text" name="classStart" placeholder="클래스가 진행되는 시간을 추가해주세요."> -->
 							</div>
 							<div class="class-introduce">
 								<p>클래스 소개</p>
-								<textarea name="classIntroduce" rows="10" cols="45"></textarea>
+								<textarea name="classIntroduce" rows="10" cols="45" value="${classs.getClassIntroduce()}"></textarea>
 							</div>
 						</div>
 						<div class="creator-information">
@@ -202,7 +207,7 @@
 								<div class="flexWrap">
 									<p>크리에이터 닉네임</p><!-- <p class=input-required>*</p> -->
 								</div>
-								<input type="text" name="classNickname" placeholder="사용하시는 닉네임을 입력해주세요.">
+								<input type="text" name="classNickname" placeholder="사용하시는 닉네임을 입력해주세요." value="${classs.getClassNickname()}">
 							</div>
 <!-- 							<div class="creator-introduce">
 								<p>크리에이터 소개</p>
@@ -213,9 +218,11 @@
 								<input type="text" name="creatorPhone" placeholder="연락 가능한 연락처를 입력해주세요. (- 제외)">
 							</div> -->
 						<div class="bottomBtnWrap">
-							<div class="application-button backBtn">
-								<button class="backBtn" onclick="goToClassMine()">뒤로가기</button>
-							</div>
+						<a hre="${pageContext.request.contextPath}/_class/ClassMine.cl?userNum=1">
+								<div class="application-button backBtn">
+									<button class="backBtn" onclick="goToClassMine()">뒤로가기</button>
+								</div>
+						</a>
 							<div class="rightBtnWrap">
 								<div class="application-button">
 									<button onclick="modifyOk()">수정하기</button>
