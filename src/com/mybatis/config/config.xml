@@ -9,6 +9,7 @@
 	<typeAliases>
 		<typeAlias type="com.hi_hobby.domain.vo.UserVO" alias="userVO"/>
 		<typeAlias type="com.hi_hobby.domain.vo.ClassVO" alias="classVO"/>
+		<typeAlias type="com.hi_hobby.domain.vo.ClassDTO" alias="classDTO"/>
 		<typeAlias type="com.hi_hobby.domain.vo.CouponVO" alias="couponVO"/>
 		<typeAlias type="com.hi_hobby.domain.vo.InquiryVO" alias="inquiryVO"/>
 		<typeAlias type="com.hi_hobby.domain.vo.OrderVO" alias="orderVO"/>

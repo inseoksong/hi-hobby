@@ -1,36 +1,31 @@
-package com.hi_hobby.user;
+package com.hi_hobby._class;
 
 import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
-import com.hi_hobby.domain.dao.UserDAO;
+import com.hi_hobby.domain.dao.ClassDAO;
 import com.hi_hobby.domain.vo.ClassVO;
-import com.hi_hobby.domain.vo.UserVO;
 
-public class MyPage implements Action {
+public class ClassBoughtViewOnlineDetail implements Action {
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.setCharacterEncoding("UTF-8");
 		ActionInfo actionInfo = new ActionInfo();
-		UserDAO userDAO = new UserDAO();
-		HttpSession session = req.getSession();
+		ClassDAO classDAO = new ClassDAO();
 		
-		int userNum = (Integer)session.getAttribute("userNum");
+		int classNum = Integer.parseInt(req.getParameter("classNum"));
 		
-		List<UserVO> userProfile = userDAO.view(userNum);
-		List<ClassVO> classInfo = (List<ClassVO>)req.getAttribute("classInfo");
+		List<ClassVO> classInfo = classDAO.viewOnlineDetail(classNum);
 		
-		req.setAttribute("userProfile", userProfile);
 		req.setAttribute("classInfo", classInfo);
 		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("/myPage101.jsp");
+		actionInfo.setPath("/boughtOnlineClass.jsp");
 		
 		return actionInfo;
 	}

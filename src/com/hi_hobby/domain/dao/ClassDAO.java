@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import com.hi_hobby.domain.vo.ClassDTO;
 import com.hi_hobby.domain.vo.ClassVO;
 import com.mybatis.config.MyBatisConfig;
 
@@ -73,6 +74,19 @@ public class ClassDAO {
 		System.out.println("디테일 다오 들어옴");
 		return sqlSession.selectOne("Class.selectDetail", classNum);
 	}
-
 	
+	// 마이페이지를 위한 클래스 정보 불러오기
+	public ClassVO viewMyPage(int classNum) {
+		return sqlSession.selectOne("Class.viewMyPage", classNum);
+	}
+	
+	// 마이페이지를 위한 온라인 클래스 상세정보 불러오기
+	public List<ClassVO> viewOnlineDetail(int classNum) {
+		return sqlSession.selectList("Class.viewOnlineDetail", classNum);
+	}
+	
+	// 마이페이지를 위한 온라인 클래스 상세정보 불러오기
+	public List<ClassDTO> viewOnedayDetail(int classNum) {
+		return sqlSession.selectList("Class.viewOnedayDetail", classNum);
+	}
 }
