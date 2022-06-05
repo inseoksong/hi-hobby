@@ -67,15 +67,6 @@ public class ClassFrontController extends HttpServlet {
 			System.out.println("디테일 프론트 들어옴");
 			actionInfo = new ClassGraphViewOneDetail().execute(req, resp);
 		}
-		else if(command.equals("ClassBoughtView.cl")) {
-			actionInfo = new ClassBoughtView().execute(req, resp);
-		}
-		else if(command.equals("ClassBoughtViewOnlineDetail.cl")) {
-			actionInfo = new ClassBoughtViewOnlineDetail().execute(req, resp);
-		}
-		else if(command.equals("ClassBoughtViewOnedayDetail.cl")) {
-			actionInfo = new ClassBoughtViewOnedayDetail().execute(req, resp);
-		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
 		}
