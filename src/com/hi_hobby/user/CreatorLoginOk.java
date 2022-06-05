@@ -43,7 +43,7 @@ public class CreatorLoginOk implements Action {
 			
 		} else {
 			actionInfo.setRedirect(true);
-			actionInfo.setPath (req.getContextPath() + "/createrLogin.jsp");
+			actionInfo.setPath ("/createrLogin.jsp");
 			System.out.println("아이디 잘못 입력함");
 		}
 		

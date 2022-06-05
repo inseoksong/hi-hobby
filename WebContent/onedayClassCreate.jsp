@@ -12,6 +12,8 @@
 <link rel="shortcut icon" href="asset/img/favicon.ico">
 </head>
 <body>
+	<c:set var="userNum" value="${sessionScope.userNum }"/>
+	
 	<div class="css-13i5cls">
 		<div class="css-zsoya5">
 			<div class="css-7nulm7">
@@ -119,7 +121,7 @@
 					</nav>
 				</div>
 				<!-- 기본 정보 -->
-				<form action="ClassCreateOk.cl" name="oneRegForm">
+				<form action="${pageContext.request.contextPath}/_class/ClassCreateOk.cl?userNum=${userNum}" name="oneRegForm" method="post" enctype="multipart/form-data">
 					<div class="bottomside">
 						<div class="class-information">
 							<h4>클래스 정보</h4>
@@ -127,32 +129,36 @@
 								<p>커버 이미지</p>
 								<p>커버로 사용할 이미지를 추가해주세요. (최대 4장)</p>
 								<div class="images images1">
-									<label for="image1">
+									<label for="class_image1">
 										<div>
 											<img src="https://creator.class101.net/images/im-add-photo-landscape.png">
 										</div>
 									</label>
-									<input type="file" id="image1" class="class-image-file" name="classImage1">
-									<label for="image2">
+									<input type="file" id="class_image1" class="class-image-file" name="classImage1">
+									<input type="button" onclick="cancelFile('classImage1')" value="첨부 삭제">
+									<label for="class_image2">
 										<div>
 											<img src="https://creator.class101.net/images/im-add-photo-landscape.png">
 										</div>
 									</label>
-									<input type="file" id="image2" class="class-image-file" name="classImage2">
+									<input type="file" id="class_image2" class="class-image-file" name="classImage2">
+									<input type="button" onclick="cancelFile('classImage2')" value="첨부 삭제">
 								</div>
 								<div class="images images2">
-									<label for="image3">
+									<label for="class_image3">
 										<div>
 											<img src="https://creator.class101.net/images/im-add-photo-landscape.png">
 										</div>
 									</label>
-									<input type="file" id="image3" class="class-image-file" name="classImage3">
-									<label for="image4">
+									<input type="file" id="class_image3" class="class-image-file" name="classImage3">
+									<input type="button" onclick="cancelFile('classImage3')" value="첨부 삭제">
+									<label for="class_image4">
 										<div>
 											<img src="https://creator.class101.net/images/im-add-photo-landscape.png">
 										</div>
 									</label>
-									<input type="file" id="image4" class="class-image-file" name="classImage4">
+									<input type="file" id="class_image4" class="class-image-file" name="classImage4">
+									<input type="button" onclick="cancelFile('classImage4')" value="첨부 삭제">
 								</div>
 							</div>
 							<div class="class-name">
@@ -218,11 +224,11 @@
 							</div>
 							<div class="rightBtnWrap">
 								<div class="application-button">
-									<button onclick="modifyOk()">수정하기</button>
+									<button onclick="createOk()">신청하기</button>
 								</div>
-								<div class="application-button"> <!-- onclick="notice(4) -->
+<!-- 								<div class="application-button"> onclick="notice(4)
 									<button id="class-del-btn" type="submit" onclick = "classDel()">삭제하기</button>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
@@ -311,10 +317,16 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="asset/js/onedayClassCreate.js"></script>
 <script src="asset/js/createrCenter.js"></script>
-<script>
-	function oneRegister(){
-		console.log(oneReForm.classCategoy.value);
-		oneRegForm.submit();
+<script>	
+
+	function goToClassMine(){
+		history.back()	
 	}
+	
+	function createOk(){
+		oneRegForm.submit();
+		alert("클래스가 승인요청 되었습니다.");
+	}
+	
 </script>
 </html>

@@ -89,7 +89,7 @@ ${int userNum = (Integer)session.getAttribute("userNum");}
 												</div>
 											</div>
 										</div>
-										<a href="${pageContext.request.contextPath}/_class/ClassMine.cl?userNum=${userNum}">
+										<a href="${pageContext.request.contextPath}/_class/ClassMine.cl?userNum=${userNum}&page=${page}">
 											<div class="css-a1maoc" style="display: block;" id="classList">전체 상품</div>
 										</a>
 									</div>

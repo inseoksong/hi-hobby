@@ -16,6 +16,7 @@
 <body>
 	<c:set var="userNum" value="${sessionScope.userNum }"/>
 	<c:set var="classs" value= "${classVO}"/>
+	<c:set var="page" value= "${page}"/>
 	
 	<div class="css-13i5cls">
 		<div class="css-zsoya5">
@@ -124,7 +125,7 @@
 					</nav>
 				</div>
 				<!-- 기본 정보 -->
-				<form action="${pageContext.request.contextPath}/_class/ClassModifyOk.cl?classNum=${classs.getClassNum()}&userNum=${userNum}" name="onedayModify" method="post">
+				<form action="${pageContext.request.contextPath}/_class/ClassModifyOk.cl?classNum=${classs.getClassNum()}&userNum=${userNum}&page=${page}" name="onedayModify" method="post" enctype="multipart/form-data">
 					<div class="bottomside">
 						<div class="class-information">
 							<h4>클래스 정보</h4>
@@ -132,32 +133,36 @@
 								<p>커버 이미지</p>
 								<p>커버로 사용할 이미지를 추가해주세요. (최대 4장)</p>
 								<div class="images images1">
-									<label for="image1">
+									<label for="class_image1">
 										<div>
 											<img src="https://creator.class101.net/images/im-add-photo-landscape.png">
 										</div>
 									</label>
-									<input type="file" id="image1" class="class-image-file" name="classImage1">
-									<label for="image2">
+									<input type="file" id="class_image1" class="class-image-file" name="classImage1">
+									<input type="button" onclick="cancelFile('classImage1')" value="첨부 삭제">
+									<label for="class_image2">
 										<div>
 											<img src="https://creator.class101.net/images/im-add-photo-landscape.png">
 										</div>
 									</label>
-									<input type="file" id="image2" class="class-image-file" name="classImage2">
+									<input type="file" id="class_image2" class="class-image-file" name="classImage2">
+									<input type="button" onclick="cancelFile('classImage2')" value="첨부 삭제">
 								</div>
 								<div class="images images2">
-									<label for="image3">
+									<label for="class_image3">
 										<div>
 											<img src="https://creator.class101.net/images/im-add-photo-landscape.png">
 										</div>
 									</label>
-									<input type="file" id="image3" class="class-image-file" name="classImage3">
-									<label for="image4">
+									<input type="file" id="class_image3" class="class-image-file" name="classImage3">
+									<input type="button" onclick="cancelFile('classImage3')" value="첨부 삭제">
+									<label for="class_image4">
 										<div>
 											<img src="https://creator.class101.net/images/im-add-photo-landscape.png">
 										</div>
 									</label>
-									<input type="file" id="image4" class="class-image-file" name="classImage4">
+									<input type="file" id="class_image4" class="class-image-file" name="classImage4">
+									<input type="button" onclick="cancelFile('classImage4')" value="첨부 삭제">
 								</div>
 							</div>
 							<div class="class-name">

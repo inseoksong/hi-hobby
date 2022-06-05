@@ -43,8 +43,18 @@ public class ClassDAO {
 	}
 	
 	// 내가 개설한 클래스 보기 - 크리에이터센터
-	public List <ClassVO> viewMine(int userNum) {
-		return sqlSession.selectList("Class.viewMine", userNum);
+	public List <ClassVO> viewMine(Map<String,Integer> classMap) {
+		return sqlSession.selectList("Class.viewMine", classMap);
+	}
+	
+	// 크리에이터 - 내가 개설한 클래스 개수
+	public int getMineTotal(int userNum) {
+		return sqlSession.selectOne("Class.mineTotal", userNum);
+	}
+	
+	// 최근 등록한 클래스 번호
+	public int getSeq(int userNum) {
+		return sqlSession.selectOne("Class.getSeq", userNum);
 	}
 	
 	// 승인대기 클래스 조회

@@ -28,6 +28,8 @@ public class ClassModify implements Action {
 		ActionInfo actionInfo = new ActionInfo();
 		
 		int classNum = Integer.parseInt(req.getParameter("classNum"));
+		int page = Integer.parseInt(req.getParameter("page"));
+		
 		classVO = classDAO.modify(classNum);
 		
 //		obj.put("title", classVO.getClassTitle());
