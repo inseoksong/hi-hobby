@@ -24,6 +24,8 @@
 	클래스101에서 시작해 2022세요</title>
 </head>
 <body>
+	<c:set var="userNum" value="${sessionScope.userNum}"/>
+
 	<div id="__next" data-reactroot="">
 		<main>
 		<div class="css-zsoya5">
@@ -67,26 +69,28 @@
 								<div class="css-1q7ezph">
 									<div class="css-zsoya5">
 										<div class="css-qg5d2b"></div>
-										<div class="css-1mg3xmk 2" onclick="location.href='createrCenterInformation.jsp'"
-											onmouseout="this.style.background='#ffffff'"
-											onmouseover="this.style.background='rgb(248, 248, 248)';">
-											<div class="css-1f8m7mx">
-												<div class="css-1m6hr3p">
-													<span class="css-l67hwq">
-													    <svg
-															xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-															class="css-skwyyj">
-                                                                <path
-																d="M15.88 10.4c1-.995 1.62-2.375 1.62-3.9C17.5 3.46 15.04 1 12 1S6.5 3.46 6.5 6.5c0 1.52.62 2.895 1.615 3.895C5.095 11.85 3 14.94 3 18.5v3.25c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25V18.5a6.504 6.504 0 0 1 6.83-6.49c3.49.17 6.17 3.185 6.17 6.68v3.06c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25v-3.045c.005-3.59-2.055-6.805-5.12-8.305Zm-3.875-6.9c1.655 0 3 1.345 3 3s-1.345 3-3 3-3-1.345-3-3 1.345-3 3-3Z"
-																class="css-sy7xp0"></path>
-                                                        </svg>
-                                                    </span>
-													<div class="css-84g0ej"></div>
-													<span class="css-15zs1or">크리에이터 정보</span>
+										<a href="${pageContext.request.contextPath}/createrCenterInformaion.jsp">
+											<div class="css-1mg3xmk 2"
+												onmouseout="this.style.background='#ffffff'"
+												onmouseover="this.style.background='rgb(248, 248, 248)';">
+												<div class="css-1f8m7mx">
+													<div class="css-1m6hr3p">
+														<span class="css-l67hwq">
+														    <svg
+																xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+																class="css-skwyyj">
+	                                                                <path
+																	d="M15.88 10.4c1-.995 1.62-2.375 1.62-3.9C17.5 3.46 15.04 1 12 1S6.5 3.46 6.5 6.5c0 1.52.62 2.895 1.615 3.895C5.095 11.85 3 14.94 3 18.5v3.25c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25V18.5a6.504 6.504 0 0 1 6.83-6.49c3.49.17 6.17 3.185 6.17 6.68v3.06c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25v-3.045c.005-3.59-2.055-6.805-5.12-8.305Zm-3.875-6.9c1.655 0 3 1.345 3 3s-1.345 3-3 3-3-1.345-3-3 1.345-3 3-3Z"
+																	class="css-sy7xp0"></path>
+	                                                        </svg>
+	                                                    </span>
+														<div class="css-84g0ej"></div>
+														<span class="css-15zs1or">크리에이터 정보</span>
+													</div>
 												</div>
 											</div>
-										</div>
-										<a href="${pageContext.request.contextPath}/_class/ClassMine.cl?userNum=1">
+										</a>
+										<a href="${pageContext.request.contextPath}/_class/ClassMine.cl?userNum=${userNum}">
 											<div class="css-165esj4 3" onclick="notice(3)" onmouseout="this.style.background='#ffffff'" onmouseover="this.style.background='rgb(248, 248, 248)';" style="background: rgb(255, 255, 255);">
 												<div class="css-1f8m7mx">
 													<div class="css-1m6hr3p">
@@ -500,6 +504,7 @@
 													
 													<!-- 클래스 목록 시작 -->
 												<c:forEach var="classs" items="${classList}" >
+													<c:if test="${classs.getClassStatus() != '1'}">
 													<div aria-label="grid"
 														class="ReactVirtualized__Grid ReactVirtualized__Table__Grid"
 														role="rowgroup" tabindex="0"
@@ -631,6 +636,7 @@
 															</div>
 														</div>
 													</div>
+													</c:if>
 												</c:forEach>
 												</div>
 											</div>

@@ -28,7 +28,6 @@ public class ClassModify implements Action {
 		ActionInfo actionInfo = new ActionInfo();
 		
 		int classNum = Integer.parseInt(req.getParameter("classNum"));
-		System.out.println(classNum);
 		classVO = classDAO.modify(classNum);
 		
 //		obj.put("title", classVO.getClassTitle());
@@ -44,7 +43,6 @@ public class ClassModify implements Action {
 //		System.out.println(obj);
 		
 		req.setAttribute("classVO", classVO);
-		System.out.println(classVO);
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/creatorClassModify.jsp");

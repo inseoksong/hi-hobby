@@ -25,7 +25,7 @@ public class ClassModifyOk implements Action {
 			ActionInfo actionInfo = new ActionInfo();		
 			HttpSession session = req.getSession();
 			int classNum = Integer.parseInt(req.getParameter("classNum"));
-			System.out.println("modifyOk : " + classNum);
+			int userNum = Integer.parseInt(req.getParameter("userNum"));
 			
 			classVO.setClassNum(classNum);                      // 클래스 번호                
 			classVO.setClassNickname(req.getParameter("classNickname"));                      // 클래스 생성자 닉네임                   
@@ -40,13 +40,16 @@ public class ClassModifyOk implements Action {
 			classVO.setClassIntroduce(req.getParameter("classIntroduce"));                          // 클래스 설명                     
 //			classVO.setUserNum(session.getAttribute("userNum"));                             // 유저 고유번호(크리에이터 정보를 가져오기 위해)
 			
-			System.out.print(classVO);
+//			System.out.print(classVO);
 			classDAO.modifyOk(classVO);
 			
-			JSONObject result = new JSONObject();
-			result.put("check", "true");
+//			JSONObject result = new JSONObject();
+//			result.put("check", "true");
+			
+			actionInfo.setRedirect(false);
+			actionInfo.setPath("/_class/ClassModify.cl?classNum="+classNum);
 	
-			return null;
+			return actionInfo;
 		
 	}
 	

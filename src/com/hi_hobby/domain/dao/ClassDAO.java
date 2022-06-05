@@ -29,7 +29,6 @@ public class ClassDAO {
 	
 	// 클래스 수정정보 넣기
 	public void modifyOk(ClassVO classVO) {
-		System.out.println("수정하러 옴");
 		sqlSession.update("Class.modifyOk", classVO);
 	}
 	
@@ -40,7 +39,7 @@ public class ClassDAO {
 	
 	// 클래스 조회
 	public ClassVO view(int classNum) {
-		return sqlSession.selectOne("Class.view");
+		return sqlSession.selectOne("Class.view", classNum);
 	}
 	
 	// 내가 개설한 클래스 보기 - 크리에이터센터

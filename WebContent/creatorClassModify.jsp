@@ -14,7 +14,9 @@
 <link rel="shortcut icon" href="${pageContext.request.contextPath}/asset/img/favicon.ico">
 </head>
 <body>
+	<c:set var="userNum" value="${sessionScope.userNum }"/>
 	<c:set var="classs" value= "${classVO}"/>
+	
 	<div class="css-13i5cls">
 		<div class="css-zsoya5">
 			<div class="css-7nulm7">
@@ -87,7 +89,7 @@
 												</div>
 											</div>
 										</div>
-										<a href="${pageContext.request.contextPath}/_class/ClassMine.cl?userNum=1">
+										<a href="${pageContext.request.contextPath}/_class/ClassMine.cl?userNum=${userNum}">
 											<div class="css-165esj4 3" onclick="notice(3)" onmouseout="this.style.background='#ffffff'" onmouseover="this.style.background='rgb(248, 248, 248)';" style="background: rgb(255, 255, 255);">
 												<div class="css-1f8m7mx">
 													<div class="css-1m6hr3p">
@@ -122,7 +124,7 @@
 					</nav>
 				</div>
 				<!-- 기본 정보 -->
-				<form action="ClassCreateOk.cl" name="oneRegForm">
+				<form action="${pageContext.request.contextPath}/_class/ClassModifyOk.cl?classNum=${classs.getClassNum()}&userNum=${userNum}" name="onedayModify" method="post">
 					<div class="bottomside">
 						<div class="class-information">
 							<h4>클래스 정보</h4>
@@ -218,17 +220,15 @@
 								<input type="text" name="creatorPhone" placeholder="연락 가능한 연락처를 입력해주세요. (- 제외)">
 							</div> -->
 						<div class="bottomBtnWrap">
-						<a hre="${pageContext.request.contextPath}/_class/ClassMine.cl?userNum=1">
-								<div class="application-button backBtn">
-									<button class="backBtn" onclick="goToClassMine()">뒤로가기</button>
-								</div>
-						</a>
+							<div class="application-button backBtn">
+								<button type="button" class="backBtn" onclick="goToClassMine()">뒤로가기</button>
+							</div>
 							<div class="rightBtnWrap">
 								<div class="application-button">
-									<button onclick="modifyOk()">수정하기</button>
+									<button type="submit" onclick="modifyOk()">수정하기</button>
 								</div>
 								<div class="application-button"> <!-- onclick="notice(4) -->
-									<button id="class-del-btn" type="submit" onclick = "classDel()">삭제하기</button>
+									<button type="button" id="class-del-btn" onclick = "classDel()">삭제하기</button>
 								</div>
 							</div>
 						</div>
@@ -316,12 +316,31 @@
 				</footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+ var contextPath = "${pageContext.request.contextPath}";
+</script>
 <script src="asset/js/onedayClassCreate.js"></script>
 <script src="asset/js/createrCenter.js"></script>
 <script>
-	function oneRegister(){
-		console.log(oneReForm.classCategoy.value);
-		oneRegForm.submit();
+function goToClassMine(){
+	history.back()	
+}
+
+function modifyOk(){
+	onedayModify.submit();
+	alert("클래스가 수정되었습니다.");
+}
+
+function classDel(){
+	let check = false;
+	check = confirm("클래스를 삭제하시겠습니까?");
+	
+	if(check){
+		alert("클래스가 삭제되었습니다.")
+		location.href=contextPath + "/_class/ClassDelete.cl?classNum="+${classs.getClassNum()}+"&userNum="+${userNum};
 	}
+
+}
+
 </script>
 </html>

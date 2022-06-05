@@ -32,7 +32,6 @@ public class ClassMine implements Action{
 		ActionInfo actionInfo = new ActionInfo();
 		
 		req.setAttribute("classList", classList);
-		System.out.println(classList.get(0).getClassTitle());
 		
 		actionInfo.setRedirect(false);
 		actionInfo.setPath("/createrCenterAllClass.jsp");

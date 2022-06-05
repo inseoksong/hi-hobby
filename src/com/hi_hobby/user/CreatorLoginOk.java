@@ -39,7 +39,7 @@ public class CreatorLoginOk implements Action {
 			session.setAttribute("userNum", userNum);
 			
 			actionInfo.setRedirect(false);
-			actionInfo.setPath( req.getContextPath() + "/createrCenter.jsp" );
+			actionInfo.setPath("/createrCenterInformation.jsp" );
 			
 		} else {
 			actionInfo.setRedirect(true);

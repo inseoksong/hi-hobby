@@ -22,6 +22,10 @@
 	클래스101에서 시작해 2022세요</title>
 </head>
 <body>
+<%-- 
+${int userNum = (Integer)session.getAttribute("userNum");}
+ --%>
+ <c:set var="userNum" value="${sessionScope.userNum}"/>
 	<div id="__next" data-reactroot="">
 		<main>
 		<div class="css-zsoya5">
@@ -85,10 +89,9 @@
 												</div>
 											</div>
 										</div>
-										<a href="${pageContext.request.contextPath}/_class/ClassMine.cl?userNum=1">
+										<a href="${pageContext.request.contextPath}/_class/ClassMine.cl?userNum=${userNum}">
 											<div class="css-a1maoc" style="display: block;" id="classList">전체 상품</div>
 										</a>
-											<!-- userNum 받아와서 수정하기 -->
 									</div>
 								</div>
 							</div>
