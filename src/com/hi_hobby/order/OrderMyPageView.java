@@ -25,6 +25,8 @@ public class OrderMyPageView implements Action {
 		List<Integer> orderOnline = orderDAO.viewOnline(userNum);
 		List<Integer> orderOneday = orderDAO.viewOneday(userNum);
 		
+		System.out.println(orderOnline.size());
+		
 		req.setAttribute("orderOnline", orderOnline);
 		req.setAttribute("orderOneday", orderOneday);
 		
