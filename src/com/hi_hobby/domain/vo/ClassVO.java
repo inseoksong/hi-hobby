@@ -19,7 +19,8 @@ public class ClassVO {
 	private String classIntroduce;		// 클래스 설명
 	private String classDay;			// 클래스 생성 날짜
 	private int userNum;				// 유저 고유번호(크리에이터 정보를 가져오기 위해)
-
+	private String classVideo;			// 비디오 파일 이름
+	
 	public ClassVO() {;}
 
 	public int getClassNum() {

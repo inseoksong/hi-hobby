@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+    <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http//mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Class">
 
@@ -149,6 +149,38 @@
 		from tbl_class
 		where class_num = #{classNum} 
 	</select>	
+	
+<!-- 전체 클래스 보기 (목록에 사용)-->	
+	<select id="classAllList" parameterType="map" resultType="classDTO">
+	   select class_num, class_category, class_Day, class_approve, class_title, i.user_num, user_name
+	   from tbl_class i join tbl_user u
+	   on i.user_num = u.user_num
+	   order by 1 desc limit #{startRow}, #{rowCount}
+	</select>
+	
+	
+	<!-- 마이페이지를 위한 클래스 정보 불러오기 -->
+	<select id="viewMyPage" parameterType="_int" resultType="classVO">
+		select class_num, class_img
+		from tbl_class
+		where class_num = #{classNum}
+	</select>
+	
+	<!-- 마이페이지를 위한 온라인 클래스 상세정보 불러오기 -->
+	<select id="viewOnlineDetail" parameterType="_int" resultType="classVO">
+		select class_title, class_nickname, class_video
+		from tbl_class
+		where class_num = #{classNum}
+	</select>
+	
+	<!-- 마이페이지를 위한 원데이 클래스 상세정보 불러오기 -->
+	<select id="viewOnedayDetail" parameterType="_int" resultType="classDTO">
+		select class_title, class_nickname, order_reservation, class_place
+		from tbl_class c join tbl_order o
+		on c.class_num = o.class_num
+		where c.class_num = #{classNum}
+	</select>
+
 
 
 </mapper>
