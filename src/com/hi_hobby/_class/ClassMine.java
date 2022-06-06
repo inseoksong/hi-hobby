@@ -38,6 +38,7 @@ public class ClassMine implements Action{
 		// 사용자가 요청한 페이지
 		String temp = req.getParameter("page");
 		int page = temp == null? 1 : Integer.parseInt(temp);	// 요청한게 없으면 1페이지, 요청이 있으면 해당페이지
+		System.out.println("ClassMine 컨트롤러 : "+page+"페이지");
 		
 		// 한 페이지에 출력되는 클래스 개수
 		int rowCount= 10;

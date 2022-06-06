@@ -629,7 +629,7 @@
 																	style="overflow: hidden; flex: 0 1 155px;">
 																	<div class="css-b3mawz">
 																		<div class="css-i2rvrf">
-																			<button class="css-1estejg" onclick="location.href='${pageContext.request.contextPath}/_class/ClassModify.cl?classNum=${classs.getClassNum()}&page=${i}'">
+																			<button class="css-1estejg" onclick="location.href='${pageContext.request.contextPath}/_class/ClassModify.cl?classNum=${classs.getClassNum()}&page=${page}'">
 																				<span class="css-3kqv01"><span
 																					class="css-13g5vis">수정하기</span></span>
 																			</button>

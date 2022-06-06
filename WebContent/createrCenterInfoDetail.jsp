@@ -26,6 +26,7 @@
 ${int userNum = (Integer)session.getAttribute("userNum");}
  --%>
  <c:set var="userNum" value="${sessionScope.userNum}"/>
+ <c:set var="user" value="${userDTO}"/>
  
 	<div id="__next" data-reactroot="">
 		<main>
@@ -103,7 +104,7 @@ ${int userNum = (Integer)session.getAttribute("userNum");}
 				<div class="css-16f3fmi">
 					<div class="css-2pw500">
 						<!-- 크리에이터 정보 -->
-						<div class="css-154w5w9" style="display: block;">
+						<div class="css-154w5w9" style="display: none;">
 							<div class="css-djg42i">
 								<div class="css-15zhte1">
 									<h3 class="css-71lsss">크리에이터 정보</h3>
@@ -115,29 +116,27 @@ ${int userNum = (Integer)session.getAttribute("userNum");}
 									<h4 class="css-1o07dsb">기본 정보</h4>
 									<div class="css-1pki59g"></div>
 									<div class="css-ako7s9">
-										<a href="${pageContext.request.contextPath}/user/CreatorInfo.us">
-											<div class="css-1iy9h8i">
-												<div class="css-1f8m7mx">
-													<div class="css-u4kbcl">
-														<div class="css-15zhte1">
-															<h4 class="css-1o07dsb">내 정보</h4>
-															<div class="css-9ru05u"></div>
-															<p class="css-1e8cvx3">신분증이 첨부되니 반드시 준비해주세요.</p>
-														</div>
-														<div class="css-1kzabao"></div>
-														<div class="css-8gl8s1">입력 전</div>
+										<div class="css-1iy9h8i" onclick="notice(2)">
+											<div class="css-1f8m7mx">
+												<div class="css-u4kbcl">
+													<div class="css-15zhte1">
+														<h4 class="css-1o07dsb">내 정보</h4>
+														<div class="css-9ru05u"></div>
+														<p class="css-1e8cvx3">신분증이 첨부되니 반드시 준비해주세요.</p>
 													</div>
-													<span class="css-wzytx3"><svg
-															xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-															class="css-uxrfz2">
-	                                                                <path
-																d="M8.825 21.93 7.41 20.515c-.1-.1-.1-.255 0-.355l8.155-8.155-8.16-8.16c-.1-.1-.1-.255 0-.355L8.82 2.075c.1-.1.255-.1.355 0l9.75 9.75c.1.1.1.255 0 .355L9.18 21.93c-.1.1-.26.1-.355 0Z"
-																class="css-17ivn46"></path>
-	                                                            </svg>
-	                                               </span>
+													<div class="css-1kzabao"></div>
+													<div class="css-8gl8s1">입력 전</div>
 												</div>
+												<span class="css-wzytx3"><svg
+														xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+														class="css-uxrfz2">
+                                                                <path
+															d="M8.825 21.93 7.41 20.515c-.1-.1-.1-.255 0-.355l8.155-8.155-8.16-8.16c-.1-.1-.1-.255 0-.355L8.82 2.075c.1-.1.255-.1.355 0l9.75 9.75c.1.1.1.255 0 .355L9.18 21.93c-.1.1-.26.1-.355 0Z"
+															class="css-17ivn46"></path>
+                                                            </svg>
+                                               </span>
 											</div>
-										</a>
+										</div>
 									</div>
 									</a>
 								</div>
@@ -148,7 +147,7 @@ ${int userNum = (Integer)session.getAttribute("userNum");}
 						<form action="" name= "creatorInfo" method="post">
 							<div
 								class="Grid__StyledDiv-sc-81d45n-0 iIwnuy CreatorAccountProfileViewController__Container-sc-1u2e1vs-0 jrlbMn"
-								style="display: none;">
+								style="display: block;">
 								<div
 									class="Layouts__Row-sc-1nk2ist-1 CreatorAccountProfileViewController__HeaderSection-sc-1u2e1vs-1 klyAjq gANRQY">
 									<div class="Col__StyledDiv-sc-1afbvp3-0 iGnmDu">
@@ -202,19 +201,35 @@ ${int userNum = (Integer)session.getAttribute("userNum");}
 											</div>
 											<div class="FormGroup__Content-sc-1b539l4-4 fedjlq">
 												<input type="text" id="name" fill="true" name="name"
-													placeholder="이름을 입력해주세요." id="nameIn"
+													value="${user.getUserName()}"  id="nameIn"
 													class="TextInput__StyledInput-sc-5hb15z-0 jRAPzN TextInputField__StyledTextInput-sc-3mob3-0"
-													required>
+													readonly>
 												<div class="css-hpn70j"></div>
 												<div class="css-15zhte1 na" style="display: none;">
 													<p class="css-17uv9yt">이름을 입력해주세요</p>
 												</div>
 											</div>
 										</div>
+										<div class="FormGroup__Container-sc-1b539l4-2 YxuLq">
+											<div class="FormGroup__LabelContainer-sc-1b539l4-3 hoTfaP">
+												<label color="#3a3a3a"
+													class="FormGroup__Label-sc-1b539l4-0 hMHDcy">최근 등록한 클래스</label>
+											</div>
+											<table>
+												<c:forEach var="user" items="${userList}">
+													<tr>
+														<td>${user.getClassNum()}</td>
+														<td>${user.getClassTitle()}</td>
+													</tr>
+												</c:forEach>
+											</table>
+	
+										</div>
 
 										<div class="Spacing__Box-sc-47wgmh-0 bTsQjQ"></div>
 										<div class="RadioButtonField__Container-sc-1fyzgka-0 krzWXx">
-											<div class="FormGroup__Container-sc-1b539l4-2 YxuLq">
+										<!-- 성별 부분 -->
+<!-- 											<div class="FormGroup__Container-sc-1b539l4-2 YxuLq">
 												<div class="FormGroup__LabelContainer-sc-1b539l4-3 hoTfaP">
 													<label color="#3a3a3a"
 														class="FormGroup__Label-sc-1b539l4-0 hMHDcy">성별</label>
@@ -239,8 +254,8 @@ ${int userNum = (Integer)session.getAttribute("userNum");}
 														</div>
 													</div>
 												</div>
-											</div>
-										</div>
+											</div> -->
+										<!-- </div>
 										<div class="Spacing__Box-sc-47wgmh-0 bTsQjQ"></div>
 										<div
 											class="FormGroup__Container-sc-1b539l4-2 YxuLq DatePickerField__StyledFormGroup-p6y8sk-0 hQpntn">
@@ -249,8 +264,8 @@ ${int userNum = (Integer)session.getAttribute("userNum");}
 													class="FormGroup__Label-sc-1b539l4-0 hMHDcy">생년월일</label>
 											</div>
 											<div class="FormGroup__Content-sc-1b539l4-4 fedjlq">
-												<!-- <div class="DatePicker__Container-sc-17jj9sz-0 gwWmPU"> -->
-												<!-- <div class="Input__Container-sc-1pp94n7-1 bMuLZO DatePicker__PickerInput-sc-17jj9sz-5 bGqcar"> -->
+												<div class="DatePicker__Container-sc-17jj9sz-0 gwWmPU">
+												<div class="Input__Container-sc-1pp94n7-1 bMuLZO DatePicker__PickerInput-sc-17jj9sz-5 bGqcar">
 												<input
 													class="Input__StyledInput-sc-1pp94n7-0 cRDrJp DatePicker__PickerInput-sc-17jj9sz-5 bGqcar"
 													type="text" placeholder="20220523" id="birth" required>
@@ -258,8 +273,8 @@ ${int userNum = (Integer)session.getAttribute("userNum");}
 												<div class="css-15zhte1 bi" style="display: none;">
 													<p class="css-17uv9yt">생년월일을 입력해주세요</p>
 												</div>
-												<!-- </div> -->
-												<!-- </div> -->
+												</div>
+												</div>
 											</div>
 										</div>
 										<div class="Spacing__Box-sc-47wgmh-0 bTsQjQ"></div>
@@ -280,7 +295,7 @@ ${int userNum = (Integer)session.getAttribute("userNum");}
 												</select>
 											</div>
 										</div>
-										<!-- <hr size="24" class="Divider-sc-1brd6qu-0 gmtXfv"> -->
+										<hr size="24" class="Divider-sc-1brd6qu-0 gmtXfv">
 										<div class="FormGroup__Container-sc-1b539l4-2 YxuLq">
 											<div class="FormGroup__LabelContainer-sc-1b539l4-3 hoTfaP">
 												<label color="#3a3a3a"
@@ -315,18 +330,18 @@ ${int userNum = (Integer)session.getAttribute("userNum");}
 													</div>
 											</label>
 										</div>
-									</div>
+									</div> -->
 									<div class="Spacing__Box-sc-47wgmh-0 hlNGtB"></div>
-									<button type="button" id="save" onclick="ok(1)"
+									<button type="button" id="save" onclick="saveOk()"
 										class="ButtonBase__ButtonContainer-sc-1lxfn99-0 ePMgoJ ContainButton__StyledButtonBase-zzhpc2-0 iIoHla CreatorAccountProfileViewController__StyledButton-sc-1u2e1vs-3 hdPOVF disabled save"
 										style="display: inline-block; cursor: pointer;">
 										<span class="ButtonBase__Text-sc-1lxfn99-1 klhmlx">저장</span>
 									</button>
-									<button type="button" id="del" onclick="ok(2)"
+<!-- 									<button type="button" id="del" onclick="ok(2)"
 										class="ButtonBase__ButtonContainer-sc-1lxfn99-0 ePMgoJ ContainButton__StyledButtonBase-zzhpc2-0 iIoHla CreatorAccountProfileViewController__StyledButton-sc-1u2e1vs-3 hdPOVF disabled del"
 										style="display: inline-block; cursor: pointer;">
 										<span class="ButtonBase__Text-sc-1lxfn99-1 klhmlx">삭제</span>
-									</button>
+									</button> -->
 								</div>
 							</div>
 					</div>
@@ -444,10 +459,16 @@ ${int userNum = (Integer)session.getAttribute("userNum");}
 <script>
 var contextPath = "${pageContext.request.contextPath }";
 </script>
-<script src="asset/js/createrCenterInformation.js"></script>
+<script src="asset/js/createrCenterInfoDetail.js"></script>
 <script src="asset/js/onedayClassCreate.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
+
+function saveOk(){
+	location.href=contextPath+""
+	alert("저장되었습니다.");
+}
+
  var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 mapOption = {
     center: new daum.maps.LatLng(37.537187, 127.005476), // 지도의 중심좌표
