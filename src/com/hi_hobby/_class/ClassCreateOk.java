@@ -1,7 +1,7 @@
 package com.hi_hobby._class;
 
 import java.io.IOException;
-import java.util.List;
+import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,13 +24,6 @@ public class ClassCreateOk implements Action {
 			ClassVO classVO = new ClassVO();
 			ClassDAO classDAO = new ClassDAO();
 			ActionInfo actionInfo = new ActionInfo();		
-			HttpSession session = req.getSession();		
-			//파일을 주고받기위해 기존 req를 받던것  > multipartreq로 받아야 하지만,
-			// session은 req 로 받아야한다. ***
-			FileDAO  fileDAO = new FileDAO();
-			
-			int userNum = (Integer)req.getSession().getAttribute("userNum");
-			// String > Integer 다운캐스팅 표시
 			
 			// 사진 첨부를 위한 부분 
 			String uploadPath = "C:\\hi_hobby\\upload";

@@ -1,23 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>     
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>하이하비 | 온라인 클래스</title>
-<link rel="stylesheet" href="asset/css/onlineClass.css">
-<link rel="stylesheet" href="asset/css/onlinePayment.css">
+<title>하이하비 | 원데이 클래스</title>
+<link rel="stylesheet" href="asset/css/onedayClass.css">
+<link rel="stylesheet" href="asset/css/onedayPayment.css">
 <link rel="stylesheet" href="asset/css/header.css">
 <link rel="stylesheet" href="asset/css/footer.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 <link rel="shortcut icon" href="asset/img/favicon.ico">
 </head>
 <body>
-	<c:set var="classOn" value="${classOn}"/>
+	<c:set var="classAll" value="${classNum}"/>
 	<c:set var="page" value="${page}"/>
-	<c:set var="priceResult" value="${classOn.getClassPrice()}"/>
-	<c:set var="classNum" value="${classOn.getClassNum()}"/>
+	<c:set var="classOne" value="${classOne}"/>
+	<c:set var="priceResult" value="${classAll.getClassPrice()}"/>
+	<c:set var="classNum" value="${classAll.getClassNum()}"/>
 	<jsp:include page="header.jsp"/>
 	<!-- ↑ 헤더 부분 -->
 	<section class="final-wrap">
@@ -34,7 +35,7 @@
 						</div>
 						<div class="images">
 							<div class="image">
-								<c:out value="${classOn.getClassImg()}"></c:out>
+								<c:out value="${classOne.getClassImg()}"></c:out>
 							</div>
 						</div>
 						<div class="arrow next">
@@ -52,20 +53,20 @@
 						<div class="sticky">
 							<div class="class-explan">
 								<div class="class-name">
-									<c:out value="${classOn.getClassTitle()}"/>
+									<c:out value="${classOne.getClassTitle()}"/>
 								</div>
-								<div class="class-crea"><c:out value="${classOn.getClassNickname()}"/></div>
-								<div class="class-price"><c:out value="${classOn.getClassPrice()}"/></div>
+								<div class="class-crea"><c:out value="${classOne.getClassNickname()}"/></div>
+								<div class="class-price"><c:out value="${classOne.getClassPrice()}"/></div>
 							</div>
 							<div class="reservation-button">
-								<button type="button">클래스 구매하기</button>
+								<button type="button">클래스 예약하기</button>
 							</div>
 							<div class="push-share">
 								<button type="button" class="push" onclick="classLike()">
 									<span class="push-share-img">
 										<img class="empty" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FtUiuQ%2FbtrCNOnpIbK%2FtYcpNGwOjSNCd7tzUtBja0%2Fimg.png">
 									</span>
-									<span id="LikeClass"><c:out value="${classOn.getClassLike()}"/></span>
+									<span id="LikeClass"><c:out value="${classOne.getClassLike()}"/></span>
 								</button>
 								<button type="button" class="share" onclick="copy()">
 									<span class="push-share-img">
@@ -88,6 +89,17 @@
 									</div>
 									<section class="main">
 										<form action="OrderCreateOne.or" name="createOneForm" method="post" onsubmit="orderCheck()">
+											<c:if test="classOne">
+												<div class="reservation">
+													<div class="reservation-text-big">예약</div>
+													<div class="reservation-text-small">예약</div>
+													<div class="reservation-write">
+														<input type="text" name="reservation" placeholder="YYYY-MM-DD">
+													</div>
+													<div class="reservation-check"></div>
+												</div>
+											</c:if>
+											<div class="line"></div>
 											<div class="point">
 												<div class="point-text-big">쿠폰</div>
 												<div class="point-text-small">쿠폰</div>
@@ -105,7 +117,7 @@
 												<div class="payment-text-big">결제 금액</div>
 												<div class="payment-price">
 													<p>총 상품 금액</p>
-													<p><c:out value="${classOn.getClassPrice()}"/></p>
+													<p><c:out value="${classOne.getClassPrice()}"/></p>
 												</div>
 												<div class="payment-line"></div>
 												<div class="payment-point">
@@ -162,7 +174,7 @@
 									<div class="writing">
 										<div class="folded">
 											<div class="main-text">
-											<c:out value="${classOn.getClassIntroduce()}"/>
+											<c:out value="${classOne.getClassIntroduce()}"/>
 											</div>
 										</div>
 										<div class="class-hidden"></div>
@@ -175,9 +187,9 @@
 							<div class="creator">
 								<div class="creator-wrap">
 									<div class="creator-profile">
-										<h3><c:out value="${classOn.getClassNickname()}"/></h3>
+										<h3><c:out value="${classOne.getClassNickname()}"/></h3>
 										<div class="creator-image">
-											<c:out value="${classOn.getClassImg()}"/>
+											<c:out value="${classOne.getClassImg()}"/>
 										</div>
 									</div>
 									<div class="writing">
@@ -195,21 +207,21 @@
 								<div class="detail-wrap">
 									<div class="detail-product">
 										<p class="question">상품</p>
-										<p class="answer"><c:out value="${classOn.isClassOne()}"/></p>
+										<p class="answer"><c:out value="${classOne.isClassOne()}"/></p>
 									</div>
 									<div class="detail-category">
 										<p class="question">카테고리</p>
-										<p class="answer"><c:out value="${classOn.getClassCategory()}"/></p>
+										<p class="answer"><c:out value="${classOne.getClassCategory()}"/></p>
 									</div>
 								</div>
 								<div class="detail-wrap">
 									<div class="detail-location">
 										<p class="question">위치</p>
-										<p class="answer"><c:out value="${classOn.getClassPlace()}"/></p>
+										<p class="answer"><c:out value="${classOne.getClassPlace()}"/></p>
 									</div>
 									<div class="detail-time">
 										<p class="question">시간</p>
-										<p class="answer"><c:out value="${classOn.getClassStart()}"/></p>
+										<p class="answer"><c:out value="${classOne.getClassStart()}"/></p>
 									</div>
 								</div>
 							</div>
@@ -223,8 +235,8 @@
 	<jsp:include page="footer.jsp"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="asset/js/onlineClass.js"></script>
-<script src="asset/js/onlinePayment.js"></script>
+<script src="asset/js/onedayClass.js"></script>
+<script src="asset/js/onedayPayment.js"></script>
 <script src="asset/js/header.js"></script>
 <script>
 	var click = false;

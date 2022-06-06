@@ -10,13 +10,15 @@ import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
 import com.hi_hobby.domain.dao.ClassDAO;
 
-public class ClassGraphViewOne implements Action {
+public class ClassGraphViewCategory implements Action {
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 			req.setCharacterEncoding("UTF-8");
 			HashMap<String, Integer> classMap = new HashMap<>();
 			ActionInfo actionInfo = new ActionInfo();
 			ClassDAO classDAO = new ClassDAO();
+			
+			int classCategory = Integer.parseInt(req.getParameter("classCategory"));
 			
 			//전체 게시글 개수
 			int total = classDAO.getTotal();
@@ -50,9 +52,10 @@ public class ClassGraphViewOne implements Action {
 			//DB에서 필요한 데이터를 Map에 담는다.
 			classMap.put("startRow", startRow);
 			classMap.put("rowCount", rowCount);
+			classMap.put("classCategory", classCategory);
 
 			//시작 인덱스와, 개수를 전달하여 게시글 목록을 가져온 뒤 requestScope에 담아준다.
-			req.setAttribute("GraphViewOne", classDAO.GraphViewOne(classMap));
+			req.setAttribute("GraphViewCategory", classDAO.GraphViewCategory(classMap));
 			//현재 페이지를 requestScope에 담아준다.
 			req.setAttribute("page", page);
 			req.setAttribute("startPage", startPage);
@@ -63,7 +66,7 @@ public class ClassGraphViewOne implements Action {
 //			List<ClassVO> GraphViewOne = classDAO.GraphViewOne(); 출력만
 //			req.setAttribute("GraphViewOne", GraphViewOne);			출력만
 			actionInfo.setRedirect(false);
-			actionInfo.setPath("/onedayList.jsp");
+			actionInfo.setPath("/categoryList.jsp");
 			
 			return actionInfo;
 

@@ -17,12 +17,21 @@ public class ClassVO {
 	private int classStatus;		// 클래스 삭제 여부
 	private int classLike;				// 찜하기 버튼(하트)
 	private String classIntroduce;		// 클래스 설명
+	private String classDay;			// 클래스 생성 날짜
 	private int userNum;				// 유저 고유번호(크리에이터 정보를 가져오기 위해)
 
 	public ClassVO() {;}
 
 	public int getClassNum() {
 		return classNum;
+	}
+
+	public String getClassDay() {
+		return classDay;
+	}
+
+	public void setClassDay(String classDay) {
+		this.classDay = classDay;
 	}
 
 	public void setClassNum(int classNum) {

@@ -60,11 +60,38 @@ public class ClassFrontController extends HttpServlet {
 		else if(command.equals("ClassConfirm.cl")) {
 			actionInfo = new ClassApprove().execute(req, resp);
 		}
+		else if(command.equals("ClassGraphViewCategoryList.cl")) {
+			actionInfo = new ClassGraphViewCategory().execute(req, resp);
+		}
 		else if(command.equals("ClassGraphViewOne.cl")) {
 			actionInfo = new ClassGraphViewOne().execute(req, resp);
 		}
+		else if(command.equals("ClassGraphViewOneTop.cl")) {
+			actionInfo = new ClassGraphViewOneTop().execute(req, resp);
+		}
 		else if(command.equals("ClassGraphViewOneDetail.cl")) {
 			actionInfo = new ClassGraphViewOneDetail().execute(req, resp);
+		}
+		else if(command.equals("ClassGraphViewOn.cl")) {
+			actionInfo = new ClassGraphViewOn().execute(req, resp);
+		}
+		else if(command.equals("ClassGraphView.cl")) {
+			actionInfo = new ClassGraphView().execute(req, resp);
+		}
+		else if(command.equals("ClassGraphViewDetail.cl")) {
+			actionInfo = new ClassGraphViewDetail().execute(req, resp);
+		}
+		else if(command.equals("ClassGraphViewOnTop.cl")) {
+			actionInfo = new ClassGraphViewOnTop().execute(req, resp);
+		}
+		else if(command.equals("ClassGraphViewOnDetail.cl")) {
+			actionInfo = new ClassGraphViewOnDetail().execute(req, resp);
+		}
+		else if(command.equals("ClassLike.cl")) {
+			actionInfo = new ClassLike().execute(req, resp);
+		}
+		else if(command.equals("ClassGetLike.cl")) {
+			actionInfo = new ClassGetLike().execute(req, resp);
 		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성

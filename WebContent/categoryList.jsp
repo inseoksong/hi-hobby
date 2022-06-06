@@ -1,20 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>하이하비 | 온라인 클래스</title>
-<link rel="stylesheet" href="asset/css/onlineList.css">
+<title>하이하비 | 원데이 클래스</title>
+<link rel="stylesheet" href="asset/css/onedayList.css">
 <link rel="stylesheet" href="asset/css/header.css">
 <link rel="stylesheet" href="asset/css/footer.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 <link rel="shortcut icon" href="asset/img/favicon.ico">
 </head>
 <body>
-	<c:set var="classViewOn" value="${classViewOn}"/>
+	<c:set var="GraphViewCategory" value="${GraphViewCategory}"/>
 	<c:set var="page" value="${page}"/>
 	<c:set var="startPage" value="${startPage}"/>
 	<c:set var="endPage" value="${endPage}"/>
@@ -22,6 +22,7 @@
 	<c:set var="total" value="${total}"/>
 	<c:set var="i" value="0" />
 	<c:set var="j" value="3" />
+	
 	<jsp:include page="header.jsp"/>
 	<!-- ↑ 헤더 부분 -->
 	<section class="final-wrap">
@@ -34,11 +35,6 @@
 					<h1 class="music-main category">음악</h1>
 					<h1 class="exercise-main category">운동</h1>
 					<h1 class="life-main category">라이프</h1>
-					<h1 class="photo-video-main category">사진 · 영상</h1>
-					<h1 class="finance-main category">금융 · 재태크</h1>
-					<h1 class="programming-main category">프로그래밍</h1>
-					<h1 class="business-main category">비즈니스</h1>
-					<h1 class="language-main category">외국어</h1>
 				</section>
 				<section>
 					<div>
@@ -50,12 +46,12 @@
 						<div class="class-wrap">
 							<div class="classes-wrap">
 								<c:choose>
-									<c:when test="${GraphViewOn != null and fn:length(GraphViewOn) > 0}">
-										<c:forEach var="classs" items="${GraphViewOn}">
+									<c:when test="${GraphViewCategory != null and fn:length(GraphViewCategory) > 0}">
+										<c:forEach var="classs" items="${GraphViewCategory}">
 											<c:if test="${i%j == 0 }">
 											<ul class="classes">
 											</c:if>
-												<a href="${pageContext.request.contextPath }/ClassGraphViewOnDetail.cl?classNum=${classs.getClassNum()}&page=${page}">
+												<a href="${pageContext.request.contextPath }/ClassGraphViewDetail.cl?classNum=${classs.getClassNum()}&page=${page}">
 													<li class="first"">
 														<div class="img-wrap">
 															<c:out value="${classs.getClassImg()}"/>
@@ -137,6 +133,6 @@
 	<jsp:include page="footer.jsp"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="asset/js/onlineList.js"></script>
+<script src="asset/js/onedayList.js"></script>
 <script src="asset/js/header.js"></script>
 </html>

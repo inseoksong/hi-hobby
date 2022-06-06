@@ -24,46 +24,74 @@
                 <div class="all-menu-below">
                     <div class="below-div">
                         <div class="child-wrap white">
-                            <div class="cate-top below-child">크리에이터</div>
+	                        <a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=${1}">
+	                            <div class="cate-top below-child">크리에이터</div>
+                            </a>
                         </div>
                         <div class="child-wrap">
-                            <div class="cate-bottom below-child">드로잉</div>
+                        	<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=${2}">
+                            	<div class="cate-bottom below-child">드로잉</div>
+                            </a>
                         </div>
                         <div class="child-wrap">
-                            <div class="cate-bottom below-child">공예</div>
+	                        <a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=${3}">
+	                            <div class="cate-bottom below-child">공예</div>
+                            </a>
                         </div>
                         <div class="child-wrap">
-                            <div class="cate-bottom below-child">요리 · 베이킹</div>
+	                        <a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=${4}">
+	                            <div class="cate-bottom below-child">요리 · 베이킹</div>
+                            </a>
                         </div>
                         <div class="child-wrap">
-                            <div class="cate-bottom below-child">음악</div>
+	                        <a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=${5}">
+	                            <div class="cate-bottom below-child">음악</div>
+                            </a>
                         </div>
                         <div class="child-wrap">
-                            <div class="cate-bottom below-child">운동</div>
+	                        <a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=${6}">
+	                            <div class="cate-bottom below-child">운동</div>
+                            </a>
                         </div>
                         <div class="child-wrap">
-                            <div class="cate-bottom below-child">라이프</div>
+	                        <a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=${7}">
+	                            <div class="cate-bottom below-child">라이프</div>
+                            </a>
                         </div>
                         <div class="child-wrap">
-                            <div class="cate-bottom below-child">사진·영상</div>
+	                        <a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=${8}">
+	                            <div class="cate-bottom below-child">사진·영상</div>
+                            </a>
                         </div>
                         <div class="child-wrap white">
-                            <div class="cate-top below-child">수익창출</div>
+	                        <a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=${9}">
+	                            <div class="cate-top below-child">수익창출</div>
+                            </a>
                         </div>
                         <div class="child-wrap">
-                            <div class="cate-bottom below-child">금융·재테크</div>
+	                        <a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=${10}">
+	                            <div class="cate-bottom below-child">금융·재테크</div>
+                            </a>
                         </div>
                         <div class="child-wrap white">
-                            <div class="cate-top below-child">직무</div>
+	                        <a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=${11}">
+	                            <div class="cate-top below-child">직무</div>
+                            </a>
                         </div>
                         <div class="child-wrap">
-                            <div class="cate-bottom below-child">프로그래밍</div>
+	                        <a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=${12}">
+	                            <div class="cate-bottom below-child">프로그래밍</div>
+                            </a>
                         </div>
                         <div class="child-wrap">
-                            <div class="cate-bottom below-child">비즈니스</div>
+	                        <a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=${13}">
+	                            <div class="cate-bottom below-child">비즈니스</div>
+                            </a>
                         </div>
                         <div class="child-wrap">
-                            <div class="cate-bottom below-child">외국어</div>
+	                        <a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=${1}">
+	                            <div class="cate-bottom below-child">외국어</div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -239,10 +267,8 @@
         <div class="main-content">
             <div class="layer floor1">
                 <div class="title-wrap" style="clear:both;">
-                    <a style="cursor: pointer;" href="location.href='oneday.jsp'">
                         <p class="title">원데이 클래스 TOP 10</p>
-                    </a>
-                    <a href="ClassGraphViewOne.cl">
+                    <a href="ClassGraphViewOneTop.cl">
                         <p class="more-class">전체 클래스 보기</p>
                     </a>
                 </div>
@@ -487,10 +513,8 @@
             <a name="target2"></a>
             <div class="layer floor1">
                 <div class="title-wrap" style="clear:both;">
-                    <a style="cursor: pointer;" href="location.href='onlineClass.jsp'">
                         <p class="title">온라인 클래스 TOP 10</p>
-                    </a>
-                    <a href="">
+                    <a href="ClassGraphViewOnTop.cl">
                         <p class="more-class">전체 클래스 보기</p>
                     </a>
                 </div>
@@ -735,10 +759,8 @@
             <a name="target3"></a>
             <div class="layer floor1">
                 <div class="title-wrap" style="clear:both;">
-                    <a href="">
                         <p class="title">MD 추천 클래스</p>
-                    </a>
-                    <a href="">
+                    <a href="ClassGraphView.cl">
                         <p class="more-class">전체 클래스 보기</p>
                     </a>
                 </div>
@@ -982,10 +1004,8 @@
             </div> 
             <div class="layer floor1">
                 <div class="title-wrap" style="clear:both;">
-                    <a style="cursor: pointer;" href="location.href='onedayClass.jsp'">
-                        <p class="title">원데이 클래스</p>
-                    </a>
-                    <a href="">
+                    <p class="title">원데이 클래스</p>
+                    <a href="ClassGraphViewOne.cl">
                         <p class="more-class">전체 클래스 보기</p>
                     </a>
                 </div>
@@ -1229,10 +1249,8 @@
             </div>
             <div class="layer floor1">
                 <div class="title-wrap" style="clear:both;">
-                    <a style="cursor: pointer;" href="location.href='onlineClass.jsp'">
-                        <p class="title">온라인 클래스</p>
-                    </a>
-                    <a href="">
+                    <p class="title">온라인 클래스</p>
+                    <a href="ClassGraphViewOn.cl">
                         <p class="more-class">전체 클래스 보기</p>
                     </a>
                 </div>

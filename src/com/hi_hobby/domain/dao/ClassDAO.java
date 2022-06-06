@@ -69,18 +69,22 @@ public class ClassDAO {
 	}
 	
 	// 원데이 클래스 목록 조회
+	public List<ClassVO> GraphViewCategory(Map<String, Integer> classMap) {
+		return sqlSession.selectList("Class.GraphViewCategory", classMap);
+	}
+	
+	// 원데이 클래스 목록 조회
 	public List<ClassVO> GraphViewOne(Map<String, Integer> classMap) {
 		return sqlSession.selectList("Class.GraphViewOne", classMap);
 	}
 	
-	//클래스 전체 개수
-	public int getTotal() {
-		return sqlSession.selectOne("Class.getTotal");
+	// 원데이 클래스 TOP10 목록 조회
+	public List<ClassVO> GraphViewOneTop(Map<String, Integer> classMap) {
+		return sqlSession.selectList("Class.GraphViewOneTop", classMap);
 	}
 	
 	//클래스 정보 조회
 	public ClassVO selectDetail(int classNum) {
-		System.out.println("디테일 다오 들어옴");
 		return sqlSession.selectOne("Class.selectDetail", classNum);
 	}
 	
