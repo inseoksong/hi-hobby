@@ -14,7 +14,7 @@ public class ClassVO {
 	private String classDay;			// 클래스 생성 날짜
 	private boolean classApprove;		// 승인 여부
 	private String classImg;			// 이미지 자료형
-	private boolean classOne;			// 원데이(1), 온라인(0) 클래스 구분
+	private int classOne;				// 원데이(1), 온라인(0) 클래스 구분
 	private int classStatus;			// 클래스 삭제 여부
 	private int classLike;				// 찜하기 버튼(하트)
 	private String classIntroduce;		// 클래스 설명
@@ -119,11 +119,11 @@ public class ClassVO {
 		this.classLike = classLike;
 	}
 
-	public boolean isClassOne() {
+	public int getClassOne() {
 		return classOne;
 	}
 
-	public void setClassOne(boolean classOne) {
+	public void setClassOne(int classOne) {
 		this.classOne = classOne;
 	}
 
