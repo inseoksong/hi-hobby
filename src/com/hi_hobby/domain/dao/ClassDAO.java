@@ -29,7 +29,6 @@ public class ClassDAO {
 	
 	// 클래스 수정정보 넣기
 	public void modifyOk(ClassVO classVO) {
-		System.out.println("수정하러 옴");
 		sqlSession.update("Class.modifyOk", classVO);
 	}
 	
@@ -40,12 +39,22 @@ public class ClassDAO {
 	
 	// 클래스 조회
 	public ClassVO view(int classNum) {
-		return sqlSession.selectOne("Class.view");
+		return sqlSession.selectOne("Class.view", classNum);
 	}
 	
 	// 내가 개설한 클래스 보기 - 크리에이터센터
-	public List <ClassVO> viewMine(int userNum) {
-		return sqlSession.selectList("Class.viewMine", userNum);
+	public List <ClassVO> viewMine(Map<String,Integer> classMap) {
+		return sqlSession.selectList("Class.viewMine", classMap);
+	}
+	
+	// 크리에이터 - 내가 개설한 클래스 개수
+	public int getMineTotal(int userNum) {
+		return sqlSession.selectOne("Class.mineTotal", userNum);
+	}
+	
+	// 최근 등록한 클래스 번호
+	public int getSeq(int userNum) {
+		return sqlSession.selectOne("Class.getSeq", userNum);
 	}
 	
 	// 승인대기 클래스 조회

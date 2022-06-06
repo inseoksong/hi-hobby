@@ -36,12 +36,25 @@
 	where class_num = #{classNum}
 	</update>
 	
-<!-- 내가 개설한 클래스 보기 (크리에이터센터)-->
-	<select id="viewMine" parameterType="_int" resultType="classVO">
-	select class_num, class_nickname, class_title, class_category, class_place, class_start, class_end, class_approve, class_img, class_one, class_status, class_introduce, class_price
-	from tbl_class
-	where user_num = #{userNum}
+	<!-- 내가 개설한 클래스 보기 (크리에이터센터)-->
+	<select id="viewMine" parameterType="map" resultType="classVO">
+		select class_num, class_nickname, class_title, class_category, class_place, class_start, class_end, class_approve, class_img, class_one, class_status, class_introduce, class_price
+		from tbl_class
+		where user_num = #{userNum}
+		order by 1 desc limit #{startRow}, #{rowCount}
 	</select>	
+	
+	<!-- 내가 개설한 클래스 개수 -->
+	<select id="mineTotal" parameterType="_int" resultType="_int">
+		select count(class_num) from tbl_class where user_num = ${userNum}
+	</select>
+	
+	<!-- 최근 등록한 클래스 번호 -->
+	<select id="getSeq" parameterType="_int" resultType="_int">
+		select class_num from tbl_class
+		where user_num = ${userNum}
+		order by 1 desc limit 0, 1
+	</select> <!-- 내림차순해서 한개만 뽑기 :: 가장 최근 등록 클래스 -->
 	
 <!-- 승인 대기 클래스 보기 -->
 	<select id="pending" parameterType="_int" resultType="classVO">

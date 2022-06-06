@@ -39,11 +39,11 @@ public class CreatorLoginOk implements Action {
 			session.setAttribute("userNum", userNum);
 			
 			actionInfo.setRedirect(false);
-			actionInfo.setPath( req.getContextPath() + "/createrCenter.jsp" );
+			actionInfo.setPath("/createrCenterInformation.jsp" );
 			
 		} else {
 			actionInfo.setRedirect(true);
-			actionInfo.setPath (req.getContextPath() + "/createrLogin.jsp");
+			actionInfo.setPath ("/createrLogin.jsp");
 			System.out.println("아이디 잘못 입력함");
 		}
 		

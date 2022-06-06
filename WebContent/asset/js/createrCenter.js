@@ -301,17 +301,6 @@ function secc(idx){
     }
 };
 
-function classDel(){
-	let check = false;
-	check = confirm("클래스를 삭제하시겠습니까?");
-			
-			if(!check){
-				location.href = contextPath + "/createrCenter.jsp";
-			} else {
-				location.href = contextPath + "/_class/ClassDelete.cl";
-			}
-}
-
 /*var contextPath = "${pageContext.request.contextPath }"; -상단에 선언
 
 //클래스 목록 불러오기
@@ -340,31 +329,3 @@ function classDel(){
         		}
         	}); */
 
-function modifyOk(){
-	$.ajax({
-		url : contextPath + "/_class/ClassModifyOk.cl",
-		type : "get",
-		data : {"classNum" : 1},
-		contentType : "application/json; charset:UTF-8",
-		dataType : "json",
-		success : function(result){
-			console.log("수정 성공!");
-		},
-		error :function(request, error, a, b, c){
-			console.log("실패..");
-			alert("code:" + request.status + "\n" + "message : " + request.reponseText + "\n" + "error : " + error);
-			console.log(a);
-			console.log(b);
-			console.log(c);
-    	}
-	})
-}
-
-
-function goToClassMine(){
-	location.href= "createrCenter.jsp";
-	console.log("뒤로가기 클릭");
-	notice(4);
-	console.log("notice(4) 들어옴");
-	console.log(contextPath+"/_class/ClassMine.cl?userNum=1");
-}

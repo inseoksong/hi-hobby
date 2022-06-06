@@ -24,6 +24,15 @@
 	클래스101에서 시작해 2022세요</title>
 </head>
 <body>
+	<c:set var="userNum" value="${sessionScope.userNum}"/>
+	
+	<c:set var="page" value="${page }"/>
+	<c:set var="startPageNum" value="${startPageNum}"/>
+	<c:set var="endPageNum" value="${endPageNum}"/>
+	<c:set var="realEndPageNum" value="${realEndPageNum}"/>
+	<c:set var="total" value="${total}"/>
+	
+
 	<div id="__next" data-reactroot="">
 		<main>
 		<div class="css-zsoya5">
@@ -67,26 +76,28 @@
 								<div class="css-1q7ezph">
 									<div class="css-zsoya5">
 										<div class="css-qg5d2b"></div>
-										<div class="css-1mg3xmk 2" onclick="location.href='createrCenterInformation.jsp'"
-											onmouseout="this.style.background='#ffffff'"
-											onmouseover="this.style.background='rgb(248, 248, 248)';">
-											<div class="css-1f8m7mx">
-												<div class="css-1m6hr3p">
-													<span class="css-l67hwq">
-													    <svg
-															xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-															class="css-skwyyj">
-                                                                <path
-																d="M15.88 10.4c1-.995 1.62-2.375 1.62-3.9C17.5 3.46 15.04 1 12 1S6.5 3.46 6.5 6.5c0 1.52.62 2.895 1.615 3.895C5.095 11.85 3 14.94 3 18.5v3.25c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25V18.5a6.504 6.504 0 0 1 6.83-6.49c3.49.17 6.17 3.185 6.17 6.68v3.06c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25v-3.045c.005-3.59-2.055-6.805-5.12-8.305Zm-3.875-6.9c1.655 0 3 1.345 3 3s-1.345 3-3 3-3-1.345-3-3 1.345-3 3-3Z"
-																class="css-sy7xp0"></path>
-                                                        </svg>
-                                                    </span>
-													<div class="css-84g0ej"></div>
-													<span class="css-15zs1or">크리에이터 정보</span>
+										<a href="${pageContext.request.contextPath}/createrCenterInformaion.jsp">
+											<div class="css-1mg3xmk 2"
+												onmouseout="this.style.background='#ffffff'"
+												onmouseover="this.style.background='rgb(248, 248, 248)';">
+												<div class="css-1f8m7mx">
+													<div class="css-1m6hr3p">
+														<span class="css-l67hwq">
+														    <svg
+																xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+																class="css-skwyyj">
+	                                                                <path
+																	d="M15.88 10.4c1-.995 1.62-2.375 1.62-3.9C17.5 3.46 15.04 1 12 1S6.5 3.46 6.5 6.5c0 1.52.62 2.895 1.615 3.895C5.095 11.85 3 14.94 3 18.5v3.25c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25V18.5a6.504 6.504 0 0 1 6.83-6.49c3.49.17 6.17 3.185 6.17 6.68v3.06c0 .14.11.25.25.25h2c.14 0 .25-.11.25-.25v-3.045c.005-3.59-2.055-6.805-5.12-8.305Zm-3.875-6.9c1.655 0 3 1.345 3 3s-1.345 3-3 3-3-1.345-3-3 1.345-3 3-3Z"
+																	class="css-sy7xp0"></path>
+	                                                        </svg>
+	                                                    </span>
+														<div class="css-84g0ej"></div>
+														<span class="css-15zs1or">크리에이터 정보</span>
+													</div>
 												</div>
 											</div>
-										</div>
-										<a href="${pageContext.request.contextPath}/_class/ClassMine.cl?userNum=1">
+										</a>
+										<a href="${pageContext.request.contextPath}/_class/ClassMine.cl?userNum=${userNum}">
 											<div class="css-165esj4 3" onclick="notice(3)" onmouseout="this.style.background='#ffffff'" onmouseover="this.style.background='rgb(248, 248, 248)';" style="background: rgb(255, 255, 255);">
 												<div class="css-1f8m7mx">
 													<div class="css-1m6hr3p">
@@ -392,7 +403,8 @@
 						<div class="css-xc25bh">
 							<h3 class="css-1gqy0up">클래스</h3>
 							<div class=buttonWrap>
-								<button class="css-9fzpu4" onclick="notice(2)">
+																		<!-- onclick="notice(2)" -->
+								<button class="css-9fzpu4" onclick="location.href='${pageContext.request.contextPath}/onedayClassCreate.jsp'"> 
 									<span class="css-3kqv01">
 										<span class="css-1u6oz3l">
 											<svg
@@ -500,6 +512,7 @@
 													
 													<!-- 클래스 목록 시작 -->
 												<c:forEach var="classs" items="${classList}" >
+													<c:if test="${classs.getClassStatus() != '1'}">
 													<div aria-label="grid"
 														class="ReactVirtualized__Grid ReactVirtualized__Table__Grid"
 														role="rowgroup" tabindex="0"
@@ -621,7 +634,7 @@
 																	style="overflow: hidden; flex: 0 1 155px;">
 																	<div class="css-b3mawz">
 																		<div class="css-i2rvrf">
-																			<button class="css-1estejg" onclick="location.href='${pageContext.request.contextPath}/_class/ClassModify.cl?classNum=${classs.getClassNum()}'">
+																			<button class="css-1estejg" onclick="location.href='${pageContext.request.contextPath}/_class/ClassModify.cl?classNum=${classs.getClassNum()}&page=${i}'">
 																				<span class="css-3kqv01"><span
 																					class="css-13g5vis">수정하기</span></span>
 																			</button>
@@ -631,42 +644,114 @@
 															</div>
 														</div>
 													</div>
+													</c:if>
 												</c:forEach>
+												
+												<!-- 클래스 만들기 선택 -->
+													<div id="creatorChoice" style="display: none;">
+														<header>
+															<div>
+																<span>
+																	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 32" class="css-jmnqyc">
+																		<path d="M30.303 5.687v7.027l-.043.053-.069-.215-.073-.214a10.545 10.545 0 0 0-9.901-7.088h-.018a10.545 10.545 0 0 0-9.909 7.095l-.073.215-.068.214-.046-.052V5.687H0v20.621h10.103v-7.027l.046-.053.068.215.073.212a10.545 10.545 0 0 0 9.902 7.09h.017a10.545 10.545 0 0 0 9.902-7.09l.073-.212.068-.215.043.053v7.035h10.103V5.686H30.303ZM65.237 22.314c1.225-.883 2.063-2.176 2.52-3.88l3.24.677c-.56 2.382-1.766 4.25-3.614 5.606-1.848 1.355-4.015 2.033-6.507 2.033-3.032 0-5.6-1.034-7.712-3.108C51.059 21.568 50 19.022 50 16.003c0-2.998 1.052-5.537 3.164-7.625 2.111-2.088 4.68-3.128 7.712-3.128 2.471 0 4.631.664 6.48 1.999 1.848 1.334 3.06 3.128 3.64 5.387l-3.24.924c-.456-1.705-1.3-2.998-2.519-3.881-1.218-.883-2.68-1.328-4.361-1.328-2.119 0-3.898.732-5.345 2.204-1.447 1.472-2.166 3.279-2.166 5.435 0 2.156.72 3.97 2.166 5.435 1.44 1.464 3.226 2.204 5.345 2.204 1.682.006 3.136-.431 4.361-1.315ZM83.996 10.98l-.222 3.08a8.944 8.944 0 0 0-.9-.028c-1.91 0-3.364.61-4.361 1.835-.997 1.225-1.495 2.909-1.495 5.065v5.394h-3.24V11.04h3.24v3.265c1.412-2.3 3.378-3.45 5.884-3.45.457 0 .824.041 1.094.123ZM100.036 19.446H87.513c.145 1.376.664 2.471 1.557 3.293.893.821 1.932 1.232 3.115 1.232 2.14 0 3.656-.883 4.549-2.65l2.893.617c-.623 1.581-1.585 2.779-2.88 3.587-1.301.807-2.817 1.218-4.562 1.218-2.16 0-4.015-.746-5.559-2.252-1.55-1.499-2.319-3.43-2.319-5.79 0-2.383.776-4.327 2.32-5.84 1.543-1.512 3.44-2.265 5.683-2.265 2.098 0 3.89.726 5.372 2.17 1.489 1.444 2.27 3.299 2.354 5.558v1.122Zm-10.71-5.017c-.913.657-1.481 1.568-1.71 2.738h9.097c-.25-1.212-.769-2.136-1.558-2.772-.789-.637-1.73-.958-2.831-.958-1.087.006-2.084.335-2.998.992ZM117.793 26.319h-3.24v-1.753c-1.412 1.458-3.281 2.184-5.608 2.184-2.097 0-3.897-.753-5.406-2.266-1.502-1.506-2.257-3.443-2.257-5.804 0-2.341.755-4.272 2.271-5.791 1.516-1.52 3.316-2.28 5.392-2.28 2.327 0 4.196.733 5.608 2.19v-1.758h3.24v15.278Zm-4.763-3.868c1.018-.972 1.53-2.231 1.53-3.771s-.512-2.8-1.53-3.772-2.202-1.465-3.551-1.465c-1.454 0-2.659.48-3.614 1.43-.955.952-1.433 2.226-1.433 3.807 0 1.58.478 2.847 1.433 3.805.955.959 2.16 1.431 3.614 1.431 1.349 0 2.533-.486 3.551-1.465ZM132.061 25.58c-1.33.78-2.603 1.17-3.836 1.17-1.723 0-3.08-.48-4.077-1.43-.997-.952-1.495-2.355-1.495-4.204V13.69h-3.33v-2.65h3.33V6.298h3.239v4.744h5.296v2.649h-5.296v7.208c0 .924.229 1.629.686 2.108.457.479 1.08.725 1.869.725.893 0 1.765-.274 2.617-.828l.997 2.676ZM146.19 12.937c1.585 1.485 2.381 3.402 2.381 5.743 0 2.34-.796 4.257-2.395 5.756-1.599 1.5-3.551 2.252-5.856 2.252-2.327 0-4.293-.746-5.906-2.252-1.613-1.499-2.416-3.415-2.416-5.756s.803-4.258 2.416-5.743c1.613-1.485 3.579-2.231 5.906-2.231 2.326-.007 4.285.739 5.87 2.23Zm-2.291 9.514c1.017-.972 1.523-2.231 1.523-3.771s-.506-2.8-1.523-3.772c-1.018-.972-2.216-1.465-3.579-1.465-1.413 0-2.624.486-3.628 1.465-1.011.972-1.509 2.232-1.509 3.772 0 1.54.505 2.8 1.509 3.771 1.004.972 2.215 1.465 3.628 1.465 1.37 0 2.561-.486 3.579-1.465ZM161.469 10.98l-.222 3.08a8.947 8.947 0 0 0-.9-.028c-1.911 0-3.364.61-4.361 1.835-.997 1.225-1.496 2.909-1.496 5.065v5.394h-3.239V11.04h3.239v3.265c1.413-2.3 3.379-3.45 5.885-3.45.464 0 .824.041 1.094.123ZM183.497 22.314c1.225-.883 2.063-2.176 2.52-3.88l3.24.677c-.561 2.382-1.766 4.25-3.614 5.606-1.849 1.355-4.015 2.033-6.508 2.033-3.032 0-5.6-1.034-7.712-3.108-2.104-2.074-3.163-4.62-3.163-7.639 0-2.998 1.052-5.537 3.163-7.625 2.112-2.088 4.68-3.128 7.712-3.128 2.472 0 4.632.664 6.48 1.999 1.849 1.334 3.06 3.128 3.642 5.387l-3.24.924c-.457-1.705-1.302-2.998-2.52-3.881-1.226-.883-2.679-1.328-4.362-1.328-2.118 0-3.897.732-5.344 2.204-1.447 1.472-2.167 3.279-2.167 5.435 0 2.156.72 3.97 2.167 5.435 1.44 1.464 3.226 2.204 5.344 2.204 1.683.006 3.136-.431 4.362-1.315ZM206.674 19.446h-12.523c.145 1.376.664 2.471 1.557 3.293.894.821 1.932 1.232 3.116 1.232 2.139 0 3.655-.883 4.548-2.65l2.894.617c-.623 1.581-1.586 2.779-2.88 3.587-1.302.807-2.818 1.218-4.562 1.218-2.16 0-4.015-.746-5.559-2.252-1.551-1.499-2.319-3.43-2.319-5.79 0-2.383.775-4.327 2.319-5.84 1.544-1.512 3.44-2.265 5.683-2.265 2.098 0 3.891.726 5.372 2.17 1.489 1.444 2.271 3.299 2.354 5.558v1.122Zm-10.716-5.017c-.914.657-1.482 1.568-1.71 2.738h9.096c-.249-1.212-.768-2.136-1.557-2.772-.79-.637-1.731-.958-2.832-.958-1.087.006-2.083.335-2.997.992ZM222.403 12.41c1.142 1.198 1.71 2.758 1.71 4.668v9.24h-3.268v-8.597c0-1.252-.339-2.258-1.011-3.018-.678-.76-1.564-1.143-2.665-1.143-1.433 0-2.561.486-3.378 1.444-.817.965-1.232 2.382-1.232 4.25v7.051h-3.24V11.041h3.24v1.882c1.308-1.54 3.094-2.306 5.358-2.306 1.848-.007 3.344.595 4.486 1.793ZM237.979 25.58c-1.329.78-2.603 1.17-3.835 1.17-1.724 0-3.081-.48-4.078-1.43-.996-.952-1.495-2.355-1.495-4.204V13.69h-3.33v-2.65h3.33V6.298h3.24v4.744h5.296v2.649h-5.296v7.208c0 .924.228 1.629.685 2.108.457.479 1.08.725 1.87.725.893 0 1.765-.274 2.616-.828l.997 2.676ZM253.652 19.446h-12.523c.145 1.376.665 2.471 1.558 3.293.893.821 1.931 1.232 3.115 1.232 2.139 0 3.655-.883 4.548-2.65l2.894.617c-.623 1.581-1.585 2.779-2.88 3.587-1.301.807-2.817 1.218-4.562 1.218-2.16 0-4.015-.746-5.559-2.252-1.551-1.499-2.319-3.43-2.319-5.79 0-2.383.775-4.327 2.319-5.84 1.544-1.512 3.441-2.265 5.684-2.265 2.097 0 3.89.726 5.372 2.17 1.488 1.444 2.27 3.299 2.353 5.558v1.122Zm-10.716-5.017c-.914.657-1.482 1.568-1.71 2.738h9.097c-.25-1.212-.769-2.136-1.558-2.772-.789-.637-1.731-.958-2.831-.958-1.087.006-2.084.335-2.998.992ZM266.515 10.98l-.222 3.08a8.947 8.947 0 0 0-.9-.028c-1.91 0-3.364.61-4.361 1.835-.997 1.225-1.495 2.909-1.495 5.065v5.394h-3.24V11.04h3.24v3.265c1.412-2.3 3.378-3.45 5.884-3.45.464 0 .824.041 1.094.123Z" class="css-sy7xp0"></path>
+																	</svg>
+																</span>
+															</div>
+															<a onclick="notice(4)">나가기</a>
+														</header>
+														<div class="aperture"></div>
+														<section>
+															<div class="main">
+																<h3>어떤 상품으로 시작할까요?</h3>
+																<h6>10분이면 등록 완료! 새로운 삶을 시작해보세요.</h6>
+															</div>
+															<div class="class-wrap">
+																<div class="class-choice">
+																	<img src="https://cdn.class101.net/images/a034a402-0a5b-487c-b0ab-308a06ba6f20/3840xauto.webp">
+																	<h6>원데이 클래스</h6>
+																	<a href="onedayClassCreate.jsp">
+																		<button type="button" onclick="notice(6)">만들기</button>
+																	</a>
+																</div>
+																<div class="class-choice" >
+																	<img src="https://cdn.class101.net/images/94fe8872-2d7c-4d99-b903-264f03ec037b/3840xauto.webp">
+																	<h6>온라인 클래스</h6>
+																	<a href="onedayClassCreate.jsp">
+																		<button type="button" onclick="notice(8)">만들기</button>
+																	</a>
+																</div>
+															</div>
+														</section>
+													</div>											
+												
 												</div>
 											</div>
 										</div>
 										<div class="css-1l2cl2">
 											<nav aria-label="Pagination Navigation" class="css-58su99">
-												<div class="css-1qti8at">
-													<button disabled="" class="css-18gsj3a">
-														<span class="css-ujih8e"><svg
-																xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-																class="css-byt8v">
-                                                                        <path
-																	d="M15.175 2.075 16.59 3.49c.1.1.1.255 0 .355L8.435 12l8.16 8.16c.1.1.1.255 0 .355L15.18 21.93c-.1.1-.255.1-.355 0l-9.75-9.75c-.1-.1-.1-.255 0-.355l9.745-9.75c.1-.1.26-.1.355 0Z"
-																	class="css-oh7lsi"></path>
-                                                                    </svg></span>
-													</button>
-												</div>
-												<div class="css-2ezfro"></div>
-												<div class="css-58su99">
+										<!-- 페이징 처리 -->
+										<!-- 페이지번호가 1보다 클때만 왼쪽페이지로 갈수있도록 (6, 11, 16 ..) -->
+										<c:if test="${startPageNum> 1 }">
+											<a href="${pageContext.request.contextPath}/_class/ClassMine.cl?page=${page-1}">
 													<div class="css-1qti8at">
-														<button aria-label="Page 1" aria-current="true"
-															class="css-9z3irw">1</button>
+														<button disabled="" class="css-18gsj3a">
+															<span class="css-ujih8e"><svg
+																	xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+																	class="css-byt8v">
+	                                                                        <path
+																		d="M15.175 2.075 16.59 3.49c.1.1.1.255 0 .355L8.435 12l8.16 8.16c.1.1.1.255 0 .355L15.18 21.93c-.1.1-.255.1-.355 0l-9.75-9.75c-.1-.1-.1-.255 0-.355l9.745-9.75c.1-.1.26-.1.355 0Z"
+																		class="css-oh7lsi"></path>
+	                                                                    </svg></span>
+														</button>
 													</div>
-												</div>
+											</a>
+										</c:if>
+												
 												<div class="css-2ezfro"></div>
-												<div class="css-1qti8at">
-													<button disabled="" class="css-18gsj3a">
-														<span class="css-ujih8e"><svg
-																xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-																class="css-byt8v">
-                                                                        <path
-																	d="M8.825 21.93 7.41 20.515c-.1-.1-.1-.255 0-.355l8.155-8.155-8.16-8.16c-.1-.1-.1-.255 0-.355L8.82 2.075c.1-.1.255-.1.355 0l9.75 9.75c.1.1.1.255 0 .355L9.18 21.93c-.1.1-.26.1-.355 0Z"
-																	class="css-oh7lsi"></path>
-                                                                    </svg></span>
-													</button>
-												</div>
+												<!-- 번호가 반복되는 구간 -->
+												<!-- 시작번호부터 끝번호까지 반복돌릴건데 (ex) 1 2 3 4 5) -->
+												<c:forEach var="i" begin="${startPageNum}" end="${endPageNum}">	
+													<c:choose>
+														<c:when test="${i eq page}">	<!-- 그 페이지 번호는 안눌리도록 -->
+															<div class="css-58su99">
+																<div class="css-1qti8at">
+																	<button aria-label="Page 1" aria-current="true"
+																		class="css-9z3irw"><c:out value="${i}"/></button>
+																</div>
+															</div>
+															<div class="css-2ezfro"></div>
+														</c:when>
+														<c:otherwise> <!-- 그 외의 페이지는 클릭 가능하도록 -->
+															<a href="${pageContext.request.contextPath}/_class/ClassMine.cl?userNum=${userNum}&page=${i}">
+																<div class="css-58su99">
+																	<div class="css-1qti8at">
+																		<button aria-label="Page 1" aria-current="true"
+																			class="css-9z3irw"><c:out value="${i}"/></button>
+																	</div>
+																</div>
+															</a>
+															<div class="css-2ezfro"></div>
+														</c:otherwise>
+													</c:choose>
+												</c:forEach>
+												
+												<!-- 끝 페이지가 realEndPageNum보다 작을때만 오른쪽으로 넘어갈 수 있음 -->
+												<c:if test="${endPageNum < realEndPageNum }">
+													<a href="${pageContext.request.contextPath}/_class/ClassMine.cl?page=${page+1}">
+														<div class="css-1qti8at">
+															<button disabled="" class="css-18gsj3a">
+																<span class="css-ujih8e"><svg
+																		xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+																		class="css-byt8v">
+		                                                                        <path
+																			d="M8.825 21.93 7.41 20.515c-.1-.1-.1-.255 0-.355l8.155-8.155-8.16-8.16c-.1-.1-.1-.255 0-.355L8.82 2.075c.1-.1.255-.1.355 0l9.75 9.75c.1.1.1.255 0 .355L9.18 21.93c-.1.1-.26.1-.355 0Z"
+																			class="css-oh7lsi"></path>
+		                                                                    </svg></span>
+															</button>
+														</div>
+													</a>
+												</c:if>
+												
 											</nav>
 										</div>
 									</div>
@@ -786,6 +871,12 @@
 <script src="asset/js/onedayClassCreate.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
+function createChoice(){
+	let $create = ${"#creatorChoice"};
+	$create.style.display = ''block';
+}
+
+
  var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 mapOption = {
     center: new daum.maps.LatLng(37.537187, 127.005476), // 지도의 중심좌표
