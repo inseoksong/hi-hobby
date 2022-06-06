@@ -25,14 +25,6 @@ public class OrderVO {
 	public void setOrderReservation(String orderReservation) {
 		this.orderReservation = orderReservation;
 	}
-
-	public boolean isOrderCoupon() {
-		return orderCoupon;
-	}
-
-	public void setOrderCoupon(boolean orderCoupon) {
-		this.orderCoupon = orderCoupon;
-	}
 	
 	public int getClassNum() {
 		return classNum;
