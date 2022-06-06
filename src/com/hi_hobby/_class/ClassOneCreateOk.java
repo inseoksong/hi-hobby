@@ -41,7 +41,6 @@ public class ClassOneCreateOk implements Action {
 			int fileSize = 1024 * 1024 * 5; // 파일 사이즈 5M								//업로드 경로, 파일사이즈
 			MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 			// 파일을 주고받기 위해서는 multipartREquest 를 이용해야한다.
-			FileDAO fileDAO = new FileDAO();
 			
 			classVO.setClassNickname(multipartRequest.getParameter("classNickname"));                      // 클래스 생성자 닉네임                   
 			classVO.setClassTitle(multipartRequest.getParameter("classTitle"));                            // 클래스 제목                        

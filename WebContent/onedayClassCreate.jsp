@@ -121,7 +121,7 @@
 					</nav>
 				</div>
 				<!-- 기본 정보 -->
-				<form action="${pageContext.request.contextPath}/_class/ClassOneCreateOk.cl?userNum=${userNum}" name="oneRegForm" method="post" enctype="multipart/form-data">
+				<form action="${pageContext.request.contextPath}/_class/ClassCreateOk.cl?userNum=${userNum}" name="oneRegForm" method="post" enctype="multipart/form-data">
 					<div class="bottomside">
 						<div class="class-information">
 							<h4>클래스 정보</h4>
@@ -324,31 +324,31 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-	var contextPath = "{pageContext.request.contextPath}/asset/img/noImage.png";
+	var contextPath = "{pageContext.request.contextPath}";
 </script>
 <script src="asset/js/onedayClassCreate.js"></script>
 <script src="asset/js/createrCenter.js"></script>
 <script>	
 
-// 이미지 등록시 썸네일 보기
-	$(".images").click(function(){
-		console.log("이미지 클릭됨");
-	})
+//이미지 등록시 썸네일 보기
+$(".images").click(function(){
+	console.log("이미지 클릭됨");
+})
+
+$(".images").change(function(e){
+	let img = $(this).find("img");
+	let reader = new FileReader();
+	reader.readAsDataURL(e.target.files[0]);
 	
-	$(".images").change(function(e){
-		let img = $(this).find("img");
-		let reader = new FileReader();
-		reader.readAsDataURL(e.target.files[0]);
-		
-		reader.onload = function(e){
-			if(e.target.result.indexOf("image") != -1){	// 이미지가 있을때
-				img.attr("src", e.target.result);
-				console.log(e.target.result);
-			}else{	// 이미지가 없을때
-				img.attr("src", contextPath + "/asset/img/noImage.png");
-			}							//대체할 이미지의 경로
-		}
-	})
+	reader.onload = function(e){
+		if(e.target.result.indexOf("image") != -1){	// 이미지가 있을때
+			img.attr("src", e.target.result);
+			console.log(e.target.result);
+		}else{	// 이미지가 없을때
+			img.attr("src", contextPath + "/asset/img/noImage.png");
+		}							//대체할 이미지의 경로
+	}
+})
 
 	function goToClassMine(){
 		history.back();
@@ -358,21 +358,20 @@
 		oneRegForm.submit();
 		alert("클래스가 승인요청 되었습니다.");
 	}
-	
 
-/* 	function cancelFile(img){
-		File file = new File();
-        
-    	if( file.exists() ){
-    		if(file.delete()){
-    			System.out.println("파일삭제 성공");
-    		}else{
-    			System.out.println("파일삭제 실패");
-    		}
-    	}else{
-    		System.out.println("파일이 존재하지 않습니다.");
-    	}
-	} */
-	
+	/* 	function cancelFile(img){
+	File file = new File();
+    
+	if( file.exists() ){
+		if(file.delete()){
+			System.out.println("파일삭제 성공");
+		}else{
+			System.out.println("파일삭제 실패");
+		}
+	}else{
+		System.out.println("파일이 존재하지 않습니다.");
+	}
+} */
+
 </script>
 </html>
