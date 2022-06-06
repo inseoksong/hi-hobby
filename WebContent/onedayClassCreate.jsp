@@ -128,37 +128,45 @@
 							<div class="class-image">
 								<p>커버 이미지</p>
 								<p>커버로 사용할 이미지를 추가해주세요. (최대 4장)</p>
-								<div class="images images1">
-									<label for="class_image1">
-										<div>
-											<img src="https://creator.class101.net/images/im-add-photo-landscape.png">
-										</div>
-									</label>
-									<input type="file" id="class_image1" class="class-image-file" name="classImage1">
-									<input type="button" onclick="cancelFile('classImage1')" value="첨부 삭제">
-									<label for="class_image2">
-										<div>
-											<img src="https://creator.class101.net/images/im-add-photo-landscape.png">
-										</div>
-									</label>
-									<input type="file" id="class_image2" class="class-image-file" name="classImage2">
-									<input type="button" onclick="cancelFile('classImage2')" value="첨부 삭제">
+								<div class="uploadWrap">
+									<div class="images images1">
+										<label for="class_image1">
+											<div>
+												<img src="${pageContext.request.contextPath}/asset/img/noImage.png">
+											</div>
+										</label>
+										<input type="file" id="class_image1" class="class-image-file" name="classImage1">
+										<input type="button" class="uploadDel" onclick="cancelFile('classImage1')" value="첨부 삭제">
+									</div>
+									<div class="images images2">	
+										<label for="class_image2">
+											<div>
+												<img src="${pageContext.request.contextPath}/asset/img/noImage.png">
+											</div>
+										</label>
+										<input type="file" id="class_image2" class="class-image-file" name="classImage2">
+										<input type="button" class="uploadDel" onclick="cancelFile('classImage2')" value="첨부 삭제">
+									</div>
 								</div>
-								<div class="images images2">
-									<label for="class_image3">
-										<div>
-											<img src="https://creator.class101.net/images/im-add-photo-landscape.png">
-										</div>
-									</label>
-									<input type="file" id="class_image3" class="class-image-file" name="classImage3">
-									<input type="button" onclick="cancelFile('classImage3')" value="첨부 삭제">
-									<label for="class_image4">
-										<div>
-											<img src="https://creator.class101.net/images/im-add-photo-landscape.png">
-										</div>
-									</label>
-									<input type="file" id="class_image4" class="class-image-file" name="classImage4">
-									<input type="button" onclick="cancelFile('classImage4')" value="첨부 삭제">
+								<div class="uploadWrap">
+									<div class="images images3">
+										<label for="class_image3">
+											<div>
+												<img src="${pageContext.request.contextPath}/asset/img/noImage.png">
+											</div>
+										</label>
+										<input type="file" id="class_image3" class="class-image-file" name="classImage3">
+										<input type="button" class="uploadDel" onclick="cancelFile('classImage3')" value="첨부 삭제">
+									</div>
+									<div class="images images4">	
+										<label for="class_image4">
+											<div>
+												<img src="${pageContext.request.contextPath}/asset/img/noImage.png">
+											</div>
+										</label>
+										<input type="file" id="class_image4" class="class-image-file" name="classImage4">
+										<input type="button" class="uploadDel" onclick="cancelFile('classImage4')" value="첨부 삭제">
+									</div>
 								</div>
 							</div>
 							<div class="class-name">
@@ -315,18 +323,55 @@
 				</footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	var contextPath = "{pageContext.request.contextPath}";
+</script>
 <script src="asset/js/onedayClassCreate.js"></script>
 <script src="asset/js/createrCenter.js"></script>
 <script>	
 
+//이미지 등록시 썸네일 보기
+$(".images").click(function(){
+	console.log("이미지 클릭됨");
+})
+
+$(".images").change(function(e){
+	let img = $(this).find("img");
+	let reader = new FileReader();
+	reader.readAsDataURL(e.target.files[0]);
+	
+	reader.onload = function(e){
+		if(e.target.result.indexOf("image") != -1){	// 이미지가 있을때
+			img.attr("src", e.target.result);
+			console.log(e.target.result);
+		}else{	// 이미지가 없을때
+			img.attr("src", contextPath + "/asset/img/noImage.png");
+		}							//대체할 이미지의 경로
+	}
+})
+
 	function goToClassMine(){
-		history.back()	
+		history.back();
 	}
 	
 	function createOk(){
 		oneRegForm.submit();
 		alert("클래스가 승인요청 되었습니다.");
 	}
-	
+
+	/* 	function cancelFile(img){
+	File file = new File();
+    
+	if( file.exists() ){
+		if(file.delete()){
+			System.out.println("파일삭제 성공");
+		}else{
+			System.out.println("파일삭제 실패");
+		}
+	}else{
+		System.out.println("파일이 존재하지 않습니다.");
+	}
+} */
+
 </script>
 </html>
