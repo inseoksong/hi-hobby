@@ -43,7 +43,6 @@
                                 <th width="15%">작성자</th>
                                 <th width="14%">작성일</th>
                             </tr>
-                            <div id="helpInquiryList">
                             
                             <c:choose>
 								<c:when test="${inquiryList != null and fn:length(inquiryList) > 0}">
@@ -53,7 +52,7 @@
 			                                <td class="waiting"><c:choose><c:when test="${inquiry.isInquiryProcess()}"><span style="color: green">답변 완료</span></c:when><c:otherwise>답변 대기</c:otherwise></c:choose></td>
 			                                <td class="qnaTitle">
 			                                	<c:choose>
-			                                		<c:when test="${memberNumber eq board.getMemberNumber()}">
+			                                		<c:when test="${sessionScope.userNum eq inquiry.getUserNum()}">
 			                                			<a class="qnaTitle1" href="${pageContext.request.contextPath }/inquiry/InquiryMyView.in?inquiryNum=${inquiry.getInquiryNum()}&page=${page}">${inquiry.getInquiryTitle()}</a>	
 			                                		</c:when>
 			                                		<c:otherwise>

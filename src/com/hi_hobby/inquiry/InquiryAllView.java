@@ -29,7 +29,6 @@ public class InquiryAllView implements Action{
 		InquiryDAO inquiryDAO = new InquiryDAO();
 		UserDAO userDAO = new UserDAO();
 		
-		
 		//전체 게시글 개수
 		int total = inquiryDAO.getTotal();
 		//사용자가 요청한 페이지

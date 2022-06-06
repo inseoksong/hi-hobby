@@ -214,3 +214,7 @@ div.number-buttons button.number-select {
       text-overflow:ellipsis;
       white-space:nowrap;
   }
+
+td.web-view{
+ 	  border-bottom: white;
+}

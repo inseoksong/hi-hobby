@@ -12,7 +12,7 @@
 
 <!-- 전체 문의 보기 2-->
 	<select id="inquiryList" parameterType="map" resultType="inquiryDTO">
-		select inquiry_num, inquiry_Day, inquiry_process, inquiry_title, user_name
+		select inquiry_num, inquiry_Day, inquiry_process, inquiry_title, i.user_num, user_name
 		from tbl_inquiry i join tbl_user u
 		on i.user_num = u.user_num
 		order by 1 desc limit #{startRow}, #{rowCount}
@@ -25,7 +25,7 @@
 
 <!-- 내가 쓴 문의글 불러오기 5-->
 	<select id="inquiryMyView" parameterType="_int" resultType="inquiryDTO">
-		select inquiry_num, inquiry_content, inquiry_title, inquiry_day, inquiry_process, i.user_num, user_name
+		select inquiry_num, inquiry_content, inquiry_title, inquiry_day, inquiry_process, i.user_num, user_name, user_email
 		from tbl_inquiry i join tbl_user u
 		on i.user_num = u.user_num and inquiry_num = #{inquiryNum}
 	</select>

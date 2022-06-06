@@ -24,6 +24,7 @@ public class ClassOneCreateOk implements Action {
 			ClassVO classVO = new ClassVO();
 			ClassDAO classDAO = new ClassDAO();
 			ActionInfo actionInfo = new ActionInfo();		
+			FileDAO fileDAO = new FileDAO();
 			
 			HttpSession session = req.getSession();
 			//파일을 주고받기위해 기존 req를 받던것  > multipartreq로 받아야 하지만,

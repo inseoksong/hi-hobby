@@ -28,7 +28,7 @@
                 </div>
                 <div class="docInfoWrap">
                     <div><span>작성일 : </span><span><c:out value="${inquiry.getInquiryDay()}"/></span></div>
-                    <p style="text-align:left; margin-bottom:1%">작성자 : ${inquiry.getUserName()}</p>
+                    <p>작성자 : ${inquiry.getUserName()}</p>
                 </div>
                 <div class="textAreaWrap">
                     <textarea><c:out value="${inquiry.getInquiryContent()}"/>
@@ -36,10 +36,13 @@
                 </div>
                 <div class="buttonWrap">
 					
+					<h4>문의 답변은 아이디와 동일한 이메일로 발송됩니다.</h4>
+					
 					<c:choose>
 						<c:when test="${inquiry.isInquiryProcess()}">
 							<a>
 								<h1 class="noEdit">답변 완료된 문의입니다</h1>
+								<h1 class="noEdit2">이메일을 확인해주세요</h1>
 							</a>
 						</c:when>
 						<c:otherwise>
