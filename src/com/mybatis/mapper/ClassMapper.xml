@@ -5,8 +5,8 @@
 <!-- 클래스 생성 -->
 	<insert id="create" parameterType="classVO">
 		insert into tbl_class
-		(class_nickname, class_title, class_category, class_place, class_price, class_start, class_end, class_approve, class_img, class_one, class_status, user_num, class_introduce)
-		values (#{classNickname}, #{classTitle}, #{classCategory}, #{classPlace}, #{classPrice}, #{classStart}, #{classEnd}, #{classApprove}, #{classImg}, #{classOne}, #{classStatus}, #{userNum}, #{classIntroduce})
+		(class_nickname, class_title, class_category, class_place, class_price, class_start, class_end, class_approve, class_img, class_one, class_status, user_num, class_introduce, class_day)
+		values (#{classNickname}, #{classTitle}, #{classCategory}, #{classPlace}, #{classPrice}, #{classStart}, #{classEnd}, #{classApprove}, #{classImg}, #{classOne}, #{classStatus}, #{userNum}, #{classIntroduce}, #{classDay})
 	</insert>
 	
 <!-- 클래스 수정화면 보기 --> <!-- parameterType = _int 추가하기 -->
@@ -56,12 +56,52 @@
 	where class_num = '#{classNum}'
 	</update>
 
+<!-- 추천 (전체)클래스 목록 조회 -->
+	<select id="GraphView" resultType="classVO">
+		select class_num, class_nickname, class_title, class_category, class_place, class_price, class_start, class_end, class_img, class_introduce, class_like
+		from tbl_class
+		order by class_like desc limit #{startRow}, #{rowCount}
+		<!-- where class_approve = true -->
+	</select>
+	
+<!-- 카테고리 클래스 목록 조회 -->
+	<select id="GraphViewCategory" resultType="classVO">
+		select class_num, class_nickname, class_title, class_category, class_place, class_price, class_start, class_end, class_img, class_introduce, class_like
+		from tbl_class
+		<!-- where class_category = #{classCategory} -->
+		order by 1 desc limit #{startRow}, #{rowCount}
+	</select>
+	
 <!-- 원데이 클래스 목록 조회 -->
 	<select id="GraphViewOne" resultType="classVO">
-		select class_num, class_nickname, class_title, class_category, class_place, class_price, class_start, class_end, class_img, class_introduce
+		select class_num, class_nickname, class_title, class_category, class_place, class_price, class_start, class_end, class_img, class_introduce, class_like
 		from tbl_class
 		order by 1 desc limit #{startRow}, #{rowCount}
-		<!-- where class_approve = true -->
+		<!-- where class_approve = true and class_one = true-->
+	</select>
+	
+<!-- 온라인 클래스 목록 조회 -->
+	<select id="GraphViewOn" resultType="classVO">
+		select class_num, class_nickname, class_title, class_category, class_place, class_price, class_start, class_end, class_img, class_introduce, class_like
+		from tbl_class
+		order by 1 desc limit #{startRow}, #{rowCount}
+		<!-- where class_approve = true and class_one = false-->
+	</select>
+	
+<!-- 원데이 클래스 TOP 목록 조회 -->
+	<select id="GraphViewOneTop" resultType="classVO">
+		select class_num, class_nickname, class_title, class_category, class_place, class_price, class_start, class_end, class_img, class_introduce, class_like
+		from tbl_class
+		<!-- where class_approve = true and class_one = true-->
+		order by class_like desc limit 2
+	</select>
+	
+<!-- 온라인 클래스 TOP 목록 조회 -->
+	<select id="GraphViewOnTop" resultType="classVO">
+		select class_num, class_nickname, class_title, class_category, class_place, class_price, class_start, class_end, class_img, class_introduce, class_like
+		from tbl_class
+		<!-- where class_approve = true and class_one = false-->
+		order by class_like desc limit 2
 	</select>
 	
 <!-- 게시글 전체 갯수 -->
@@ -75,5 +115,35 @@
 		from tbl_class
 		where class_num = #{classNum}
 	</select>
+	
+<!-- 온라인 클래스 목록 조회 -->
+	<select id="selectDetailOn" parameterType="_int" resultType="classVO">
+		select class_num, class_nickname, class_title, class_category, class_place, class_price, class_start, class_end, class_img, class_introduce
+		from tbl_class
+		where class_num = #{classNum}
+	</select>
+	
+<!-- 추천하기 -->
+	<update id="classLike" parameterType="classVO">
+		update tbl_class
+		set class_like = #{classLike}
+		where class_num = #{classNum}<!-- and user_num = #{userNum} --> 
+	</update>
+	
+<!-- 추천 갯수 -->
+	<select id="getLike" resultType="_int">
+		select class_like 
+		from tbl_class
+		where class_num = #{classNum} 
+	</select>	
 
+<!-- 전체 클래스 보기 (목록에 사용)-->	
+<select id="classAllList" parameterType="map" resultType="classDTO">
+   select class_num, class_category, class_Day, class_approve, class_title, i.user_num, user_name
+   from tbl_class i join tbl_user u
+   on i.user_num = u.user_num
+   order by 1 desc limit #{startRow}, #{rowCount}
+</select>
+	
+	
 </mapper>

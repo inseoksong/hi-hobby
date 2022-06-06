@@ -10,7 +10,7 @@ import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
 import com.hi_hobby.domain.dao.ClassDAO;
 
-public class ClassGraphViewOne implements Action {
+public class ClassGraphViewOneTop implements Action {
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 			req.setCharacterEncoding("UTF-8");
@@ -26,7 +26,7 @@ public class ClassGraphViewOne implements Action {
 			//null이 아니면 요청한 페이지를 page에 담아준다.
 			int page = temp == null ? 1 : Integer.parseInt(temp);
 			//한 페이지에 출력되는 게시글의 개수
-			int rowCount = 9;
+			int rowCount = 10;
 			//한 화면에 나오는 페이지 번호 수
 			int pageSize = 5;
 			
@@ -52,7 +52,7 @@ public class ClassGraphViewOne implements Action {
 			classMap.put("rowCount", rowCount);
 
 			//시작 인덱스와, 개수를 전달하여 게시글 목록을 가져온 뒤 requestScope에 담아준다.
-			req.setAttribute("GraphViewOne", classDAO.GraphViewOne(classMap));
+			req.setAttribute("GraphViewOne", classDAO.GraphViewOneTop(classMap));
 			//현재 페이지를 requestScope에 담아준다.
 			req.setAttribute("page", page);
 			req.setAttribute("startPage", startPage);

@@ -10,7 +10,7 @@ import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
 import com.hi_hobby.domain.dao.ClassDAO;
 
-public class ClassGraphViewOne implements Action {
+public class ClassGraphView implements Action {
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 			req.setCharacterEncoding("UTF-8");
@@ -52,7 +52,7 @@ public class ClassGraphViewOne implements Action {
 			classMap.put("rowCount", rowCount);
 
 			//시작 인덱스와, 개수를 전달하여 게시글 목록을 가져온 뒤 requestScope에 담아준다.
-			req.setAttribute("GraphViewOne", classDAO.GraphViewOne(classMap));
+			req.setAttribute("GraphView", classDAO.GraphView(classMap));
 			//현재 페이지를 requestScope에 담아준다.
 			req.setAttribute("page", page);
 			req.setAttribute("startPage", startPage);
@@ -63,7 +63,7 @@ public class ClassGraphViewOne implements Action {
 //			List<ClassVO> GraphViewOne = classDAO.GraphViewOne(); 출력만
 //			req.setAttribute("GraphViewOne", GraphViewOne);			출력만
 			actionInfo.setRedirect(false);
-			actionInfo.setPath("/onedayList.jsp");
+			actionInfo.setPath("/likeClassList.jsp");
 			
 			return actionInfo;
 

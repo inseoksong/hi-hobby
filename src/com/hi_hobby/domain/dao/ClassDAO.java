@@ -59,8 +59,43 @@ public class ClassDAO {
 	}
 	
 	// 원데이 클래스 목록 조회
+	public List<ClassVO> GraphViewCategory(Map<String, Integer> classMap) {
+		return sqlSession.selectList("Class.GraphViewCategory", classMap);
+	}
+	
+	// 원데이 클래스 목록 조회
 	public List<ClassVO> GraphViewOne(Map<String, Integer> classMap) {
 		return sqlSession.selectList("Class.GraphViewOne", classMap);
+	}
+	
+	// 원데이 클래스 TOP10 목록 조회
+	public List<ClassVO> GraphViewOneTop(Map<String, Integer> classMap) {
+		return sqlSession.selectList("Class.GraphViewOneTop", classMap);
+	}
+	
+	//클래스 정보 조회
+	public ClassVO selectDetail(int classNum) {
+		return sqlSession.selectOne("Class.selectDetail", classNum);
+	}
+	
+	// 온라인 클래스 목록 조회
+	public List<ClassVO> GraphViewOn(Map<String, Integer> classMap) {
+		return sqlSession.selectList("Class.GraphViewOn", classMap);
+	}
+	
+	// 전체 클래스 목록 조회
+	public List<ClassVO> GraphView(Map<String, Integer> classMap) {
+		return sqlSession.selectList("Class.GraphView", classMap);
+	}
+	
+	// 온라인 클래스 TOP10 목록 조회
+	public List<ClassVO> GraphViewOnTop(Map<String, Integer> classMap) {
+		return sqlSession.selectList("Class.GraphViewOnTop", classMap);
+	}
+	
+	// 온라인 클래스 정보 조회
+	public ClassVO selectDetailOn(int classNum) {
+		return sqlSession.selectOne("Class.selectDetailOn", classNum);
 	}
 	
 	//클래스 전체 개수
@@ -68,10 +103,19 @@ public class ClassDAO {
 		return sqlSession.selectOne("Class.getTotal");
 	}
 	
-	//클래스 정보 조회
-	public ClassVO selectDetail(int classNum) {
-		System.out.println("디테일 다오 들어옴");
-		return sqlSession.selectOne("Class.selectDetail", classNum);
+	//클래스 추천하기 업데이트
+	public void classLike(ClassVO classVO) {
+		sqlSession.update("Class.classLike", classVO);
+	}
+	
+	// 추천 값 가져오기
+	public int getLike(int classNum) {
+		return sqlSession.selectOne("Class.getLike", classNum);
+	}
+	
+	// 문의 글 전체리스트
+	public List<ClassDTO> classAllList(Map<String, Integer> classMap) {
+	   return sqlSession.selectList("Class.classAllList", classMap);
 	}
 
 	

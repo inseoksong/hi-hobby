@@ -17,6 +17,7 @@
 	<c:set var="classOne" value="${classOne}"/>
 	<c:set var="page" value="${page}"/>
 	<c:set var="priceResult" value="${classOne.getClassPrice()}"/>
+	<c:set var="classNum" value="${classOne.getClassNum()}"/>
 	<jsp:include page="header.jsp"/>
 	<!-- ↑ 헤더 부분 -->
 	<section class="final-wrap">
@@ -60,11 +61,11 @@
 								<button type="button">클래스 예약하기</button>
 							</div>
 							<div class="push-share">
-								<button type="button" class="push" onclick="likeClass()">
+								<button type="button" class="push" onclick="classLike()">
 									<span class="push-share-img">
 										<img class="empty" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FtUiuQ%2FbtrCNOnpIbK%2FtYcpNGwOjSNCd7tzUtBja0%2Fimg.png">
 									</span>
-									<span id="LikeClass">174</span>
+									<span id="LikeClass"><c:out value="${classOne.getClassLike()}"/></span>
 								</button>
 								<button type="button" class="share" onclick="copy()">
 									<span class="push-share-img">
@@ -235,6 +236,8 @@
 <script src="asset/js/onedayPayment.js"></script>
 <script src="asset/js/header.js"></script>
 <script>
+	var click = false;
+	
 	function checkCoupon(){
 		$.ajax({
 			url:"${pageContext.request.contextPath}/CouponCheck.co",
@@ -263,21 +266,42 @@
 		});
 	}
 	
-	function likeClass(){
+	function getLike(){
 		$.ajax({
-			url:"${pageContext.request.contextPath}/ClassLike.cl",
+			url:"${pageContext.request.contextPath}/ClassGetLike.cl",
 			type: "get",
-			data: {classNum: ${classOne.getClassNum()},
-			contentType: "application/json; charset=utf-8",
-			dataType: "json",
+/* 			contentType: "application/json; charset=utf-8",
+			dataType: "json", */
+			data: {classNum: ${classOne.getClassNum()}}, 
 			success: function(result){
-				if(result.result){
-					$("span#LikeClass").text(++result);
-				}else{
-					$("span#LikeClass").text(--result);
-				}
+				
 			},
 			error: function(request, status, error){
+				console.log("실패..");
+				console.log(request);
+				console.log(status);
+				console.log(error);
+			}
+		});
+		
+	}
+	
+	getLike();
+	
+	function classLike(){
+		$.ajax({
+			url:"${pageContext.request.contextPath}/ClassLike.cl",
+			type: "post",
+			data: {classNum: ${classNum}, click: click}, 
+			success: function(result){
+				getLike();
+ 				if(click){
+					click = false;
+				}else{
+					click = true;
+				}
+			},
+			error: function(request, status, error){ 
 				console.log("실패..");
 				console.log(request);
 				console.log(status);
