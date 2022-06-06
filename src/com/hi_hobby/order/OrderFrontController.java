@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.hi_hobby._class.ClassOneCreateOk;
+import com.hi_hobby._class.ClassCreateOk;
 import com.hi_hobby.action.ActionInfo;
 
 public class OrderFrontController extends HttpServlet {

@@ -26,11 +26,8 @@ public class ClassFrontController extends HttpServlet {
 		String command = requestURL.substring(requestURL.lastIndexOf("/") + 1);
 		ActionInfo actionInfo = null;
 		
-		if(command.equals("ClassOneCreateOk.cl")) {
-			actionInfo = new ClassOneCreateOk().execute(req, resp);
-		}
-		if(command.equals("ClassOnlineCreateOk.cl")) {
-			actionInfo = new ClassOnlineCreateOk().execute(req, resp);
+		if(command.equals("ClassCreateOk.cl")) {
+			actionInfo = new ClassCreateOk().execute(req, resp);
 		}
 		else if(command.equals("ClassCreate.cl")) {
 			actionInfo.setRedirect(false);
