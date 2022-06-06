@@ -6,20 +6,18 @@ public class ClassVO {
 	private String classTitle;			// 클래스 제목
 	private String classCategory;		// 클래스 카테고리
 	private String classPlace;			// 원데이 클래스 장소
-	private String classPlaceDetail;	// 원데이 클래스 장소
+	private String classPlaceDetail;	// 원데이 클래스 (상세주소)장소
 	private int classPrice;				// 클래스 가격
 	private String classStart;			// 시작시간 (시간 자료형)
 	private String classEnd;			// 끝나는 시간(시간 자료형)
-	private String classUpdate;			// 끝나는 시간(시간 자료형)
+	private String classUpdate;			// 업데이트 시간
+	private String classDay;			// 클래스 생성 날짜
 	private boolean classApprove;		// 승인 여부
 	private String classImg;			// 이미지 자료형
-	private int classOne;			// 원데이, 온라인 클래스 구분
-	private int classStatus;		// 클래스 삭제 여부
 	private int classLike;				// 찜하기 버튼(하트)
 	private String classIntroduce;		// 클래스 설명
-	private String classDay;			// 클래스 생성 날짜
-	private int userNum;				// 유저 고유번호(크리에이터 정보를 가져오기 위해)
 	private String classVideo;			// 비디오 파일 이름
+	private int userNum;				// 유저 고유번호(크리에이터 정보를 가져오기 위해)
 	
 	public ClassVO() {;}
 
