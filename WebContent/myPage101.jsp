@@ -16,6 +16,8 @@
 <title>하이하비 | 마이페이지</title>
 </head>
 <body class="101-ui-portal" style="width: auto;">
+	<!-- 업로드 파일 경로 -->
+	<c:set var="uploadPath" value="C:\\upload\\"/>
 	<div id="__next">
 		<div id="wrapper">
 			<div class="wrapper2">
@@ -64,127 +66,69 @@
 									</a>
 								</section>
 							</aside>
-							<hr class="fSJEcd">
-							<div class="jlbLpy">
-								<div class="jTDelL"></div>
-								<div class="kNxSwr">
-									<section>
-										<div class="hcxVgX">
-											<div class="cHXTMU">
-												<h3 class="cFqqVC uoupY" font-weight="bold">내가 구매한 상품</h3>
-											</div>
-										</div>
-										
-										<div class="kgBzKM VOHdJ" style="display: none;">
-											<svg xmlns="https://www.google.co.kr/" width="32" height="32" fill="none" viewBox="0 0 24 24">
-												<path fill-rule="evenodd" fill="#1B1C1D" d="M10.649 13.351l3.602.901-.901-3.602-2.702 2.702zM12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 100 16zm4.596-4.132a1 1 0 01-1.213.728L9 15 7.404 8.617a1 1 0 011.213-1.213L15 9l1.596 6.383a1 1 0 010 .485z"></path>
+							<div class="section-wrap">
+								<section class="bought-class">
+									<div class="bought-class-text">
+										<h3>내가 구매한 온라인 클래스</h3>
+									</div>
+									<button type="button" class="onlinePrev arrow prev">
+										<span>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+												<path fill-rule="evenodd" d="M15.5 5.5l-6 6.5 6 6.5L14 20l-7.5-8L14 4l1.5 1.5z" fill="#1a1a1a"></path>
 											</svg>
-											<div>아직 구매하신 클래스가 없어요!</div>
-										</div>
-										<!-- 데이터 입력받으면 위 div는 display는 none으로 바꾸고 밑 div가 생성되게 해야 함. -->
-										<div class="cXOrCl" style="diaplay:block;">
-											<div class="eDQPYt">
-												<button type="button" class="gQyJNI fEVWYc jWkqON " color="transparent">
-													<span class="jwNHGa">
-														<svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-															<path fill-rule="evenodd" fill="#1a1a1a" d="M15.5 5.5l-6 6.5 6 6.5L14 20l-7.5-8L14 4l1.5 1.5z"></path>
-														</svg>
-													</span>
-												</button>
-												<div class="hiddenBox" style="width:780px;">
-												<div class="swiper-container ebjtps swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events" id="swiper-19">
-													<div class="swiper-wrapper">
-														<div class="swiper-slide undefined swiper-slide-active" style="width: 243.333px; margin-right: 24px;">
-															<div class="css-zsoya5">
-																<a class="hRWfZQ" href="/products/sfCxoddIvlEWDmBXckPt">
-																	<div class="iDddPj">
-																		<div class="kbMurS">
-																			<span class="bUogJm kKdHVx">
-																				<picture class="kWswCZ iXXLck">
-																					<img sizes="(min-width: 1024px) 300px, 50vw" srcset="https://cdn.class101.net/images/69ff27e6-6aa5-4321-9a77-f8a26de79813/2048xauto.webp 375w">
-																				</picture>
-																			</span>
-																		</div>
-																	</div>
-																</a>
-															</div>
-														</div>
-														<div class="swiper-slide undefined swiper-slide-active" style="width: 243.333px; margin-right: 24px;">
-															<div class="css-zsoya5">
-																<a class="hRWfZQ" href="/products/sfCxoddIvlEWDmBXckPt">
-																	<div class="iDddPj">
-																		<div class="kbMurS">
-																			<span class="bUogJm kKdHVx">
-																				<picture class="kWswCZ iXXLck">
-																					<img sizes="(min-width: 1024px) 300px, 50vw" srcset="https://cdn.class101.net/images/cb2119ec-b977-49e3-a1a4-b674081ed809/375xauto.webp 375w">
-																				</picture>
-																			</span>
-																		</div>
-																	</div>
-																</a>
-															</div>
-														</div>
-														<div class="swiper-slide undefined swiper-slide-active" style="width: 243.333px; margin-right: 24px;">
-															<div class="css-zsoya5">
-																<a class="hRWfZQ" href="/products/sfCxoddIvlEWDmBXckPt">
-																	<div class="iDddPj">
-																		<div class="kbMurS">
-																			<span class="bUogJm kKdHVx">
-																				<picture class="kWswCZ iXXLck">
-																					<img sizes="(min-width: 1024px) 300px, 50vw" srcset="https://cdn.class101.net/images/6af8c670-27e7-4a45-88b0-d133791b5242/750xauto.webp 375w">
-																				</picture>
-																			</span>
-																		</div>
-																	</div>
-																</a>
-															</div>
-														</div>
-														<div class="swiper-slide undefined swiper-slide-active" style="width: 243.333px; margin-right: 24px;">
-															<div class="css-zsoya5">
-																<a class="hRWfZQ" href="/products/sfCxoddIvlEWDmBXckPt">
-																	<div class="iDddPj">
-																		<div class="kbMurS">
-																			<span class="bUogJm kKdHVx">
-																				<picture class="kWswCZ iXXLck">
-																					<img sizes="(min-width: 1024px) 300px, 50vw" srcset="https://cdn.class101.net/images/cb2119ec-b977-49e3-a1a4-b674081ed809/375xauto.webp 375w">
-																				</picture>
-																			</span>
-																		</div>
-																	</div>
-																</a>
-															</div>
-														</div>
-														<div class="swiper-slide undefined swiper-slide-active" style="width: 243.333px; margin-right: 24px;">
-															<div class="css-zsoya5">
-																<a class="hRWfZQ" href="/products/sfCxoddIvlEWDmBXckPt">
-																	<div class="iDddPj">
-																		<div class="kbMurS">
-																			<span class="bUogJm kKdHVx">
-																				<picture class="kWswCZ iXXLck">
-																					<img sizes="(min-width: 1024px) 300px, 50vw" srcset="https://cdn.class101.net/images/69ff27e6-6aa5-4321-9a77-f8a26de79813/2048xauto.webp 375w">
-																				</picture>
-																			</span>
-																		</div>
-																	</div>
-																</a>
-															</div>
-														</div>
+										</span>
+									</button>
+									<button type="button" class="onlineNext arrow next">
+										<span>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+												<path fill-rule="evenodd" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z" fill="#1a1a1a"></path>
+											</svg>
+										</span>
+									</button>
+									<div class="class-container">
+										<div class="classes online">
+											<c:forEach var="lecture" items="${classOnline}">
+													<div class="img">
+														<form action="ClassBoughtViewOnlineDetail.cl" name="classForm">
+															<img src="<c:url value='upload/${lecture.getClassImg()}'/>">
+															<input type="hidden" id="classNum" name="classNum" value="${lecture.getClassNum()}">
+														</form>
 													</div>
-												</div>
-												</div>
-												<button type="button" class="gQyJNI fEVWYc BYXFz" color="transparent">
-													<span class="jwNHGa">
-														<svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-															<path fill-rule="evenodd" fill="#1a1a1a" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z"></path>
-														</svg>
-													</span>
-												</button>
-											</div>
+											</c:forEach>
 										</div>
-									</section>
-								</div>
-							</div>
-							<div>
+									</div>
+								</section>
+								<section class="bought-class">
+									<div class="bought-class-text">
+										<h3>내가 구매한 원데이 클래스</h3>
+									</div>
+									<button type="button" class="onedayPrev arrow prev">
+										<span>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+												<path fill-rule="evenodd" d="M15.5 5.5l-6 6.5 6 6.5L14 20l-7.5-8L14 4l1.5 1.5z" fill="#1a1a1a"></path>
+											</svg>
+										</span>
+									</button>
+									<button type="button" class="onedayNext arrow next">
+										<span>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+												<path fill-rule="evenodd" d="M8.5 18.5l6-6.5-6-6.5L10 4l7.5 8-7.5 8-1.5-1.5z" fill="#1a1a1a"></path>
+											</svg>
+										</span>
+									</button>
+									<div class="class-container">
+										<div class="classes oneday">
+											<c:forEach var="lecture" items="${classOneday}">
+													<div class="img">
+														<form action="ClassBoughtViewOnedayDetail.cl" name="classForm">
+															<img src="<c:url value='upload/${lecture.getClassImg()}'/>">
+															<input type="hidden" id="classNum" name="classNum" value="${lecture.getClassNum()}">
+														</form>
+													</div>
+											</c:forEach>
+										</div>
+									</div>
+								</section>
 							</div>
 						</div>
 					</div>
@@ -195,42 +139,111 @@
 		</div>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="asset/js/header.js"></script>
 <script>
-	const slides = document.querySelector('.swiper-wrapper'); //전체 슬라이드 컨테이너
-	const slideImg = document.querySelectorAll('.hiddenBox .swiper-slide'); //모든 슬라이드들
-	let currentIdx = 0; //현재 슬라이드 index
-	const slideCount = slideImg.length; // 슬라이드 개수
-	const prev = document.querySelector('.jWkqON'); //이전 버튼
-	const next = document.querySelector('.BYXFz'); //다음 버튼
-	const slideWidth = 244; //한개의 슬라이드 넓이
-	const slideMargin = 25; //슬라이드간의 margin 값
+	let onlineImgNum = ${classOnline.size()};
+	onlineImgNum = onlineImgNum - 3;
 	
-	//전체 슬라이드 컨테이너 넓이 설정
+	const $online = $("div.online");
+	const $onlinePrev = $("button.onlinePrev");
+	const $onlineNext = $("button.onlineNext");
+	let onlineCount = 0;
 	
-	  slides.style.width = (slideWidth + slideMargin) * slideCount + 'px'; 
-	   
-	function moveSlide(num) {
-	  slides.style.left = -num * 400 + 'px';
-	  currentIdx = num;
-	}
-	
-	prev.addEventListener('click', function () {
-	  /*첫 번째 슬라이드로 표시 됐을때는 
-	  이전 버튼 눌러도 아무런 반응 없게 하기 위해 
-	  currentIdx !==0일때만 moveSlide 함수 불러옴 */
-	
-	  if (currentIdx !== 0) {moveSlide(currentIdx - 1)};
+	$onlinePrev.click(function() {
+		if(onlineImgNum < 0) {
+			$onlinePrev.attr('disabled', false);
+			$onlineNext.attr('disabled', false);
+			return;
+		}
+		
+		if(onlineCount != 0) {
+			onlineCount--;
+		}
+
+		if(onlineCount < 0) {
+			$onlinePrev.attr('disabled', true);
+			onlineCount = 0;
+		}
+		else {
+			$onlinePrev.attr('disabled', false);
+			$onlineNext.attr('disabled', false);
+		}
+		$online.css("transform", "translate(-" + onlineCount * 310 + "px)");
 	});
 	
-	next.addEventListener('click', function () {
-	  /* 마지막 슬라이드로 표시 됐을때는 
-	  다음 버튼 눌러도 아무런 반응 없게 하기 위해
-	  currentIdx !==slideCount - 1 일때만 
-	  moveSlide 함수 불러옴 */
-	  if (currentIdx !== slideCount - 1) {
-	    moveSlide(currentIdx + 1);
-	  }
+	$onlineNext.click(function() {
+		if(onlineImgNum < 0) {
+			$onlinePrev.attr('disabled', false);
+			$onlineNext.attr('disabled', false);
+			return;
+		}
+		
+		onlineCount++;
+
+		if(onlineCount > onlineImgNum) {
+			$onlineNext.attr('disabled', true);
+		}
+		else {
+			$onlinePrev.attr('disabled', false);
+			$onlineNext.attr('disabled', false);
+		}
+		$online.css("transform", "translate(-" + onlineCount * 310 + "px)");
+	});
+	
+	let onedayImgNum = ${classOneday.size()};
+	onedayImgNum = onedayImgNum - 3;
+	
+	const $oneday = $("div.oneday");
+	const $onedayPrev = $("button.onedayPrev");
+	const $onedayNext = $("button.onedayNext");
+	let onedayCount = 0;
+	
+	$onedayPrev.click(function() {
+		if(onedayImgNum < 0) {
+			$onedayPrev.attr('disabled', false);
+			$onedayNext.attr('disabled', false);
+			return;
+		}
+		
+		if(onedayCount != 0) {
+			onedayCount--;
+		}
+		
+		if(onedayCount < 0) {
+			$onedayPrev.attr('disabled', true);
+			onedayCount = 0;
+		}
+		else {
+			$onedayPrev.attr('disabled', false);
+			$onedayNext.attr('disabled', false);
+		}
+		$oneday.css("transform", "translate(-" + onedayCount * 310 + "px)");
+	});
+	
+	$onedayNext.click(function() {
+		if(onedayImgNum < 0) {
+			$onedayPrev.attr('disabled', false);
+			$onedayNext.attr('disabled', false);
+			return;
+		}
+		
+		onedayCount++;
+
+		if(onedayCount > onedayImgNum) {
+			$onedayNext.attr('disabled', true);
+		}
+		else {
+			$onedayPrev.attr('disabled', false);
+			$onedayNext.attr('disabled', false);
+		}
+		$oneday.css("transform", "translate(-" + onedayCount * 310 + "px)");
+	});
+	
+	const $img = $("div.img");
+	
+	$img.click(function() {
+		$(this).children().submit();
 	});
 </script>
 </html>

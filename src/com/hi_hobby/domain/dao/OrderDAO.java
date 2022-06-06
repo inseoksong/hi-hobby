@@ -40,4 +40,14 @@ public class OrderDAO {
 		System.out.println("cancel dao들어옴");
 		sqlSession.update("Order.cancel", orderVO);
 	}
+	
+	// 마이페이지를 위한 온라인 주문 불러오기
+	public List<Integer> viewOnline(int userNum) {
+		return sqlSession.selectList("Order.viewOnline", userNum);
+	}
+	
+	// 마이페이지를 위한 원데이 주문 불러오기
+	public List<Integer> viewOneday(int userNum) {
+		return sqlSession.selectList("Order.viewOneday", userNum);
+	}
 }

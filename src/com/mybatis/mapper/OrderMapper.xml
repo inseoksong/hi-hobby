@@ -28,5 +28,18 @@
 	set order_approve=#{orderApprove}
 	where order_num=#{orderNum};
 	</update>
-
+	
+	<!-- 마이페이지를 위한 온라인 주문 불러오기 -->
+	<select id="viewOnline" parameterType="_int" resultType="_int">
+		select class_num
+		from tbl_order
+		where user_num = #{userNum} and order_status = 0 and order_approve = 0
+	</select>
+	
+	<!-- 마이페이지를 위한 원데이 주문 불러오기 -->
+	<select id="viewOneday" parameterType="_int" resultType="_int">
+		select class_num
+		from tbl_order
+		where user_num = #{userNum} and order_status = 1 and order_approve = 0
+	</select>
 </mapper>
