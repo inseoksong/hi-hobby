@@ -2,6 +2,7 @@ package com.hi_hobby._class;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -9,16 +10,17 @@ import javax.servlet.http.HttpServletResponse;
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
 import com.hi_hobby.domain.dao.ClassDAO;
+import com.hi_hobby.domain.vo.ClassVO;
 
 public class ClassGraphViewCategory implements Action {
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 			req.setCharacterEncoding("UTF-8");
-			HashMap<String, Integer> classMap = new HashMap<>();
+			HashMap<String, String> classMap = new HashMap<>();
 			ActionInfo actionInfo = new ActionInfo();
 			ClassDAO classDAO = new ClassDAO();
 			
-			int classCategory = Integer.parseInt(req.getParameter("classCategory"));
+			String categoryList = req.getParameter("classCategory");
 			
 			//전체 게시글 개수
 			int total = classDAO.getTotal();
@@ -50,9 +52,9 @@ public class ClassGraphViewCategory implements Action {
 			endPage = endPage > realEndPage ? realEndPage : endPage;
 			
 			//DB에서 필요한 데이터를 Map에 담는다.
-			classMap.put("startRow", startRow);
-			classMap.put("rowCount", rowCount);
-			classMap.put("classCategory", classCategory);
+/*			classMap.put("startRow", startRow);
+			classMap.put("rowCount", rowCount);*/
+			classMap.put("categoryList", categoryList);
 
 			//시작 인덱스와, 개수를 전달하여 게시글 목록을 가져온 뒤 requestScope에 담아준다.
 			req.setAttribute("GraphViewCategory", classDAO.GraphViewCategory(classMap));

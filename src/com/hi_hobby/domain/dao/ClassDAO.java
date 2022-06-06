@@ -68,8 +68,8 @@ public class ClassDAO {
 		sqlSession.update("Class.confirm");
 	}
 	
-	// 원데이 클래스 목록 조회
-	public List<ClassVO> GraphViewCategory(Map<String, Integer> classMap) {
+	// 카테고리 별 클래스 목록 조회
+	public List<ClassVO> GraphViewCategory(Map<String, String> classMap) {
 		return sqlSession.selectList("Class.GraphViewCategory", classMap);
 	}
 	
