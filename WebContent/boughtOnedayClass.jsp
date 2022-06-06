@@ -20,6 +20,7 @@
 			<c:set var="classCreator" value="${lecture.getClassNickname()}"/>
 			<c:set var="classTime" value="${lecture.getOrderReservation()}"/>
 			<c:set var="classPlace" value="${lecture.getClassPlace()}"/>
+			<c:set var="classPlaceDetail" value="${lecture.getClassPlaceDetail()}"/>
 		</c:forEach>
 		<section class="main-section">
 			<div class="page-title">
@@ -43,7 +44,7 @@
 			<div class="line"></div>
 			<div class="class-place">
 				<h1>클래스 장소</h1>
-				<p>: <c:out value="${classPlace}"/></p>
+				<p>: <c:out value="${classPlace}"/>, <c:out value="${classPlaceDetail}"/></p>
 			</div>
 			<div class="line"></div>
 		</section>

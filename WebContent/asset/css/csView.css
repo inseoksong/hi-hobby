@@ -170,3 +170,22 @@ span.title{
     padding-left: 30px;
 }
 
+h1.noEdit{
+    position: absolute;
+    font-size: 16px;
+    right: 100px;
+    margin-top: 14px;
+}
+
+h1.noEdit2{
+    position: absolute;
+    right: 100px;
+    font-size: 11px;
+    margin-top: 33px;
+    color: gray;
+}
+
+.buttonWrap h4{
+    position: absolute;
+    left: 25px;
+}

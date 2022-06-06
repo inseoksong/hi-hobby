@@ -9,6 +9,7 @@ public class InquiryDTO {
 	private boolean inquiryProcess;	// 문의글 처리 현황
 	private int userNum;			// 작성한 유저 고유 번호 (외래키)
 	private String userName;			// 작성한 유저 이름 (외래키)	
+	private String userEmail;			// 작성한 유저 이메일 (외래키)	
 	
 	public InquiryDTO() {;}
 
@@ -88,6 +89,14 @@ public class InquiryDTO {
 	
 	public void setUserName(String userName) {
 		this.userName = userName;
+	}
+
+	public String getUserEmail() {
+		return userEmail;
+	}
+	
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
 	}
 	
 }

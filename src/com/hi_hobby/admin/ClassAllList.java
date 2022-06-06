@@ -12,26 +12,26 @@ import org.json.simple.JSONObject;
 
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
-import com.hi_hobby.domain.dao.InquiryDAO;
+import com.hi_hobby.domain.dao.ClassDAO;
 import com.hi_hobby.domain.dao.UserDAO;
-import com.hi_hobby.domain.vo.InquiryVO;
+import com.hi_hobby.domain.vo.ClassVO;
 import com.hi_hobby.domain.vo.UserVO;
 import com.sun.security.jgss.InquireType;
 
-public class InquiryOkPage implements Action{
+public class ClassAllList implements Action{
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		HashMap<String, Integer> inquiryMap = new HashMap<>();
+		HashMap<String, Integer> classMap = new HashMap<>();
 		req.setCharacterEncoding("UTF-8");
 		ActionInfo actionInfo = new ActionInfo();
 		HttpSession session = req.getSession();
-		InquiryVO inquiryVO = new InquiryVO();
-		InquiryDAO inquiryDAO = new InquiryDAO();
+		ClassVO classVO = new ClassVO();
+		ClassDAO classDAO = new ClassDAO();
 		UserDAO userDAO = new UserDAO();
 		
 		
 		//전체 게시글 개수
-		int total = inquiryDAO.getTotal();
+		int total = classDAO.getTotal();
 		//사용자가 요청한 페이지
 		String temp = req.getParameter("page");
 		//사용자가 요청한 페이지가 null이면 1페이지를,
@@ -60,11 +60,11 @@ public class InquiryOkPage implements Action{
 		endPage = endPage > realEndPage ? realEndPage : endPage;
 		
 		//DB에서 필요한 데이터를 Map에 담는다.
-		inquiryMap.put("startRow", startRow);
-		inquiryMap.put("rowCount", rowCount);
-
+		classMap.put("startRow", startRow);
+		classMap.put("rowCount", rowCount);
+		
 		//시작 인덱스와, 개수를 전달하여 게시글 목록을 가져온 뒤 requestScope에 담아준다.
-		req.setAttribute("inquiryList", inquiryDAO.inquiryList(inquiryMap));
+		req.setAttribute("classAllList", classDAO.classAllList(classMap));
 		//현재 페이지를 requestScope에 담아준다.
 		req.setAttribute("page", page);
 		req.setAttribute("startPage", startPage);
@@ -74,7 +74,7 @@ public class InquiryOkPage implements Action{
 		
 		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("/inquiryOkPage.jsp");
+		actionInfo.setPath("/classManage.jsp");
 		
 		
 		return actionInfo;

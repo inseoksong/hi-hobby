@@ -45,5 +45,4 @@
 		set user_status = 0
 		where user_num = #{userNum}
 	</update>
-	
 </mapper>
