@@ -26,8 +26,11 @@ public class ClassFrontController extends HttpServlet {
 		String command = requestURL.substring(requestURL.lastIndexOf("/") + 1);
 		ActionInfo actionInfo = null;
 		
-		if(command.equals("ClassCreateOk.cl")) {
-			actionInfo = new ClassCreateOk().execute(req, resp);
+		if(command.equals("ClassOneCreateOk.cl")) {
+			actionInfo = new ClassOneCreateOk().execute(req, resp);
+		}
+		else if(command.equals("ClassOnlineCreateOk.cl")) {
+			actionInfo = new ClassOnlineCreateOk().execute(req, resp);
 		}
 		else if(command.equals("ClassCreate.cl")) {
 			actionInfo.setRedirect(false);
@@ -92,6 +95,15 @@ public class ClassFrontController extends HttpServlet {
 		}
 		else if(command.equals("ClassGetLike.cl")) {
 			actionInfo = new ClassGetLike().execute(req, resp);
+		}
+		else if(command.equals("ClassBoughtView.cl")) {
+			actionInfo = new ClassBoughtView().execute(req, resp);
+		}
+		else if(command.equals("ClassBoughtViewOnlineDetail.cl")) {
+			actionInfo = new ClassBoughtViewOnlineDetail().execute(req, resp);
+		}
+		else if(command.equals("ClassBoughtViewOnedayDetail.cl")) {
+			actionInfo = new ClassBoughtViewOnedayDetail().execute(req, resp);
 		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성

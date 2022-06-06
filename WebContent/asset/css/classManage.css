@@ -10,265 +10,64 @@ body {
     color: rgb(26, 26, 26);
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-header {
-    width : 100%;
-    height : 80px;
-    border-bottom: 1px rgb(229, 229, 229) solid;
-    background-color: white;
+/* a태그의 색상 > 부모에게 상속 */
+a:-webkit-any-link {
+    color: inherit;
 }
 
-div.header {
-    width : 98%;
-    height : 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-div.logo {
-    position : relative;
-    width : 300px;
-}
-
-div.logo > svg {
-    position : absolute;
-    top : 17px;
-    width : 110px; 
-    height :50px;
-}
-
-div.logo-text {
-    position : absolute;
-    top: 25px;
-    left: 40px;
-    font-size: 25px;
-    font-weight: 700;
-    font-family: 'Quicksand', sans-serif;
-    letter-spacing: -1.25px;
-}
-
-div.profile {
-    width : 34px;
-    height : 34px;
-    position : relative;
-    cursor: pointer;
-}
-
-div.profile img {
-    width : 100%;
-    height : 100%;
-}
-
-.child-box {
-    visibility: hidden;
-    width: 200px;
-    height : 50px;
-    background-color: white;
-    border :1px rgb(229, 229, 229) solid;
-    position: absolute;
-    top : 45px;
-    right : 0;
-    cursor: pointer;
-}
-
-.toggle {
-    visibility: visible;
-}
-
-div.child-wrap {
-    width : 100%;
-    height: 50%;
-}
-
-div.child-wrap:hover {
-    background-color: rgb(229, 229, 229);
-}
-
-div.child-menu {
-    width : 100%;
-    height : 50px;
-    text-align: left;
-    padding-left : 20px;
-    line-height: 50px;
-}
-
-div.child-menu > span {
-    margin : 0;
-    padding : 0;
-}
-
-nav{
-    position: absolute;
-    width : 240px;
-    height : calc(100% - 80px);
-    border-right: 1px rgb(229, 229, 229) solid;
-}
-
-.section-left{
-    width: 240px;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
-    border-color: rgb(229, 229, 229);
-}
-
-.menu-wrap{
-    width: 100%;
-    height : 60px;
-    display: flex;
-    cursor: pointer;
-}
-
-.menu-wrap:hover{
-    background-color: rgb(229, 229, 229);
-}
-
-.menu-wrap svg{
-    width : 24px;
-    height : 24px;
-    padding-top: 20px;
-    padding-left : 20px
-}.menu-wrap svg{
-    width : 24px;
-    height : 24px;
-    padding-top: 20px;
-    padding-left : 20px
-}
-
-.menu-text{
-    width: 100%;
-    line-height: 60px;
-}
-
-.menu-text{
-    color :rgb(26, 26, 26);
-    font-weight: 500;
-    font-size: 15px;
-}
-
-.menu-text span{
-    padding-left: 10px;
+body{
+    overflow: auto;
 }
 
 section{
-    padding-left: 240px;
-    display: flex;
-    height : calc(100% - 480px);
-    border-color: rgb(229, 229, 229);
-    border-left: 1px solid;
-}
-
-.alert{
-    visibility: hidden;
-    position: fixed;
-    margin: 0 auto;
-    top : 150px;
-    left: 0;
-    right : 0;   /* 가운데로 이동 */
-    width : 300px;
-    height : 60px;
-    font-size: 17px;
-    border: 1px solid rgba(128, 128, 128, 0.5);
-    z-index: 1000;
-    background-color: white;
-    padding-left: 20px;
-    display: flex;
-    align-items: center;
-    box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.5);
-}
-
-.visible{
-    visibility: visible;
-}
-
-div.class-wrap{
-    width : fit-content;
-    padding : 14px;
+    width : 1176px;
     margin-left: auto;
     margin-right: auto;
 }
 
-div.class-top{
-    display: flex;
+div.csWrap{
+    width : 1176px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.class-top-title{
+div.helpWrap{
+    padding : 50px;
+    width : 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.helpTop{
+    display: flex;
+    width : 100%;
+}
+
+.helpTitle{
     font-size: 24px;
     font-weight: 700;
     height: 60px;
     width : 100%;
-    left: 50;
-}
-
-.class-all{
-    width : 1400px;
-    height : 550px;
-    border: 1px rgb(238, 238, 238) solid;
-}
-
-div.search-box {
-    width : 1300px;
-    height : 42px;
-    background-color: #F8F8F8;
-    border-color: #E5E5E5;
-    position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
 }
 
-div.search-box form {
-    width : 100%;
-    height : 100%;
+.helpTitle > span{
+    display: inline-block;
+    width: 160px;
 }
 
-div.search-box input{
-    width : 100%;
-    height : 100%;
-    border-style: none;
-    padding-left: 12px;
-    color :rgb(102, 102, 102);
-    border-radius: 2px;
-    font-family:'Pretendard JP',Pretendard,system-ui;
-    background: transparent;
-    outline : none;
-}
-
-div.search-box svg{
-    position : absolute;
-    top : 7px;
-    right : 10px;
-}
-
-div.list-wrap { 
-    width : 1350px;
-    margin : 0 auto;
-}
-
-table.class-admin{
-    font-size: 15px;
-    width : 1300px;
-    text-align: left;
-    margin : 15px 0 0 2px ;
-}
-
-td.btn{
-    padding-left: 5px;
-}
-
-.manageBtn {
-    width: 55px;
-    height: 30px;
+.helpTop button{
+    width : 80px;
+    height : 40px;
     background-color: #18a550;
     border : none;
     color : white;
-    font-size: 13px;
-    letter-spacing: 2px;
+    font-size: 15px;
     font-weight: 500;
     border-radius: 32px;
     cursor: pointer;
@@ -276,12 +75,25 @@ td.btn{
     font-family:'Pretendard JP',Pretendard,system-ui,Roboto,'Helvetica Neue','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif;
 }
 
-.waitinBtn{
-    background-color: #18a550;
+.helpAll{
+    width : 100%;
+    height : auto;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
 }
 
-.refuseBtn{
-    background-color: rgb(218, 31, 31);
+div.tableWrap{
+    width : 1100px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.helpList{
+    font-size: 14px;
+    width : 1100px;
+    text-align: left;
+    margin : 15px 0 0 2px ;
 }
 
 th{
@@ -297,26 +109,23 @@ tr.lastData td{
     border-bottom : none;
 }
 
-td.className{
+td.qnaTitle{
     padding-left: 2px;
 }
 
-td.className:hover{
+td.qnaTitle:hover{
     text-decoration: underline;
     cursor: pointer;
 }
 
 .status{
-    color : rgb(26, 26, 26);
-    font-weight: 700;
-}
-
-.confirm{
     color : #18a550;
+    font-weight: 500;
 }
 
-.refuse {
-    color : rgb(218, 31, 31);
+.waiting{
+    color : rgb(243, 33, 59) ;
+    font-weight: 500;
 }
 
 .numWrap {
@@ -325,7 +134,6 @@ td.className:hover{
     margin-right: auto;
     margin-top : 30px;
 }
-
 .numBox{
     width: 100%;
     display: flex;
@@ -392,4 +200,21 @@ div.number-buttons button.number-select {
 	color: #fff;
 	font-weight: 500;
 	font-size: 14px;
+}
+
+.pwSubBtn{
+	margin: -1px;
+	padding-top: 0px;
+}
+
+.qnaTitle1 {
+      width:70px;
+      padding:0 5px;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+  }
+
+td.web-view{
+ 	  border-bottom: white;
 }
