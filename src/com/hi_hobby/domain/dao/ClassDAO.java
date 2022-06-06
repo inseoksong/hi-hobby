@@ -142,4 +142,21 @@ public class ClassDAO {
 	public List<ClassDTO> classAllList(Map<String, Integer> classMap) {
 	   return sqlSession.selectList("Class.classAllList", classMap);
 	}
+	
+	// 내가 쓴 문의글 불러오기
+	public ClassDTO classMyView(int classNum) {
+	   return sqlSession.selectOne("Class.classMyView", classNum);
+	}
+
+	// 클래스 승인 허가
+	public void classApproveOk(int classNum) {
+	   sqlSession.update("Class.classApproveOk", classNum);
+	}
+
+	// 클래스 승인 취소
+	public void classApproveNo(int classNum) {
+	   sqlSession.update("Class.classApproveNo", classNum);
+	}
+
+
 }

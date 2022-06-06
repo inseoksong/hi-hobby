@@ -180,7 +180,24 @@
 		on c.class_num = o.class_num
 		where c.class_num = #{classNum}
 	</select>
+	
+	<!-- 내가 쓴 문의글 불러오기 -->
+	<select id="classMyView" parameterType="_int" resultType="classDTO">
+	   select class_num, class_title, class_category, class_place, class_place_detail, class_start, class_end, class_introduce, class_price,  class_nickname, class_approve, c.user_num, user_name, user_email
+	   from tbl_class c join tbl_user u
+	   on i.user_num = u.user_num and class_num = #{classNum}
+	</select>
 
 
+	<!-- 클래스 승인 허가 -->
+	<update id="classApproveOk" parameterType="_int">
+	   update tbl_class set class_approve = 1 where class_num = #{classNum}
+	</update>
+	
+	
+	<!-- 클래스 승인 취소 -->
+	<update id="classApproveNo" parameterType="_int">
+	   update tbl_class set class_approve = 0 where class_num = #{classNum}
+	</update>
 
 </mapper>
