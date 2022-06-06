@@ -20,6 +20,7 @@ public class ClassVO {
 	private String classDay;			// 클래스 생성 날짜
 	private int userNum;				// 유저 고유번호(크리에이터 정보를 가져오기 위해)
 	private String classVideo;			// 비디오 파일 이름
+	private String classPriceComma;		// 클래스 가격에 ,가 붙은 가격
 	
 	public ClassVO() {;}
 
@@ -173,5 +174,13 @@ public class ClassVO {
 
 	public void setClassVideo(String classVideo) {
 		this.classVideo = classVideo;
+	}
+
+	public String getClassPriceComma() {
+		return classPriceComma;
+	}
+
+	public void setClassPriceComma(String classPriceComma) {
+		this.classPriceComma = classPriceComma;
 	}
 }

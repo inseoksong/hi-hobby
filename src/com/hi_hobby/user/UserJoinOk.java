@@ -27,7 +27,7 @@ public class UserJoinOk implements Action {
 		userDAO.join(userVO);
 		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("/main.jsp");
+		actionInfo.setPath("/index.jsp");
 		
 		return actionInfo;
 	}

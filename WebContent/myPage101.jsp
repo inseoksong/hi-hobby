@@ -66,15 +66,15 @@
 									</a>
 								</section>
 							</aside>
-							<c:set var="OnlineClass" value="${classOnline}"/>
-							<c:set var="OnedayClass" value="${classOneday}"/>
+							<c:set var="onlineClass" value="${classOnline}"/>
+							<c:set var="onedayClass" value="${classOneday}"/>
 							<div class="section-wrap">
 								<section class="bought-class">
 									<div class="bought-class-text">
 										<h3>내가 구매한 온라인 클래스</h3>
 									</div>
 									<c:choose>
-										<c:when test="${empty OnlineClass}">
+										<c:when test="${empty onlineClass}">
 											<div class="no-class-container">
 												<div class="no-class">
 													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-uxrfz2">
@@ -120,7 +120,7 @@
 										<h3>내가 구매한 원데이 클래스</h3>
 									</div>
 									<c:choose>
-										<c:when test="${empty OnedayClass}">
+										<c:when test="${empty onedayClass}">
 											<div class="no-class-container">
 												<div class="no-class">
 													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="css-uxrfz2">
