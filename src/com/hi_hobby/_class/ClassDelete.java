@@ -17,15 +17,16 @@ public class ClassDelete implements Action{
 		resp.setContentType("text/html;charset=UTF-8");
 		req.setCharacterEncoding("UTF-8");
 		
-//		int classNum = Integer.parseInt(req.getParameter("classNum"));
-		int classNum = 10;
+		int classNum = Integer.parseInt(req.getParameter("classNum"));
+		int userNum = Integer.parseInt(req.getParameter("userNum"));
 		ClassDAO classDAO = new  ClassDAO();
 		ActionInfo actionInfo = new ActionInfo();
 		
 		classDAO.del(classNum);
+		System.out.println(classDAO.modify(classNum).getClassStatus());
 		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath("/createrCenter");
+		actionInfo.setPath(req.getContextPath()+"/_class/ClassMine.cl?userNum="+userNum);
 		
 		return actionInfo;
 	}

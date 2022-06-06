@@ -9,10 +9,10 @@
     <title>하이하비 크리에이터 센터 | 크리에이터 로그인</title>
     <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="preload" as="style">
     <link href="https://cdn.class101.net/fonts/pretendard/pretendard-dynamic-subset.css" rel="stylesheet">
-    <link rel="shortcut icon" href="asset/img/favicon.ico">
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/asset/img/favicon.ico">
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
-    <link rel="stylesheet" type="text/css" href="asset/css/createrLogin.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/asset/css/createrLogin.css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
                     <div class="css-1n2mv2k">
                     	<a href="createrSupport.jsp">
                     		<span class="css-qlxdgd">
-                    			<img src="asset/img/creatorLogo2.png">
+                    			<img src="${pageContext.request.contextPath}/asset/img/creatorLogo2.png">
                             </span>
                          </a>
                     </div>
