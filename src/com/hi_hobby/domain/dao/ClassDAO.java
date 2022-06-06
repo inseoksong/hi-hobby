@@ -102,4 +102,44 @@ public class ClassDAO {
 	public List<ClassDTO> viewOnedayDetail(int classNum) {
 		return sqlSession.selectList("Class.viewOnedayDetail", classNum);
 	}
+	
+	// 온라인 클래스 목록 조회
+	public List<ClassVO> GraphViewOn(Map<String, Integer> classMap) {
+		return sqlSession.selectList("Class.GraphViewOn", classMap);
+	}
+	
+	// 전체 클래스 목록 조회
+	public List<ClassVO> GraphView(Map<String, Integer> classMap) {
+		return sqlSession.selectList("Class.GraphView", classMap);
+	}
+	
+	// 온라인 클래스 TOP10 목록 조회
+	public List<ClassVO> GraphViewOnTop(Map<String, Integer> classMap) {
+		return sqlSession.selectList("Class.GraphViewOnTop", classMap);
+	}
+	
+	// 온라인 클래스 정보 조회
+	public ClassVO selectDetailOn(int classNum) {
+		return sqlSession.selectOne("Class.selectDetailOn", classNum);
+	}
+	
+	//클래스 전체 개수
+	public int getTotal() {
+		return sqlSession.selectOne("Class.getTotal");
+	}
+	
+	//클래스 추천하기 업데이트
+	public void classLike(ClassVO classVO) {
+		sqlSession.update("Class.classLike", classVO);
+	}
+	
+	// 추천 값 가져오기
+	public int getLike(int classNum) {
+		return sqlSession.selectOne("Class.getLike", classNum);
+	}
+	
+	// 문의 글 전체리스트
+	public List<ClassDTO> classAllList(Map<String, Integer> classMap) {
+	   return sqlSession.selectList("Class.classAllList", classMap);
+	}
 }
