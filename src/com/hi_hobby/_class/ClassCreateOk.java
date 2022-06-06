@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
 import com.hi_hobby.domain.dao.ClassDAO;
+import com.hi_hobby.domain.dao.FileDAO;
 import com.hi_hobby.domain.vo.ClassVO;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
@@ -23,6 +24,7 @@ public class ClassCreateOk implements Action {
 			ClassVO classVO = new ClassVO();
 			ClassDAO classDAO = new ClassDAO();
 			ActionInfo actionInfo = new ActionInfo();		
+			FileDAO fileDAO = new FileDAO();
 			
 			HttpSession session = req.getSession();
 			long miliseconds = System.currentTimeMillis();

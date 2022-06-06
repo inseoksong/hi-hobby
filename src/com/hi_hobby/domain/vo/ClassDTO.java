@@ -18,6 +18,9 @@ public class ClassDTO {
 	private int classLike;				// 찜하기 버튼(하트)
 	private String classIntroduce;		// 클래스 설명
 	private int userNum;				// 유저 고유번호(크리에이터 정보를 가져오기 위해)
+	private String userName;				// 유저 이름(크리에이터 정보를 가져오기 위해)
+	private String userEmail;				// 유저 이메일(크리에이터 정보를 가져오기 위해)
+	private String classDay;				// 클래스 생성 날짜
 	private String classVideo;			// 비디오 파일 이름
 	private String orderReservation;	// 예약 시간
 	
@@ -122,6 +125,24 @@ public class ClassDTO {
 	}
 	public void setUserNum(int userNum) {
 		this.userNum = userNum;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getUserEmail() {
+		return userEmail;
+	}
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
+	}
+	public String getClassDay() {
+		return classDay;
+	}
+	public void setClassDay(String classDay) {
+		this.classDay = classDay;
 	}
 	public String getClassVideo() {
 		return classVideo;
