@@ -930,7 +930,6 @@ body>div {
 	clear : both;
     display: flex;
     width: 100%;
-    padding-left: 240px;
     -webkit-box-align: stretch;
     align-items: stretch;
     flex-direction: column;
@@ -3837,10 +3836,6 @@ div.listPointBlock {
         justify-content: space-between;
     }
 
-    .css-16f3fmi {
-        padding-left: 240px;
-    }
-
     .css-1f8m7mx {
         -webkit-box-pack: justify;
         justify-content: space-between;
@@ -3895,11 +3890,6 @@ div.flexWrap {
     display: flex;
 }
 
-button#class-del-btn{
-	background-color: rgb(243, 33, 59);
-	border: 1px solid rgb(243, 33, 59);
-}
-
 div.bottomBtnWrap{
 	display : flex;
 	justify-content: space-between;
@@ -3922,6 +3912,35 @@ div.backBtn button.backBtn{
 	color : rgb(26, 26, 26);
 }
 
-div.backBtn : hover{
+#listbtn:hover{
 	background-color: rgb(229, 229, 229);
 }
+
+.creator-information p{
+    font-size: 14px;
+    color: #a2a2a2;
+    padding-top: 16px;
+}
+
+ .datailText{
+ 	font-size: 15px !important;
+ }
+ 
+ .class-ok-btn:hover{
+ 	background-color: #598845;
+ }
+
+.class-del-btn{
+	background-color: rgb(243, 33, 59) !important;
+	border: 1px solid rgb(243, 33, 59) !important;
+}
+
+ .class-del-btn:hover{
+ 	background-color: #9B111E !important;
+ }
+ 
+ 
+ 
+ 
+ 
+ 

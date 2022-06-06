@@ -1,0 +1,433 @@
+html, body{
+    margin : 0 ;
+    padding : 0 ;
+    width: 100%;
+    height:100%;
+}
+
+body {
+    font-family:'Pretendard JP',Pretendard,system-ui,Roboto,'Helvetica Neue','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif;
+    color: rgb(26, 26, 26);
+}
+
+a{
+    text-decoration: none;
+}
+
+/* header {
+    width : 100%;
+    height : 80px;
+    border-bottom: 1px rgb(229, 229, 229) solid;
+    background-color: white;
+}
+
+div.header {
+    width : 98%;
+    height : 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.logo {
+    position : relative;
+    width : 300px;
+}
+
+div.logo > svg {
+    position : absolute;
+    top : 17px;
+    width : 110px; 
+    height :50px;
+}
+
+div.logo-text {
+    position : absolute;
+    top: 25px;
+    left: 40px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: -1.25px;
+}
+
+div.profile {
+    width : 34px;
+    height : 34px;
+    position : relative;
+    cursor: pointer;
+}
+
+div.profile img {
+    width : 100%;
+    height : 100%;
+}
+
+.child-box {
+    visibility: hidden;
+    width: 200px;
+    height : 50px;
+    background-color: white;
+    border :1px rgb(229, 229, 229) solid;
+    position: absolute;
+    top : 45px;
+    right : 0;
+    cursor: pointer;
+}
+
+.toggle {
+    visibility: visible;
+}
+
+div.child-wrap {
+    width : 100%;
+    height: 50%;
+}
+
+div.child-wrap:hover {
+    background-color: rgb(229, 229, 229);
+}
+
+div.child-menu {
+    width : 100%;
+    height : 50px;
+    text-align: left;
+    padding-left : 20px;
+    line-height: 50px;
+}
+
+div.child-menu > span {
+    margin : 0;
+    padding : 0;
+}
+
+nav{
+    position: absolute;
+    width : 240px;
+    height : calc(100% - 80px);
+    border-right: 1px rgb(229, 229, 229) solid;
+}
+
+.section-left{
+    width: 240px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(229, 229, 229);
+}
+
+.menu-wrap{
+    width: 100%;
+    height : 60px;
+    display: flex;
+    cursor: pointer;
+}
+
+.menu-wrap:hover{
+    background-color: rgb(229, 229, 229);
+}
+
+.menu-wrap svg{
+    width : 24px;
+    height : 24px;
+    padding-top: 20px;
+    padding-left : 20px
+}.menu-wrap svg{
+    width : 24px;
+    height : 24px;
+    padding-top: 20px;
+    padding-left : 20px
+}
+
+.menu-text{
+    width: 100%;
+    line-height: 60px;
+}
+
+.menu-text{
+    color :rgb(26, 26, 26);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.menu-text span{
+    padding-left: 10px;
+} */
+
+section{
+    padding-left: 240px;
+    display: flex;
+    height : calc(100% - 480px);
+    border-color: rgb(229, 229, 229);
+    border-left: 1px solid;
+}
+
+.alert{
+    visibility: hidden;
+    position: fixed;
+    margin: 0 auto;
+    top : 150px;
+    left: 0;
+    right : 0;   /* 가운데로 이동 */
+    width : 300px;
+    height : 60px;
+    font-size: 17px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    z-index: 1000;
+    background-color: white;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.5);
+}
+
+.visible{
+    visibility: visible;
+}
+
+div.class-wrap{
+    width : fit-content;
+    padding : 14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.class-top{
+    display: flex;
+}
+
+.class-top-title{
+    font-size: 24px;
+    font-weight: 700;
+    height: 60px;
+    width : 100%;
+    left: 50;
+}
+
+.class-all{
+    width : 1400px;
+    height : 550px;
+    border: 1px rgb(238, 238, 238) solid;
+}
+
+div.search-box {
+    width : 1300px;
+    height : 42px;
+    background-color: #F8F8F8;
+    border-color: #E5E5E5;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+div.search-box form {
+    width : 100%;
+    height : 100%;
+}
+
+div.search-box input{
+    width : 100%;
+    height : 100%;
+    border-style: none;
+    padding-left: 12px;
+    color :rgb(102, 102, 102);
+    border-radius: 2px;
+    font-family:'Pretendard JP',Pretendard,system-ui;
+    background: transparent;
+    outline : none;
+}
+
+div.search-box svg{
+    position : absolute;
+    top : 7px;
+    right : 10px;
+}
+
+div.list-wrap { 
+    width : 1350px;
+    margin : 0 auto;
+}
+
+table.class-admin{
+    font-size: 15px;
+    width : 1300px;
+    text-align: left;
+    margin : 15px 0 0 2px ;
+}
+
+td.btn{
+    padding-left: 5px;
+}
+
+.manageBtn {
+    width: 55px;
+    height: 30px;
+    background-color: #18a550;
+    border : none;
+    color : white;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    border-radius: 32px;
+    cursor: pointer;
+    margin-right: 20px;
+    font-family:'Pretendard JP',Pretendard,system-ui,Roboto,'Helvetica Neue','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif;
+}
+
+.waitinBtn{
+    background-color: #18a550;
+}
+
+.refuseBtn{
+    background-color: rgb(218, 31, 31);
+}
+
+th{
+    text-align: left;
+}
+
+th, td {
+    height : 50px;
+    border-bottom : 1px rgb(238 238 238) solid;
+}
+
+tr.lastData td{
+    border-bottom : none;
+}
+
+td.className{
+    padding-left: 2px;
+}
+
+td.className:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.status{
+    color : rgb(26, 26, 26);
+    font-weight: 700;
+}
+
+.confirm{
+    color : #18a550;
+}
+
+.refuse {
+    color : rgb(218, 31, 31);
+}
+
+.numWrap {
+    width : 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top : 30px;
+}
+
+.numBox{
+    width: 100%;
+    display: flex;
+    align-content: center;
+}
+
+.arroePrev{
+    margin-right: 16px;
+}
+
+.circleBox{
+    display: flex;
+    align-items: center;
+}
+
+button.numCircle{
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    color:black;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 16px;
+    margin-top: -7px;
+    font-size: 15px;
+    font-family:'Pretendard JP',Pretendard,system-ui,Roboto,'Helvetica Neue','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif;
+}
+
+div.page-number {
+	margin-top: 24px;
+	margin-bottom: 20px;
+}
+
+div.number-buttons {
+	display: flex;
+	justify-content: center;
+}
+
+div.number-buttons button {
+	display: inline-flex;
+	width: 32px;
+	height: 32px;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+	background-color: #f8f8f8;
+	border: 1px solid #f8f8f8;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+div.number-buttons button.numButton {
+	background-color: #f8f8f8;
+	border-color: #f8f8f8;
+	color: #000;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+div.number-buttons button.number-select {
+	background-color: #19ce60;
+	border-color: #19ce60;
+	color: #fff;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.buttonA{
+    position: absolute;
+    top: 33%;
+    left: 450px;
+}
+
+.buttonA2{
+    position: absolute;
+    top: 33%;
+    right: 450px;
+}
+
+.buttonB{
+    background: #ffffff;
+    padding: 100px;
+	cursor: pointer;
+}
+
+.buttonB2{
+    background: #ffffff;
+    padding: 100px;
+	cursor: pointer;
+}
+
+.gogoLogo{
+    height: 72px;
+    width: 72px;
+    display: block;
+}
+
+.buttonB:hover{
+    background: #D3D3D3;
+}
+
+.buttonB2:hover{
+    background: #D3D3D3;
+}

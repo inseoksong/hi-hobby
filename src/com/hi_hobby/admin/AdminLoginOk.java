@@ -35,7 +35,7 @@ public class AdminLoginOk implements Action {
 
 		if(adminNumber == 1) {
 			actionInfo.setRedirect(false);
-			actionInfo.setPath("/classManage.jsp");
+			actionInfo.setPath("/adminMainPage.jsp");
 			
 		}else {
 			System.out.println("로그인 실패");

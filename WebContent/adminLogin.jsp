@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="asset/css/adminLogin.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/asset/css/adminLogin.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 <link rel="shortcut icon" href="asset/img/favicon.ico">
     
@@ -39,5 +39,5 @@
 		</div>
 	</div>
 </body>
-<script src="asset/js/adminLogin.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/asset/js/adminLogin.js"></script>
 </html>
