@@ -44,6 +44,9 @@ public class OrderFrontController extends HttpServlet {
 			System.out.println("주문 취소 프론트 들어옴");
 			actionInfo = new OrderCancel().execute(req, resp);
 		}
+		else if(command.equals("OrderMyPageView.or")) {
+			actionInfo = new OrderMyPageView().execute(req, resp);
+		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
 		}

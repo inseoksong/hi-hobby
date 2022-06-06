@@ -137,9 +137,7 @@
                                             <div class="text02">지금 쿠폰팩 받고 클래스 시작하세요!</div>
                                         </div>
                                         <div class="text-bottom">
-                                            <div class="thisNum">
-                                                01
-                                            </div>
+                                            <div class="thisNum">01</div>
                                             <div>07</div>
                                         </div>
                                     </div>
@@ -155,15 +153,11 @@
                                 </div>
                                 <div class="text-wrap">
                                     <div class="text-top">
-                                        <div class="text01">모두가 꿈꾸는 부수입
-                                            <br>
-                                            #창업 #부업</div>
+                                        <div class="text01">모두가 꿈꾸는 부수입<br>#창업 #부업</div>
                                         <div class="text02">베스트 클래스 탑 100</div>
                                     </div>
                                     <div class="text-bottom">
-                                        <div class="thisNum">
-                                            02
-                                        </div>
+                                        <div class="thisNum">02</div>
                                         <div>07</div>
                                     </div>
                                 </div>
@@ -182,9 +176,7 @@
                                         <div class="text02">일러스트, iPad, 이모티콘 등 디지털 드로잉의 모든 것</div>
                                     </div>
                                     <div class="text-bottom">
-                                        <div class="thisNum">
-                                            03
-                                        </div>
+                                        <div class="thisNum">03</div>
                                         <div>07</div>
                                     </div>
                                 </div>
@@ -203,9 +195,7 @@
                                         <div class="text02">듣고 싶던 영어강의 무료로 듣고 5만원 특별 쿠폰까지!</div>
                                     </div>
                                     <div class="text-bottom">
-                                        <div class="thisNum">
-                                            04
-                                        </div>
+                                        <div class="thisNum">04</div>
                                         <div>07</div>
                                     </div>
                                 </div>
@@ -224,9 +214,7 @@
                                         <div class="text02">디지털 드로잉 실시간 피드백 클래스</div>
                                     </div>
                                     <div class="text-bottom">
-                                        <div class="thisNum">
-                                            05
-                                        </div>
+                                        <div class="thisNum">05</div>
                                         <div>07</div>
                                     </div>
                                 </div>
@@ -245,9 +233,7 @@
                                         <div class="text02">수익 파이프라인 만드는 노하우가 한 곳에</div>
                                     </div>
                                     <div class="text-bottom">
-                                        <div class="thisNum">
-                                            06
-                                        </div>
+                                        <div class="thisNum">06</div>
                                         <div>07</div>
                                     </div>
                                 </div>
@@ -266,9 +252,7 @@
                                         <div class="text02">내가 원하는 시간에 메세지를 보내 드려요!</div>
                                     </div>
                                     <div class="text-bottom">
-                                        <div class="thisNum">
-                                            07
-                                        </div>
+                                        <div class="thisNum">07</div>
                                         <div>07</div>
                                     </div>
                                 </div>

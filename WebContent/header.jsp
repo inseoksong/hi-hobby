@@ -117,7 +117,7 @@
 					</c:when>
 					<c:otherwise>
 						<div style="width:24px;"></div>
-						<a href="MyPage.us">
+						<a href="OrderMyPageView.or">
 	                     	<p>마이페이지</p>
 		                 </a>
 		                 <div style="width:24px;"></div>

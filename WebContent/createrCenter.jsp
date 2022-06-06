@@ -113,7 +113,8 @@
 										<div class="css-a1maoc" style="display: none;"
 											onclick="notice(4)" id="classList">전체 상품</div>
 										<div class="css-1wbal16" style="display: none;"
-											onclick="notice(5)">클래스 댓글</div>
+											onclick="goToClassMine()">클래스 댓글</div>
+											<!-- onclick="notice(5)" -->
 									</div>
 								</div>
 							</div>
@@ -342,7 +343,7 @@
 												</div>
 												<div class="bottomBtnWrap">
 													<div class="application-button backBtn">
-														<button class="backBtn">뒤로가기</button>
+														<button class="backBtn" onclick="goToClassMine()">뒤로가기</button>
 													</div>
 													<div class="rightBtnWrap">
 														<div class="application-button">

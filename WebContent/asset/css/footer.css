@@ -8,6 +8,7 @@ html, body{
 body {
     font-family:'Pretendard JP',Pretendard,system-ui,Roboto,'Helvetica Neue','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif;
     color: rgb(26, 26, 26);
+    word-break: keep-all;
 }
 
 a{

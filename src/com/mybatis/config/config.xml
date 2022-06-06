@@ -9,11 +9,13 @@
 	<typeAliases>
 		<typeAlias type="com.hi_hobby.domain.vo.UserVO" alias="userVO"/>
 		<typeAlias type="com.hi_hobby.domain.vo.ClassVO" alias="classVO"/>
+		<typeAlias type="com.hi_hobby.domain.vo.ClassDTO" alias="classDTO"/>
 		<typeAlias type="com.hi_hobby.domain.vo.CouponVO" alias="couponVO"/>
 		<typeAlias type="com.hi_hobby.domain.vo.InquiryVO" alias="inquiryVO"/>
 		<typeAlias type="com.hi_hobby.domain.vo.OrderVO" alias="orderVO"/>
 		<typeAlias type="com.hi_hobby.domain.vo.AdminVO" alias="adminVO"/>
 		<typeAlias type="com.hi_hobby.domain.vo.InquiryDTO" alias="inquiryDTO"/>
+		<typeAlias type="com.hi_hobby.domain.vo.FileVO" alias="FileVO"/>
 	</typeAliases>
 	
 	<environments default="mysql">
@@ -35,5 +37,6 @@
 		<mapper resource="com/mybatis/mapper/InquiryMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/OrderMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/AdminMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/FileMapper.xml"/>
 	</mappers>
 </configuration>

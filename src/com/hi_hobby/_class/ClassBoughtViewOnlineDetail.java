@@ -1,6 +1,7 @@
 package com.hi_hobby._class;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -8,27 +9,24 @@ import javax.servlet.http.HttpServletResponse;
 import com.hi_hobby.action.Action;
 import com.hi_hobby.action.ActionInfo;
 import com.hi_hobby.domain.dao.ClassDAO;
+import com.hi_hobby.domain.vo.ClassVO;
 
-public class ClassDelete implements Action{
-
+public class ClassBoughtViewOnlineDetail implements Action {
 	@Override
 	public ActionInfo execute(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		
-		resp.setContentType("text/html;charset=UTF-8");
 		req.setCharacterEncoding("UTF-8");
+		ActionInfo actionInfo = new ActionInfo();
+		ClassDAO classDAO = new ClassDAO();
 		
 		int classNum = Integer.parseInt(req.getParameter("classNum"));
-		int userNum = Integer.parseInt(req.getParameter("userNum"));
-		ClassDAO classDAO = new  ClassDAO();
-		ActionInfo actionInfo = new ActionInfo();
 		
-		classDAO.del(classNum);
-		System.out.println(classDAO.modify(classNum).getClassStatus());
+		List<ClassVO> classInfo = classDAO.viewOnlineDetail(classNum);
+		
+		req.setAttribute("classInfo", classInfo);
 		
 		actionInfo.setRedirect(false);
-		actionInfo.setPath(req.getContextPath()+"/_class/ClassMine.cl?userNum="+userNum);
+		actionInfo.setPath("/boughtOnlineClass.jsp");
 		
 		return actionInfo;
 	}
-
 }
