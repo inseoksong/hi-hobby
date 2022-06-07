@@ -67,6 +67,8 @@ public class ClassModifyOk implements Action {
 //			JSONObject result = new JSONObject();
 //			result.put("check", "true");
 			
+			req.setAttribute("page", page);
+			
 			actionInfo.setRedirect(true);
 			actionInfo.setPath(req.getContextPath()+"/_class/ClassModify.cl?classNum="+classNum +"&userNum="+userNum + "&page=" + page);
 	

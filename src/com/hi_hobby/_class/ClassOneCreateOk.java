@@ -53,7 +53,7 @@ public class ClassOneCreateOk implements Action {
 			classVO.setClassOne(1);                                // 클래스구분 : 원데이(1)
 			classVO.setClassIntroduce(multipartRequest.getParameter("classIntroduce"));                          // 클래스 설명                     
 			classVO.setUserNum(userNum);                             // 유저 고유번호(크리에이터 정보를 가져오기 위해)
-			classVO.setClassDay(date2);
+//			classVO.setClassDay(date2);
 			
 			// 클래스 등록
 			classDAO.create(classVO);
@@ -62,7 +62,7 @@ public class ClassOneCreateOk implements Action {
 			fileDAO.insert(multipartRequest, classDAO.getSeq(userNum));
 			
 			actionInfo.setRedirect(false);
-			actionInfo.setPath(req.getContextPath() + "/_class/ClassMine.cl?userNum="+userNum);
+			actionInfo.setPath(req.getContextPath() + "/_class/ClassMine.cl?userNum="+userNum+"&page=1");
 	
 			return actionInfo;
 		

@@ -6,6 +6,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import com.hi_hobby.domain.vo.UserDTO;
 import com.hi_hobby.domain.vo.UserVO;
 import com.mybatis.config.MyBatisConfig;
 
@@ -55,5 +56,10 @@ public class UserDAO {
 	// 크리에이터로 변경
 	public void setCreator(int userNum) {
 		sqlSession.update("User.creator", userNum);
+	}
+	
+	// 크리에이터 정보 불러오기
+	public List <UserDTO> creatorInfo (int userNum) {
+		return sqlSession.selectList("User.creatorInfo", userNum);
 	}
 }

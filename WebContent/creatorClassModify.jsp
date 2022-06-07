@@ -17,6 +17,7 @@
 	<c:set var="userNum" value="${sessionScope.userNum }"/>
 	<c:set var="classs" value= "${classVO}"/>
 	<c:set var="page" value= "${page}"/>
+	<c:set var="files" value="${files}"/>
 	
 	<div class="css-13i5cls">
 		<div class="css-zsoya5">
@@ -132,37 +133,45 @@
 							<div class="class-image">
 								<p>커버 이미지</p>
 								<p>커버로 사용할 이미지를 추가해주세요. (최대 4장)</p>
-								<div class="images images1">
-									<label for="class_image1">
-										<div>
-											<img src="https://creator.class101.net/images/im-add-photo-landscape.png">
-										</div>
-									</label>
-									<input type="file" id="class_image1" class="class-image-file" name="classImage1">
-									<input type="button" onclick="cancelFile('classImage1')" value="첨부 삭제">
-									<label for="class_image2">
-										<div>
-											<img src="https://creator.class101.net/images/im-add-photo-landscape.png">
-										</div>
-									</label>
-									<input type="file" id="class_image2" class="class-image-file" name="classImage2">
-									<input type="button" onclick="cancelFile('classImage2')" value="첨부 삭제">
+								<div class="uploadWrap">
+									<div class="images images1">
+										<label for="class_image1">
+											<div>
+												<img src="${pageContext.request.contextPath}/asset/img/noImage.png">
+											</div>
+										</label>
+										<input type="file" id="class_image1" class="class-image-file" name="classImage1">
+										<input type="button" class="uploadDel" onclick="cancelFile('classImage1')" value="첨부 삭제">
+									</div>
+									<div class="images images2">	
+										<label for="class_image2">
+											<div>
+												<img src="${pageContext.request.contextPath}/asset/img/noImage.png">
+											</div>
+										</label>
+										<input type="file" id="class_image2" class="class-image-file" name="classImage2">
+										<input type="button" class="uploadDel" onclick="cancelFile('classImage2')" value="첨부 삭제">
+									</div>
 								</div>
-								<div class="images images2">
-									<label for="class_image3">
-										<div>
-											<img src="https://creator.class101.net/images/im-add-photo-landscape.png">
-										</div>
-									</label>
-									<input type="file" id="class_image3" class="class-image-file" name="classImage3">
-									<input type="button" onclick="cancelFile('classImage3')" value="첨부 삭제">
-									<label for="class_image4">
-										<div>
-											<img src="https://creator.class101.net/images/im-add-photo-landscape.png">
-										</div>
-									</label>
-									<input type="file" id="class_image4" class="class-image-file" name="classImage4">
-									<input type="button" onclick="cancelFile('classImage4')" value="첨부 삭제">
+								<div class="uploadWrap">
+									<div class="images images3">
+										<label for="class_image3">
+											<div>
+												<img src="${pageContext.request.contextPath}/asset/img/noImage.png">
+											</div>
+										</label>
+										<input type="file" id="class_image3" class="class-image-file" name="classImage3">
+										<input type="button" class="uploadDel" onclick="cancelFile('classImage3')" value="첨부 삭제">
+									</div>
+									<div class="images images4">	
+										<label for="class_image4">
+											<div>
+												<img src="${pageContext.request.contextPath}/asset/img/noImage.png">
+											</div>
+										</label>
+										<input type="file" id="class_image4" class="class-image-file" name="classImage4">
+										<input type="button" class="uploadDel" onclick="cancelFile('classImage4')" value="첨부 삭제">
+									</div>
 								</div>
 							</div>
 							<div class="class-name">
@@ -226,7 +235,7 @@
 							</div> -->
 						<div class="bottomBtnWrap">
 							<div class="application-button backBtn">
-								<button type="button" class="backBtn" onclick="goToClassMine()">뒤로가기</button>
+								<button type="button" class="backBtn" onclick="goToClassMine()">목록으로</button>
 							</div>
 							<div class="rightBtnWrap">
 								<div class="application-button">
@@ -327,8 +336,29 @@
 <script src="asset/js/onedayClassCreate.js"></script>
 <script src="asset/js/createrCenter.js"></script>
 <script>
+
+//이미지 등록시 썸네일 보기
+$(".images").click(function(){
+	console.log("이미지 클릭됨");
+})
+
+$(".images").change(function(e){
+	let img = $(this).find("img");
+	let reader = new FileReader();
+	reader.readAsDataURL(e.target.files[0]);
+	
+	reader.onload = function(e){
+		if(e.target.result.indexOf("image") != -1){	// 이미지가 있을때
+			img.attr("src", e.target.result);
+			console.log(e.target.result);
+		}else{	// 이미지가 없을때
+			img.attr("src", contextPath + "/asset/img/noImage.png");
+		}							//대체할 이미지의 경로
+	}
+})
+
 function goToClassMine(){
-	history.back()	
+	location.href=contextPath + "/_class/ClassMine.cl?userNum="+${userNum}+"&page="+${page};
 }
 
 function modifyOk(){
