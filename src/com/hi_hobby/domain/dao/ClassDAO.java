@@ -197,4 +197,5 @@ public class ClassDAO {
 	public ClassVO selectSaleBack(int classNum) {
 		return sqlSession.selectOne("Class.selectSaleBack", classNum);
 	}
+	
 }
