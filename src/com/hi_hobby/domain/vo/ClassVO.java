@@ -17,6 +17,8 @@ public class ClassVO {
 	private int classStatus;		// 클래스 삭제 여부
 	private int classLike;				// 찜하기 버튼(하트)
 	private String classIntroduce;		// 클래스 설명
+	private String classVideo;			// 비디오 파일 이름
+	private int userNum;				// 유저 고유번호(크리에이터 정보를 가져오기 위해)
 	
 	
 	public ClassVO() {;}
