@@ -198,4 +198,33 @@ public class ClassDAO {
 		return sqlSession.selectOne("Class.selectSaleBack", classNum);
 	}
 	
+	// 메인페이지를 위한 원데이 TOP 10 클래스 정보 불러오기
+	public List<ClassVO> classMainOnedayTop10() {
+			return sqlSession.selectList("Class.classMainOnedayTop10");
+	}
+
+	// 메인페이지를 위한 온라인 TOP 10 클래스 정보 불러오기
+	public List<ClassVO> classMainOnlineTop10() {
+		return sqlSession.selectList("Class.classMainOnlineTop10");
+	}
+
+	// 메인페이지를 위한 MD 추천 클래스 정보 불러오기
+	public List<ClassVO> classMainMD() {
+		return sqlSession.selectList("Class.classMainMD");
+	}
+
+	// 메인페이지를 위한 원데이 TOP 10 클래스 정보 불러오기
+	public List<ClassVO> classMainOneday() {
+		return sqlSession.selectList("Class.classMainOneday");
+	}
+		
+	// 메인페이지를 위한 온라인 TOP 10 클래스 정보 불러오기
+	public List<ClassVO> classMainOnline() {
+		return sqlSession.selectList("Class.classMainOnline");
+	}
+		
+	// 메인페이지를 위한 최근 업로드된 클래스 정보 불러오기
+	public List<ClassVO> classMainRecent() {
+		return sqlSession.selectList("Class.classMainRecent");
+	}
 }
