@@ -105,33 +105,6 @@ public class ClassFrontController extends HttpServlet {
 		else if(command.equals("ClassBoughtViewOnedayDetail.cl")) {
 			actionInfo = new ClassBoughtViewOnedayDetail().execute(req, resp);
 		}
-		else if(command.equals("ClassRecommended.cl")) {
-			actionInfo = new ClassRecommended().execute(req, resp);
-		}
-		else if(command.equals("ClassLatest.cl")) {
-			actionInfo = new ClassBoughtViewOnedayDetail().execute(req, resp);
-		}
-		else if(command.equals("ClassLikeLatest.cl")) {
-			actionInfo = new ClassLikeLatest().execute(req, resp);
-		}
-		else if(command.equals("ClassLikeOne.cl")) {
-			actionInfo = new ClassLikeOne().execute(req, resp);
-		}
-		else if(command.equals("ClassLatestOne.cl")) {
-			actionInfo = new ClassLatestOne().execute(req, resp);
-		}
-		else if(command.equals("ClassLikeOn.cl")) {
-			actionInfo = new ClassLikeOn().execute(req, resp);
-		}
-		else if(command.equals("ClassLatestOn.cl")) {
-			actionInfo = new ClassLatestOn().execute(req, resp);
-		}
-		else if(command.equals("ClassSale.cl")) {
-			actionInfo = new ClassSale().execute(req, resp);
-		}
-		else if(command.equals("ClassSaleBack.cl")) {
-			actionInfo = new ClassSaleBack().execute(req, resp);
-		}
 		else {
 			// 404 일 때 출력할 에러 페이지 경로 작성
 		}

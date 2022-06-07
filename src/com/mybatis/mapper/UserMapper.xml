@@ -45,4 +45,12 @@
 		set user_status = 0
 		where user_num = #{userNum}
 	</update>
+	
+	<!-- 크리에이터 정보 불러오기 -->
+	<select id="creatorInfo" parameterType="_int" resultType="userDTO">
+		select user_name, class_num, class_title from tbl_class join tbl_user
+		on tbl_class.user_num  = tbl_user.user_num 
+		where tbl_class.user_num  = #{userNum} 
+		order by class_num desc limit 0,5;
+	</select>
 </mapper>

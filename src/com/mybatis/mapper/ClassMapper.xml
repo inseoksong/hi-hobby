@@ -9,7 +9,7 @@
 		values (#{classNickname}, #{classTitle}, #{classCategory}, #{classPlace}, #{classPrice}, #{classStart}, #{classEnd}, #{classApprove}, #{classImg}, #{classOne}, #{classStatus}, #{userNum}, #{classIntroduce}, #{classDay})
 	</insert>
 	
-<!-- 클래스 수정화면 보기 --> <!-- parameterType = _int 추가하기 -->
+<!-- 클래스 수정화면 보기 -->
 	<select id="modify" parameterType = "_int" resultType="classVO">
 		select class_num, class_nickname, class_title, class_category, class_place, class_place_detail, class_start, class_end, class_price, class_approve, class_img, class_one, class_status, class_introduce
 		from tbl_class where class_num = #{classNum}
