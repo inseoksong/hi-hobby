@@ -87,7 +87,7 @@
 										</div>
 									</div>
 									<section class="main">
-										<form action="OrderCreateOne.or" name="createOneForm" method="post" onsubmit="orderCheck()">
+										<form action="OrderCreateOn.or" name="createOneForm" method="post" onsubmit="orderCheck()">
 											<div class="point">
 												<div class="point-text-big">쿠폰</div>
 												<div class="point-text-small">쿠폰</div>
@@ -120,7 +120,7 @@
 													<p><c:out value="${priceResult}"/></p>
 													</c:when>
 													<c:otherwise>
-													<p><c:out value="${priceResult-2000}"/></p>
+													<p><c:out value="${priceResult}"/></p>
 													</c:otherwise>
 													</c:choose>
 												</div>
@@ -227,35 +227,85 @@
 <script src="asset/js/onlinePayment.js"></script>
 <script src="asset/js/header.js"></script>
 <script>
-	var click = false;
-	
-	function checkCoupon(){
-		$.ajax({
-			url:"${pageContext.request.contextPath}/CouponCheck.co",
-			type: "get",
-			data: {couponUser: $("input[name='point']").val()},
-			contentType: "application/json; charset=utf-8",
-			dataType: "json",
-			success: function(result){
-				aj = result;
-				if(!result.result){
-					$("p#result").text("사용 불가능한 쿠폰입니다.");
-					$("p#result").css("color","red")
-					$("p#couponPrice").text("0");
-				}else{
-					$("p#result").text("사용가능한 쿠폰입니다.");
-					$("p#result").css("color","blue")
-					$("p#couponPrice").text("2000");
+var click = false;
+var persent = false;
+function checkCoupon(){
+	$.ajax({
+		url:"${pageContext.request.contextPath}/CouponCheck.co",
+		type: "get",
+		data: {couponUser: $("input[name='point']").val()},
+		contentType: "application/json; charset=utf-8",
+		dataType: "json",
+		success: function(result){
+			if(!result.result){
+				$("p#result").text("사용 불가능한 쿠폰입니다.");
+				$("p#result").css("color","red")
+				$("p#couponPrice").text("0");
+				if(persent){
+					getPriceBack();
+					persent = false;
+					
 				}
-			},
-			error: function(request, status, error){
-				console.log("실패..");
-				console.log(request);
-				console.log(status);
-				console.log(error);
+			}else{
+				if(persent){
+					$("p#result").text("사용가능한 쿠폰입니다. 중복 사용은 불가합니다.");
+					continue;
+				}
+				$("p#result").text("사용가능한 쿠폰입니다.");
+				$("p#result").css("color","blue")
+				$("p#couponPrice").text("2000");
+				getPrice();
+				persent = true;
 			}
-		});
-	}
+		},
+		error: function(request, status, error){
+			console.log("실패..");
+			console.log(request);
+			console.log(status);
+			console.log(error);
+		}
+	});
+}
+
+function getPrice(){
+	$.ajax({
+		url:"${pageContext.request.contextPath}/ClassSale.cl",
+		type: "get",
+		data: {classNum: ${classOn.getClassNum()}},
+		contentType: "application/json; charset=utf-8",
+		dataType: "json",
+		success: function(result){
+			console.log(result.classSale);
+			persent = true;
+		},
+		error: function(request, status, error){
+			console.log("실패..");
+			console.log(request);
+			console.log(status);
+			console.log(error);
+		}
+	});
+}
+
+function getPriceBack(){
+	$.ajax({
+		url:"${pageContext.request.contextPath}/ClassSaleBack.cl",
+		type: "get",
+		data: {classNum: ${classOn.getClassNum()}},
+		contentType: "application/json; charset=utf-8",
+		dataType: "json",
+		success: function(result){
+			console.log(result.classSale);
+			persent = false;
+		},
+		error: function(request, status, error){
+			console.log("실패..");
+			console.log(request);
+			console.log(status);
+			console.log(error);
+		}
+	});
+}
 	
 	function getLike(){
 		$.ajax({
