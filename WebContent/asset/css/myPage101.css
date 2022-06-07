@@ -525,14 +525,22 @@ div.classes {
 
 div.img {
 	width: 300px;
+	height: 210px;
 	float: left;
 	margin-right: 10px;
 }
 
+form[name="classForm"] {
+	width: 300px;
+	height: 210px;
+}
+
 div.img img {
 	width: 100%;
-	display: block;
-	border-radius: 8px;
+	height: 100%;
+	object-fit: contain;
+	background-color: #efefef;
+	border-radius: 3px;
 }
 
 button.prev {

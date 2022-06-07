@@ -84,7 +84,7 @@ public class UserLoginOk implements Action {
 				}
 			}
 			
-			actionInfo.setPath("/main.jsp");
+			actionInfo.setPath("/index.jsp");
 		}
 		else {
 			actionInfo.setPath("/Login.us");

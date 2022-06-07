@@ -174,4 +174,12 @@ public class ClassVO {
 	public void setClassVideo(String classVideo) {
 		this.classVideo = classVideo;
 	}
+
+	public String getClassPriceComma() {
+		return classPriceComma;
+	}
+
+	public void setClassPriceComma(String classPriceComma) {
+		this.classPriceComma = classPriceComma;
+	}
 }

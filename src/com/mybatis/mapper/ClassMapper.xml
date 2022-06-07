@@ -216,14 +216,14 @@
 	<select id="viewMyPage" parameterType="_int" resultType="classVO">
 		select class_num, class_img
 		from tbl_class
-		where class_num = #{classNum}
+		where class_num = #{classNum} and class_approve = 1
 	</select>
 	
 	<!-- 마이페이지를 위한 온라인 클래스 상세정보 불러오기 -->
 	<select id="viewOnlineDetail" parameterType="_int" resultType="classVO">
 		select class_title, class_nickname, class_video
 		from tbl_class
-		where class_num = #{classNum}
+		where class_num = #{classNum} and class_approve = 1
 	</select>
 	
 	<!-- 마이페이지를 위한 원데이 클래스 상세정보 불러오기 -->
@@ -231,7 +231,7 @@
 		select class_title, class_nickname, order_reservation, class_place, class_place_detail
 		from tbl_class c join tbl_order o
 		on c.class_num = o.class_num
-		where c.class_num = #{classNum}
+		where c.class_num = #{classNum} and class_approve = 1
 	</select>
 	
 <!-- 개설한 클래스 내용 불러오기 -->
@@ -261,4 +261,51 @@
 		order by class_Day desc limit #{startRow}, #{rowCount}
 	</select>
 
+	<!-- 메인페이지를 위한 원데이 TOP 10 클래스 정보 불러오기 -->
+	<select id="classMainOnedayTop10" resultType="classVO">
+		select class_num, class_img, class_nickname, class_title, class_like, class_price from tbl_class
+		where class_one = 1 and class_approve = 1
+		order by class_like desc
+		limit 10
+	</select>
+	
+	<!-- 메인페이지를 위한 온라인 TOP 10 클래스 정보 불러오기 -->
+	<select id="classMainOnlineTop10" resultType="classVO">
+		select class_num, class_img, class_nickname, class_title, class_like, class_price from tbl_class
+		where class_one = 0 and class_approve = 1
+		order by class_like desc
+		limit 10
+	</select>
+	
+	<!-- 메인페이지를 위한 MD 추천 클래스 정보 불러오기 -->
+	<select id="classMainMD" resultType="classVO">
+		select class_num, class_img, class_nickname, class_title, class_like, class_price from tbl_class
+		where class_approve = 1
+		order by rand()
+		limit 10
+	</select>
+	
+	<!-- 메인페이지를 위한 원데이 클래스 정보 불러오기 -->
+	<select id="classMainOneday" resultType="classVO">
+		select class_num, class_img, class_nickname, class_title, class_like, class_price from tbl_class
+		where class_one = 1 and class_approve = 1
+		order by class_num desc
+		limit 10
+	</select>
+	
+	<!-- 메인페이지를 위한 온라인 클래스 정보 불러오기 -->
+	<select id="classMainOnline" resultType="classVO">
+		select class_num, class_img, class_nickname, class_title, class_like, class_price from tbl_class
+		where class_one = 0 and class_approve = 1
+		order by class_num desc
+		limit 10
+	</select>
+	
+	<!-- 메인페이지를 위한 최근 업로드된 클래스 정보 불러오기 -->
+	<select id="classMainRecent" resultType="classVO">
+		select class_num, class_img, class_nickname, class_title, class_like, class_price from tbl_class
+		where class_approve = 1
+		order by class_num desc
+		limit 12
+	</select>
 </mapper>

@@ -23,7 +23,7 @@
 	<header>
 	    <div class="header-wrap">
 	        <div class="header-left">
-	            <a href="main.jsp">
+	            <a href="index.jsp">
 	                <span>
 	                    <div class="main-logo"><img src="${pageContext.request.contextPath}/asset/img/hihobbyLogo2.png" /></div>
 	                </span>
