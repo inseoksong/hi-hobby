@@ -236,7 +236,7 @@
 	
 <!-- 개설한 클래스 내용 불러오기 -->
    <select id="classMyView" parameterType="_int" resultType="classDTO">
-      select class_num, class_title, class_category, class_place, class_place_detail, class_start, class_end, class_introduce, class_price,  class_nickname, class_approve, c.user_num, user_name, user_email
+      select class_num, class_title, class_category, class_place, class_place_detail, class_start, class_end, class_introduce, class_price,  class_nickname, class_approve, class_img, c.user_num, user_name, user_email
       from tbl_class c join tbl_user u
       on c.user_num = u.user_num and class_num = #{classNum}
    </select>
