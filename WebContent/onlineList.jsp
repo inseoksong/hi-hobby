@@ -28,24 +28,68 @@
 		<div class="section-wrap">
 			<div class="main-section">
 				<section class="category-bar">
-					<h1 class="drawing-main category">드로잉</h1>
-					<h1 class="crafts-main category">공예</h1>
-					<h1 class="cooking-baking-main category">요리 · 베이킹</h1>
-					<h1 class="music-main category">음악</h1>
-					<h1 class="exercise-main category">운동</h1>
-					<h1 class="life-main category">라이프</h1>
-					<h1 class="photo-video-main category">사진 · 영상</h1>
-					<h1 class="finance-main category">금융 · 재태크</h1>
-					<h1 class="programming-main category">프로그래밍</h1>
-					<h1 class="business-main category">비즈니스</h1>
-					<h1 class="language-main category">외국어</h1>
+					<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=드로잉">
+						<h1 class="drawing-main category">
+						드로잉
+						</h1>
+					</a>
+					<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=공예">
+						<h1 class="crafts-main category">
+							공예
+							
+						</h1>
+					</a>
+					<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=요리 · 베이킹">
+						<h1 class="cooking-baking-main category">
+						요리 · 베이킹
+						</h1>
+					</a>
+					<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=음악">
+						<h1 class="music-main category">
+						음악
+						</h1>
+					</a>
+					<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=운동">
+						<h1 class="exercise-main category">
+						운동
+						</h1>
+					</a>						
+					<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=라이프">
+						<h1 class="life-main category">
+						라이프
+						</h1>
+					</a>
+					<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=사진·영상">
+						<h1 class="photo-video-main category">
+						사진 · 영상
+						</h1>
+					</a>
+					<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=금융·재테크">
+						<h1 class="finance-main category">
+						금융 · 재태크
+						</h1>
+					</a>
+					<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=프로그래밍">
+						<h1 class="programming-main category">
+						프로그래밍
+						</h1>
+					</a>
+					<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=비즈니스">
+						<h1 class="business-main category">
+						비즈니스
+						</h1>
+					</a>
+					<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=외국어">
+						<h1 class="language-main category">
+						외국어
+						</h1>
+					</a>
 				</section>
 				<section>
 					<div>
 						<div class="order-button">
-							<button type="button" class="recommended-order">추천순</button>
-							<button type="button" class="popularity-order">인기순</button>
-							<button type="button" class="latest-order">최신순</button>
+							<button type="button" class="recommended-order" onclick="location.href='${pageContext.request.contextPath }/ClassLikeOn.cl'">추천순</button>
+							<button type="button" class="latest-order" onclick="location.href='${pageContext.request.contextPath }/ClassLatestOn.cl'">최신순</button>
 						</div>
 						<div class="class-wrap">
 							<div class="classes-wrap">
@@ -71,7 +115,7 @@
 																<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24">
 																	<path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path>
 																</svg>
-																173
+																<c:out value="${classs.getClassLike()}"/>
 															</div>
 															<div class="line"></div>
 															<div class="class-price">

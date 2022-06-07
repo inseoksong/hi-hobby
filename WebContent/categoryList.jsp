@@ -29,19 +29,43 @@
 		<div class="section-wrap">
 			<div class="main-section">
 				<section class="category-bar">
-					<h1 class="drawing-main category">드로잉</h1>
-					<h1 class="crafts-main category">공예</h1>
-					<h1 class="cooking-baking-main category">요리 · 베이킹</h1>
-					<h1 class="music-main category">음악</h1>
-					<h1 class="exercise-main category">운동</h1>
-					<h1 class="life-main category">라이프</h1>
+					<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=드로잉">
+						<h1 class="drawing-main category">
+						드로잉
+						</h1>
+					</a>
+					<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=공예">
+						<h1 class="crafts-main category">
+							공예
+							
+						</h1>
+					</a>
+					<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=요리 · 베이킹">
+						<h1 class="cooking-baking-main category">
+						요리 · 베이킹
+						</h1>
+					</a>
+					<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=음악">
+						<h1 class="music-main category">
+						음악
+						</h1>
+					</a>
+					<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=운동">
+						<h1 class="exercise-main category">
+						운동
+						</h1>
+					</a>						
+					<a href="${pageContext.request.contextPath }/ClassGraphViewCategoryList.cl?classCategory=라이프">
+						<h1 class="life-main category">
+						라이프
+						</h1>
+					</a>
 				</section>
 				<section>
 					<div>
 						<div class="order-button">
-							<button type="button" class="recommended-order">추천순</button>
-							<button type="button" class="popularity-order">인기순</button>
-							<button type="button" class="latest-order">최신순</button>
+							<button type="button" class="recommended-order" onclick="recommended()">추천순</button>
+							<button type="button" class="latest-order" onclick="latest()">최신순</button>
 						</div>
 						<div class="class-wrap">
 							<div class="classes-wrap">
@@ -67,7 +91,7 @@
 																<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24">
 																	<path fill-rule="evenodd" d="M1.5 8.824C1.5 5.607 3.962 3 7 3c2.5 0 4 1.5 5 3 1-1.5 2.5-3 5-3 3.038 0 5.5 2.607 5.5 5.824C22.5 14.827 16.684 18.52 12 21 7.316 18.52 1.5 14.827 1.5 8.824z" fill="#d7d7d7"></path>
 																</svg>
-																173
+																<c:out value="${classs.getClassLike()}"/>
 															</div>
 															<div class="line"></div>
 															<div class="class-price">
@@ -135,4 +159,61 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="asset/js/onedayList.js"></script>
 <script src="asset/js/header.js"></script>
+<script>
+	function like(){
+		$.ajax({
+			url:"${pageContext.request.contextPath}/ClassRecommended.co",
+			type: "get",
+			data: {category: GraphViewCategory},
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function(result){
+				aj = result;
+				if(!result.result){
+					$("p#result").text("사용 불가능한 쿠폰입니다.");
+					$("p#result").css("color","red")
+					$("p#couponPrice").text("0");
+				}else{
+					$("p#result").text("사용가능한 쿠폰입니다.");
+					$("p#result").css("color","blue")
+					$("p#couponPrice").text("2000");
+				}
+			},
+			error: function(request, status, error){
+				console.log("실패..");
+				console.log(request);
+				console.log(status);
+				console.log(error);
+			}
+		});
+	}
+	
+	function latest(){
+		$.ajax({
+			url:"${pageContext.request.contextPath}/ClassLatest.co",
+			type: "get",
+			data: {couponUser: GraphViewCategory},
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function(result){
+				aj = result;
+				if(!result.result){
+					$("p#result").text("사용 불가능한 쿠폰입니다.");
+					$("p#result").css("color","red")
+					$("p#couponPrice").text("0");
+				}else{
+					$("p#result").text("사용가능한 쿠폰입니다.");
+					$("p#result").css("color","blue")
+					$("p#couponPrice").text("2000");
+				}
+			},
+			error: function(request, status, error){
+				console.log("실패..");
+				console.log(request);
+				console.log(status);
+				console.log(error);
+			}
+		});
+	}
+</script>
 </html>

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -85,7 +85,7 @@
 							<div class="giQpUz kkWRfi">
 								<div class="hdnqZU">
 									<div class="fyBGRf" color="#3a3a3a">
-									<c:out value="${ order.orderReservation() }"></c:out>
+									<c:out value="${order.orderReservation()}"></c:out>
 									</div>
 								</div>
 								<div class="ihCtaW">
@@ -105,10 +105,10 @@
 											</span>
 										</div>
 										<div class="jzTFeN">
-											<h1>주문번호 : <c:out value="${ order.getOrderNum }"></c:out></h1>
+											<h1>주문번호 : <c:out value="${order.getOrderNum}"></c:out></h1>
 											<div class="bpeeGV">
 												<a class="fjgoBy" >
-													<h1> 클래스 번호 : <c:out value="${ order.getClassNum }"></c:out></h1>
+													<h1> 클래스 번호 : <c:out value="${order.getClassNum}"></c:out></h1>
 												</a>
 											</div>
 										</div>
@@ -116,18 +116,7 @@
 								</div>
 							</div>
 						</c:forEach>
-						
-						
-
 					</div>
-					
-					
-					
-					
-					
-					
-					
-					
 				</div>
 			
 				<footer class="imGLyS">

@@ -5,15 +5,15 @@
 <!-- 원데이 주문 생성-->
 	<insert id="createOne" parameterType="orderVO">
 	insert into tbl_order
-	(order_reservation, order_status, order_approve<!-- , class_num, user_num, order_coupon -->)
-	values(#{orderReservation}, #{orderStatus}, #{orderApprove}<!-- , #{classNum}, #{userNum}, #{orderCoupon} -->)
+	(order_reservation, order_status, order_approve , class_num, user_num)
+	values(#{orderReservation}, #{orderStatus}, #{orderApprove} , #{classNum}, #{userNum})
 	</insert>
 	
 <!-- 온라인 주문 생성-->
 	<insert id="createOn" parameterType="orderVO">
 	insert into tbl_order
-	(order_status, order_approve<!-- , class_num, user_num , order_coupon -->)
-	values(#{orderStatus}, #{orderApprove}<!-- , #{classNum}, #{userNum} , #{orderCoupon} -->)
+	(order_status, order_approve, class_num, user_num)
+	values(#{orderStatus}, #{orderApprove}, #{classNum}, #{userNum})
 	</insert>
 	
 <!-- 주문 불러오기 -->

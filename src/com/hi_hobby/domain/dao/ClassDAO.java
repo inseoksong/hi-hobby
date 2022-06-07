@@ -157,6 +157,45 @@ public class ClassDAO {
 	public void classApproveNo(int classNum) {
 	   sqlSession.update("Class.classApproveNo", classNum);
 	}
+	
+	// 최신순 나열
+	public  List<ClassVO> ClassRecommended(String GraphViewCategory) {
+		return sqlSession.selectList("Class.ClassRecommended(GraphViewCategory)");
+	}
 
+	// 전체 클래스 최신 목록 조회
+	public List<ClassVO> ClassLikeLatest(Map<String, Integer> classMap) {
+		return sqlSession.selectList("Class.ClassLikeLatest", classMap);
+	}
+	
+	// 원데이 클래스 추천 목록 조회
+	public List<ClassVO> ClassLikeOne(Map<String, Integer> classMap) {
+		return sqlSession.selectList("Class.ClassLikeOne", classMap);
+	}
+	
+	// 원데이 클래스 최신 목록 조회
+	public List<ClassVO> ClassLatestOne(Map<String, Integer> classMap) {
+		return sqlSession.selectList("Class.ClassLatestOne", classMap);
+	}
+	
+	// 온라인 클래스 추천 목록 조회
+	public List<ClassVO> ClassLikeOn(Map<String, Integer> classMap) {
+		return sqlSession.selectList("Class.ClassLikeOn", classMap);
+	}
+	
+	// 온라인 클래스 최신 목록 조회
+	public List<ClassVO> ClassLatestOn(Map<String, Integer> classMap) {
+		return sqlSession.selectList("Class.ClassLatestOn", classMap);
+	}
 
+	// 쿠폰 사용시 클래스 정보
+	public ClassVO selectSale(int classNum) {
+		return sqlSession.selectOne("Class.selectSale", classNum);
+	}
+	
+	// 잘못된 쿠폰 사용 시 클래스 정보
+	public ClassVO selectSaleBack(int classNum) {
+		return sqlSession.selectOne("Class.selectSaleBack", classNum);
+	}
+	
 }

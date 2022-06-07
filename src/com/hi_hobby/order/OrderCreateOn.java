@@ -22,21 +22,20 @@ public class OrderCreateOn implements Action{
 		OrderDAO orderDAO = new OrderDAO();
 		
 		HttpSession session = req.getSession();
+		int classNum = Integer.parseInt(req.getParameter("classNum"));
 	
-		System.out.println("온라인 컨트롤러 들어옴");
+		System.out.println("원데이 컨트롤러 들어옴");
 		
-		orderVO.setOrderStatus(false);
-		orderVO.setOrderApprove(false);
-//		orderVO.setClassNum(Integer.parseInt((session.getAttribute("classNum")+"")));
-//		orderVO.setUserNum(Integer.parseInt((session.getAttribute("userNum")+"")));
-//		orderVO.setOrderCoupon(session.getAttribute("coupon"));
+		orderVO.setOrderReservation(req.getParameter("reservation"));
+		orderVO.setOrderStatus(1);
+		orderVO.setClassNum(classNum);
+		orderVO.setUserNum(Integer.parseInt(session.getAttribute("userNum")+""));
 		
 		orderDAO.createOn(orderVO);
-//		orderDAO.view(orderVO);
 		
 //		req.setAttribute("orderNumber", orderVO.getOrderNum());
 		actionInfo.setRedirect(false);
-//		actionInfo.setPath("/myOrder.jsp");
+		actionInfo.setPath("/myOrder101.jsp");
 		return actionInfo;
 	}
 	
